@@ -1,0 +1,20 @@
+material
+{
+    technique demo0
+    {
+        pass normal
+        {
+            shader
+            {
+                vertexShader = res/ScreenGame/Shaders/caustics.vert
+                fragmentShader = res/ScreenGame/Shaders/caustics.frag
+                sampler u_sampler1
+                {
+                    path = res/ScreenGame/Shaders/caustics.png
+                    wrapS = REPEAT
+                    wrapT = REPEAT
+                }
+            }
+        }
+    }
+}

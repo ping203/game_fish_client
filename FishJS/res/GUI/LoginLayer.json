@@ -1,0 +1,151 @@
+{
+  "ID": "9346ac48-79fb-4bf1-a122-f0e00b8d3532",
+  "Version": "3.10.0.0",
+  "Name": "LoginLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 97,
+        "Children": [
+          {
+            "FontSize": 14,
+            "ButtonText": "Login",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Normal.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 14,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 385.3734,
+              "Y": 464.0216
+            },
+            "Scale": {
+              "ScaleX": 2.2676,
+              "ScaleY": 1.2662
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3011,
+              "Y": 0.6445
+            },
+            "PreSize": {
+              "X": 0.0359,
+              "Y": 0.05
+            },
+            "LeftMargin": 362.3734,
+            "RightMargin": 871.6266,
+            "TopMargin": 237.9784,
+            "BottomMargin": 446.0216,
+            "Tag": 98,
+            "ActionTag": -257601392,
+            "Size": {
+              "X": 46.0,
+              "Y": 36.0
+            },
+            "Name": "btnLogin",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 20,
+            "IsCustomSize": true,
+            "LabelText": "",
+            "PlaceHolderText": "Text Field",
+            "MaxLengthText": 10,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 493.579,
+              "Y": 461.167
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3856,
+              "Y": 0.6405
+            },
+            "PreSize": {
+              "X": 0.0672,
+              "Y": 0.0319
+            },
+            "LeftMargin": 450.579,
+            "RightMargin": 743.421,
+            "TopMargin": 247.333,
+            "BottomMargin": 449.667,
+            "Tag": 99,
+            "ActionTag": 1530591117,
+            "Size": {
+              "X": 86.0,
+              "Y": 23.0
+            },
+            "Name": "TextField_1",
+            "ctype": "TextFieldObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/Button_Normal.png",
+        "Default/Button_Press.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

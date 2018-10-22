@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--Honghaier Game Editor : Version 1.0 -->
+<plist version="1.0">
+	<dict>
+		<key>animations</key>
+		<dict>
+			<key>fish_24_swim</key>
+			<dict>
+				<key>delay</key>
+				<real>0.075</real>
+				<key>frames</key>
+				<array>
+					<string>fish_24_01.png</string>
+					<string>fish_24_02.png</string>
+					<string>fish_24_03.png</string>
+					<string>fish_24_04.png</string>
+					<string>fish_24_05.png</string>
+					<string>fish_24_06.png</string>
+					<string>fish_24_07.png</string>
+					<string>fish_24_08.png</string>
+					<string>fish_24_09.png</string>
+					<string>fish_24_10.png</string>
+					<string>fish_24_11.png</string>
+					<string>fish_24_12.png</string>
+                    <string>fish_24_13.png</string>
+                    <string>fish_24_14.png</string>
+                    <string>fish_24_15.png</string>
+                    <string>fish_24_16.png</string>
+                    <string>fish_24_17.png</string>
+                    <string>fish_24_18.png</string>
+                    <string>fish_24_19.png</string>
+                    <string>fish_24_20.png</string>
+                    <string>fish_24_21.png</string>
+                    <string>fish_24_22.png</string>
+                    <string>fish_24_23.png</string>
+                    <string>fish_24_24.png</string>
+                    <string>fish_24_25.png</string>
+                    <string>fish_24_26.png</string>
+                    <string>fish_24_27.png</string>
+                    <string>fish_24_28.png</string>
+                    <string>fish_24_29.png</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</plist>
