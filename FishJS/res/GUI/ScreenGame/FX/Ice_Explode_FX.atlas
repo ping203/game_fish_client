@@ -1,0 +1,55 @@
+
+Ice_Explode_FX.png
+size: 1024,512
+format: RGBA4444
+filter: Linear,Linear
+repeat: none
+Export/1
+  rotate: false
+  xy: 451, 8
+  size: 252, 245
+  orig: 448, 252
+  offset: 98, 4
+  index: -1
+Export/2
+  rotate: false
+  xy: 451, 255
+  size: 388, 252
+  orig: 448, 252
+  offset: 39, 0
+  index: -1
+Export/3c
+  rotate: false
+  xy: 1, 255
+  size: 448, 252
+  orig: 448, 252
+  offset: 0, 0
+  index: -1
+Export/4a
+  rotate: false
+  xy: 1, 1
+  size: 448, 252
+  orig: 448, 252
+  offset: 0, 0
+  index: -1
+Export/4b
+  rotate: false
+  xy: 841, 449
+  size: 60, 58
+  orig: 60, 58
+  offset: 0, 0
+  index: -1
+Export/4c
+  rotate: false
+  xy: 841, 427
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+Export/4d
+  rotate: false
+  xy: 705, 211
+  size: 39, 42
+  orig: 41, 42
+  offset: 0, 0
+  index: -1

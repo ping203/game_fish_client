@@ -1,0 +1,76 @@
+
+laser.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+laser5
+  rotate: false
+  xy: 0, 106
+  size: 223, 149
+  orig: 254, 181
+  offset: 19, 15
+  index: -1
+laser6
+  rotate: false
+  xy: 224, 82
+  size: 174, 173
+  orig: 199, 199
+  offset: 13, 11
+  index: -1
+laser7
+  rotate: false
+  xy: 280, 44
+  size: 38, 37
+  orig: 39, 39
+  offset: 0, 1
+  index: -1
+laser71
+  rotate: false
+  xy: 622, 207
+  size: 42, 48
+  orig: 43, 49
+  offset: 0, 1
+  index: -1
+laser72
+  rotate: false
+  xy: 221, 0
+  size: 58, 81
+  orig: 62, 82
+  offset: 0, 1
+  index: -1
+laser73
+  rotate: false
+  xy: 399, 88
+  size: 71, 54
+  orig: 72, 55
+  offset: 0, 1
+  index: -1
+laser74
+  rotate: false
+  xy: 122, 13
+  size: 98, 92
+  orig: 99, 97
+  offset: 0, 5
+  index: -1
+laser75
+  rotate: false
+  xy: 399, 143
+  size: 108, 112
+  orig: 109, 114
+  offset: 0, 2
+  index: -1
+laser76
+  rotate: false
+  xy: 0, 3
+  size: 121, 102
+  orig: 122, 107
+  offset: 0, 5
+  index: -1
+laser77
+  rotate: false
+  xy: 508, 168
+  size: 113, 87
+  orig: 114, 90
+  offset: 0, 3
+  index: -1

@@ -1,0 +1,22 @@
+/**
+ * Created by Administrator on 9/22/2018.
+ */
+
+var CMD = function () {
+
+}
+
+
+
+CMD.HAND_SHAKE  = 0;
+CMD.CMD_LOGIN  = 1;
+CMD.CMD_LOGIN_FAIL  = 2;
+
+
+// Fish CMD
+CMD.CMD_START_SHOOT = 3022;
+CMD.CMD_SHOOT_RESULT = 3023;
+CMD.CMD_ADD_FISH = 3024;
+CMD.CMD_MATRIX_DATA = 3025;
+CMD.CMD_STATE_CHANGE = 3027;
+CMD.CMD_UPDATE_ROUND = 3029;

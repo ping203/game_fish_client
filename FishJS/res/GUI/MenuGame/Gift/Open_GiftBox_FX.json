@@ -1,0 +1,102 @@
+{
+"skeleton": { "hash": "2CdN74hqkvjikn8kMcu1mfkvpH8", "spine": "3.5.44", "width": 1380, "height": 1500, "images": "" },
+"bones": [
+	{ "name": "Open_GiftBox_FX" },
+	{ "name": "AllFX", "parent": "Open_GiftBox_FX" },
+	{ "name": "Streaks", "parent": "AllFX", "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "Streaks", "bone": "Streaks", "attachment": "LightRays_9" }
+],
+"skins": {
+	"default": {
+		"Streaks": {
+			"LightRays_0": { "width": 460, "height": 500 },
+			"LightRays_3": { "width": 460, "height": 500 },
+			"LightRays_6": { "width": 460, "height": 500 },
+			"LightRays_9": { "width": 460, "height": 500 },
+			"LightRays_12": { "width": 460, "height": 500 },
+			"LightRays_15": { "width": 460, "height": 500 },
+			"LightRays_18": { "width": 460, "height": 500 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"Streaks": {
+				"attachment": [
+					{ "time": 0, "name": "LightRays_0" },
+					{ "time": 0.1, "name": "LightRays_3" },
+					{ "time": 0.2, "name": "LightRays_6" },
+					{ "time": 0.3, "name": "LightRays_9" },
+					{ "time": 0.4, "name": "LightRays_12" },
+					{ "time": 0.5, "name": "LightRays_15" },
+					{ "time": 0.6, "name": "LightRays_18" },
+					{ "time": 0.6667, "name": "LightRays_0" },
+					{ "time": 0.7667, "name": "LightRays_3" },
+					{ "time": 0.8667, "name": "LightRays_6" },
+					{ "time": 0.9667, "name": "LightRays_9" },
+					{ "time": 1.0667, "name": "LightRays_12" },
+					{ "time": 1.1667, "name": "LightRays_15" },
+					{ "time": 1.2667, "name": "LightRays_18" },
+					{ "time": 1.3333, "name": "LightRays_0" },
+					{ "time": 1.4333, "name": "LightRays_3" },
+					{ "time": 1.5333, "name": "LightRays_6" },
+					{ "time": 1.6333, "name": "LightRays_9" },
+					{ "time": 1.7333, "name": "LightRays_12" },
+					{ "time": 1.8333, "name": "LightRays_15" },
+					{ "time": 1.9333, "name": "LightRays_18" },
+					{ "time": 2, "name": "LightRays_0" },
+					{ "time": 2.1, "name": "LightRays_3" },
+					{ "time": 2.2, "name": "LightRays_6" },
+					{ "time": 2.3, "name": "LightRays_9" },
+					{ "time": 2.4, "name": "LightRays_12" },
+					{ "time": 2.5, "name": "LightRays_15" },
+					{ "time": 2.6, "name": "LightRays_18" },
+					{ "time": 2.6667, "name": "LightRays_0" },
+					{ "time": 2.7667, "name": "LightRays_3" },
+					{ "time": 2.8667, "name": "LightRays_6" },
+					{ "time": 2.9667, "name": "LightRays_9" },
+					{ "time": 3.0667, "name": "LightRays_12" },
+					{ "time": 3.1667, "name": "LightRays_15" },
+					{ "time": 3.2667, "name": "LightRays_18" },
+					{ "time": 3.3333, "name": "LightRays_0" },
+					{ "time": 3.4333, "name": "LightRays_3" },
+					{ "time": 3.5333, "name": "LightRays_6" },
+					{ "time": 3.6333, "name": "LightRays_9" },
+					{ "time": 3.7333, "name": "LightRays_12" },
+					{ "time": 3.8333, "name": "LightRays_15" },
+					{ "time": 3.9333, "name": "LightRays_18" },
+					{ "time": 4, "name": "LightRays_0" },
+					{ "time": 4.1, "name": "LightRays_3" },
+					{ "time": 4.2, "name": "LightRays_6" },
+					{ "time": 4.3, "name": "LightRays_9" },
+					{ "time": 4.4, "name": "LightRays_12" },
+					{ "time": 4.5, "name": "LightRays_15" },
+					{ "time": 4.6, "name": "LightRays_18" },
+					{ "time": 4.6667, "name": "LightRays_0" },
+					{ "time": 4.7667, "name": "LightRays_3" },
+					{ "time": 4.8667, "name": "LightRays_6" },
+					{ "time": 4.9667, "name": "LightRays_9" },
+					{ "time": 5.0667, "name": "LightRays_12" },
+					{ "time": 5.1667, "name": "LightRays_15" },
+					{ "time": 5.2667, "name": "LightRays_18" },
+					{ "time": 5.3333, "name": "LightRays_18" }
+				]
+			}
+		},
+		"bones": {
+			"Streaks": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.3333, "angle": -90 },
+					{ "time": 2.6667, "angle": -180 },
+					{ "time": 4, "angle": -270 },
+					{ "time": 5.3333, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

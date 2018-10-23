@@ -1,0 +1,68 @@
+{
+  "ID": "3d681c67-1ae9-4538-89d3-042457937f77",
+  "Version": "3.10.0.0",
+  "Name": "Scene3D",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UseDefaultLight": true,
+        "SkyBoxEnabled": false,
+        "SkyBoxValid": false,
+        "SkyBoxMask": 1024,
+        "Tag": 84,
+        "Children": [
+          {
+            "Fov": 60.0,
+            "UserCameraFlagMode": "USER1",
+            "CameraFlagData": 0,
+            "SkyBoxEnabled": false,
+            "SkyBoxValid": false,
+            "CColor": {},
+            "Position3D": {
+              "X": 0.0,
+              "Y": 1.0,
+              "Z": -10.0
+            },
+            "CameraFlagMode": 31,
+            "Name": "UserCamera_0",
+            "ctype": "UserCameraObjectData"
+          },
+          {
+            "Type": "DIRECTIONAL",
+            "Flag": "LIGHT0",
+            "Intensity": 1.0,
+            "Enable": true,
+            "Range": 5.0,
+            "OuterAngle": 30.0,
+            "CColor": {},
+            "Position3D": {
+              "X": 0.0,
+              "Y": 3.0,
+              "Z": 0.0
+            },
+            "Rotation3D": {
+              "X": 50.0,
+              "Y": 180.0,
+              "Z": 0.0
+            },
+            "CameraFlagMode": 31,
+            "Name": "DirectionLight",
+            "ctype": "Light3DObjectData"
+          }
+        ],
+        "Name": "Scene3D",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene3D"
+}

@@ -1,0 +1,104 @@
+
+FXCaTran.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10002
+  rotate: false
+  xy: 796, 310
+  size: 71, 154
+  orig: 75, 157
+  offset: 3, 2
+  index: -1
+10006
+  rotate: false
+  xy: 606, 138
+  size: 78, 326
+  orig: 80, 327
+  offset: 1, 0
+  index: -1
+10010
+  rotate: false
+  xy: 239, 0
+  size: 76, 361
+  orig: 78, 361
+  offset: 1, 0
+  index: -1
+10014
+  rotate: false
+  xy: 316, 0
+  size: 75, 361
+  orig: 77, 361
+  offset: 1, 0
+  index: -1
+10018
+  rotate: false
+  xy: 81, 0
+  size: 79, 361
+  orig: 80, 361
+  offset: 0, 0
+  index: -1
+10022
+  rotate: false
+  xy: 392, 0
+  size: 73, 361
+  orig: 74, 361
+  offset: 0, 0
+  index: -1
+10026
+  rotate: false
+  xy: 0, 0
+  size: 80, 361
+  orig: 80, 361
+  offset: 0, 0
+  index: -1
+10030
+  rotate: false
+  xy: 161, 0
+  size: 77, 361
+  orig: 78, 361
+  offset: 1, 0
+  index: -1
+10034
+  rotate: false
+  xy: 466, 0
+  size: 72, 361
+  orig: 74, 361
+  offset: 1, 0
+  index: -1
+10038
+  rotate: false
+  xy: 539, 103
+  size: 66, 361
+  orig: 68, 361
+  offset: 1, 0
+  index: -1
+10042
+  rotate: false
+  xy: 685, 158
+  size: 61, 306
+  orig: 61, 306
+  offset: 0, 0
+  index: -1
+10046
+  rotate: false
+  xy: 747, 223
+  size: 48, 241
+  orig: 49, 242
+  offset: 0, 0
+  index: -1
+10050
+  rotate: false
+  xy: 868, 293
+  size: 34, 171
+  orig: 36, 187
+  offset: 1, 1
+  index: -1
+text
+  rotate: false
+  xy: 0, 362
+  size: 495, 102
+  orig: 495, 102
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,197 @@
+{
+  "ID": "c50733ae-b25a-47bd-858b-79104c79e25f",
+  "Version": "3.10.0.0",
+  "Name": "Scene3D",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UseDefaultLight": true,
+        "SkyBoxEnabled": false,
+        "SkyBoxValid": true,
+        "LeftImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "RightImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "UpImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "DownImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "ForwardImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "BackImage": {
+          "Type": "Default",
+          "Path": "Default/skybox.png",
+          "Plist": ""
+        },
+        "SkyBoxMask": 1024,
+        "Tag": 39,
+        "Children": [
+          {
+            "Fov": 60.0,
+            "ClipPlane": {
+              "X": 1.0,
+              "Y": 1000.0
+            },
+            "UserCameraFlagMode": "USER1",
+            "CameraFlagData": 1026,
+            "SkyBoxEnabled": false,
+            "SkyBoxValid": true,
+            "LeftImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "RightImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "UpImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "DownImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "ForwardImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "BackImage": {
+              "Type": "Default",
+              "Path": "Default/skybox.png",
+              "Plist": ""
+            },
+            "CColor": {},
+            "Position3D": {
+              "X": 0.0,
+              "Y": 1.0,
+              "Z": -10.0
+            },
+            "Rotation3D": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "CameraFlagMode": 31,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "UserCamera_0",
+            "ctype": "UserCameraObjectData"
+          },
+          {
+            "Type": "DIRECTIONAL",
+            "Flag": "LIGHT0",
+            "Intensity": 1.0,
+            "Enable": true,
+            "Range": 5.0,
+            "OuterAngle": 30.0,
+            "CColor": {},
+            "Position3D": {
+              "X": 0.0,
+              "Y": 3.0,
+              "Z": 0.0
+            },
+            "Rotation3D": {
+              "X": 50.0,
+              "Y": 180.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "CameraFlagMode": 31,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "DirectionLight",
+            "ctype": "Light3DObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "ScreenGame/FishPath/FishFormation_Path3.c3b",
+              "Plist": ""
+            },
+            "RunAction3D": false,
+            "IsFlipped": false,
+            "LightFlag": "LIGHT0",
+            "CColor": {},
+            "Position3D": {
+              "X": 0.2756,
+              "Y": 1.2283,
+              "Z": -0.7095
+            },
+            "Rotation3D": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 0.1,
+              "Y": 0.1,
+              "Z": 0.1
+            },
+            "CameraFlagMode": 30,
+            "Tag": 42,
+            "ActionTag": 866553461,
+            "Size": {
+              "X": 694.4225,
+              "Y": 626.6836
+            },
+            "Name": "Sprite3D_1",
+            "ctype": "Sprite3DObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Scene3D",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/skybox.png",
+        "../ScreenGame/FishPath/FishFormation_Path3.c3b"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene3D"
+}
