@@ -46,7 +46,8 @@ var WebsocketClient = cc.Class.extend({
     onSocketData: function (evt) {
         if (this.listener && this.listener.onReceived) {
 
-            this.listener.onReceived.call(this.listener, 0, new Uint8Array(evt.data));
+            this.listener.onReceived.call(this.listener, new Uint8Array(evt.data,0));
+
         }
     },
     onSocketError: function () {
@@ -56,7 +57,7 @@ var WebsocketClient = cc.Class.extend({
         }
     },
 
-    beginSend: function (packet) {
+    send: function (packet) {
         cc.log("On send packet: " + packet.length);
         this.ws.send(packet);
     }

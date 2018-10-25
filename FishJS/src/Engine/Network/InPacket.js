@@ -136,8 +136,9 @@ var InPacketData = {
     }
 };
 var CmdReceivedCommon = InPacket.extend({
-    ctor: function(){
+    ctor: function(pkg){
         this._super();
+        this.init(pkg);
     }
 })
 

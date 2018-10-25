@@ -39,7 +39,7 @@ var OutPacket = cc.Class.extend(
             //this.putUnsignedShort(this._length);
             //this.putByte(this._controllerId);
             this.putShort(this._cmdId);
-            this.putShort(this._length - 4);
+            this.putShort(this._length);
         },
         putByte: function (b) {
             this._data[this._pos++] = b;
@@ -114,7 +114,7 @@ var OutPacket = cc.Class.extend(
             this._data[pos + 1] = v >> 0;
         },
         updateSize: function () {
-            this.updateUnsignedShortAtPos(this._length - 3, INDEX_SIZE_PACKET);
+            this.updateUnsignedShortAtPos(this._length - 4, 2);
         },
         getData: function () {
             return this._data.slice(0, this._length);

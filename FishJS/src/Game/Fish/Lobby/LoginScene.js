@@ -9,7 +9,8 @@ var LoginScene = BaseLayer.extend({
     {
         this._super();
         this.initWithBinaryFile("res/GUI/LoginLayer.json");
-        wsClient = new WebsocketClient();
+
+        GameClient.getInstance().setListener(lobbyListenner);
     },
     initGUI: function()
     {
@@ -20,18 +21,9 @@ var LoginScene = BaseLayer.extend({
         {
             case 1:
             {
-                wsClient.connect("192.168.0.105",8080,false,this);
+                GameClient.getInstance().connect("192.168.1.20",8080);
                 break;
             }
         }
-    },
-    onFinishConnect: function(success)
-    {
-        cc.log("connect successful!");
-
-    },
-    onReceived: function(id,pkgData)
-    {
-
     }
 })

@@ -7,11 +7,44 @@ CmdSendLogin = CmdSendCommon.extend({
     {
         this._super();
         this.initData(1000);
-        this.setCmdId()
+        this.setCmdId(CMD.CMD_LOGIN);
+
+    },
+    putData: function(username,password){
+
+        //pack
+        this.packHeader();
+
+        this.putString(username);
+        this.putString(password);
+
+        //update
+        this.updateSize();
     }
 })
 
+CmdSendQuickJoin  = CmdSendCommon.extend({
+    ctor: function()
+    {
+        this._super();
+        this.initData(100);
+        this.setCmdId(CMD.CMD_QUICK_JOIN);
 
+        this.putData();
+
+    },
+    putData: function(){
+
+        //pack
+        this.packHeader();
+
+        this.putInt(0);
+        this.putShort(0);
+
+        //update
+        this.updateSize();
+    }
+})
 
 CmdSendStartShoot = CmdSendCommon.extend(
     {

@@ -10,7 +10,7 @@ var FishPacketListener = cc.Class.extend({
         cc.log("Fish ->>>Listener::onReceived :" + cmd);
 
         switch (cmd) {
-            case CMD.CMD_JOIN_ROOM_SUCCESS:
+            case CMD.CMD_QUICK_JOIN:
             {
                 var pk = new CmdReceivedJoinRoomSuccess(p);
                 pk.clean();

@@ -25,6 +25,7 @@
          "src/Engine/Utils/LocalizedString.js",
       "src/Engine/Flatbuffers/flatbuffers.js",
       "src/Engine/Network/WsClient.js",
+
       "src/Engine/Network/InPacket.js",
       "src/Engine/Network/OutPacket.js",
       "src/Engine/Protocols/client_request_generated.js",
@@ -51,12 +52,18 @@
         "src/Game/Fish/GameLogic/Path.js",
         "src/Game/Fish/GameLogic/Map.js",
 
-      "src/Game/Fish/Lobby/LoginScene.js",
+      "src/Game/Fish/Network/InPacket.js",
+      "src/Game/Fish/Network/OutPacket.js",
+      "src/Game/Fish/Network/FishPacketListener.js",
+      "src/Game/Fish/Network/FishCMD.js",
+      "src/Game/Fish/Network/GameClient.js",
 
-        "src/Game/Fish/Network/InPacket.js",
-        "src/Game/Fish/Network/OutPacket.js",
-        "src/Game/Fish/Network/FishPacketListener.js",
-        "src/Game/Fish/Network/FishCMD.js",
+      "src/Game/Fish/Lobby/LoginScene.js",
+      "src/Game/Fish/Lobby/LobbyPacketListenner.js",
+
+
+
+
 
       "src/extras/core/Curve.js",
         "src/extras/core/CurvePath.js",

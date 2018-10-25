@@ -2,6 +2,20 @@
  * Created by HOANG on 9/22/2018.
  */
 
+CmdReceivedLogin = CmdReceivedCommon.extend({
+    ctor: function(pkg){
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.username = this.getString();
+        this.displayName = this.getString();
+        this.avatar = this.getString();
+        this.balance = this.getLong();
+        this.vipType = this.getShort();
+    }
+})
+
 CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
@@ -10,54 +24,26 @@ CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
     },
     readData: function(){
         this.uChair = this.getByte();
-        this.roomBet = this.getDouble();
-        this.roomIndex = this.getInt();
+        this.roomBet = this.getLong();
         this.roomID = this.getInt();
         this.roomType = this.getByte();
 
-        this.roomOwner = this.getByte();
-        this.roomOwnerID = this.getInt();
-        this.roomLock = this.getBool();
-
-        this.playerStatus = this.getBytes();
-        this.playerInfo = new Array(6);
+        this.playerInfo = new Array(4);
         var length = this.getShort();
         for(var i=0;i<length;i++)
         {
             var info = {};
-            info["avatar"] = this.getString();
             info["uID"] = this.getInt();
+            info["avatar"] = this.getString();
             info["uName"] = this.getString();
-            info["zName"] = this.getString();
-            info["bean"] = this.getDouble();
-            info["exp"] = this.getDouble();
-            info["winCount"] = this.getInt();
-            info["lostCount"] = this.getInt();
-            info["usingItem"] = this.getInt();
-
-            this.getString();
-
+            info["displayName"] = this.getString();
+            info["bean"] = this.getLong();
+            info["exp"] = this.getLong();
+            info["vip"] = this.getByte();
             info["chair"] = this.getByte();
             this.playerInfo[info["chair"]] = info;
         }
         log(this.playerInfo);
-        length = this.getShort();
-        for(var i=0;i<length;i++)
-        {
-            this.vip = this.getByte();
-            if(this.playerInfo[i])
-                this.playerInfo[i]["vip"] = this.vip;
-        }
-
-        // Game info
-        this.dialerChair = this.getByte();
-        this.getByte();
-        this.getByte();
-        this.getByte();
-        this.getByte();
-        this.getByte();
-        this.minGold = this.getDouble();
-
     }
 })
 
