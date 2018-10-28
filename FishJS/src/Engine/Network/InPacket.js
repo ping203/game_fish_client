@@ -10,6 +10,7 @@ var InPacket = cc.Class.extend({
         //this._controllerId = this.parseByte();
         this._cmdId = this.getShort();
         this._dataLength = this.getShort();
+        this._error = this.getByte();
     },
     getCmdId: function () {
         return this._cmdId;
@@ -95,6 +96,15 @@ var InPacket = cc.Class.extend({
         return this.byteArrayToLong(data);
     },
 
+    getLongs: function () {
+        var size = this.getShort();
+        var ret= [];
+        for(var i=0;i<size;i++){
+            ret.push(this.getLong());
+        }
+        return ret;
+    },
+
 
     getDouble: function () {
         var buffer = new ArrayBuffer(8);
@@ -106,6 +116,19 @@ var InPacket = cc.Class.extend({
         var dataview = new DataView(buffer);
 
         return dataview.getFloat64(0);
+
+    },
+
+    getFloat: function () {
+        var buffer = new ArrayBuffer(4);
+        var int8array = new Uint8Array(buffer);
+
+        for (var i = 4; i >= 0; i--) {
+            int8array[4 - i] = this.parseByte();
+        }
+        var dataview = new DataView(buffer);
+
+        return dataview.getFloat32(0);
 
     },
 

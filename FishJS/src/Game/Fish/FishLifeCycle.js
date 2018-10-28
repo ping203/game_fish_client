@@ -15,27 +15,19 @@ var FishLifeCycle = cc.Class.extend({
 
         // read Data
         this.bet = pk.roomBet;
-        this.roomOwner = pk.roomOwner;
         this.roomID = pk.roomID;
-        this.roomIndex =   pk.roomIndex;
-        this.myChair = pk.uChair;
-        this.roomOwnerID = pk.roomOwnerID;
-        this.roomJackpot = pk.roomJackpot;
-        this.gameAction = pk.gameAction;
+        this.myChair = pk.position;
         this.mode = pk.roomType;
-        this.dialerChair = pk.dialerChair;
-        this.minGold = pk.minGold;
 
         this.players[this.myChair].enable(true);
         this.myPlayer = this.players[this.myChair];
-        for(var i = 0;i< MAX_PLAYER;i++)
+        for(var i = 0;i< pk.playerInfo.length;i++)
         {
-            if(pk.playerStatus[i] != USER_STATUS_NO_LOGIN){
-                this.players[i].playerData.rawData = pk.playerInfo[i];
-                this.players[i].setChair(i);
-                this.players[i].enable(true);
-                this.players[i].updateInfo();
-            }
+            var position = pk.playerInfo[i]["position"];
+            this.players[position].playerData.rawData = pk.playerInfo[i];
+            this.players[position].setChair();
+            this.players[position].enable(true);
+            this.players[position].updateInfo();
         }
 
         fishSound.playMusicBackgroundGame();
@@ -43,10 +35,10 @@ var FishLifeCycle = cc.Class.extend({
     onUserJoin: function(pk)
     {
 
-        this.players[pk.uChair].playerData.rawData = pk.info;
-        this.players[pk.uChair].setChair(pk.uChair);
-        this.players[pk.uChair].enable(true);
-        this.players[pk.uChair].updateInfo();
+        this.players[pk.position].playerData.rawData = pk.info;
+        this.players[pk.position].setChair(pk.position);
+        this.players[pk.position].enable(true);
+        this.players[pk.position].updateInfo();
 
     },
     onUpdateRound: function(pk)

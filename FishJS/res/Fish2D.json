@@ -1,17 +1,17 @@
 {
   "fish_type_1" :{
-      "name" : "Ca Xanh" ,
-      "anim_swim" : "",
-      "scale" : 0.65,
-      "zorder": 1,
-      "box": [0.5,0.75],
-      "shadow": true,
-      "shadow_offset" : [10,10]
+    "name" : "Ca Xanh" ,
+    "anim_swim" : "",
+    "scale" : 0.7,
+    "zorder": 1,
+    "box": [0.5,0.75],
+    "shadow": true,
+    "shadow_offset" : [10,10]
   },
   "fish_type_2" :{
     "name" : "Ca He",
     "anim_swim" : "",
-    "scale" : 0.65,
+    "scale" : 0.5,
     "zorder": 1,
     "box": [0.5,0.75],
     "shadow": true,

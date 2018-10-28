@@ -37,10 +37,14 @@ var g_resources = [
     "res/GUI/ScreenGame/Background/particle_texture.plist",
 
     "res/Fish2D.json",
-    "res/Paths.json",
+    "res/Path_normals.json",
     "res/fishes_matran.json",
+    "res/fishes_banthuong.json",
+
     "res/GUI/GameLayer.json",
     "res/GUI/LoginLayer.json",
+    "res/GUI/LobbyScene.json",
+
 
     "res/GUI/CreatePathScene.json"
 

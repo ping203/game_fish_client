@@ -236,8 +236,9 @@ var GameLayerUI = BaseLayer.extend({
     },
     onTouchBegan: function(touch,event)
     {
-        if(touch.getID() != 0)
-            return false;
+        //cc.log(touch.getID())
+        //if(touch.getID() != 0)
+        //    return false;
         var location = touch.getLocation();
         if(this.enable_shoot && this.gameMgr.state != GameManager.STATE_PREPARE)
         {
@@ -257,15 +258,15 @@ var GameLayerUI = BaseLayer.extend({
     },
     onTouchMoved: function(touch,event)
     {
-        if(touch.getID() != 0)
-            return;
+        //if(touch.getID() != 0)
+        //    return;
         this.point_to_shoot = touch.getLocation();
         fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
     },
     onTouchEnded: function(touch,event)
     {
-        if(touch.getID() != 0)
-            return;
+        //if(touch.getID() != 0)
+        //    return;
         this.hold_mouse = false;
     },
     createEffectFishDie: function(fishSp,money,playerIndex)

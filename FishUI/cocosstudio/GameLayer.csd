@@ -6,26 +6,89 @@
       <ObjectData Name="Layer" Tag="4" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="bg" ActionTag="-911620121" Tag="11" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-320.0171" RightMargin="-319.9829" TopMargin="-179.9988" BottomMargin="-180.0012" StretchWidthEnable="True" StretchHeightEnable="True" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
-            <Size X="1920.0000" Y="1080.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="639.9829" Y="359.9988" />
-            <Scale ScaleX="0.6646" ScaleY="0.6646" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="1.5000" Y="1.5000" />
-            <FileData Type="Normal" Path="ScreenGame/Background/bg2.jpg" Plist="" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Particle_3" ActionTag="-694818474" Tag="91" IconVisible="True" LeftMargin="355.2509" RightMargin="924.7491" TopMargin="245.9604" BottomMargin="474.0396" ctype="ParticleObjectData">
-            <Size X="0.0000" Y="0.0000" />
+          <AbstractNodeData Name="Panel_bg" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="bg0" ActionTag="-911620121" Tag="11" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+                <Size X="1280.0000" Y="720.0000" />
+                <Children>
+                  <AbstractNodeData Name="bongnuoc" ActionTag="-694818474" Tag="91" IconVisible="True" LeftMargin="353.2925" RightMargin="926.7075" TopMargin="247.2654" BottomMargin="472.7346" ctype="ParticleObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <AnchorPoint />
+                    <Position X="353.2925" Y="472.7346" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2760" Y="0.6566" />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="ScreenGame/Background/particle_texture.plist" Plist="" />
+                    <BlendFunc Src="770" Dst="1" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="640.0000" Y="360.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="3.2000" Y="1.8000" />
+                <PreSize X="6.4000" Y="3.6000" />
+                <FileData Type="Normal" Path="ScreenGame/Background/bg2.jpg" Plist="" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="bg1" ActionTag="945407169" VisibleForFrame="False" Tag="98" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+                <Size X="1280.0000" Y="720.0000" />
+                <Children>
+                  <AbstractNodeData Name="bongnuoc" ActionTag="2043811067" Tag="99" IconVisible="True" LeftMargin="886.8409" RightMargin="393.1591" TopMargin="169.3471" BottomMargin="550.6529" ctype="ParticleObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <AnchorPoint />
+                    <Position X="886.8409" Y="550.6529" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.6928" Y="0.7648" />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="ScreenGame/Background/particle_texture.plist" Plist="" />
+                    <BlendFunc Src="770" Dst="1" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="640.0000" Y="360.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="3.2000" Y="1.8000" />
+                <PreSize X="6.4000" Y="3.6000" />
+                <FileData Type="Normal" Path="ScreenGame/Background/bg.jpg" Plist="" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="bg2" ActionTag="636876102" VisibleForFrame="False" Tag="100" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+                <Size X="1280.0000" Y="720.0000" />
+                <Children>
+                  <AbstractNodeData Name="bongnuoc" ActionTag="-1151616029" Tag="101" IconVisible="True" LeftMargin="831.3556" RightMargin="448.6444" TopMargin="177.8365" BottomMargin="542.1635" ctype="ParticleObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <AnchorPoint />
+                    <Position X="831.3556" Y="542.1635" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.6495" Y="0.7530" />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="ScreenGame/Background/particle_texture.plist" Plist="" />
+                    <BlendFunc Src="770" Dst="1" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="640.0000" Y="360.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="232" G="232" B="232" />
+                <PrePosition X="3.2000" Y="1.8000" />
+                <PreSize X="6.4000" Y="3.6000" />
+                <FileData Type="Normal" Path="ScreenGame/Background/bg3.jpg" Plist="" />
+              </AbstractNodeData>
+            </Children>
             <AnchorPoint />
-            <Position X="355.2509" Y="474.0396" />
+            <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2775" Y="0.6584" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="ScreenGame/Background/particle_texture.plist" Plist="" />
-            <BlendFunc Src="770" Dst="1" />
+            <PrePosition />
+            <PreSize X="0.1563" Y="0.2778" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="Panel_Fish" ActionTag="-1029040304" Tag="12" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
@@ -40,7 +103,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_1" ActionTag="117900689" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="gay" ActionTag="117900689" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
             <Size X="447.0000" Y="107.0000" />
             <Children>
               <AbstractNodeData Name="Particle_2" ActionTag="1016150746" Tag="52" IconVisible="True" LeftMargin="373.6724" RightMargin="73.3276" TopMargin="50.6213" BottomMargin="56.3787" ctype="ParticleObjectData">
@@ -64,13 +127,13 @@
                 <PreSize X="1.0000" Y="1.0000" />
                 <FileData Type="PlistSubImage" Path="Trident_empty.png" Plist="ScreenGame/Guns/AtlasGuns.plist" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Particle_1" ActionTag="-40996458" Tag="51" IconVisible="True" LeftMargin="178.0631" RightMargin="268.9369" TopMargin="48.4254" BottomMargin="58.5746" ctype="ParticleObjectData">
+              <AbstractNodeData Name="Particle_1" ActionTag="-40996458" Tag="51" IconVisible="True" LeftMargin="170.2338" RightMargin="276.7662" TopMargin="50.5291" BottomMargin="56.4709" ctype="ParticleObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
-                <Position X="178.0631" Y="58.5746" />
-                <Scale ScaleX="0.9476" ScaleY="0.9476" />
+                <Position X="170.2338" Y="56.4709" />
+                <Scale ScaleX="0.9400" ScaleY="0.9400" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3984" Y="0.5474" />
+                <PrePosition X="0.3808" Y="0.5278" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="ScreenGame/Particles/TridentParticle.plist" Plist="" />
                 <BlendFunc Src="770" Dst="1" />

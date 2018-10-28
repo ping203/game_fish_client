@@ -9,6 +9,33 @@
           <Image Name="Sprite.png" />
           <Image Name="TextAtlas.png" />
         </Folder>
+        <Folder Name="event">
+          <Folder Name="eventBtt">
+            <File Name="bt.atlas" />
+            <File Name="bt.json" />
+            <Image Name="bt.png" />
+          </Folder>
+          <Folder Name="eventKhoBauDaiDuong">
+            <File Name="Icon_Treasure_FX.atlas" />
+            <File Name="Icon_Treasure_FX.json" />
+            <Image Name="Icon_Treasure_FX.png" />
+          </Folder>
+          <Folder Name="eventUuDaiNapThe">
+            <File Name="napthe.atlas" />
+            <File Name="napthe.json" />
+            <Image Name="napthe.png" />
+          </Folder>
+          <Folder Name="eventVongQuaySeason">
+            <Image Name="Icon_HoiCaMuaXuan.png" />
+          </Folder>
+          <PlistImageFolder Image="JFEventButtonPack.png" PListFile="JFEventButtonPack.plist" Name=".JFEventButtonPack_PList.Dir">
+            <PlistImageFile Name="eventButton.png" Key="eventButton.png" />
+            <PlistImageFile Name="eventConsole.png" Key="eventConsole.png" />
+            <PlistImageFile Name="Kich_hoat_code.png" Key="Kich_hoat_code.png" />
+            <PlistImageFile Name="Nap_tich_luy.png" Key="Nap_tich_luy.png" />
+          </PlistImageFolder>
+          <Image Name="SanLiXi.png" />
+        </Folder>
         <Folder Name="Fonts">
           <TTF Name="arial.ttf" />
           <TTF Name="arialbd.ttf" />
@@ -31,11 +58,6 @@
             <Image Name="bg.jpg" />
             <Image Name="bg2.jpg" />
             <Image Name="bg3.jpg" />
-            <Image Name="IMG_GAMESCREEN_BG.png" />
-            <Image Name="IMG_GAMESCREEN_BG0.png" />
-            <Image Name="IMG_GAMESCREEN_BG1.png" />
-            <Image Name="IMG_GAMESCREEN_FG0.png" />
-            <Image Name="IMG_GAMESCREEN_FG1.png" />
             <PlistParticleFile Name="particle_texture.plist" />
             <Image Name="playerPos.png" />
           </Folder>
@@ -133,21 +155,6 @@
             <File Name="TridentSkill_Noti_FX.json" />
             <Image Name="TridentSkill_Noti_FX.png" />
           </Folder>
-          <Folder Name="FXNew">
-            <Folder Name="FXBulletHit">
-              <Image Name="bubble.png" />
-              <Image Name="Elec_FX0001.png" />
-              <Image Name="Elec_FX0002.png" />
-              <Image Name="Elec_FX0003.png" />
-              <Image Name="Elec_FX0004.png" />
-              <Image Name="Elec_FX0005.png" />
-              <Image Name="Elec_FX0006.png" />
-              <Image Name="Elec_FX0007.png" />
-              <Image Name="Elec_FX0008.png" />
-              <Image Name="net2.png" />
-              <Image Name="null.png" />
-            </Folder>
-          </Folder>
           <Folder Name="Guns">
             <PlistImageFolder Image="AtlasGuns.png" PListFile="AtlasGuns.plist" Name=".AtlasGuns_PList.Dir">
               <PlistImageFile Name="IMG_ARROW_HERE.png" Key="IMG_ARROW_HERE.png" />
@@ -228,25 +235,6 @@
             <Image Name="TridentParticle.png" />
             <PlistParticleFile Name="WinGold_Big.plist" />
           </Folder>
-          <Folder Name="Shaders">
-            <File Name="base.material" />
-            <File Name="base_no_anim_light.material" />
-            <File Name="caustics.frag" />
-            <File Name="caustics.material" />
-            <Image Name="caustics.png" />
-            <File Name="caustics.vert" />
-            <File Name="cylinder.frag" />
-            <File Name="cylinder.vert" />
-            <File Name="fish_basic.fsh" />
-            <File Name="fish_basic.vsh" />
-            <File Name="fishmaterial.material" />
-            <File Name="normal.frag" />
-            <File Name="normal.vert" />
-            <File Name="outLine.frag" />
-            <File Name="outline.material" />
-            <File Name="outLine.vert" />
-            <File Name="UVAnimation.material" />
-          </Folder>
           <Folder Name="SkillActive">
             <File Name="Trident_Electric_Gem_FX.atlas" />
             <File Name="Trident_Electric_Gem_FX.json" />
@@ -285,10 +273,43 @@
             <Image Name="nong_sung.png" />
           </Folder>
         </Folder>
+        <Folder Name="Sounds">
+          <Folder Name="Game">
+            <Audio Name="bgm_net.mp3" />
+            <Audio Name="bgm1.mp3" />
+            <Audio Name="bgm2.mp3" />
+            <Audio Name="bgm3.mp3" />
+            <Audio Name="bgm4.mp3" />
+            <Audio Name="bgm5.mp3" />
+            <Audio Name="bgm6.mp3" />
+            <Audio Name="FXBingo.mp3" />
+            <Audio Name="FXCatch.mp3" />
+            <Audio Name="FXFire.mp3" />
+            <Audio Name="FXGold.mp3" />
+            <Audio Name="FXIonFire.mp3" />
+            <Audio Name="FXS_Bome1.mp3" />
+            <Audio Name="FXS_Bome2.mp3" />
+            <Audio Name="FXS_Electric.mp3" />
+            <Audio Name="FXS_Lazer1.mp3" />
+            <Audio Name="FXS_Lazer2.mp3" />
+            <Audio Name="FXSuperArm.mp3" />
+            <Audio Name="ReShot.mp3" />
+            <Audio Name="Shot.mp3" />
+            <Audio Name="Wave.mp3" />
+          </Folder>
+          <Folder Name="Lobby">
+            <Audio Name="BGM_Lobby1.mp3" />
+            <Audio Name="BGM_Lobby2.mp3" />
+            <Audio Name="ClickQuay.mp3" />
+            <Audio Name="Close.mp3" />
+            <Audio Name="NhacQuay.mp3" />
+            <Audio Name="NhanThuong.mp3" />
+          </Folder>
+        </Folder>
         <Project Name="CreatePathScene.csd" Type="Scene" />
         <Project Name="GameLayer.csd" Type="Layer" />
-        <Project Name="LoginLayer.csd" Type="Scene" />
         <Project Name="LobbyScene.csd" Type="Scene" />
+        <Project Name="LoginLayer.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

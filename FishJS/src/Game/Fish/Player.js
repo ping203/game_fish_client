@@ -82,9 +82,9 @@ var Player = cc.Node.extend({
     },
     updateInfo: function()
     {
-        this.lbName.setString(this.playerData.rawData["uName"]);
-        this.lbMoney1.setString(this.playerData.rawData["bean"]);
-        this.lbMoney2.setString(this.playerData.rawData["bean"]);
+        this.lbName.setString(this.playerData.rawData["displayName"]);
+        this.lbMoney1.setString(this.playerData.rawData["balance"]);
+        this.lbMoney2.setString(this.playerData.rawData["balance"]);
     }
 
 

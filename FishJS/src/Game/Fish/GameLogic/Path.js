@@ -8,11 +8,12 @@ var PathWeb = cc.Class.extend({
         this.duration = duration;
         this.curves = [];
         this.pointDatas = [];
+        cc.log(duration)
     },
     addPathPoint: function(point)
     {
         var p = new Vector2(point.x,point.y);
-        cc.log(JSON.stringify(p))
+        //cc.log(JSON.stringify(p))
         this.pointDatas.push(p);
     },
     calculate: function()

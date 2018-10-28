@@ -60,7 +60,7 @@ var FishPacketListener = cc.Class.extend({
             {
                 var pk = new CmdReceivedAddFish(p);
                 pk.clean();
-                cc.log("add fish :" +JSON.stringify(pk));
+                cc.log("add fish :" +JSON.stringify(pk.listFish.length));
                 fishLifeCycle.onAddFish(pk);
 
 

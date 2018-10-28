@@ -91,7 +91,7 @@ cc.game.onStart = function(){
 
 
         var scene = new GameScene();
-        cc.director.runScene(makeScene(new LoginScene()));
+        cc.director.runScene(makeScene(new LobbyScene()));
     }, this);
 };
 cc.game.run();

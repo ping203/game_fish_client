@@ -59,11 +59,10 @@
       "src/Game/Fish/Network/GameClient.js",
 
       "src/Game/Fish/Lobby/LoginScene.js",
+      "src/Game/Fish/Lobby/LobbyScene.js",
       "src/Game/Fish/Lobby/LobbyPacketListenner.js",
 
-
-
-
+      "src/Game/Fish/Demos/DemoScene.js",
 
       "src/extras/core/Curve.js",
         "src/extras/core/CurvePath.js",

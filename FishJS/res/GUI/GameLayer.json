@@ -15,95 +15,318 @@
         "Tag": 4,
         "Children": [
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "ScreenGame/Background/bg2.jpg",
-              "Plist": ""
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
             },
-            "Scale9OriginX": 633,
-            "Scale9OriginY": 356,
-            "Scale9Width": 654,
-            "Scale9Height": 368,
-            "StretchWidthEnable": true,
-            "StretchHeightEnable": true,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
+            "FirstColor": {
+              "R": 150,
+              "G": 200
             },
-            "Position": {
-              "X": 639.9829,
-              "Y": 359.9988
-            },
-            "Scale": {
-              "ScaleX": 0.6646,
-              "ScaleY": 0.6646
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
-            },
-            "PreSize": {
-              "X": 1.5,
-              "Y": 1.5
-            },
-            "HorizontalEdge": "BothEdge",
-            "VerticalEdge": "BothEdge",
-            "LeftMargin": -320.0171,
-            "RightMargin": -319.9829,
-            "TopMargin": -179.9988,
-            "BottomMargin": -180.0012,
-            "Tag": 11,
-            "ActionTag": -911620121,
-            "Size": {
-              "X": 1920.0,
-              "Y": 1080.0
-            },
-            "Name": "bg",
-            "ctype": "ImageViewObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "ScreenGame/Background/particle_texture.plist",
-              "Plist": ""
-            },
-            "BlendFunc": {
-              "Src": 770,
-              "Dst": 1
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
             },
             "AnchorPoint": {},
             "Position": {
-              "X": 355.2509,
-              "Y": 474.0396
+              "X": 0.0,
+              "Y": 0.0
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
             "CColor": {},
-            "IconVisible": true,
+            "IconVisible": false,
             "PrePosition": {
-              "X": 0.2775,
-              "Y": 0.6584
+              "X": 0.0,
+              "Y": 0.0
             },
             "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
+              "X": 0.1563,
+              "Y": 0.2778
             },
-            "LeftMargin": 355.2509,
-            "RightMargin": 924.7491,
-            "TopMargin": 245.9604,
-            "BottomMargin": 474.0396,
-            "Tag": 91,
-            "ActionTag": -694818474,
+            "RightMargin": 1080.0,
+            "TopMargin": 520.0,
+            "Tag": 97,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/Background/bg2.jpg",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 633,
+                "Scale9OriginY": 356,
+                "Scale9Width": 654,
+                "Scale9Height": 368,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 3.2,
+                  "Y": 1.8
+                },
+                "PreSize": {
+                  "X": 6.4,
+                  "Y": 3.6
+                },
+                "RightMargin": -1080.0,
+                "TopMargin": -520.0,
+                "Tag": 11,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "ScreenGame/Background/particle_texture.plist",
+                      "Plist": ""
+                    },
+                    "BlendFunc": {
+                      "Src": 770,
+                      "Dst": 1
+                    },
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 353.2925,
+                      "Y": 472.7346
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": true,
+                    "PrePosition": {
+                      "X": 0.276,
+                      "Y": 0.6566
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 353.2925,
+                    "RightMargin": 926.7075,
+                    "TopMargin": 247.2654,
+                    "BottomMargin": 472.7346,
+                    "Tag": 91,
+                    "ActionTag": -694818474,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "bongnuoc",
+                    "ctype": "ParticleObjectData"
+                  }
+                ],
+                "ActionTag": -911620121,
+                "Size": {
+                  "X": 1280.0,
+                  "Y": 720.0
+                },
+                "Name": "bg0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/Background/bg.jpg",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 633,
+                "Scale9OriginY": 356,
+                "Scale9Width": 654,
+                "Scale9Height": 368,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 3.2,
+                  "Y": 1.8
+                },
+                "PreSize": {
+                  "X": 6.4,
+                  "Y": 3.6
+                },
+                "RightMargin": -1080.0,
+                "TopMargin": -520.0,
+                "Tag": 98,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "ScreenGame/Background/particle_texture.plist",
+                      "Plist": ""
+                    },
+                    "BlendFunc": {
+                      "Src": 770,
+                      "Dst": 1
+                    },
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 886.8409,
+                      "Y": 550.6529
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": true,
+                    "PrePosition": {
+                      "X": 0.6928,
+                      "Y": 0.7648
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 886.8409,
+                    "RightMargin": 393.1591,
+                    "TopMargin": 169.3471,
+                    "BottomMargin": 550.6529,
+                    "Tag": 99,
+                    "ActionTag": 2043811067,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "bongnuoc",
+                    "ctype": "ParticleObjectData"
+                  }
+                ],
+                "ActionTag": 945407169,
+                "Size": {
+                  "X": 1280.0,
+                  "Y": 720.0
+                },
+                "VisibleForFrame": false,
+                "Name": "bg1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/Background/bg3.jpg",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 633,
+                "Scale9OriginY": 356,
+                "Scale9Width": 654,
+                "Scale9Height": 368,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 232,
+                  "G": 232,
+                  "B": 232
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 3.2,
+                  "Y": 1.8
+                },
+                "PreSize": {
+                  "X": 6.4,
+                  "Y": 3.6
+                },
+                "RightMargin": -1080.0,
+                "TopMargin": -520.0,
+                "Tag": 100,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "ScreenGame/Background/particle_texture.plist",
+                      "Plist": ""
+                    },
+                    "BlendFunc": {
+                      "Src": 770,
+                      "Dst": 1
+                    },
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 831.3556,
+                      "Y": 542.1635
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": true,
+                    "PrePosition": {
+                      "X": 0.6495,
+                      "Y": 0.753
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 831.3556,
+                    "RightMargin": 448.6444,
+                    "TopMargin": 177.8365,
+                    "BottomMargin": 542.1635,
+                    "Tag": 101,
+                    "ActionTag": -1151616029,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "bongnuoc",
+                    "ctype": "ParticleObjectData"
+                  }
+                ],
+                "ActionTag": 636876102,
+                "Size": {
+                  "X": 1280.0,
+                  "Y": 720.0
+                },
+                "VisibleForFrame": false,
+                "Name": "bg2",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": -2088100913,
             "Size": {
-              "X": 0.0,
-              "Y": 0.0
+              "X": 200.0,
+              "Y": 200.0
             },
-            "Name": "Particle_3",
-            "ctype": "ParticleObjectData"
+            "Name": "Panel_bg",
+            "ctype": "PanelObjectData"
           },
           {
             "ClipAble": false,
@@ -291,27 +514,27 @@
                 },
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 178.0631,
-                  "Y": 58.5746
+                  "X": 170.2338,
+                  "Y": 56.4709
                 },
                 "Scale": {
-                  "ScaleX": 0.9476,
-                  "ScaleY": 0.9476
+                  "ScaleX": 0.94,
+                  "ScaleY": 0.94
                 },
                 "CColor": {},
                 "IconVisible": true,
                 "PrePosition": {
-                  "X": 0.3984,
-                  "Y": 0.5474
+                  "X": 0.3808,
+                  "Y": 0.5278
                 },
                 "PreSize": {
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 178.0631,
-                "RightMargin": 268.9369,
-                "TopMargin": 48.4254,
-                "BottomMargin": 58.5746,
+                "LeftMargin": 170.2338,
+                "RightMargin": 276.7662,
+                "TopMargin": 50.5291,
+                "BottomMargin": 56.4709,
                 "Tag": 51,
                 "ActionTag": -40996458,
                 "Size": {
@@ -327,7 +550,7 @@
               "X": 447.0,
               "Y": 107.0
             },
-            "Name": "Image_1",
+            "Name": "gay",
             "ctype": "ImageViewObjectData"
           },
           {
@@ -4240,7 +4463,9 @@
         "Fonts/arialbd.ttf",
         "Fonts/SoDan.fnt",
         "Fonts/SoDan.png",
+        "ScreenGame/Background/bg.jpg",
         "ScreenGame/Background/bg2.jpg",
+        "ScreenGame/Background/bg3.jpg",
         "ScreenGame/Background/bubble.png",
         "ScreenGame/Background/particle_texture.plist",
         "ScreenGame/Guns/AtlasGuns.plist",

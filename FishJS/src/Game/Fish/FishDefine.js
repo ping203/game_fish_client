@@ -10,7 +10,7 @@ var FishData = cc.Class.extend({
     load: function()
     {
         this.loadFishModel();
-        this.loadFishPath();
+        //this.loadFishPath();
         this.loadMatrix();
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-0.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-1.plist");
@@ -56,7 +56,7 @@ var FishData = cc.Class.extend({
     },
     loadFishPath: function()
     {
-        this.fishPathData = cc.loader.getRes("res/Paths.json");
+        this.fishPathData = cc.loader.getRes("res/Path_normals.json");
     },
     loadMatrix: function()
     {

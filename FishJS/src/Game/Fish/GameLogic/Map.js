@@ -2,12 +2,6 @@
  * Created by HOANGNGUYEN on 9/7/2018.
  */
 
-var Map = cc.Class.extend({
-    ctor: function()
-    {
-
-    }
-})
 
 var MatranMap = cc.Class.extend({
     ctor: function(){

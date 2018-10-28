@@ -8,11 +8,12 @@ CmdReceivedLogin = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
+        this.uID = this.getInt();
         this.username = this.getString();
         this.displayName = this.getString();
         this.avatar = this.getString();
         this.balance = this.getLong();
-        this.vipType = this.getShort();
+        this.vipType = this.getByte();
     }
 })
 
@@ -23,25 +24,24 @@ CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-        this.uChair = this.getByte();
-        this.roomBet = this.getLong();
+        this.position = this.getByte();
         this.roomID = this.getInt();
         this.roomType = this.getByte();
-
-        this.playerInfo = new Array(4);
+        this.roomBet = this.getLongs();
+        this.playerInfo = [];
         var length = this.getShort();
         for(var i=0;i<length;i++)
         {
             var info = {};
             info["uID"] = this.getInt();
-            info["avatar"] = this.getString();
-            info["uName"] = this.getString();
+            info["username"] = this.getString();
             info["displayName"] = this.getString();
-            info["bean"] = this.getLong();
-            info["exp"] = this.getLong();
-            info["vip"] = this.getByte();
-            info["chair"] = this.getByte();
-            this.playerInfo[info["chair"]] = info;
+            info["avatar"] = this.getString();
+            info["balance"] = this.getLong();
+            info["vipType"] = this.getByte();
+
+            info["position"] = this.getByte();
+            this.playerInfo.push(info);
         }
         log(this.playerInfo);
     }
@@ -57,34 +57,17 @@ CmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
     },
     readData: function(){
         this.info = {};
-        this.info["avatar"] = this.getString();
         this.info["uID"] = this.getInt();
-        this.info["displayname"]  = this.getString();
-        this.info["uName"] = this.getString();
+        this.info["username"] = this.getString();
+        this.info["displayName"] = this.getString();
+        this.info["avatar"] = this.getString();
+        this.info["balance"] = this.getLong();
+        this.info["vipType"] = this.getByte();
 
-        this.info["bean"]= this.getDouble();
-        this.info["exp"] = this.getDouble();
-        this.info["winCount"] = this.getInt();
-        this.info["lostCount"] = this.getInt();
-        this.getInt();
-        this.getString();
-        this.uStatus = this.getByte();
-        this.uChair = this.getByte();
-        this.info["vip"] = this.getByte();
+        this.info["position"] = this.getByte();
     }
 })
 
-
-CmdReceivedRegQuitRoom = CmdReceivedCommon.extend({
-    ctor :function(pkg)
-    {
-        this._super(pkg);
-        this.readData();
-    },
-    readData: function(){
-        this.reg = this.getBool();
-    }
-})
 
 CmdReceivedUserExitRoom = CmdReceivedCommon.extend({
     ctor :function(pkg)
@@ -93,8 +76,7 @@ CmdReceivedUserExitRoom = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-
-        this.chair = this.getByte();
+        this.position = this.getByte();
         this.uID = this.getInt();
     }
 })
@@ -108,8 +90,9 @@ CmdReceivedStartShoot = CmdReceivedCommon.extend({
     },
     readData: function(){
 
-        this.chair = this.getByte();
+        this.position = this.getByte();
         this.bet = this.getLong();
+        this.user_money = this.getLong();
         this.x = this.getFloat();
         this.y = this.getFloat();
 
@@ -206,9 +189,10 @@ CmdReceivedShootResult = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-        this.nChair = this.getByte();
+        this.position = this.getByte();
         this.fishID = this.getInt();
         this.isSuccess = this.getBool();
+        this.bet = this.getLong();
         this.won_money = this.getLong();
         this.user_money = this.getLong();
     }
@@ -232,7 +216,7 @@ CmdReceivedMatrixData = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-        this.matrix_type = this.getShort();
+        this.matrix_type = this.getByte();
         this.startID = this.getInt();
         this.time = this.getFloat();
     }

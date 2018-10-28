@@ -103,6 +103,12 @@ var OutPacket = cc.Class.extend(
             this.putByte((v >> 0) & 0xff);
             return this;
         },
+        putFloat: function(v){
+            this.putByte((v >> 24) & 0xff);
+            this.putByte((v >> 16) & 0xff);
+            this.putByte((v >> 8) & 0xff);
+            this.putByte((v >> 0) & 0xff);
+        },
 
         putString: function (str) {
             //TODO: add this
