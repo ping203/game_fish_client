@@ -90,15 +90,7 @@ var GameManagerWeb = cc.Class.extend({
 
         this._world.SetContactListener(contactListener);
 
-        // body & fixture def for bullet
-        this.bulletFixtureFef = new b2FixtureDef;
-        this.bulletFixtureFef.density = 1.0;
-        this.bulletFixtureFef.restitution = 1.0;
-        this.bulletFixtureFef.friction = 0.0;
-        this.bulletFixtureFef.filter.categoryBits = GameManager.BULLET_BIT;
-        this.bulletFixtureFef.filter.maskBits = GameManager.WALL_BIT | GameManager.FISH_BIT;
-        this.bulletFixtureFef.shape = new b2PolygonShape;
-        this.bulletFixtureFef.shape.SetAsBox(0.5,0.5);
+
 
         this.bulletBodyDef = new b2BodyDef;
         this.bulletBodyDef.type = b2Body.b2_dynamicBody;
@@ -267,9 +259,7 @@ var GameManagerWeb = cc.Class.extend({
 
 })
 
-GameManagerWeb.WALL_BIT = 0x0001;
-GameManagerWeb.FISH_BIT = 0x0002;
-GameManagerWeb.BULLET_BIT = 0x0004;
+
 
 var Setting = cc.sys.isNative?engine.Setting:SettingWeb;
 var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
@@ -289,6 +279,10 @@ var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
     }
 
 });
+
+GameManager.WALL_BIT = 0x0001;
+GameManager.FISH_BIT = 0x0002;
+GameManager.BULLET_BIT = 0x0004;
 
 GameManager.STATE_NORMAL_MAP = 0;
 GameManager.STATE_PREPARE = 1;

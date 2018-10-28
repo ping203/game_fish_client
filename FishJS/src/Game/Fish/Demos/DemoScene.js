@@ -36,7 +36,6 @@ var DemoScene = BaseLayer.extend({
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);
-
         for(var i=0;i<fishAdd.length;i++)
         {
             this.gameScene.addFish(fishAdd[i].id,fishAdd[i].type,fishAdd[i].pathData.listPoints,fishAdd[i].pathData.totalTime,0);
