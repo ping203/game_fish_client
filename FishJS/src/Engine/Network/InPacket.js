@@ -123,8 +123,8 @@ var InPacket = cc.Class.extend({
         var buffer = new ArrayBuffer(4);
         var int8array = new Uint8Array(buffer);
 
-        for (var i = 4; i >= 0; i--) {
-            int8array[4 - i] = this.parseByte();
+        for (var i = 3; i >= 0; i--) {
+            int8array[3 - i] = this.parseByte();
         }
         var dataview = new DataView(buffer);
 

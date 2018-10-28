@@ -104,10 +104,14 @@ var OutPacket = cc.Class.extend(
             return this;
         },
         putFloat: function(v){
-            this.putByte((v >> 24) & 0xff);
-            this.putByte((v >> 16) & 0xff);
-            this.putByte((v >> 8) & 0xff);
-            this.putByte((v >> 0) & 0xff);
+
+            var a = new Buffer(4);
+            a.writeFloat32(v);
+
+            this.putByte(a[3]);
+            this.putByte(a[2]);
+            this.putByte(a[1]);
+            this.putByte(a[0]);
         },
 
         putString: function (str) {

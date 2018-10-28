@@ -170,14 +170,13 @@ CmdReceivedAddFish = CmdReceivedCommon.extend({
             f.listPoint = [];
 
             var size = this.getShort();
-            for(var i=0;i<size;i+=2)
+            for(var i=0;i<size;i++)
             {
                 f.listPoint.push(vec2(this.getFloat(),this.getFloat()));
             }
 
             this.listFish.push(f);
         }
-
 
     }
 })
