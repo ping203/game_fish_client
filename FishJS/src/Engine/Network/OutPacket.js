@@ -105,13 +105,14 @@ var OutPacket = cc.Class.extend(
         },
         putFloat: function(v){
 
-            var a = new Buffer(4);
-            a.writeFloat32(v);
-
-            this.putByte(a[3]);
-            this.putByte(a[2]);
-            this.putByte(a[1]);
-            this.putByte(a[0]);
+            var buffer = new ArrayBuffer(4);
+            var f32 = new Float32Array(buffer);
+            var uint = new Uint8Array(buffer);
+            f32[0] = v;
+            this.putByte(uint[3]);
+            this.putByte(uint[2]);
+            this.putByte(uint[1]);
+            this.putByte(uint[0]);
         },
 
         putString: function (str) {

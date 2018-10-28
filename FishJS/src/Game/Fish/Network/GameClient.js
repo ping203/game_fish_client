@@ -21,6 +21,8 @@ var GameClient = cc.Class.extend({
     {
         this.listenner = null;
         this.wsClient = new WebsocketClient();
+
+        this.connected = false;
     },
     setListener: function(lis)
     {
@@ -33,10 +35,14 @@ var GameClient = cc.Class.extend({
     onFinishConnect: function(result){
         if(this.listenner)
             this.listenner.onConnect(result);
+        this.connected = result;
+
     },
     onDisconnected: function(){
         if(this.listenner)
             this.listenner.onDisconnect();
+        this.connected = false;
+
     },
     onReceived: function(pkg){
         var pk = new CmdReceivedCommon(pkg);
@@ -48,7 +54,8 @@ var GameClient = cc.Class.extend({
         }
     },
     sendPacket: function(pk){
-        this.wsClient.send(pk.getData());
+        if(this.wsClient && this.connected)
+            this.wsClient.send(pk.getData());
     }
 })
 

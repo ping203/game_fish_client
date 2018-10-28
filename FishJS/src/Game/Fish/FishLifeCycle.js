@@ -16,8 +16,8 @@ var FishLifeCycle = cc.Class.extend({
         // read Data
         this.bet = pk.roomBet;
         this.roomID = pk.roomID;
-        this.myChair = pk.position;
-        this.mode = pk.roomType;
+        this.myChair = this.position = pk.position;
+        this.roomType = pk.roomType;
 
         this.players[this.myChair].enable(true);
         this.myPlayer = this.players[this.myChair];
@@ -25,12 +25,12 @@ var FishLifeCycle = cc.Class.extend({
         {
             var position = pk.playerInfo[i]["position"];
             this.players[position].playerData.rawData = pk.playerInfo[i];
-            this.players[position].setChair();
+            this.players[position].setChair(position);
             this.players[position].enable(true);
             this.players[position].updateInfo();
         }
 
-        fishSound.playMusicBackgroundGame();
+        //fishSound.playMusicBackgroundGame();
     },
     onUserJoin: function(pk)
     {
@@ -70,7 +70,8 @@ var FishLifeCycle = cc.Class.extend({
     },
     onStartShoot: function(data)
     {
-        this.gameScene.shoot(this.players[data.chair],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
+        if(data.position != this.position)
+            this.gameScene.shoot(this.players[data.chair],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
     },
     onShootResult: function(pk)
     {

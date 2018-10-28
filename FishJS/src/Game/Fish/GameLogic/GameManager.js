@@ -286,7 +286,7 @@ var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
     getFishByID: function(id)
     {
         return this.fishEntities[""+id];
-    },
+    }
 
 });
 

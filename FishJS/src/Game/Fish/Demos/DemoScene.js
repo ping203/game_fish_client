@@ -9,6 +9,23 @@ var DemoScene = BaseLayer.extend({
         this.gameScene = new GameLayerUI();
         this.addChild(this.gameScene);
 
+        fishLifeCycle = new FishLifeCycle();
+        fishLifeCycle.gameScene = this.gameScene;
+        fishLifeCycle.players = this.gameScene.players;
+
+        fishLifeCycle.bet = [1000,1000,1000,5000];
+        fishLifeCycle.myChair = fishLifeCycle.position = 0;
+
+        fishLifeCycle.players[fishLifeCycle.myChair].enable(true);
+        fishLifeCycle.myPlayer = fishLifeCycle.players[fishLifeCycle.myChair];
+
+
+
+        fishLifeCycle.players[0].playerData.rawData = null;
+        fishLifeCycle.players[0].setChair();
+        fishLifeCycle.players[0].enable(true);
+        //this.players[0].updateInfo();
+
         this.gameLogic = new GameLogicDemo();
         this.gameLogic.setListener(this);
         this.gameLogic.reset();
@@ -22,7 +39,7 @@ var DemoScene = BaseLayer.extend({
 
         for(var i=0;i<fishAdd.length;i++)
         {
-            this.gameScene.addFish(fishAdd[i].id,fishAdd[i].type,fishAdd[i].pathData.listPoints,fishAdd[i].fishRealData.time_xuat_hien,0);
+            this.gameScene.addFish(fishAdd[i].id,fishAdd[i].type,fishAdd[i].pathData.listPoints,fishAdd[i].pathData.totalTime,0);
         }
         //cc.log("length :" + fishAdd.length);
     },
