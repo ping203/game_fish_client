@@ -13,7 +13,8 @@ var LobbyPacketListenner = cc.Class.extend({
         if(result)
         {
             var pk = new CmdSendLogin();
-            pk.putData("vishiha","hoang154");
+            var username = "vishiha" + Math.floor((Math.random() * 1000) + 1)
+            pk.putData(username,"hoang154");
             GameClient.getInstance().sendPacket(pk);
         }
 
