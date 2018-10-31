@@ -8,18 +8,20 @@ var FishLifeCycle = cc.Class.extend({
     },
     onJoinRoomSucess: function(pk)
     {
-
         this.gameScene = new GameLayerUI();
         sceneMgr.openWithScene(this.gameScene);
         this.players = this.gameScene.players;
 
         // read Data
-        this.bet = pk.roomBet;
+        this.bets = pk.roomBet;
+        this.myBetIdx = 0;          // index cua bet trong array
         this.roomID = pk.roomID;
         this.myChair = this.position = pk.position;
         this.roomType = pk.roomType;
 
         this.players[this.myChair].enable(true);
+        this.players[this.myChair].setIsMyPlayer(true);
+        this.players[this.myChair].setGunBet(this.bets[0]);
         this.myPlayer = this.players[this.myChair];
         for(var i = 0;i< pk.playerInfo.length;i++)
         {
@@ -28,6 +30,8 @@ var FishLifeCycle = cc.Class.extend({
             this.players[position].setChair(position);
             this.players[position].enable(true);
             this.players[position].updateInfo();
+
+            this.players[position].setIsMyPlayer(position == this.myChair);
         }
 
         //fishSound.playMusicBackgroundGame();

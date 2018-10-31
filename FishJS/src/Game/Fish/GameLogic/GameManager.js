@@ -33,11 +33,15 @@ var GameManagerWeb = cc.Class.extend({
         this.initWorld();
 
         this._entityCollisionListener = null;
+        this._contactPreSolveLitener = null;
 
     },
     setEntityCollisionListener: function(_lis)
     {
         this._entityCollisionListener = _lis;
+    },
+    setOnContactPreSolve: function(lis){
+        this._contactPreSolveLitener = lis;
     },
     createWall: function()
     {
@@ -112,8 +116,42 @@ var GameManagerWeb = cc.Class.extend({
         this.createWall();
 
     },
-    update: function(dt)
+    getFishByPos: function(screenPos){
+        var ret = null;
+        var listFishCheck = [];
+        for(var i=0;i<this._entities.length;i++){
+            if(this._entities[i]._type == Entity.FISH && this._entities[i]._nodeDisplay){
+                var sprite = this._entities[i]._nodeDisplay.getChildByTag(0);
+                var convertPos = sprite.convertToNodeSpaceAR(screenPos);
+                var contentSize = sprite.getContentSize();
+
+                var rect_check = cc.rect(-contentSize.width/2,-contentSize.height/2,contentSize.width,contentSize.height);
+                if(cc.rectContainsPoint(rect_check,convertPos)){
+                    listFishCheck.push(this._entities[i]);
+                }
+            }
+        }
+
+        if(listFishCheck.length>0){
+            listFishCheck.sort(function(a,b){
+                return a._nodeDisplay.getLocalZOrder() < b._nodeDisplay.getLocalZOrder();
+            })
+
+            var test = [];
+            for(var i=0;i<listFishCheck.length;i++){
+                test.push(listFishCheck[i]._nodeDisplay.getLocalZOrder());
+            }
+            cc.log(JSON.stringify(test))
+
+            return listFishCheck[0];
+        }
+        return null;
+    },
+    update: function(dtt)
     {
+        var dt = dtt;
+        if(this.setting.using_constant_fps)
+            dt = this.setting.FPS;
         var count = this._entities.length;
         while(count--)
         {
@@ -149,6 +187,7 @@ var GameManagerWeb = cc.Class.extend({
         vel.y *= this.setting.bullet_vel;
 
         bullet.setPosition(start_pos.x,start_pos.y);
+        bullet.setVelLength(this.setting.bullet_vel);
         bullet._body.SetLinearVelocity(vel);
 
         return bullet;
@@ -157,6 +196,7 @@ var GameManagerWeb = cc.Class.extend({
     destroyEntity: function(entity)
     {
         entity.need_remove = true;
+        entity.released = true;
     },
 
     BeginContact: function(contact)
@@ -204,14 +244,20 @@ var GameManagerWeb = cc.Class.extend({
     {
         if(!contact.IsTouching())
             return;
+
         var entityA = contact.GetFixtureA().GetBody().GetUserData();
         var entityB = contact.GetFixtureB().GetBody().GetUserData();
+
+        if(this._contactPreSolveLitener != null){
+            this._contactPreSolveLitener.call(this._contactPreSolveLitener,entityA,entityB,contact);
+            return;
+        }
 
         if(entityA._type == Entity.BULLET && entityB._type == Entity.FISH)
         {
             contact.SetEnabled(false);
         }
-        if(entityA._type == Entity.FISH && entityB._type == Entity.BULLET)
+        else if(entityA._type == Entity.FISH && entityB._type == Entity.BULLET)
         {
             contact.SetEnabled(false);
         }

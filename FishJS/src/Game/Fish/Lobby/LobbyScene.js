@@ -11,6 +11,8 @@ var LobbyScene = BaseLayer.extend({
         var panel_center = this.getControl("Panel_center");
         this.customizeButton("btnChoiThu",0,panel_center);
         this.customizeButton("btnChoiNgay",1,panel_center);
+        this.customizeButton("btnShop",2,panel_center);
+
 
         GameClient.getInstance().setListener(lobbyListenner);
 
@@ -23,6 +25,14 @@ var LobbyScene = BaseLayer.extend({
             }
             case 1:{
                 GameClient.getInstance().connect("127.0.0.1",8080);
+                break;
+            }
+            case 2:{
+                var spine = new sp.SkeletonAnimation("res/FX/laser_02.json","res/FX/laser_02.atlas");
+                spine.setAnimation(0,"laser_02",true);
+                spine.setPosition(300,300);
+                this.addChild(spine);
+                cc.log(spine);
                 break;
             }
         }

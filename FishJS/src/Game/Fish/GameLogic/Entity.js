@@ -11,6 +11,7 @@ var EntityWeb = cc.Class.extend({
         this._type = -1;
         this._nodeDisplay = null;
         this._id = -1;
+        this.released = false;
     },
     update : function(dt)
     {
@@ -22,8 +23,11 @@ var EntityWeb = cc.Class.extend({
     },
     setTransform: function(pos,angle)
     {
-        this._body.SetPosition(pos);
-        this._body.SetAngle(angle);
+        if(this._body){
+            this._body.SetPosition(pos);
+            this._body.SetAngle(angle);
+        }
+
     },
     getBodyVelocity: function()
     {
@@ -105,6 +109,8 @@ var FishCommonWeb = EntityWeb.extend({
         this.paused = false;
         this.time = timeElapsed;
 
+        this.update(0);
+
     },
     enableAutoDie: function(die)
     {
@@ -119,7 +125,10 @@ var FishCommonWeb = EntityWeb.extend({
         {
             this.time = 0;
             if(this.enable_auto_die)
+            {
                 this.need_remove = true;
+                this.released = true;
+            }
         }
 
         //var position = this.path.getPositionFromTime(this.time);
@@ -146,12 +155,32 @@ var BulletWeb = Entity.extend({
         this.live = live;
         this.id = -9999;
 
+        this.velLength = 0;
+
+        this.holdInfo = null;
+    },
+    setVelLength: function(vv){
+        this.velLength = vv;
     },
     update: function(dt)
     {
+        var pos = this.getBodyPosition();
+
+        if(this.holdInfo && this.holdInfo.isHolding){
+            var fish_pos = this.holdInfo.fishForHold.getBodyPosition();
+
+            var vel_dir = cc.p(fish_pos.x - pos.x,fish_pos.y - pos.y);
+            var vel = new b2Vec2(vel_dir.x,vel_dir.y)
+            vel.Normalize();
+            vel.x *= this.velLength;
+            vel.y *= this.velLength;
+
+            this._body.SetLinearVelocity(vel);
+        }
+
         if(this._nodeDisplay)
         {
-            var pos = this.getBodyPosition();
+
             this._nodeDisplay.setPosition(pos.x * PM_RATIO,pos.y * PM_RATIO);
             this._nodeDisplay.setRotation(this.rotationFromVel(this.getBodyVelocity()))
         }
@@ -159,9 +188,10 @@ var BulletWeb = Entity.extend({
     getLive: function()
     {
         return this.live;
+    },
+    setHoldInfo: function(hInfo){
+        this.holdInfo = hInfo;
     }
-
-
 
 })
 

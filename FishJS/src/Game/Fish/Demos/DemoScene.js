@@ -8,21 +8,23 @@ var DemoScene = BaseLayer.extend({
         this._super();
         this.gameScene = new GameLayerUI();
         this.addChild(this.gameScene);
+        this.gameScene.setActionListener(this);
 
         fishLifeCycle = new FishLifeCycle();
         fishLifeCycle.gameScene = this.gameScene;
         fishLifeCycle.players = this.gameScene.players;
 
-        fishLifeCycle.bet = [1000,1000,1000,5000];
+        fishLifeCycle.bets = [50,100,500,1000,5000];
         fishLifeCycle.myChair = fishLifeCycle.position = 0;
+        fishLifeCycle.myBetIdx = 0;
 
-        fishLifeCycle.players[fishLifeCycle.myChair].enable(true);
+        //fishLifeCycle.players[fishLifeCycle.myChair].enable(true);
         fishLifeCycle.myPlayer = fishLifeCycle.players[fishLifeCycle.myChair];
 
-
+        fishLifeCycle.myPlayer.setIsMyPlayer(true);
+        fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[0])
 
         fishLifeCycle.players[0].playerData.rawData = null;
-        fishLifeCycle.players[0].setChair();
         fishLifeCycle.players[0].enable(true);
         //this.players[0].updateInfo();
 
@@ -36,14 +38,51 @@ var DemoScene = BaseLayer.extend({
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);
-        for(var i=0;i<fishAdd.length;i++)
+        if(fishAdd != null)
         {
-            this.gameScene.addFish(fishAdd[i].id,fishAdd[i].type,fishAdd[i].pathData.listPoints,fishAdd[i].pathData.totalTime,0);
+            for(var i=0;i<fishAdd.length;i++)
+            {
+                this.gameScene.addFish(fishAdd[i].id,fishAdd[i].type,fishAdd[i].pathData.listPoints,fishAdd[i].pathData.totalTime,0);
+            }
+            //cc.log("length :" + fishAdd.length);
         }
-        //cc.log("length :" + fishAdd.length);
+
     },
     onStateChange: function(state){
         cc.log(" state :" + state);
+
+        this.gameScene.gameMgr.state = state;
+
+        if(this.gameScene.gameMgr.state != GameManager.STATE_MATRIX_MAP)
+            matranMap.paused = true;
+
+        if(state == GameManager.STATE_NORMAL_MAP){
+            this.gameLogic.reset();
+        }
+        else if(state == GameManager.STATE_MATRIX_MAP){
+            matranMap.start(0,this.gameLogic.gameMap.getMatranMap().getStartID());
+        }
+    },
+    // for action
+    onStartShoot: function(bet,x,y){
+
+    },
+    onShootFish: function(bet,fish_id){
+        var result = this.gameLogic.shoot(fish_id,bet);
+        if(result && result.success)
+        {
+            var fish = this.gameScene.gameMgr.getFishByID(fish_id)
+            if(fish)
+            {
+                var fishSp = fish.getNodeDisplay();
+                fish.setNodeDisplay(null);
+
+                this.gameScene.createEffectFishDie(fishSp,result.won_money,0);
+                this.gameScene.gameMgr.destroyEntity(fish);
+
+                fishSound.playEffectFishDie(fish.id);
+            }
+        }
     }
 })
 
@@ -526,8 +565,8 @@ var GameLogicDemo = cc.Class.extend({
     },
 
     removeFish: function(id) {
-        if(this.listFishes[""+(this.count)]) {
-            delete this.listFishes[""+(this.count)];
+        if(this.listFishes[""+(id)]) {
+            delete this.listFishes[""+(id)];
         }
     },
 
@@ -538,6 +577,7 @@ var GameLogicDemo = cc.Class.extend({
             var f = this.getFish(id);
             if(f) {
                 result.success = this.shootTest(f.fishRealData.ti_le_ban / 100.0);
+                //result.success = true;
                 if(result.success) {
                     result.won_money = Math.floor(f.fishRealData.ti_le_an * bet);
                     this.removeFish(id);                                             // remove khoi list fish hien tai
@@ -545,8 +585,8 @@ var GameLogicDemo = cc.Class.extend({
             }
             return result;
         }
-        else if(this.state == GameScene.STATE_MATRIX_MAP) {
-            result.success = false;
+        else if(this.state == GameManager.STATE_MATRIX_MAP) {
+            result.success = true;
             result.won_money = 0;
 
             if(this.gameMap.getMatranMap().isFishAvaiable(id)) {

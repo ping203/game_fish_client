@@ -16,7 +16,9 @@ var FishData = cc.Class.extend({
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-1.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-2.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-3.plist");
-
+        cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/coin1.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-4.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/spray.plist");
 
 
         cc.animationCache.addAnimations("res/fishData/anim/fish_01_swim.plist");

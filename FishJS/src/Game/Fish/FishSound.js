@@ -30,9 +30,10 @@ fishSound.playEffectFishHit = function()
 
 fishSound.playEffectFishDie = function(type)
 {
+    return;
     if(type > 16)
         type = 16;
-    audioEngine.playEffect("res/sounds/fish/die/0" +type + ".mp3",false);
+    audioEngine.playEffect("res/sounds/fish/die/" +type + ".mp3",false);
 }
 
 

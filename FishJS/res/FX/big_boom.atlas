@@ -1,0 +1,55 @@
+
+big_boom.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+b1
+  rotate: false
+  xy: 0, 0
+  size: 115, 121
+  orig: 125, 121
+  offset: 10, 0
+  index: -1
+b174
+  rotate: false
+  xy: 1717, 780
+  size: 184, 188
+  orig: 184, 188
+  offset: 0, 0
+  index: -1
+ef1
+  rotate: false
+  xy: 0, 546
+  size: 406, 422
+  orig: 407, 424
+  offset: 1, 1
+  index: -1
+ef2
+  rotate: false
+  xy: 407, 547
+  size: 407, 421
+  orig: 409, 423
+  offset: 1, 1
+  index: -1
+ef3
+  rotate: false
+  xy: 1330, 631
+  size: 386, 337
+  orig: 388, 339
+  offset: 1, 1
+  index: -1
+ef4
+  rotate: false
+  xy: 0, 122
+  size: 367, 423
+  orig: 369, 425
+  offset: 1, 1
+  index: -1
+ef5
+  rotate: false
+  xy: 815, 681
+  size: 514, 287
+  orig: 516, 289
+  offset: 1, 1
+  index: -1

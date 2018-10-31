@@ -13,6 +13,16 @@ var GameScene = cc.Scene.extend({
 })
 
 
+var ActionListener = cc.Class.extend({
+    onStartShoot: function(bet,x,y){
+
+    },
+    onShootFish: function(bet,fish_id){
+
+    }
+})
+
+
 var GameLayerUI = BaseLayer.extend({
     ctor: function()
     {
@@ -20,19 +30,28 @@ var GameLayerUI = BaseLayer.extend({
 
         this.initWithBinaryFile("res/GUI/GameLayer.json");
         //this._layout.setVisible(false);
+
+        this.actionListener = null;
     },
     initGUI: function()
     {
 
         this.bulletLayer = new cc.Layer();
         this.effectLayer = new cc.Layer();
+        this.topLayer = new cc.Layer();
         this.fish2DLayer = new Display2DScene();
         this.fish3DScene = new Display3DScene();
         var panel_display = this.getControl("Panel_Fish");
         panel_display.addChild(this.fish3DScene,1);
         panel_display.addChild(this.fish2DLayer,2);
-        panel_display.addChild(this.bulletLayer,3);
         panel_display.addChild(this.effectLayer,4);
+        var top_panel = this.getControl("Panel_Top");
+        top_panel.addChild(this.topLayer,40);
+        top_panel.addChild(this.bulletLayer,1);
+
+
+        var panel_ui = this.getControl("Panel_UI");
+        this.customizeButton("btnHold",GameLayerUI.BTN_HOLD_FISH,panel_ui);
 
         var water = this.createWater();
         water.setOpacity(100);
@@ -43,7 +62,10 @@ var GameLayerUI = BaseLayer.extend({
         water.setScaleX(cc.winSize.width / water.getContentSize().width);
         water.setScaleY(cc.winSize.height / water.getContentSize().height);
 
-
+        this.particleBongNuoc = new cc.ParticleSystem("res/fishData/effect/bong_nuoc_effect.plist");
+        this.topLayer.addChild(this.particleBongNuoc);
+        this.particleBongNuoc.setPosition(0,0);
+        this.particleBongNuoc.setVisible(false);
 
         this.players = [];
         for(var i =0 ;i< MAX_PLAYER;i++)
@@ -53,6 +75,14 @@ var GameLayerUI = BaseLayer.extend({
             player.index = i;
             this.players.push(player);
             panel.setVisible(false);
+
+            player.btnPlus.setPressedActionEnabled(true);
+            player.btnPlus.setTag(GameLayerUI.BTN_PLUS);
+            player.btnPlus.addTouchEventListener(this.onTouchEventHandler,this);
+
+            player.btnSub.setPressedActionEnabled(true);
+            player.btnSub.setTag(GameLayerUI.BTN_SUB);
+            player.btnSub.addTouchEventListener(this.onTouchEventHandler,this);
         }
         this.time = 0;
 
@@ -66,35 +96,74 @@ var GameLayerUI = BaseLayer.extend({
         this.point_to_shoot = vec2(0,0);
 
     },
+    setActionListener: function(lis){
+        this.actionListener = lis;
+    },
+
     initBox2D: function()
     {
         this.gameMgr = new GameManager(new Setting());
         this.gameMgr.setEntityCollisionListener(this.onEntityCollision.bind(this));
-        //this.gameMgr.setOnContactPreSolve(this.onContactPreSolve.bind(this));
+        this.gameMgr.setOnContactPreSolve(this.onContactPreSolve.bind(this));
     },
     onEntityCollision: function(fish,bullet,pointCollide)
     {
         if(bullet.released)
         {
-            cc.log("ERROR : adu : bullet failed~");
+            cc.log("WARNING : this bullet is released , not collide in future!");
             return;
         }
 
-        bullet.released = true;
-        this.createEffectFishFired(vec2(pointCollide.x * PM_RATIO,pointCollide.y *PM_RATIO),bullet.playerID);
-        this.gameMgr.destroyEntity(bullet);
+        var collide_check = false;
+        if(bullet.holdInfo && bullet.holdInfo.isHolding)
+        {
+            collide_check = (bullet.holdInfo.fishForHold == fish);
+        }
+        else
+            collide_check = true;
+        if(collide_check){
+            bullet.released = true;
+            this.createEffectFishFired(vec2(pointCollide.x * PM_RATIO,pointCollide.y *PM_RATIO),bullet.playerID);
+            this.gameMgr.destroyEntity(bullet);
 
-        if(fish.id !== undefined)
-            fishBZ.sendShootFish(2000,fish.id);
+            var spFish = fish.getNodeDisplay().getChildByTag(0);
+            spFish.setColor(cc.color(200,0,0));
+            spFish.stopActionByTag(111);
+            var action = cc.tintTo(.35,255,255,255);action.setTag(111);
+            spFish.runAction(action);
+
+            if(fish.id !== undefined)
+            {
+                fishBZ.sendShootFish(fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
+                if(this.actionListener && this.actionListener.onShootFish){
+                    this.actionListener.onShootFish.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
+                }
+            }
+
+        }
 
     },
-    onContactPreSolve: function(entity1,entity2,pointCollide)
+    onContactPreSolve: function(entityA,entityB,contact)
     {
-        if(entity1._type == Entity.FISH || entity2._type == Entity.FISH)
+        if(entityA._type == Entity.BULLET && entityB._type == Entity.FISH)
         {
-            return false;
+            contact.SetEnabled(false);
         }
-        return true;
+        else if(entityA._type == Entity.FISH && entityB._type == Entity.BULLET)
+        {
+            contact.SetEnabled(false);
+        }
+        else if(entityA._type == Entity.BULLET && entityB._type == Entity.WALL)
+        {
+
+            contact.SetEnabled(!(entityA.holdInfo && entityA.holdInfo.isHolding));
+        }
+        else if(entityB._type == Entity.BULLET && entityA._type == Entity.WALL)
+        {
+            contact.SetEnabled(!(entityB.holdInfo && entityB.holdInfo.isHolding));
+        }
+
+
     },
 
     shoot: function(player,screenPosition)
@@ -103,22 +172,28 @@ var GameLayerUI = BaseLayer.extend({
         sprite.setScale(.75);
         this.bulletLayer.addChild(sprite);
 
-        player.setAngleForGun(screenPosition);
+        var destPosition = screenPosition;
+        if(fishLifeCycle.myPlayer.holdFishInfo.isHolding){
+            var posBody = fishLifeCycle.myPlayer.holdFishInfo.fishForHold.getBodyPosition();
+            destPosition = vec2(posBody.x * PM_RATIO,posBody.y * PM_RATIO);
+        }
+
+        player.setAngleForGun(destPosition);
         player.effectShoot();
 
 
-        var location = vec2(screenPosition.x,screenPosition.y);
-        //cc.log(JSON.stringify(location))
-        var gun_pos = player.fire_node.convertToWorldSpaceAR(cc.p(0,0));
-
-
+        var location = vec2(destPosition.x,destPosition.y);
+        var gun_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
         var bullet = new Bullet(4);
         bullet.playerID = player.index;
         bullet.released = false;
         bullet.setNodeDisplay( sprite);
         this.gameMgr.createBodyForBullet(bullet,vec2(.5,.5));
-
         this.gameMgr.shootBullet(bullet,vec2(gun_pos.x / PM_RATIO,gun_pos.y / PM_RATIO),vec2((location.x - gun_pos.x) / PM_RATIO,(location.y - gun_pos.y) / PM_RATIO));
+        if(fishLifeCycle.myPlayer.holdFishInfo.isHolding){
+            bullet.setHoldInfo(fishLifeCycle.myPlayer.holdFishInfo);
+        }
+        bullet.update(0);
     },
     onEnter: function()
     {
@@ -140,36 +215,8 @@ var GameLayerUI = BaseLayer.extend({
         //matranMap.start(0,0)
 
     },
-    addFish3D: function()
-    {
-        if(this.count >= 10)
-            return;
-        this.count++;
-
-        var fishModel = this.fish3DScene.createFish3D();
-        var fish = new engine.Fish();
-        fish.setNodeDisplay(fishModel);
-
-        fishModel.setUserData(fishModel.camera);
-
-        var rand = Math.floor(Math.random() * 8) + 2;
-        var rand2 = Math.floor(Math.random() * 12) + 1;
-        var path = new PathEntity(10);
-        var pathData = fishData.fishPathData["P_"+rand2];
-
-        for(var i=0;i<pathData.data.length;i++)
-        {
-            path.addPathPoint(pathData.data[i]);
-            //cc.log("add :" + JSON.stringify(pathData.data[i]))
-        }
-        path.calculate();
-        fish.startWithPath(path);
-
-         this.gameMgr.createBodyForFish(fish,vec2(1,1));
-    },
     addFish: function(id,typeFish,pathData,pathTime,elapsedTime)
     {
-
         var sp = this.createFishAnim(typeFish);
         this.fish2DLayer.addChild(sp);
 
@@ -199,7 +246,6 @@ var GameLayerUI = BaseLayer.extend({
 
         this.gameMgr.update(dt);
 
-
         // for enable shoot
         if(!this.enable_shoot)
         {
@@ -210,7 +256,7 @@ var GameLayerUI = BaseLayer.extend({
                 this.enable_shoot = true;
             }
         }
-        //
+        //  for hold mouse
         if(this.hold_mouse)
         {
             this.time_auto_shoot += dt;
@@ -220,7 +266,10 @@ var GameLayerUI = BaseLayer.extend({
                 if(this.gameMgr.state != GameManager.STATE_PREPARE)
                 {
                     this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
-                    fishBZ.sendStartShoot(2000,this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    if(this.actionListener && this.actionListener.onStartShoot){
+                        this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    }
                     fishSound.playEffectShoot();
                 }
                 else{
@@ -228,22 +277,65 @@ var GameLayerUI = BaseLayer.extend({
                 }
             }
         }
+
+        // for holding Fish display
+        for(var i=0;i<this.players.length;i++){
+            if(this.players[i].isEnabled && this.players[i].holdFishInfo.isHolding && this.players[i].holdFishInfo.fishForHold){
+                if(this.players[i].holdFishInfo.fishForHold.released)
+                {
+                    this.players[i].holdFishInfo.isHolding = false;
+                    this.players[i].nodeDisplayHold.setLength(0);
+                    continue;
+                }
+                var posBody = this.players[i].holdFishInfo.fishForHold.getBodyPosition();
+                var screenPosBody = vec2(posBody.x * PM_RATIO,posBody.y * PM_RATIO);
+                this.players[i].setAngleForGun(screenPosBody);
+
+                var gun_pos = this.players[i].fire_real.convertToWorldSpaceAR(cc.p(0,0));
+                var offsetX = screenPosBody.x - gun_pos.x;
+                var offsetY = screenPosBody.y - gun_pos.y;
+                var length = Math.sqrt(offsetX * offsetX + offsetY * offsetY);
+                this.players[i].nodeDisplayHold.setLength(length);
+            }
+        }
     },
-    onCreateFish: function(id,fish_type,path)
+    onCreateFish: function(id,fish_type,path)       // create fish in matran
     {
         //cc.log("id :" + id +" fish: "+fish_type);
         this.addFish(id,fish_type,path,8,0);
     },
     onTouchBegan: function(touch,event)
     {
-        //cc.log(touch.getID())
-        //if(touch.getID() != 0)
-        //    return false;
+        if((touch.getID() !== undefined) && touch.getID() != 0)
+            return false;
         var location = touch.getLocation();
+
+
+        this.particleBongNuoc.stopAllActions();
+        this.particleBongNuoc.setOpacity(100);
+        this.particleBongNuoc.setPosition(location.x,location.y - 40);
+        this.particleBongNuoc.setVisible(true);
+
+        if(fishLifeCycle.myPlayer.holdFishInfo.prepare_hold){
+            var ret = this.gameMgr.getFishByPos(location);
+            if(ret){
+                fishLifeCycle.myPlayer.setHold(ret);
+            }
+            else
+            {
+                fishLifeCycle.myPlayer.releaseHold();
+            }
+            fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
+            return true;
+        }
+
         if(this.enable_shoot && this.gameMgr.state != GameManager.STATE_PREPARE)
         {
             this.shoot(fishLifeCycle.myPlayer,location);
-            fishBZ.sendStartShoot(2000,location.x / PM_RATIO,location.y / PM_RATIO);
+            fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
+            if(this.actionListener && this.actionListener.onStartShoot){
+                this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
+            }
             fishSound.playEffectShoot();
             this.enable_shoot = false;
         }
@@ -258,32 +350,49 @@ var GameLayerUI = BaseLayer.extend({
     },
     onTouchMoved: function(touch,event)
     {
-        //if(touch.getID() != 0)
-        //    return;
+        if((touch.getID() !== undefined) && touch.getID() != 0)
+            return false;
         this.point_to_shoot = touch.getLocation();
         fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
+        this.particleBongNuoc.setPosition(this.point_to_shoot.x,this.point_to_shoot.y - 40);
     },
     onTouchEnded: function(touch,event)
     {
-        //if(touch.getID() != 0)
-        //    return;
+        if((touch.getID() !== undefined) && touch.getID() != 0)
+            return false;
         this.hold_mouse = false;
+        this.particleBongNuoc.runAction(cc.sequence(cc.fadeOut(.5),cc.hide()));
+
     },
     createEffectFishDie: function(fishSp,money,playerIndex)
     {
+        if(!fishSp)
+        {
+            cc.log("WARNING : fishSp is NULL");
+        }
         var pos = fishSp.getPosition();
-        var str = "+" + StringUtility.standartNumber(Math.abs(money));
-        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/Other/fonts/Tien vang-export.fnt":"res/Other/fonts/Tien bac-export.fnt";
+        var str = "" + StringUtility.standartNumber(Math.abs(money));
+        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/fonts/Tien bac-export.fnt":"res/fonts/Tien bac-export.fnt";
         var moneyLb =  new cc.LabelBMFont(str,fontFile,0);
-        moneyLb.setScale(.75);
         moneyLb.setPosition(pos);
 
-        this.effectLayer.addChild(moneyLb);
+        this.effectLayer.addChild(moneyLb,1);
+        // remove fish SP
+        var spF = fishSp.getChildByTag(0);
+        spF.stopActionByTag(110);           //end action swim
+        if(fishSp.getChildByTag(1))
+            fishSp.getChildByTag(1).stopAllActions();
+        //spF.setColor(cc.color(150,0,0));
+        spF.runAction(cc.sequence(cc.delayTime(.85),cc.fadeOut(.15)));
+        fishSp.runAction(cc.sequence(cc.delayTime(1),cc.removeSelf()));
+        //effect money
+        moneyLb.setOpacity(50);
+        moneyLb.setScale(.5);
+        moneyLb.runAction(cc.sequence(new cc.EaseBackOut(cc.scaleTo(.2,.85)),new cc.EaseBackOut(cc.scaleTo(.15,.6)),new cc.EaseBackOut(cc.scaleTo(.2,.85))));
+        moneyLb.runAction(cc.sequence(cc.fadeIn(.25),cc.delayTime(1),cc.fadeOut(.25),cc.removeSelf()));
 
-        fishSp.runAction(cc.sequence(cc.spawn(new cc.EaseBackIn(cc.scaleTo(1,0)),cc.rotateBy(1,360)),cc.removeSelf()));
-        moneyLb.setOpacity(50)
-        moneyLb.runAction(cc.moveBy(1,cc.p(0,75)));
-        moneyLb.runAction(cc.sequence(cc.fadeIn(.25),cc.delayTime(.5),cc.fadeOut(.25),cc.removeSelf()));
+        //effect gold
+        var goldSp = this.createEffectMoney(pos,playerIndex);
     },
     createEffectFishFired: function(pos,index)
     {
@@ -296,25 +405,7 @@ var GameLayerUI = BaseLayer.extend({
         sp.setPosition(pos);
         sp.runAction(cc.sequence(cc.spawn(cc.fadeIn(.25),cc.scaleTo(.25,.7)),cc.fadeTo(.35,0),cc.removeSelf()));
     },
-    createFish2D: function(type)
-    {
-        var obj = fishData.data["fish_X"+type];
-        var sp = new cc.Sprite(obj["template_path"] +"00.png");
-        var shader = cc.GLProgram.createWithFilenames("shaders/ccShader_PositionTextureColor_noMVP.vert","shaders/ccShader_PositionTextureColor_noMVP.frag");
-        sp.setShaderProgram(shader);
-        //sp.setScale(.5);
 
-        var animation = new cc.Animation()
-        for (var i = 1; i < obj["count"]; i++) {
-            var frameName = obj["template_path"] + ((i < 10) ? ("0" + i) : i) + ".png";
-            animation.addSpriteFrameWithFile(frameName);
-        }
-        animation.setDelayPerUnit(0.1);
-        var action = cc.animate(animation);
-        sp.runAction(cc.repeatForever(action));
-        //sp.setVisible(false);
-        return sp;
-    },
     createWater: function()
     {
         var sp = new cc.Sprite("res/fishData/water/water_0.png");
@@ -340,18 +431,18 @@ var GameLayerUI = BaseLayer.extend({
             var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("fish_" +type +"_01.png"));
             var action = cc.animate(animation);
             sp.runAction(cc.repeatForever(action));
-            node.addChild(sp,0);
-            sp.setPosition(data["shadow_offset"][0],data["shadow_offset"][1]);
+            node.addChild(sp,0,1);
+            sp.setPosition(data["shadow_offset"][0] + data["sprite_offset"][0],data["shadow_offset"][1] +  data["sprite_offset"][1]);
             sp.setColor(cc.color(0,0,0));
             sp.setOpacity(100);
             //sp.setFlippedX(true);
         }
         var sp2 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("fish_" +type +"_01.png"));
-        sp2.runAction(cc.repeatForever(cc.animate(animation)));
-        node.addChild(sp2,1);
+        var action =cc.repeatForever(cc.animate(animation));action.setTag(110);
+        sp2.runAction(action);
+        node.addChild(sp2,1,0);
+        sp2.setPosition( data["sprite_offset"][0], data["sprite_offset"][1]);
         //sp2.setFlippedX(true);
-
-
         if(Config.DEBUG)
         {
             var ww = data["box"][0] * PM_RATIO;
@@ -368,7 +459,75 @@ var GameLayerUI = BaseLayer.extend({
 
 
         return node;
+    },
+    onButtonReleased: function(btn,id){
+        switch (id){
+            case GameLayerUI.BTN_HOLD_FISH:{
+                if(!fishLifeCycle.myPlayer.holdFishInfo.isHolding)
+                    fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = true;
+                else
+                {
+                    fishLifeCycle.myPlayer.releaseHold();
+                }
+                break;
+            }
+            case GameLayerUI.BTN_PLUS:
+            {
+                fishLifeCycle.myBetIdx++;
+                if(fishLifeCycle.myBetIdx >= (fishLifeCycle.bets.length-1))
+                    fishLifeCycle.myBetIdx = (fishLifeCycle.bets.length-1);
+
+                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx]);
+
+                break;
+            }
+            case GameLayerUI.BTN_SUB:
+            {
+                fishLifeCycle.myBetIdx--;
+                if(fishLifeCycle.myBetIdx <= 0)
+                    fishLifeCycle.myBetIdx = 0;
+
+                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx]);
+                break;
+            }
+        }
+    },
+    createEffectMoney: function(pos,playerIndex)
+    {
+        var node = new cc.Node();
+        var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("coin1_0.png"));
+        this.effectLayer.addChild(node);
+        var animation = new cc.Animation();
+        for (var i = 0; i < 5; i++) {
+            var frameName = "coin1_"+ i + ".png";
+            animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame(frameName));
+        }
+        animation.setDelayPerUnit(0.075);
+        var action = cc.animate(animation);
+        sp.runAction(cc.repeatForever(action));
+
+        sp.setRotation(90);;
+        sp.setColor(cc.color(220,220,220))
+        node.addChild(sp);
+        sp.setScale(.75);
+
+        var destPos = this.players[playerIndex].lbMoney1.convertToWorldSpaceAR(cc.p(0,0));
+        var offset = cc.p(pos.x - destPos.x,pos.y - destPos.y);
+        var distance = Math.sqrt(offset.x * offset.x + offset.y * offset.y);
+        var time = distance / 1280;
+        node.setPosition(pos.x , pos. y + 20);
+        node.runAction(cc.sequence(cc.moveTo(.15,cc.p(pos.x,pos.y + 80)),new cc.EaseBounceOut(cc.moveBy(.45,cc.p(0,-100))),
+            cc.delayTime(.15),cc.moveTo(time,cc.p(destPos)),cc.fadeOut(.25),cc.removeSelf()
+        ))
+
+        return node;
     }
 
 
 });
+
+GameLayerUI.BTN_HOLD_FISH = 0;
+GameLayerUI.BTN_MENU = 1;
+
+GameLayerUI.BTN_PLUS = 2;
+GameLayerUI.BTN_SUB = 3;

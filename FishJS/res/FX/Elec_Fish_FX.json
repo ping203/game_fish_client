@@ -1,0 +1,46 @@
+{
+"skeleton": { "hash": "+blksHmKVWOIDL4hb1APVuObf6k", "spine": "3.5.44", "width": 120, "height": 39, "images": "" },
+"bones": [
+	{ "name": "Elec_Fish_FX" },
+	{ "name": "EFX0001", "parent": "Elec_Fish_FX" }
+],
+"slots": [
+	{ "name": "EFX0001", "bone": "EFX0001", "color": "ffffffdd", "attachment": "EFX0001", "blend": "screen" }
+],
+"skins": {
+	"default": {
+		"EFX0001": {
+			"EFX0001": { "width": 120, "height": 39 },
+			"EFX0002": { "width": 120, "height": 39 },
+			"EFX0003": { "width": 120, "height": 39 },
+			"EFX0004": { "width": 120, "height": 39 },
+			"EFX0005": { "width": 120, "height": 39 },
+			"EFX0006": { "width": 120, "height": 39 },
+			"EFX0007": { "width": 120, "height": 39 },
+			"EFX0008": { "width": 120, "height": 39 },
+			"EFX0009": { "width": 120, "height": 39 },
+			"EFX0010": { "width": 120, "height": 39 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"EFX0001": {
+				"attachment": [
+					{ "time": 0, "name": "EFX0001" },
+					{ "time": 0.0667, "name": "EFX0002" },
+					{ "time": 0.1333, "name": "EFX0003" },
+					{ "time": 0.2, "name": "EFX0004" },
+					{ "time": 0.2667, "name": "EFX0005" },
+					{ "time": 0.3333, "name": "EFX0006" },
+					{ "time": 0.4, "name": "EFX0007" },
+					{ "time": 0.4667, "name": "EFX0008" },
+					{ "time": 0.5333, "name": "EFX0009" },
+					{ "time": 0.6, "name": "EFX0010" }
+				]
+			}
+		}
+	}
+}
+}

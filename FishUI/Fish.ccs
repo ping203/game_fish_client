@@ -266,11 +266,16 @@
             <Image Name="gift.png" />
             <Image Name="giu_ca.png" />
             <Image Name="gold.png" />
+            <Image Name="hold_fish.png" />
+            <Image Name="hold_icon.png" />
             <Image Name="khung_ava.png" />
             <Image Name="khung_time.png" />
             <Image Name="light.png" />
             <Image Name="ngoc.png" />
             <Image Name="nong_sung.png" />
+            <Image Name="v2.png_1.png" />
+            <Image Name="v2.png_124.png" />
+            <Image Name="v3.png_1.png" />
           </Folder>
         </Folder>
         <Folder Name="Sounds">

@@ -6,10 +6,10 @@
       <ObjectData Name="Layer" Tag="4" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_bg" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_bg" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg0" ActionTag="-911620121" Tag="11" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="bg0" ActionTag="-911620121" Tag="11" IconVisible="False" LeftMargin="-1.0000" RightMargin="-1079.0000" TopMargin="-519.0000" BottomMargin="-1.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <Children>
                   <AbstractNodeData Name="bongnuoc" ActionTag="-694818474" Tag="91" IconVisible="True" LeftMargin="353.2925" RightMargin="926.7075" TopMargin="247.2654" BottomMargin="472.7346" ctype="ParticleObjectData">
@@ -25,10 +25,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="640.0000" Y="360.0000" />
+                <Position X="639.0000" Y="359.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="3.2000" Y="1.8000" />
+                <PrePosition X="3.1950" Y="1.7950" />
                 <PreSize X="6.4000" Y="3.6000" />
                 <FileData Type="Normal" Path="ScreenGame/Background/bg2.jpg" Plist="" />
               </AbstractNodeData>
@@ -103,7 +103,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="gay" ActionTag="117900689" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="gay" ActionTag="117900689" VisibleForFrame="False" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
             <Size X="447.0000" Y="107.0000" />
             <Children>
               <AbstractNodeData Name="Particle_2" ActionTag="1016150746" Tag="52" IconVisible="True" LeftMargin="373.6724" RightMargin="73.3276" TopMargin="50.6213" BottomMargin="56.3787" ctype="ParticleObjectData">
@@ -150,7 +150,7 @@
           <AbstractNodeData Name="player_0" ActionTag="152389595" Tag="7" IconVisible="False" LeftMargin="184.1754" RightMargin="895.8246" TopMargin="517.9312" BottomMargin="2.0688" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-575713470" Tag="34" IconVisible="False" LeftMargin="-263.4991" RightMargin="159.4991" TopMargin="30.5371" BottomMargin="-60.5371" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="bg_thongtin" ActionTag="-575713470" Tag="34" IconVisible="False" LeftMargin="-266.1635" RightMargin="162.1635" TopMargin="32.3133" BottomMargin="-62.3133" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
                 <Size X="304.0000" Y="230.0000" />
                 <Children>
                   <AbstractNodeData Name="avatar" ActionTag="1413847253" Tag="35" IconVisible="False" LeftMargin="11.9012" RightMargin="203.0988" TopMargin="14.5051" BottomMargin="127.4949" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
@@ -241,122 +241,142 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="-111.4991" Y="54.4629" />
+                <Position X="-114.1635" Y="52.6867" />
                 <Scale ScaleX="0.4497" ScaleY="0.4497" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.5575" Y="0.2723" />
+                <PrePosition X="-0.5708" Y="0.2634" />
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="455922431" Tag="41" IconVisible="True" LeftMargin="87.8186" RightMargin="112.1814" TopMargin="146.2654" BottomMargin="53.7346" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="455922431" Tag="41" IconVisible="True" LeftMargin="91.2766" RightMargin="108.7234" TopMargin="147.1772" BottomMargin="52.8228" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="de_sung" ActionTag="386459321" Tag="40" IconVisible="False" LeftMargin="-108.0217" RightMargin="-87.9783" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
-                    <Size X="196.0000" Y="198.0000" />
+                  <AbstractNodeData Name="sung" ActionTag="641217244" Tag="117" IconVisible="True" LeftMargin="-3.0000" RightMargin="3.0000" TopMargin="2.2530" BottomMargin="-2.2530" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="nong_sung" ActionTag="-2049506231" Tag="42" IconVisible="False" LeftMargin="4.5080" RightMargin="-4.5080" TopMargin="-71.0600" BottomMargin="71.0600" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="de_sung" ActionTag="386459321" Tag="40" IconVisible="False" LeftMargin="-100.4312" RightMargin="-95.5688" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="102.5080" Y="170.0600" />
+                        <Position X="-2.4312" Y="-9.6526" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire_real" ActionTag="-1572053010" Tag="95" IconVisible="True" LeftMargin="-3.2951" RightMargin="3.2951" TopMargin="-75.5096" BottomMargin="75.5096" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.2951" Y="75.5096" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5230" Y="0.8589" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire" ActionTag="-1033799091" Tag="44" IconVisible="True" LeftMargin="-3.0491" RightMargin="3.0491" TopMargin="16.4341" BottomMargin="-16.4341" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.0491" Y="-16.4341" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="nong_sung" ActionTag="-2049506231" Tag="42" IconVisible="False" LeftMargin="-98.6210" RightMargin="-97.3790" TopMargin="-131.8940" BottomMargin="-66.1060" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                        <Size X="196.0000" Y="198.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-0.6210" Y="32.8940" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/nong_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="duoi_sung" ActionTag="-115029110" Tag="43" IconVisible="False" LeftMargin="5.4055" RightMargin="-5.4055" TopMargin="-51.1330" BottomMargin="51.1330" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="duoi_sung" ActionTag="-115029110" Tag="43" IconVisible="False" LeftMargin="-97.7235" RightMargin="-98.2765" TopMargin="-114.8400" BottomMargin="-83.1600" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="103.4055" Y="150.1330" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <Position X="0.2765" Y="15.8400" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5276" Y="0.7582" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/duoi_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="fire" ActionTag="-1033799091" Tag="44" IconVisible="True" LeftMargin="94.2340" RightMargin="101.7660" TopMargin="87.2080" BottomMargin="110.7920" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="94.2340" Y="110.7920" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4808" Y="0.5596" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="fire_real" ActionTag="-1572053010" Tag="95" IconVisible="True" LeftMargin="96.6808" RightMargin="99.3192" TopMargin="-60.9868" BottomMargin="258.9868" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="96.6808" Y="258.9868" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4933" Y="1.3080" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
                     </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-10.0217" Y="-9.6526" />
+                    <AnchorPoint />
+                    <Position X="-3.0000" Y="-2.2530" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnPlus" ActionTag="1686389128" Tag="21" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="149.6338" Y="-48.3721" />
-                    <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                  <AbstractNodeData Name="ui" ActionTag="-1932203395" Tag="118" IconVisible="True" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <Children>
+                      <AbstractNodeData Name="btnPlus" ActionTag="1686389128" Tag="21" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="149.6338" Y="-48.3721" />
+                        <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnSub" ActionTag="559754922" Tag="22" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-174.5594" Y="-47.9869" />
+                        <Scale ScaleX="0.7998" ScaleY="0.7998" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="gun_info_bg" ActionTag="-479571181" Tag="11" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
+                        <Size X="243.0000" Y="132.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-12.0631" Y="-15.1311" />
+                        <Scale ScaleX="1.2162" ScaleY="1.2162" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="money" ActionTag="1017071008" Tag="24" IconVisible="False" LeftMargin="-48.0036" RightMargin="-19.9964" TopMargin="34.8547" BottomMargin="-69.8547" LabelText="100" ctype="TextBMFontObjectData">
+                        <Size X="68.0000" Y="35.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-14.0036" Y="-52.3547" />
+                        <Scale ScaleX="1.1644" ScaleY="1.1644" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position />
+                    <Scale ScaleX="0.5500" ScaleY="0.5500" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="btnSub" ActionTag="559754922" Tag="22" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-174.5594" Y="-47.9869" />
-                    <Scale ScaleX="0.7998" ScaleY="0.7998" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="gun_info_bg" ActionTag="-479571181" Tag="11" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
-                    <Size X="243.0000" Y="132.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-12.0631" Y="-15.1311" />
-                    <Scale ScaleX="1.2162" ScaleY="1.2162" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="1017071008" Tag="24" IconVisible="False" LeftMargin="-48.0036" RightMargin="-19.9964" TopMargin="34.8547" BottomMargin="-69.8547" LabelText="100" ctype="TextBMFontObjectData">
-                    <Size X="68.0000" Y="35.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-14.0036" Y="-52.3547" />
-                    <Scale ScaleX="1.1644" ScaleY="1.1644" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="87.8186" Y="53.7346" />
-                <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                <Position X="91.2766" Y="52.8228" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4391" Y="0.2687" />
+                <PrePosition X="0.4564" Y="0.2641" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
             </Children>
@@ -371,7 +391,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="861.1094" RightMargin="218.8906" TopMargin="516.6855" BottomMargin="3.3145" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="865.5502" RightMargin="214.4498" TopMargin="518.4618" BottomMargin="1.5382" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="bg_thongtin" ActionTag="-466924181" Tag="54" IconVisible="False" LeftMargin="191.0526" RightMargin="-295.0526" TopMargin="32.8408" BottomMargin="-62.8408" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -472,123 +492,143 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="624260449" Tag="110" IconVisible="True" LeftMargin="156.8684" RightMargin="43.1316" TopMargin="148.9673" BottomMargin="51.0327" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="-1383580229" Tag="119" IconVisible="True" LeftMargin="152.7901" RightMargin="47.2099" TopMargin="147.4072" BottomMargin="52.5928" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="de_sung" ActionTag="-1127837565" Tag="111" IconVisible="False" LeftMargin="-108.0217" RightMargin="-87.9783" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
-                    <Size X="196.0000" Y="198.0000" />
+                  <AbstractNodeData Name="sung" ActionTag="-1560530727" Tag="120" IconVisible="True" LeftMargin="-3.0000" RightMargin="3.0000" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="nong_sung" ActionTag="-926596437" Tag="112" IconVisible="False" LeftMargin="4.5080" RightMargin="-4.5080" TopMargin="-71.0000" BottomMargin="71.0000" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="de_sung" ActionTag="-1741869425" Tag="121" IconVisible="False" LeftMargin="-100.4312" RightMargin="-95.5688" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="102.5080" Y="170.0000" />
+                        <Position X="-2.4312" Y="-9.6526" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire_real" ActionTag="-792550019" Tag="122" IconVisible="True" LeftMargin="-3.2951" RightMargin="3.2951" TopMargin="-75.5096" BottomMargin="75.5096" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.2951" Y="75.5096" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5230" Y="0.8586" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire" ActionTag="499411152" Tag="123" IconVisible="True" LeftMargin="-3.0491" RightMargin="3.0491" TopMargin="16.4341" BottomMargin="-16.4341" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.0491" Y="-16.4341" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="nong_sung" ActionTag="2076462241" Tag="124" IconVisible="False" LeftMargin="-98.6210" RightMargin="-97.3790" TopMargin="-131.8940" BottomMargin="-66.1060" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                        <Size X="196.0000" Y="198.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-0.6210" Y="32.8940" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/nong_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="duoi_sung" ActionTag="953758180" Tag="113" IconVisible="False" LeftMargin="5.4055" RightMargin="-5.4055" TopMargin="-51.1330" BottomMargin="51.1330" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="duoi_sung" ActionTag="-212756437" Tag="125" IconVisible="False" LeftMargin="-97.7235" RightMargin="-98.2765" TopMargin="-114.8400" BottomMargin="-83.1600" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="103.4055" Y="150.1330" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <Position X="0.2765" Y="15.8400" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5276" Y="0.7582" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/duoi_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="fire" ActionTag="-2034207444" Tag="114" IconVisible="True" LeftMargin="93.5644" RightMargin="102.4356" TopMargin="95.2409" BottomMargin="102.7591" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="93.5644" Y="102.7591" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4774" Y="0.5190" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="fire_real" ActionTag="1277055769" Tag="96" IconVisible="True" LeftMargin="97.8028" RightMargin="98.1972" TopMargin="-61.9986" BottomMargin="259.9986" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="97.8028" Y="259.9986" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4990" Y="1.3131" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
                     </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-10.0217" Y="-9.6526" />
+                    <AnchorPoint />
+                    <Position X="-3.0000" Y="-2.2500" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnPlus" ActionTag="-2054451243" VisibleForFrame="False" Tag="115" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="149.6338" Y="-48.3721" />
-                    <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                  <AbstractNodeData Name="ui" ActionTag="117626684" Tag="126" IconVisible="True" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <Children>
+                      <AbstractNodeData Name="btnPlus" ActionTag="-473776084" Tag="127" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="149.6338" Y="-48.3721" />
+                        <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnSub" ActionTag="644864743" Tag="128" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-174.5594" Y="-47.9869" />
+                        <Scale ScaleX="0.7998" ScaleY="0.7998" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="gun_info_bg" ActionTag="1591156424" Tag="129" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
+                        <Size X="243.0000" Y="132.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-12.0631" Y="-15.1311" />
+                        <Scale ScaleX="1.2162" ScaleY="1.2162" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="money" ActionTag="101807393" Tag="130" IconVisible="False" LeftMargin="-48.0036" RightMargin="-19.9964" TopMargin="34.8547" BottomMargin="-69.8547" LabelText="100" ctype="TextBMFontObjectData">
+                        <Size X="68.0000" Y="35.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-14.0036" Y="-52.3547" />
+                        <Scale ScaleX="1.1644" ScaleY="1.1644" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position />
+                    <Scale ScaleX="0.5500" ScaleY="0.5500" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="btnSub" ActionTag="1498749593" VisibleForFrame="False" Tag="116" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-174.5594" Y="-47.9869" />
-                    <Scale ScaleX="0.7998" ScaleY="0.7998" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="gun_info_bg" ActionTag="-1488717813" Tag="117" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
-                    <Size X="243.0000" Y="132.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-12.0631" Y="-15.1311" />
-                    <Scale ScaleX="1.2162" ScaleY="1.2162" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="-626704319" Tag="118" IconVisible="False" LeftMargin="-48.0037" RightMargin="-19.9963" TopMargin="29.1860" BottomMargin="-64.1860" LabelText="100" ctype="TextBMFontObjectData">
-                    <Size X="68.0000" Y="35.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-14.0037" Y="-46.6860" />
-                    <Scale ScaleX="1.1600" ScaleY="1.1600" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="156.8684" Y="51.0327" />
-                <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                <Position X="152.7901" Y="52.5928" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7843" Y="0.2552" />
+                <PrePosition X="0.7640" Y="0.2630" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="861.1094" Y="3.3145" />
+            <Position X="865.5502" Y="1.5382" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6727" Y="0.0046" />
+            <PrePosition X="0.6762" Y="0.0021" />
             <PreSize X="0.1563" Y="0.2778" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
@@ -696,115 +736,135 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="-2025476440" Tag="119" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="141.9071" RightMargin="58.0929" TopMargin="69.6693" BottomMargin="130.3307" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="1375388040" Tag="131" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="140.2082" RightMargin="59.7918" TopMargin="71.3491" BottomMargin="128.6509" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="de_sung" ActionTag="-564480344" Tag="120" IconVisible="False" LeftMargin="-108.0217" RightMargin="-87.9783" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
-                    <Size X="196.0000" Y="198.0000" />
+                  <AbstractNodeData Name="sung" ActionTag="1236375401" Tag="132" IconVisible="True" LeftMargin="-3.0701" RightMargin="3.0701" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="nong_sung" ActionTag="284188088" Tag="121" IconVisible="False" LeftMargin="4.5080" RightMargin="-4.5080" TopMargin="-71.0000" BottomMargin="71.0000" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="de_sung" ActionTag="-584567260" Tag="133" IconVisible="False" LeftMargin="-100.4312" RightMargin="-95.5688" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="102.5080" Y="170.0000" />
+                        <Position X="-2.4312" Y="-9.6526" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire_real" ActionTag="-2135327641" Tag="134" IconVisible="True" LeftMargin="-3.2951" RightMargin="3.2951" TopMargin="-75.5096" BottomMargin="75.5096" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.2951" Y="75.5096" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5230" Y="0.8586" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire" ActionTag="-2137457269" Tag="135" IconVisible="True" LeftMargin="-3.0491" RightMargin="3.0491" TopMargin="16.4341" BottomMargin="-16.4341" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.0491" Y="-16.4341" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="nong_sung" ActionTag="1665855216" Tag="136" IconVisible="False" LeftMargin="-98.6210" RightMargin="-97.3790" TopMargin="-131.8940" BottomMargin="-66.1060" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                        <Size X="196.0000" Y="198.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-0.6210" Y="32.8940" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/nong_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="duoi_sung" ActionTag="-923798210" Tag="122" IconVisible="False" LeftMargin="5.4055" RightMargin="-5.4055" TopMargin="-51.1330" BottomMargin="51.1330" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="duoi_sung" ActionTag="-943252105" Tag="137" IconVisible="False" LeftMargin="-97.7235" RightMargin="-98.2765" TopMargin="-114.8400" BottomMargin="-83.1600" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="103.4055" Y="150.1330" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <Position X="0.2765" Y="15.8400" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5276" Y="0.7582" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/duoi_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="fire" ActionTag="340450229" Tag="123" IconVisible="True" LeftMargin="93.5644" RightMargin="102.4356" TopMargin="95.2409" BottomMargin="102.7591" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="93.5644" Y="102.7591" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4774" Y="0.5190" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="fire_real" ActionTag="1503565028" Tag="97" IconVisible="True" LeftMargin="98.6196" RightMargin="97.3804" TopMargin="-60.0237" BottomMargin="258.0237" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="98.6196" Y="258.0237" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5032" Y="1.3032" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
                     </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-10.0217" Y="-9.6526" />
+                    <AnchorPoint />
+                    <Position X="-3.0701" Y="-2.2500" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnPlus" ActionTag="201753775" VisibleForFrame="False" Tag="124" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="149.6338" Y="-48.3721" />
-                    <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                  <AbstractNodeData Name="ui" ActionTag="1181474380" Tag="138" IconVisible="True" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <Children>
+                      <AbstractNodeData Name="btnPlus" ActionTag="1310747908" Tag="139" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="149.6338" Y="-48.3721" />
+                        <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnSub" ActionTag="-1650414890" Tag="140" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-174.5594" Y="-47.9869" />
+                        <Scale ScaleX="0.7998" ScaleY="0.7998" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="gun_info_bg" ActionTag="-1874886406" Tag="141" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
+                        <Size X="243.0000" Y="132.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-12.0631" Y="-15.1311" />
+                        <Scale ScaleX="1.2162" ScaleY="1.2162" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="money" ActionTag="1425857637" Tag="142" IconVisible="False" LeftMargin="-48.0036" RightMargin="-19.9964" TopMargin="34.8547" BottomMargin="-69.8547" LabelText="100" ctype="TextBMFontObjectData">
+                        <Size X="68.0000" Y="35.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-14.0036" Y="-52.3547" />
+                        <Scale ScaleX="1.1644" ScaleY="1.1644" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position />
+                    <Scale ScaleX="0.5500" ScaleY="0.5500" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="btnSub" ActionTag="-364529629" VisibleForFrame="False" Tag="125" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-174.5594" Y="-47.9869" />
-                    <Scale ScaleX="0.7998" ScaleY="0.7998" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="gun_info_bg" ActionTag="803584640" Tag="126" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
-                    <Size X="243.0000" Y="132.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-12.0631" Y="-15.1311" />
-                    <Scale ScaleX="1.2162" ScaleY="1.2162" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="-1687639305" Tag="127" IconVisible="False" LeftMargin="-48.0037" RightMargin="-19.9963" TopMargin="29.1860" BottomMargin="-64.1860" LabelText="100" ctype="TextBMFontObjectData">
-                    <Size X="68.0000" Y="35.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-14.0037" Y="-46.6860" />
-                    <Scale ScaleX="1.1600" ScaleY="1.1600" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="141.9071" Y="130.3307" />
-                <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                <Position X="140.2082" Y="128.6509" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7095" Y="0.6517" />
+                <PrePosition X="0.7010" Y="0.6433" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
             </Children>
@@ -819,7 +879,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="player_3" ActionTag="-1909796107" Tag="91" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="115.9219" RightMargin="964.0781" TopMargin="-9.9412" BottomMargin="529.9412" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="player_3" ActionTag="-1909796107" Tag="91" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="110.9214" RightMargin="969.0786" TopMargin="-11.0167" BottomMargin="531.0167" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="bg_thongtin" ActionTag="197803350" Tag="92" IconVisible="False" LeftMargin="-192.4480" RightMargin="88.4480" TopMargin="-49.6121" BottomMargin="19.6121" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -920,123 +980,143 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="-901377871" Tag="128" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="144.1515" RightMargin="55.8485" TopMargin="64.1599" BottomMargin="135.8401" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="-1903671060" Tag="143" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="148.4968" RightMargin="51.5032" TopMargin="66.7783" BottomMargin="133.2217" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="de_sung" ActionTag="1807865289" Tag="129" IconVisible="False" LeftMargin="-108.0217" RightMargin="-87.9783" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
-                    <Size X="196.0000" Y="198.0000" />
+                  <AbstractNodeData Name="sung" ActionTag="-1652783757" Tag="144" IconVisible="True" LeftMargin="-3.0701" RightMargin="3.0701" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="nong_sung" ActionTag="-586104997" Tag="130" IconVisible="False" LeftMargin="4.5080" RightMargin="-4.5080" TopMargin="-71.0000" BottomMargin="71.0000" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="de_sung" ActionTag="1708600090" Tag="145" IconVisible="False" LeftMargin="-100.4312" RightMargin="-95.5688" TopMargin="-89.3474" BottomMargin="-108.6526" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="102.5080" Y="170.0000" />
+                        <Position X="-2.4312" Y="-9.6526" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire_real" ActionTag="-649582092" Tag="146" IconVisible="True" LeftMargin="-3.2951" RightMargin="3.2951" TopMargin="-75.5096" BottomMargin="75.5096" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.2951" Y="75.5096" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5230" Y="0.8586" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="fire" ActionTag="-1001209340" Tag="147" IconVisible="True" LeftMargin="-3.0491" RightMargin="3.0491" TopMargin="16.4341" BottomMargin="-16.4341" ctype="SingleNodeObjectData">
+                        <Size X="0.0000" Y="0.0000" />
+                        <AnchorPoint />
+                        <Position X="-3.0491" Y="-16.4341" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="nong_sung" ActionTag="30491063" Tag="148" IconVisible="False" LeftMargin="-98.6210" RightMargin="-97.3790" TopMargin="-131.8940" BottomMargin="-66.1060" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                        <Size X="196.0000" Y="198.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-0.6210" Y="32.8940" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/nong_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="duoi_sung" ActionTag="-1998641930" Tag="131" IconVisible="False" LeftMargin="5.4055" RightMargin="-5.4055" TopMargin="-51.1330" BottomMargin="51.1330" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="duoi_sung" ActionTag="548569318" Tag="149" IconVisible="False" LeftMargin="-97.7235" RightMargin="-98.2765" TopMargin="-114.8400" BottomMargin="-83.1600" LeftEage="64" RightEage="64" TopEage="65" BottomEage="65" Scale9OriginX="64" Scale9OriginY="65" Scale9Width="68" Scale9Height="68" ctype="ImageViewObjectData">
                         <Size X="196.0000" Y="198.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="103.4055" Y="150.1330" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <Position X="0.2765" Y="15.8400" />
+                        <Scale ScaleX="0.5500" ScaleY="0.5500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5276" Y="0.7582" />
-                        <PreSize X="1.0000" Y="1.0000" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
                         <FileData Type="Normal" Path="ScreenGame/UI_Ingame/duoi_sung.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="fire" ActionTag="-1778216144" Tag="132" IconVisible="True" LeftMargin="93.5644" RightMargin="102.4356" TopMargin="95.2409" BottomMargin="102.7591" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="93.5644" Y="102.7591" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4774" Y="0.5190" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="fire_real" ActionTag="-1379759780" Tag="98" IconVisible="True" LeftMargin="99.7800" RightMargin="96.2200" TopMargin="-61.1834" BottomMargin="259.1834" ctype="SingleNodeObjectData">
-                        <Size X="0.0000" Y="0.0000" />
-                        <AnchorPoint />
-                        <Position X="99.7800" Y="259.1834" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5091" Y="1.3090" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                      </AbstractNodeData>
                     </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-10.0217" Y="-9.6526" />
+                    <AnchorPoint />
+                    <Position X="-3.0701" Y="-2.2500" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_gun .png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnPlus" ActionTag="1979786111" VisibleForFrame="False" Tag="133" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="149.6338" Y="-48.3721" />
-                    <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                  <AbstractNodeData Name="ui" ActionTag="1001453103" Tag="150" IconVisible="True" ctype="SingleNodeObjectData">
+                    <Size X="0.0000" Y="0.0000" />
+                    <Children>
+                      <AbstractNodeData Name="btnPlus" ActionTag="727454266" Tag="151" IconVisible="False" LeftMargin="65.1338" RightMargin="-234.1338" TopMargin="-11.1279" BottomMargin="-107.8721" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="149.6338" Y="-48.3721" />
+                        <Scale ScaleX="0.8094" ScaleY="0.8094" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnSub" ActionTag="-1335311281" Tag="152" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="169.0000" Y="119.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-174.5594" Y="-47.9869" />
+                        <Scale ScaleX="0.7998" ScaleY="0.7998" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="gun_info_bg" ActionTag="1288443171" Tag="153" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
+                        <Size X="243.0000" Y="132.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-12.0631" Y="-15.1311" />
+                        <Scale ScaleX="1.2162" ScaleY="1.2162" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="money" ActionTag="-1833605968" Tag="154" IconVisible="False" LeftMargin="-48.0036" RightMargin="-19.9964" TopMargin="34.8547" BottomMargin="-69.8547" LabelText="100" ctype="TextBMFontObjectData">
+                        <Size X="68.0000" Y="35.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="-14.0036" Y="-52.3547" />
+                        <Scale ScaleX="1.1644" ScaleY="1.1644" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position />
+                    <Scale ScaleX="0.5500" ScaleY="0.5500" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_plus_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="btnSub" ActionTag="621007236" VisibleForFrame="False" Tag="134" IconVisible="False" LeftMargin="-259.0594" RightMargin="90.0594" TopMargin="-11.5131" BottomMargin="-107.4869" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="139" Scale9Height="97" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="169.0000" Y="119.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-174.5594" Y="-47.9869" />
-                    <Scale ScaleX="0.7998" ScaleY="0.7998" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_pressed.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/button_sub_normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="gun_info_bg" ActionTag="1393410239" Tag="135" IconVisible="False" LeftMargin="-133.5631" RightMargin="-109.4369" TopMargin="-50.8689" BottomMargin="-81.1311" LeftEage="46" RightEage="46" TopEage="52" BottomEage="52" Scale9OriginX="46" Scale9OriginY="52" Scale9Width="151" Scale9Height="28" ctype="ImageViewObjectData">
-                    <Size X="243.0000" Y="132.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-12.0631" Y="-15.1311" />
-                    <Scale ScaleX="1.2162" ScaleY="1.2162" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="ScreenGame/UI_Ingame/de_sung.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="-1342587847" Tag="136" IconVisible="False" LeftMargin="-48.0037" RightMargin="-19.9963" TopMargin="29.1860" BottomMargin="-64.1860" LabelText="100" ctype="TextBMFontObjectData">
-                    <Size X="68.0000" Y="35.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-14.0037" Y="-46.6860" />
-                    <Scale ScaleX="1.1600" ScaleY="1.1600" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <LabelBMFontFile_CNB Type="Normal" Path="Fonts/SoDan.fnt" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="144.1515" Y="135.8401" />
-                <Scale ScaleX="0.5500" ScaleY="0.5500" />
+                <Position X="148.4968" Y="133.2217" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7208" Y="0.6792" />
+                <PrePosition X="0.7425" Y="0.6661" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="115.9219" Y="529.9412" />
+            <Position X="110.9214" Y="531.0167" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0906" Y="0.7360" />
+            <PrePosition X="0.0867" Y="0.7375" />
             <PreSize X="0.1563" Y="0.2778" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
@@ -1050,6 +1130,36 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
+            <PreSize X="0.1563" Y="0.2778" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Panel_UI" ActionTag="-1004251529" Tag="115" IconVisible="False" LeftMargin="605.4634" RightMargin="474.5366" TopMargin="504.6108" BottomMargin="15.3892" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="btnHold" ActionTag="-1604838559" Tag="116" IconVisible="False" LeftMargin="-1.4789" RightMargin="47.4789" TopMargin="107.6640" BottomMargin="-62.6640" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="124" Scale9Height="133" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="154.0000" Y="155.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="75.5211" Y="14.8360" />
+                <Scale ScaleX="0.4996" ScaleY="0.4996" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3776" Y="0.0742" />
+                <PreSize X="0.7700" Y="0.7750" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/giu_ca.png" Plist="" />
+                <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/giu_ca.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="605.4634" Y="15.3892" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4730" Y="0.0214" />
             <PreSize X="0.1563" Y="0.2778" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />

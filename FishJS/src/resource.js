@@ -44,8 +44,19 @@ var g_resources = [
     "res/GUI/GameLayer.json",
     "res/GUI/LoginLayer.json",
     "res/GUI/LobbyScene.json",
+    "res/GUI/CreatePathScene.json",
+    "res/FX/electric_fix2.json",
+    "res/FX/electric_fix2.atlas",
+    "res/FX/electric_fix2.png",
+    "res/FX/laser_02.json",
+    "res/FX/laser_02.atlas",
+    "res/FX/laser_02.png",
 
+    "res/fonts/Tien vang-export.fnt",
+    "res/fonts/Tien bac-export.fnt",
+    "res/fishData/effect/bong_nuoc_effect.plist",
+    "res/fishData/effect/coin1.plist",
+    "res/fishData/effect/spray.plist"
 
-    "res/GUI/CreatePathScene.json"
 
 ];

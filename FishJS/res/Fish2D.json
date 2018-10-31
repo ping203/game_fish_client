@@ -2,56 +2,62 @@
   "fish_type_1" :{
     "name" : "Ca Xanh" ,
     "anim_swim" : "",
-    "scale" : 0.7,
-    "zorder": 1,
+    "scale" : 0.5,
+    "zorder": 0,
     "box": [0.5,0.75],
     "shadow": true,
-    "shadow_offset" : [10,10]
+    "shadow_offset" : [10,10],
+    "sprite_offset" : [0,-5]
   },
   "fish_type_2" :{
     "name" : "Ca He",
     "anim_swim" : "",
-    "scale" : 0.5,
+    "scale" : 0.75,
     "zorder": 1,
-    "box": [0.5,0.75],
+    "box": [0.5,1.25],
     "shadow": true,
-    "shadow_offset" : [10,10]
+    "shadow_offset" : [10,10],
+    "sprite_offset" : [0,-5]
   },
   "fish_type_3" :{
     "name" : "Ca Xam Den",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 1,
-    "box": [0.65,0.65],
+    "box": [0.65,1.25],
     "shadow": true,
-    "shadow_offset" : [10,10]
+    "shadow_offset" : [10,10],
+    "sprite_offset" : [5,-10]
   },
   "fish_type_4" :{
     "name" : "Ca Tim Nho",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 2,
-    "box": [0.65,0.95],
+    "box": [0.75,1.25],
     "shadow": true,
-    "shadow_offset" : [12,12]
+    "shadow_offset" : [12,12],
+    "sprite_offset" : [0,-10]
   },
   "fish_type_5" :{
     "name" : "Sao Bien",
     "anim_swim" : "",
     "scale" : 0.5,
     "zorder": 0,
-    "box": [0.75,0.75],
+    "box": [1,1],
     "shadow": true,
-    "shadow_offset" : [5,5]
+    "shadow_offset" : [5,5],
+    "sprite_offset" : [0,0]
   },
   "fish_type_6" :{
     "name" : "Tom Nho",
     "anim_swim" : "",
     "scale" : 0.5,
     "zorder": 0,
-    "box": [0.65,0.85],
+    "box": [0.65,1.25],
     "shadow": false,
-    "shadow_offset" : [0,0]
+    "shadow_offset" : [0,0],
+    "sprite_offset" : [0,0]
   },
   "fish_type_7" :{
     "name" : "Ca Noc",
@@ -60,7 +66,8 @@
     "zorder": 2,
     "box": [1.15,1.15],
     "shadow": true,
-    "shadow_offset" : [12,12]
+    "shadow_offset" : [12,12],
+    "sprite_offset" : [0,-5]
   },
   "fish_type_8" :{
     "name" : "Ca Xanh Den",
@@ -69,34 +76,38 @@
     "zorder": 2,
     "box": [1,2],
     "shadow": true,
-    "shadow_offset" : [13,13]
+    "shadow_offset" : [13,13],
+    "sprite_offset" : [0,-10]
   },
   "fish_type_9" :{
     "name" : "Ca Ngua",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 2,
-    "box": [1,0.75],
+    "box": [1.75,0.75],
     "shadow": true,
-    "shadow_offset" : [14,14]
+    "shadow_offset" : [14,14],
+    "sprite_offset" : [-5,0]
   },
   "fish_type_10" :{
     "name" : "Ca Buom Xanh",
     "anim_swim" : "",
     "scale" : 0.75,
     "zorder": 2,
-    "box": [2.5,2.5],
+    "box": [2,2.5],
     "shadow": true,
-    "shadow_offset" : [15,15]
+    "shadow_offset" : [15,15],
+    "sprite_offset" : [0,-5]
   },
   "fish_type_11" :{
     "name" : "Muc Ong",
     "anim_swim" : "",
     "scale" : 0.75,
     "zorder": 2,
-    "box": [1.25,2.5],
+    "box": [1.1,2.5],
     "shadow": true,
-    "shadow_offset" : [15,15]
+    "shadow_offset" : [15,15],
+    "sprite_offset" : [0,-10]
   },
   "fish_type_12" :{
     "name" : "Sua",
@@ -105,7 +116,8 @@
     "zorder": 1,
     "box": [2,2.5],
     "shadow": true,
-    "shadow_offset" : [10,10]
+    "shadow_offset" : [10,10],
+    "sprite_offset" : [0,-10]
   },
   "fish_type_13" :{
     "name" : "Ca Gai Tim",
@@ -114,7 +126,8 @@
     "zorder": 3,
     "box": [2.5,2.5],
     "shadow": true,
-    "shadow_offset" : [18,18]
+    "shadow_offset" : [18,18],
+    "sprite_offset" : [0,0]
   },
   "fish_type_14" :{
     "name" : "Ca Den Pin",
@@ -123,52 +136,58 @@
     "zorder": 1,
     "box": [1.75,2.5],
     "shadow": true,
-    "shadow_offset" : [10,10]
+    "shadow_offset" : [10,10],
+    "sprite_offset" : [0,0]
   },
   "fish_type_15" :{
     "name" : "Ca Duoi",
     "anim_swim" : "",
     "scale" : 0.8,
     "zorder": 4,
-    "box": [2.25,2.25],
+    "box": [2.75,2.5],
     "shadow": true,
-    "shadow_offset" : [22,22]
+    "shadow_offset" : [22,22],
+    "sprite_offset" : [0,-35]
   },
   "fish_type_16" :{
     "name" : "Ca Xanh Dai",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 4,
-    "box": [1.25,4],
+    "box": [1.75,7],
     "shadow": true,
-    "shadow_offset" : [22,22]
+    "shadow_offset" : [22,22],
+    "sprite_offset" : [0,-30]
   },
   "fish_type_17" :{
     "name" : "Rua Bien",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 4,
-    "box": [2,2],
+    "box": [2,2.5],
     "shadow": true,
-    "shadow_offset" : [22,22]
+    "shadow_offset" : [22,22],
+    "sprite_offset" : [0,-5]
   },
   "fish_type_18" :{
     "name" : "Ca Map Dau Bua",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 5,
-    "box": [1.5,3],
+    "box": [1.75,6],
     "shadow": true,
-    "shadow_offset" : [25,25]
+    "shadow_offset" : [25,25],
+    "sprite_offset" : [5,-30]
   },
   "fish_type_19" :{
     "name" : "Tom Hum To",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 0,
-    "box": [1.5,1.5],
+    "box": [1.5,3],
     "shadow": false,
-    "shadow_offset" : [0,0]
+    "shadow_offset" : [0,0],
+    "sprite_offset" : [0,0]
   },
   "fish_type_20" :{
     "name" : "Ech Vang",
@@ -177,25 +196,28 @@
     "zorder": 6,
     "box": [3.5,3.5],
     "shadow": true,
-    "shadow_offset" : [30,30]
+    "shadow_offset" : [30,30],
+    "sprite_offset" : [0,-35]
   },
   "fish_type_21" :{
     "name" : "Ca Dau Bua Vang",
     "anim_swim" : "",
-    "scale" : 1.0,
+    "scale" : 0.85,
     "zorder": 6,
-    "box": [1.25,4],
+    "box": [2.25,7],
     "shadow": true,
-    "shadow_offset" : [30,30]
+    "shadow_offset" : [30,30],
+    "sprite_offset" : [0,-20]
   },
   "fish_type_22" :{
     "name" : "Ca Map Vang Den Boss",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 7,
-    "box": [1.25,3.5],
+    "box": [3,10],
     "shadow": true,
-    "shadow_offset" : [35,35]
+    "shadow_offset" : [35,35],
+    "sprite_offset" : [0,-15]
   },
   "fish_type_23" :{
     "name" : "Rua Vang",
@@ -204,51 +226,57 @@
     "zorder": 8,
     "box": [3,3],
     "shadow": true,
-    "shadow_offset" : [40,40]
+    "shadow_offset" : [40,40],
+    "sprite_offset" : [0,25]
   },
   "fish_type_24" :{
     "name" : "Tien Ca Xanh",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 8,
-    "box": [1.5,8],
+    "box": [1.75,8.5],
     "shadow": true,
-    "shadow_offset" : [40,40]
+    "shadow_offset" : [40,40],
+    "sprite_offset" : [0,0]
   },
   "fish_type_25" :{
     "name" : "Tien Ca Tim",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 9,
-    "box": [1.5,8],
+    "box": [2.25,10],
     "shadow": true,
-    "shadow_offset" : [40,40]
+    "shadow_offset" : [40,40],
+    "sprite_offset" : [0,0]
   },
   "fish_type_26" :{
     "name" : "Ca Dau Bua Vang Den Boss",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 10,
-    "box": [3.25,8],
+    "box": [3,8],
     "shadow": true,
-    "shadow_offset" : [45,45]
+    "shadow_offset" : [45,45],
+    "sprite_offset" : [0,-35]
   },
   "fish_type_27" :{
     "name" : "Rong Do Boss",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 10,
-    "box": [5.5,8],
+    "box": [5,12],
     "shadow": true,
-    "shadow_offset" : [45,45]
+    "shadow_offset" : [45,45],
+    "sprite_offset" : [30,-30]
   },
   "fish_type_28" :{
     "name" : "Rong Trang Mat Xanh Boss",
     "anim_swim" : "",
     "scale" : 1.0,
     "zorder": 10,
-    "box": [1,10],
+    "box": [2.75,14],
     "shadow": true,
-    "shadow_offset" : [45,45]
+    "shadow_offset" : [45,45],
+    "sprite_offset" : [0,-20]
   }
 }
