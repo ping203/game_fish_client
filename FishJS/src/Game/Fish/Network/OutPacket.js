@@ -107,3 +107,23 @@ CmdSendShootSuccess = CmdSendCommon.extend(
         }
     }
 )
+
+CmdSendLockFish = CmdSendCommon.extend(
+    {
+        ctor:function()
+        {
+            this._super();
+            this.initData(1000);
+            this.setControllerId(1);
+            this.setCmdId(CMD.CMD_LOCK_FISH);
+        },
+        putData:function(isLock,fish_id){
+            //pack
+            this.packHeader();
+            this.putByte(isLock);
+            this.putInt(fish_id);
+            //update
+            this.updateSize();
+        }
+    }
+)

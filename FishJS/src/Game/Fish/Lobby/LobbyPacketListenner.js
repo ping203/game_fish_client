@@ -22,7 +22,7 @@ var LobbyPacketListenner = cc.Class.extend({
     },
     onReceived: function(cmd,pkg){
 
-        cc.log("onReceved: " + cmd);
+        cc.log("onReceived: " + cmd);
 
         switch (cmd){
             case CMD.CMD_LOGIN:

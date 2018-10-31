@@ -24,7 +24,10 @@ var LobbyScene = BaseLayer.extend({
                 break;
             }
             case 1:{
-                GameClient.getInstance().connect("127.0.0.1",8080);
+                //GameClient.getInstance().connect("127.0.0.1",8080);
+                GameClient.getInstance().connect("192.168.0.127",8080);
+
+                //GameClient.getInstance().connect("35.240.162.131",8080);
                 break;
             }
             case 2:{

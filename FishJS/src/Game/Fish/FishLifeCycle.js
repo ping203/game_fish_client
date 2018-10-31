@@ -109,6 +109,21 @@ var FishLifeCycle = cc.Class.extend({
     onMatrixData: function(pk)
     {
         matranMap.start(pk.time,pk.startID)
+    },
+    onLockFish: function(pk){
+        if(pk.player_position == this.position)
+            return;
+        if(pk.isLock){
+            var fishNeedLock = this.gameScene.gameMgr.getFishByID(pk.fish_id);
+            cc.log("lock fish :" + JSON.stringify(pk));
+            cc.log("find :" + fishNeedLock);
+            if(fishNeedLock)
+            {
+                this.players[pk.player_position].setHold(fishNeedLock);
+            }
+        }
+        else
+            this.players[pk.player_position].releaseHold();
     }
 
 })

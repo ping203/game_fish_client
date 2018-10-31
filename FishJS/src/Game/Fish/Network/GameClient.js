@@ -33,9 +33,10 @@ var GameClient = cc.Class.extend({
         this.wsClient.connect(ip,port,false,this);
     },
     onFinishConnect: function(result){
+        this.connected = result;
         if(this.listenner)
             this.listenner.onConnect(result);
-        this.connected = result;
+
 
     },
     onDisconnected: function(){

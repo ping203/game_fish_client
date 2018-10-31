@@ -223,4 +223,19 @@ CmdReceivedMatrixData = CmdReceivedCommon.extend({
 
 
 
+CmdReceivedLockFish = CmdReceivedCommon.extend({
+    ctor :function(pkg)
+    {
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.player_position = this.getByte();
+        this.isLock = this.getBool();
+        this.fish_id = this.getInt();
+    }
+})
+
+
+
 

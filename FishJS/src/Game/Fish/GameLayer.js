@@ -126,13 +126,17 @@ var GameLayerUI = BaseLayer.extend({
             this.createEffectFishFired(vec2(pointCollide.x * PM_RATIO,pointCollide.y *PM_RATIO),bullet.playerID);
             this.gameMgr.destroyEntity(bullet);
 
+            if(!fish.getNodeDisplay())
+                return;
+
             var spFish = fish.getNodeDisplay().getChildByTag(0);
+
             spFish.setColor(cc.color(200,0,0));
             spFish.stopActionByTag(111);
             var action = cc.tintTo(.35,255,255,255);action.setTag(111);
             spFish.runAction(action);
 
-            if(fish.id !== undefined)
+            if(fish.id !== undefined && bullet.playerID == fishLifeCycle.myChair)
             {
                 fishBZ.sendShootFish(fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
                 if(this.actionListener && this.actionListener.onShootFish){
@@ -190,8 +194,8 @@ var GameLayerUI = BaseLayer.extend({
         bullet.setNodeDisplay( sprite);
         this.gameMgr.createBodyForBullet(bullet,vec2(.5,.5));
         this.gameMgr.shootBullet(bullet,vec2(gun_pos.x / PM_RATIO,gun_pos.y / PM_RATIO),vec2((location.x - gun_pos.x) / PM_RATIO,(location.y - gun_pos.y) / PM_RATIO));
-        if(fishLifeCycle.myPlayer.holdFishInfo.isHolding){
-            bullet.setHoldInfo(fishLifeCycle.myPlayer.holdFishInfo);
+        if(player.holdFishInfo.isHolding){
+            bullet.setHoldInfo(player.holdFishInfo);
         }
         bullet.update(0);
     },
@@ -283,8 +287,7 @@ var GameLayerUI = BaseLayer.extend({
             if(this.players[i].isEnabled && this.players[i].holdFishInfo.isHolding && this.players[i].holdFishInfo.fishForHold){
                 if(this.players[i].holdFishInfo.fishForHold.released)
                 {
-                    this.players[i].holdFishInfo.isHolding = false;
-                    this.players[i].nodeDisplayHold.setLength(0);
+                    this.players[i].releaseHold();
                     continue;
                 }
                 var posBody = this.players[i].holdFishInfo.fishForHold.getBodyPosition();
@@ -317,9 +320,10 @@ var GameLayerUI = BaseLayer.extend({
         this.particleBongNuoc.setVisible(true);
 
         if(fishLifeCycle.myPlayer.holdFishInfo.prepare_hold){
-            var ret = this.gameMgr.getFishByPos(location);
-            if(ret){
-                fishLifeCycle.myPlayer.setHold(ret);
+            var fish_find = this.gameMgr.getFishByPos(location);
+            if(fish_find){
+                fishLifeCycle.myPlayer.setHold(fish_find);
+                fishBZ.sendLockFish(true,fish_find.id);
             }
             else
             {
@@ -369,8 +373,10 @@ var GameLayerUI = BaseLayer.extend({
         if(!fishSp)
         {
             cc.log("WARNING : fishSp is NULL");
+            return;
         }
         var pos = fishSp.getPosition();
+
         var str = "" + StringUtility.standartNumber(Math.abs(money));
         var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/fonts/Tien bac-export.fnt":"res/fonts/Tien bac-export.fnt";
         var moneyLb =  new cc.LabelBMFont(str,fontFile,0);
@@ -468,6 +474,7 @@ var GameLayerUI = BaseLayer.extend({
                 else
                 {
                     fishLifeCycle.myPlayer.releaseHold();
+                    fishBZ.sendLockFish(false,-1);
                 }
                 break;
             }

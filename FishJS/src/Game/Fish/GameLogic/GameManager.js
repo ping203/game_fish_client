@@ -294,7 +294,11 @@ var GameManagerWeb = cc.Class.extend({
         fishFixtureFef.shape = new b2PolygonShape;
         fishFixtureFef.shape.SetAsBox(body_box.x,body_box.y);
 
+        this.fishBodyDef = new b2BodyDef;
+        this.fishBodyDef.type = b2Body.b2_kinematicBody;
+
         fish._body = this._world.CreateBody(this.fishBodyDef);
+        //cc.log("body null :" +(fish._body == null) + " def null :" + (this.fishBodyDef));
         fish._body.CreateFixture(fishFixtureFef);
         fish._body.SetUserData(fish);
 
