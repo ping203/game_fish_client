@@ -47,7 +47,7 @@ var GameLayerUI = BaseLayer.extend({
         panel_display.addChild(this.effectLayer,4);
         var top_panel = this.getControl("Panel_Top");
         top_panel.addChild(this.topLayer,40);
-        top_panel.addChild(this.bulletLayer,1);
+        top_panel.addChild(this.bulletLayer,3);
 
 
         var panel_ui = this.getControl("Panel_UI");

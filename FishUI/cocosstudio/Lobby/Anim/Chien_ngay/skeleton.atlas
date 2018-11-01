@@ -1,0 +1,76 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Chien ngay
+  rotate: false
+  xy: 2, 156
+  size: 304, 327
+  orig: 304, 327
+  offset: 0, 0
+  index: -1
+Layer 39
+  rotate: false
+  xy: 698, 453
+  size: 35, 30
+  orig: 35, 30
+  offset: 0, 0
+  index: -1
+lua1
+  rotate: false
+  xy: 698, 453
+  size: 35, 30
+  orig: 35, 30
+  offset: 0, 0
+  index: -1
+Layer 39 copy 2
+  rotate: false
+  xy: 542, 373
+  size: 154, 110
+  orig: 154, 110
+  offset: 0, 0
+  index: -1
+Layer 40
+  rotate: false
+  xy: 202, 105
+  size: 77, 49
+  orig: 77, 49
+  offset: 0, 0
+  index: -1
+ani1
+  rotate: false
+  xy: 2, 41
+  size: 198, 113
+  orig: 198, 113
+  offset: 0, 0
+  index: -1
+ani2
+  rotate: false
+  xy: 308, 248
+  size: 232, 235
+  orig: 232, 235
+  offset: 0, 0
+  index: -1
+dan
+  rotate: false
+  xy: 2, 2
+  size: 91, 37
+  orig: 91, 37
+  offset: 0, 0
+  index: -1
+lua2
+  rotate: false
+  xy: 542, 328
+  size: 52, 43
+  orig: 52, 43
+  offset: 0, 0
+  index: -1
+text_chienngay
+  rotate: false
+  xy: 308, 188
+  size: 170, 58
+  orig: 170, 58
+  offset: 0, 0
+  index: -1

@@ -53,6 +53,104 @@
           <TTF Name="UVNNguyenDu.TTF" />
           <TTF Name="UVNThanhPhoNang.TTF" />
         </Folder>
+        <Folder Name="Lobby">
+          <Folder Name="Anim">
+            <Folder Name="Chien_ngay">
+              <File Name="skeleton.atlas" />
+              <File Name="skeleton.json" />
+              <Image Name="skeleton.png" />
+            </Folder>
+            <Folder Name="Choi_thu">
+              <File Name="skeleton.atlas" />
+              <File Name="skeleton.json" />
+              <Image Name="skeleton.png" />
+            </Folder>
+            <Folder Name="cua">
+              <File Name="skeleton.atlas" />
+              <File Name="skeleton.json" />
+              <Image Name="skeleton.png" />
+            </Folder>
+            <Folder Name="logo">
+              <File Name="skeleton.atlas" />
+              <File Name="skeleton.json" />
+              <Image Name="skeleton.png" />
+            </Folder>
+            <Folder Name="Shop">
+              <File Name="skeleton.atlas" />
+              <File Name="skeleton.json" />
+              <Image Name="skeleton.png" />
+            </Folder>
+          </Folder>
+          <Folder Name="Popup">
+            <Folder Name="btn_tabs">
+              <Image Name="btn_choigame.png" />
+              <Image Name="btn_choigame_active.png" />
+              <Image Name="btn_nhanvang.png" />
+              <Image Name="btn_nhanvang_active.png" />
+              <Image Name="btn_tieuvang.png" />
+              <Image Name="btn_tieuvang_active.png" />
+            </Folder>
+            <Folder Name="Fonts">
+              <TTF Name="UTM Swiss 721 Black Condensed.ttf" />
+              <TTF Name="UTM Swiss Condensed.ttf" />
+              <TTF Name="UTM Swiss CondensedBold.ttf" />
+              <Image Name="yellow.png" />
+              <Fnt Name="yellow-export.fnt" />
+              <Image Name="yellow-export.png" />
+            </Folder>
+            <Folder Name="VANG">
+              <Image Name="fish_common_gold.8888.png" />
+              <Image Name="fish_icon_gold_1.8888.png" />
+              <Image Name="fish_icon_gold_2.8888.png" />
+              <Image Name="fish_icon_gold_3.8888.png" />
+              <Image Name="fish_icon_gold_4.8888.png" />
+              <Image Name="fish_icon_gold_5.8888.png" />
+              <Image Name="fish_icon_gold_6.8888.png" />
+              <Image Name="fish_icon_gold_7.8888.png" />
+            </Folder>
+            <Image Name="1.png" />
+            <Image Name="2.png" />
+            <Image Name="3.png" />
+            <Image Name="arow.png" />
+            <Image Name="bg_cuahang.png" />
+            <Image Name="bg_lichsu.png" />
+            <Image Name="bg_package.png" />
+            <Image Name="bg_package-2.png" />
+            <Image Name="bg_row_user_info.png" />
+            <Image Name="bg_thongbao.png" />
+            <Image Name="bg_topwin.png" />
+            <Image Name="bg_user.png" />
+            <Image Name="btn_NapDoi.png" />
+            <Image Name="close.png" />
+            <Image Name="doiman_tab.png" />
+            <Image Name="input.png" />
+            <Image Name="napvang_tab.png" />
+            <Image Name="refresh.png" />
+            <Image Name="row1.png" />
+            <Image Name="row2.png" />
+            <Image Name="row3.png" />
+            <Image Name="thread_yellow.png" />
+            <Image Name="xacnhan.png" />
+            <Image Name="xemthongtin.png" />
+          </Folder>
+          <Image Name="avatar_bg_top.png" />
+          <Image Name="avatar_photo.png" />
+          <Image Name="bg_info_bottom.png" />
+          <Image Name="bg_lobby.png" />
+          <Image Name="btn_FAQ.png" />
+          <Image Name="btn_history.png" />
+          <Image Name="btn_logout.png" />
+          <Image Name="btn_lus.png" />
+          <Image Name="btn_setting.png" />
+          <Image Name="btn_topwin.png" />
+          <Image Name="fish_bottom_left.png" />
+          <Image Name="fish_bottom_right.png" />
+          <Image Name="ico_MAN.png" />
+          <Image Name="ico_VANG.png" />
+          <Image Name="input_MAN_bg.png" />
+          <Image Name="input_VANG_bg.png" />
+          <Image Name="opacity.png" />
+        </Folder>
         <Folder Name="ScreenGame">
           <Folder Name="Background">
             <Image Name="bg.jpg" />

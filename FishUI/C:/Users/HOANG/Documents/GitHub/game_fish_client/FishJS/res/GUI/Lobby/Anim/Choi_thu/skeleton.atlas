@@ -1,0 +1,34 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Choi thu
+  rotate: false
+  xy: 2, 67
+  size: 304, 314
+  orig: 304, 314
+  offset: 0, 0
+  index: -1
+Layer 26
+  rotate: false
+  xy: 308, 142
+  size: 230, 239
+  orig: 230, 239
+  offset: 0, 0
+  index: -1
+Layer 39
+  rotate: false
+  xy: 2, 2
+  size: 103, 63
+  orig: 103, 63
+  offset: 0, 0
+  index: -1
+Layer 40
+  rotate: false
+  xy: 308, 91
+  size: 77, 49
+  orig: 77, 49
+  offset: 0, 0
+  index: -1

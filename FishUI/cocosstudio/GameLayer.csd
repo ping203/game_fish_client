@@ -9,7 +9,7 @@
           <AbstractNodeData Name="Panel_bg" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg0" ActionTag="-911620121" Tag="11" IconVisible="False" LeftMargin="-1.0000" RightMargin="-1079.0000" TopMargin="-519.0000" BottomMargin="-1.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="bg0" ActionTag="-911620121" VisibleForFrame="False" Tag="11" IconVisible="False" LeftMargin="-1.0000" RightMargin="-1079.0000" TopMargin="-519.0000" BottomMargin="-1.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <Children>
                   <AbstractNodeData Name="bongnuoc" ActionTag="-694818474" Tag="91" IconVisible="True" LeftMargin="353.2925" RightMargin="926.7075" TopMargin="247.2654" BottomMargin="472.7346" ctype="ParticleObjectData">
@@ -32,7 +32,7 @@
                 <PreSize X="6.4000" Y="3.6000" />
                 <FileData Type="Normal" Path="ScreenGame/Background/bg2.jpg" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="bg1" ActionTag="945407169" VisibleForFrame="False" Tag="98" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="bg1" ActionTag="945407169" Tag="98" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <Children>
                   <AbstractNodeData Name="bongnuoc" ActionTag="2043811067" Tag="99" IconVisible="True" LeftMargin="886.8409" RightMargin="393.1591" TopMargin="169.3471" BottomMargin="550.6529" ctype="ParticleObjectData">
@@ -379,6 +379,16 @@
                 <PrePosition X="0.4564" Y="0.2641" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
+              <AbstractNodeData Name="BitmapFontLabel_2" ActionTag="909616542" VisibleForFrame="False" Tag="258" IconVisible="False" LeftMargin="37.5000" RightMargin="57.5000" TopMargin="7.5000" BottomMargin="145.5000" LabelText="WATING" ctype="TextBMFontObjectData">
+                <Size X="105.0000" Y="47.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="90.0000" Y="169.0000" />
+                <Scale ScaleX="1.3619" ScaleY="1.3619" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.4500" Y="0.8450" />
+                <PreSize X="0.5250" Y="0.2350" />
+                <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
+              </AbstractNodeData>
             </Children>
             <AnchorPoint />
             <Position X="184.1754" Y="2.0688" />
@@ -394,6 +404,16 @@
           <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="865.5502" RightMargin="214.4498" TopMargin="518.4618" BottomMargin="1.5382" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
+              <AbstractNodeData Name="BitmapFontLabel_1" ActionTag="-470826255" VisibleForFrame="False" Tag="256" IconVisible="False" LeftMargin="84.3646" RightMargin="0.6354" TopMargin="-6.1284" BottomMargin="159.1284" LabelText="WAITING" ctype="TextBMFontObjectData">
+                <Size X="115.0000" Y="47.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="141.8646" Y="182.6284" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.7093" Y="0.9131" />
+                <PreSize X="0.5750" Y="0.2350" />
+                <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
+              </AbstractNodeData>
               <AbstractNodeData Name="bg_thongtin" ActionTag="-466924181" Tag="54" IconVisible="False" LeftMargin="191.0526" RightMargin="-295.0526" TopMargin="32.8408" BottomMargin="-62.8408" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
                 <Size X="304.0000" Y="230.0000" />
                 <Children>

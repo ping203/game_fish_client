@@ -56,7 +56,29 @@ var g_resources = [
     "res/fonts/Tien bac-export.fnt",
     "res/fishData/effect/bong_nuoc_effect.plist",
     "res/fishData/effect/coin1.plist",
-    "res/fishData/effect/spray.plist"
+    "res/fishData/effect/spray.plist",
+
+    "res/GUI/Lobby/Anim/Chien_ngay/skeleton.json",
+    "res/GUI/Lobby/Anim/Chien_ngay/skeleton.atlas",
+    "res/GUI/Lobby/Anim/Chien_ngay/skeleton.png",
+
+    "res/GUI/Lobby/Anim/Choi_thu/skeleton.json",
+    "res/GUI/Lobby/Anim/Choi_thu/skeleton.atlas",
+    "res/GUI/Lobby/Anim/Choi_thu/skeleton.png",
+
+    "res/GUI/Lobby/Anim/cua/skeleton.json",
+    "res/GUI/Lobby/Anim/cua/skeleton.atlas",
+    "res/GUI/Lobby/Anim/cua/skeleton.png",
+
+
+    "res/GUI/Lobby/Anim/logo/skeleton.json",
+    "res/GUI/Lobby/Anim/logo/skeleton.atlas",
+    "res/GUI/Lobby/Anim/logo/skeleton.png",
+
+    "res/GUI/Lobby/Anim/Shop/skeleton.json",
+    "res/GUI/Lobby/Anim/Shop/skeleton.atlas",
+    "res/GUI/Lobby/Anim/Shop/skeleton.png"
+
 
 
 ];
