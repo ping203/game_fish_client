@@ -1,0 +1,90 @@
+
+icon1.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg1
+  rotate: false
+  xy: 0, 229
+  size: 295, 274
+  orig: 297, 276
+  offset: 1, 1
+  index: -1
+frond_1
+  rotate: false
+  xy: 0, 114
+  size: 263, 114
+  orig: 265, 116
+  offset: 1, 1
+  index: -1
+hand
+  rotate: false
+  xy: 0, 0
+  size: 57, 43
+  orig: 59, 45
+  offset: 1, 1
+  index: -1
+hand2
+  rotate: false
+  xy: 172, 94
+  size: 25, 19
+  orig: 25, 19
+  offset: 0, 0
+  index: -1
+rong
+  rotate: false
+  xy: 516, 358
+  size: 193, 145
+  orig: 195, 147
+  offset: 1, 1
+  index: -1
+rong1
+  rotate: false
+  xy: 710, 313
+  size: 86, 190
+  orig: 86, 190
+  offset: 0, 0
+  index: -1
+rong11
+  rotate: false
+  xy: 264, 201
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+rong12
+  rotate: false
+  xy: 0, 44
+  size: 171, 69
+  orig: 195, 250
+  offset: 23, 1
+  index: -1
+rong13
+  rotate: false
+  xy: 797, 309
+  size: 70, 194
+  orig: 70, 194
+  offset: 0, 0
+  index: -1
+rong14
+  rotate: false
+  xy: 868, 431
+  size: 52, 72
+  orig: 52, 72
+  offset: 0, 0
+  index: -1
+rong15
+  rotate: false
+  xy: 516, 260
+  size: 58, 97
+  orig: 58, 97
+  offset: 0, 0
+  index: -1
+tien
+  rotate: false
+  xy: 296, 230
+  size: 219, 273
+  orig: 221, 275
+  offset: 1, 1
+  index: -1

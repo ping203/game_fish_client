@@ -1,0 +1,53 @@
+{
+"skeleton": { "hash": "ucYXFdkyrQrs9FChxKo9CItZ/B4", "spine": "3.5.44", "width": 49.2, "height": 46.8, "images": "" },
+"bones": [
+	{ "name": "Small_Fish_FX" },
+	{ "name": "AllFX", "parent": "Small_Fish_FX" },
+	{ "name": "Coin", "parent": "AllFX", "scaleX": 0.6, "scaleY": 0.6 }
+],
+"slots": [
+	{ "name": "Coin", "bone": "Coin", "attachment": "Coin/SiverCoin01" }
+],
+"skins": {
+	"default": {
+		"Coin": {
+			"Coin/SiverCoin01": { "width": 82, "height": 78 },
+			"Coin/SiverCoin02": { "x": 2.94, "y": 0.01, "width": 71, "height": 78 },
+			"Coin/SiverCoin03": { "x": 2.94, "y": 0.01, "width": 50, "height": 81 },
+			"Coin/SiverCoin04": { "x": 2.94, "y": 0.01, "width": 27, "height": 78 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"Coin": {
+				"attachment": [
+					{ "time": 0, "name": "Coin/SiverCoin01" },
+					{ "time": 0.0667, "name": "Coin/SiverCoin02" },
+					{ "time": 0.1, "name": "Coin/SiverCoin03" },
+					{ "time": 0.1333, "name": "Coin/SiverCoin04" },
+					{ "time": 0.2667, "name": "Coin/SiverCoin03" },
+					{ "time": 0.3, "name": "Coin/SiverCoin02" },
+					{ "time": 0.3333, "name": "Coin/SiverCoin01" }
+				]
+			}
+		},
+		"bones": {
+			"Coin": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2, "x": 6.85, "y": 0, "curve": "stepped" },
+					{ "time": 0.3, "x": 3.11, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": -1.65, "y": 0, "curve": "stepped" },
+					{ "time": 0.3667, "x": -1.65, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2, "x": -1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

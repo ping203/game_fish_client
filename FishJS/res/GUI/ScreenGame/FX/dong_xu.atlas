@@ -1,0 +1,104 @@
+
+dong_xu.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10
+  rotate: false
+  xy: 370, 43
+  size: 82, 69
+  orig: 84, 71
+  offset: 1, 1
+  index: -1
+12
+  rotate: false
+  xy: 271, 37
+  size: 98, 75
+  orig: 100, 77
+  offset: 1, 1
+  index: -1
+14
+  rotate: false
+  xy: 130, 16
+  size: 114, 84
+  orig: 116, 86
+  offset: 1, 1
+  index: -1
+16
+  rotate: false
+  xy: 528, 110
+  size: 123, 92
+  orig: 125, 94
+  offset: 1, 1
+  index: -1
+18
+  rotate: false
+  xy: 652, 109
+  size: 120, 93
+  orig: 122, 95
+  offset: 1, 1
+  index: -1
+20
+  rotate: false
+  xy: 142, 101
+  size: 128, 101
+  orig: 130, 103
+  offset: 1, 1
+  index: -1
+22
+  rotate: false
+  xy: 0, 0
+  size: 129, 103
+  orig: 131, 105
+  offset: 1, 1
+  index: -1
+24
+  rotate: false
+  xy: 271, 113
+  size: 128, 89
+  orig: 130, 91
+  offset: 1, 1
+  index: -1
+26
+  rotate: false
+  xy: 899, 116
+  size: 120, 86
+  orig: 122, 88
+  offset: 1, 1
+  index: -1
+28
+  rotate: false
+  xy: 400, 116
+  size: 127, 86
+  orig: 129, 88
+  offset: 1, 1
+  index: -1
+30
+  rotate: false
+  xy: 773, 119
+  size: 125, 83
+  orig: 127, 85
+  offset: 1, 1
+  index: -1
+32
+  rotate: false
+  xy: 0, 104
+  size: 141, 98
+  orig: 143, 100
+  offset: 1, 1
+  index: -1
+6
+  rotate: false
+  xy: 453, 61
+  size: 56, 54
+  orig: 58, 56
+  offset: 1, 1
+  index: -1
+8
+  rotate: false
+  xy: 510, 48
+  size: 80, 61
+  orig: 82, 63
+  offset: 1, 1
+  index: -1

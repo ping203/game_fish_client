@@ -1,0 +1,46 @@
+// A "Material" file can contain one or more materials
+material
+{
+	// This is another technique. It "outlines" the model with skin
+	technique demo_skinned
+	{
+		pass normal
+		{
+            shader
+            {
+				vertexShader = res/ScreenGame/Shaders/normal.vsh
+				fragmentShader = res/ScreenGame/Shaders/normal.fsh
+                defines = MAXANIMLIGHT 1; SKINNING_JOINT_COUNT 32
+                sampler u_diffuseTexture
+                {
+                   path = res/ScreenGame/Shaders/caustics.png
+                   mipmap = true
+                   wrapS = CLAMP
+                   wrapT = CLAMP
+                   minFilter = LINEAR
+                   magFilter = LINEAR
+                }
+
+                sampler u_lightTexture
+                {
+                   path = res/ScreenGame/Shaders/caustics.png
+                   mipmap = false
+                   wrapS = REPEAT
+                   wrapT = REPEAT
+                   minFilter = LINEAR
+                   magFilter = LINEAR
+                }
+
+                renderState
+                {
+                	blend = false
+                	srcBlend = SRC_ALPHA
+                	dstBlend = ONE_MINUS_SRC_ALPHA
+                	cullFace = true
+                	depthTest = true
+                	depthWrite = true
+                }
+            }
+		}
+	}
+}

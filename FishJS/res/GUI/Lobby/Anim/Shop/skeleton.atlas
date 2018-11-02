@@ -1,0 +1,41 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Group 9
+  rotate: false
+  xy: 527, 395
+  size: 76, 74
+  orig: 76, 74
+  offset: 0, 0
+  index: -1
+SHOP
+  rotate: false
+  xy: 2, 153
+  size: 305, 316
+  orig: 305, 316
+  offset: 0, 0
+  index: -1
+ca
+  rotate: false
+  xy: 2, 79
+  size: 94, 72
+  orig: 94, 72
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 2
+  size: 70, 75
+  orig: 70, 75
+  offset: 0, 0
+  index: -1
+nang tien ca
+  rotate: false
+  xy: 309, 195
+  size: 216, 274
+  orig: 216, 274
+  offset: 0, 0
+  index: -1
