@@ -134,13 +134,16 @@ var FishCommonWeb = EntityWeb.extend({
         //var position = this.path.getPositionFromTime(this.time);
         //var angle = this.path.getCurrentAngle();
         //cc.log(JSON.stringify(position) + "    _" + angle);
-        var ret = this.path.getPositionAndAngleFromTime(this.time);
+        var ret = {};
+        ret.position = this.path.getPositionFromTime(this.time);
+        ret.angle = this.path.getCurrentAngleRad();
         if(this._nodeDisplay)
         {
             this._nodeDisplay.setPosition(ret.position);
-            this._nodeDisplay.setRotation(ret.angle);
+            this._nodeDisplay.setRotation(ret.angle * 180 / Math.PI);
         }
-        this.setTransform(vec2(ret.position.x / PM_RATIO,ret.position.y / PM_RATIO),ret.angle);
+
+        this.setTransform(vec2(ret.position.x / PM_RATIO,ret.position.y / PM_RATIO),-ret.angle);
     }
 
 })

@@ -8,97 +8,94 @@ var PathWeb = cc.Class.extend({
         this.duration = duration;
         this.curves = [];
         this.pointDatas = [];
+        this.total_length = 0;
+
+        this._previousPos = new Vector2(0,0);
+        this._currentPos = new Vector2(0,0);
 
     },
     addPathPoint: function(point)
     {
         var p = new Vector2(point.x,point.y);
-        //cc.log(JSON.stringify(p))
         this.pointDatas.push(p);
     },
     calculate: function()
     {
-        this.addPathData(this.pointDatas);
-    },
-    addPathData: function(datas)
-    {
-        this.datas = datas;
-        if(datas.length < 2)
-        {
-            cc.log("ERROR : Path length need > 2");
-        }
-        else if(datas.length == 2)
-        {
-            var new_1 = new Vector2((datas[0].x + datas[1].x) / 3,(datas[0].y + datas[1].y) / 3);
-            var new_2 = new Vector2((datas[0].x + datas[1].x) * 2 / 3,(datas[0].y + datas[1].y) * 2 / 3);
+        //this.addPathData(this.pointDatas);
+        var size = this.pointDatas.length;
+        this.total_length = 0;
+        if(size < 2)
+            return;
 
-            datas.splice(1,0,new_2);
-            datas.splice(1,0,new_1);
-
-            var curve = new CubicBezierCurve(datas[0],datas[1],datas[2],datas[3]);
-            curve.length = curve.getLength();
-            this.curves.push(curve);
-        }
-        else if(datas.length < 4)
+        var count = 0;
+        while(true)
         {
-            //cc.log("ERROR : Path length need == 2 or >= 4");
-            var new_1 = new Vector2((datas[0].x + datas[1].x) / 3,(datas[0].y + datas[1].y) / 3);
-            var new_2 = new Vector2((datas[0].x + datas[1].x) * 2 / 3,(datas[0].y + datas[1].y) * 2 / 3);
-
-            datas.splice(1,0,new_2);
-            datas.splice(1,0,new_1);
-
-            var curve = new CubicBezierCurve(datas[0],datas[1],datas[2],datas[3]);
-            curve.length = curve.getLength();
-            this.curves.push(curve);
-        }
-        else
-        {
-            var count = 1;
-            while((count + 2) < datas.length)
+            if((count +3) < size)
             {
-                var curve = new CubicBezierCurve(datas[count-1],datas[count],datas[count+1],datas[count+2]);
-                curve.length = curve.getLength();
+                var curve = new CubicBezierCurve(new Vector2(this.pointDatas[count].x,this.pointDatas[count].y),
+                    new Vector2(this.pointDatas[count + 1].x,this.pointDatas[count + 1].y),
+                    new Vector2(this.pointDatas[count + 2].x,this.pointDatas[count + 2].y),
+                    new Vector2(this.pointDatas[count + 3].x,this.pointDatas[count + 3].y))
+                curve.length_start = this.total_length;
+                this.total_length += curve.getLength();
                 this.curves.push(curve);
                 count += 3;
             }
+            else if((count +2) < size)
+            {
+
+                var curve = new QuadraticBezierCurve(new Vector2(this.pointDatas[count].x,this.pointDatas[count].y),
+                    new Vector2(this.pointDatas[count + 1].x,this.pointDatas[count + 1].y),
+                    new Vector2(this.pointDatas[count + 2].x,this.pointDatas[count + 2].y))
+                curve.length_start = this.total_length;
+                this.total_length += curve.getLength();
+                this.curves.push(curve);
+                count += 2;
+            }
+            else if((count +1) < size)
+            {
+
+                var curve = new LineCurve(new Vector2(this.pointDatas[count].x,this.pointDatas[count].y),
+                    new Vector2(this.pointDatas[count + 1].x,this.pointDatas[count + 1].y))
+                curve.length_start = this.total_length;
+                this.total_length += curve.getLength();
+                this.curves.push(curve);
+                count += 2;
+            }
+            else
+                break;
         }
 
-        this.total_length = this.getLength();
     },
     getLength: function()
     {
-        var length = 0;
-        for(var i = 0;i<this.curves.length;i++)
-        {
-            this.curves[i].length_start = length;
-            length += this.curves[i].length;
-
-        }
-        return length;
+        if(this.total_length > 0)
+            return this.total_length;
+        this.calculate();
+        return this.total_length;
     },
     getCurveFromPercentTimeLine: function(percent)
     {
 
         for(var i=0;i<this.curves.length;i++)
         {
-            if(((this.curves[i].length + this.curves[i].length_start) / this.total_length) >= percent)
+            if(((this.curves[i].getLength() + this.curves[i].length_start) / this.total_length) >= percent)
                 return this.curves[i];
         }
         return this.curves[this.curves.length-1];
     },
     getPositionFromTime: function(time)
     {
-        if(this.duration == 0)
+        if(this.duration == 0 || this.total_length == 0)
         {
-            return this.datas[this.datas.length-1];
+            return this.pointDatas[this.pointDatas.length-1];
         }
+        this._previousPos.set(this._currentPos.x,this._currentPos.y);
         var t = time / this.duration;
         if(t > 1) t = 1;
 
         var curve_choose = this.getCurveFromPercentTimeLine(t);
-        var curve_duration = curve_choose.length * this.duration / this.total_length;
-
+        var curve_duration = curve_choose.getLength() * this.duration / this.total_length;
 
         var curve_start_time = curve_choose.length_start * this.duration / this.total_length;
         var curve_end_time = curve_duration + curve_start_time;
@@ -113,8 +110,9 @@ var PathWeb = cc.Class.extend({
             tt = (time - curve_start_time) / curve_duration;
         }
 
-        return curve_choose.getPointAt(tt);
-        //return Math.GetPoint2DOnBezierCurve(this.datas[0],this.datas[1],this.datas[2],this.datas[3],t);
+        var ret = curve_choose.getPointAt(tt);
+        this._currentPos.set(ret.x,ret.y);
+        return ret;
     },
     getPositionAndAngleFromTime: function(time)     // position la cua screen pos, ko phair box2d pos
     {
@@ -132,9 +130,17 @@ var PathWeb = cc.Class.extend({
         this.lastPosition = ret.position;
         return ret;
     },
+    getCurrentAngle: function()
+    {
+        return this.rotationFromVel(vec2(this._currentPos.x - this._previousPos.x,this._currentPos.y-this._previousPos.y));
+    },
+    getCurrentAngleRad: function()
+    {
+        return this.rotationFromVelRad(vec2(this._currentPos.x - this._previousPos.x,this._currentPos.y-this._previousPos.y));
+    },
     rotationFromVel : function(vel)
     {
-        if(vel.y == 0)
+        if(Math.abs(vel.y) <  0.000001)
         {
             return vel.x > 0?90:-90;
         }
@@ -145,6 +151,21 @@ var PathWeb = cc.Class.extend({
         else
         {
             return Math.atan(vel.x / vel.y) * 180 / 3.14 + 180;
+        }
+    },
+    rotationFromVelRad : function(vel)
+    {
+        if(Math.abs(vel.y) <  0.000001)
+        {
+            return vel.x > 0?Math.PI/2:-Math.PI/2;
+        }
+        else if(vel.y > 0)
+        {
+            return Math.atan(vel.x / vel.y) ;
+        }
+        else
+        {
+            return Math.atan(vel.x / vel.y) +Math.PI;
         }
     }
 })

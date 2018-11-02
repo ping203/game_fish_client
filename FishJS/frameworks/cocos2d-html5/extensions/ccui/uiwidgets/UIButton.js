@@ -462,10 +462,15 @@ ccui.Button = ccui.Widget.extend(/** @lends ccui.Button# */{
 
         this._buttonScale9Renderer.setState( ccui.Scale9Sprite.state.NORMAL);
 
+        if(this.getChildByTag(0)){
+            var zoomTitleAction = cc.scaleTo(ccui.Button.ZOOM_ACTION_TIME_STEP, 1, 1);
+            this.getChildByTag(0).runAction(zoomTitleAction);
+        }
+
         if (this._pressedTextureLoaded) {
             if (this.pressedActionEnabled){
                 this._buttonScale9Renderer.stopAllActions();
-                this._buttonScale9Renderer.setScale(1.0);
+                this._buttonScale9Renderer.runAction(cc.scaleTo(ccui.Button.ZOOM_ACTION_TIME_STEP, 1, 1));
 
                 if(this._titleRenderer) {
                     this._titleRenderer.stopAllActions();
@@ -499,6 +504,13 @@ ccui.Button = ccui.Widget.extend(/** @lends ccui.Button# */{
 
     _onPressStateChangedToPressed: function () {
         this._buttonScale9Renderer.setState(ccui.Scale9Sprite.state.NORMAL);
+
+        if(this.getChildByTag(0)){
+            var zoomAction = cc.scaleTo(ccui.Button.ZOOM_ACTION_TIME_STEP,
+                1.0 + this._zoomScale,
+                1.0 + this._zoomScale);
+            this.getChildByTag(0).runAction(zoomAction);
+        }
 
         if (this._pressedTextureLoaded) {
             this._buttonScale9Renderer.setSpriteFrame(this._buttonClickedSpriteFrame);

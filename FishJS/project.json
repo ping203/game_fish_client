@@ -69,8 +69,11 @@
         "src/extras/core/Interpolate.js",
         "src/extras/core/Path.js",
         "src/extras/curves/CubicBezierCurve.js",
+      "src/extras/curves/LineCurve.js",
+      "src/extras/curves/QuadraticCurve.js",
 
-        "src/resource.js"
+
+      "src/resource.js"
 
     ]
 }
