@@ -2,6 +2,12 @@
  * Created by HOANGNGUYEN on 9/6/2018.
  */
 
+var PathChangeCurveListener = cc.Class.extend({
+    onNewCurve: function(curve){
+
+    }
+})
+
 var PathWeb = cc.Class.extend({
     ctor: function(duration)
     {
@@ -13,6 +19,11 @@ var PathWeb = cc.Class.extend({
         this._previousPos = new Vector2(0,0);
         this._currentPos = new Vector2(0,0);
 
+        this._currentCurve = null;
+        this.pathListener = null;
+    },
+    setPathListener: function(lis){
+        this.pathListener = lis;
     },
     addPathPoint: function(point)
     {
@@ -21,7 +32,6 @@ var PathWeb = cc.Class.extend({
     },
     calculate: function()
     {
-        //this.addPathData(this.pointDatas);
         var size = this.pointDatas.length;
         this.total_length = 0;
         if(size < 2)
@@ -95,6 +105,11 @@ var PathWeb = cc.Class.extend({
         if(t > 1) t = 1;
 
         var curve_choose = this.getCurveFromPercentTimeLine(t);
+        if(this.pathListener && (this._currentCurve !== curve_choose))
+        {
+            this.pathListener.onNewCurve(curve_choose);
+            this._currentCurve = curve_choose;
+        }
         var curve_duration = curve_choose.getLength() * this.duration / this.total_length;
 
         var curve_start_time = curve_choose.length_start * this.duration / this.total_length;
@@ -112,22 +127,6 @@ var PathWeb = cc.Class.extend({
 
         var ret = curve_choose.getPointAt(tt);
         this._currentPos.set(ret.x,ret.y);
-        return ret;
-    },
-    getPositionAndAngleFromTime: function(time)     // position la cua screen pos, ko phair box2d pos
-    {
-        var ret = {};
-        ret.position = this.getPositionFromTime(time);
-
-        if(this.lastPosition == undefined)
-        {
-            ret.angle = 90;
-        }
-        else
-        {
-            ret.angle = this.rotationFromVel(vec2(ret.position.x - this.lastPosition.x,ret.position.y - this.lastPosition.y));
-        }
-        this.lastPosition = ret.position;
         return ret;
     },
     getCurrentAngle: function()

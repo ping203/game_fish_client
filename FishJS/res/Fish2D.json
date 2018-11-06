@@ -257,26 +257,29 @@
     "box": [3,8],
     "shadow": true,
     "shadow_offset" : [45,45],
-    "sprite_offset" : [0,-35]
+    "sprite_offset" : [0,-35],
+    "isBoss": true
   },
   "fish_type_27" :{
     "name" : "Rong Do Boss",
     "anim_swim" : "",
     "scale" : 1.0,
-    "zorder": 10,
+    "zorder": 11,
     "box": [5,12],
     "shadow": true,
     "shadow_offset" : [45,45],
-    "sprite_offset" : [30,-30]
+    "sprite_offset" : [30,-30],
+    "isBoss": false
   },
   "fish_type_28" :{
     "name" : "Rong Trang Mat Xanh Boss",
     "anim_swim" : "",
-    "scale" : 1.0,
-    "zorder": 10,
+    "scale" : 1.35,
+    "zorder": 12,
     "box": [2.75,14],
     "shadow": true,
     "shadow_offset" : [45,45],
-    "sprite_offset" : [0,-20]
+    "sprite_offset" : [0,-20],
+    "isBoss": true
   }
 }

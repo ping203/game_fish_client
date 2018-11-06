@@ -90,7 +90,7 @@
               "Y": 1.0099
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -263,7 +263,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 640.0,
@@ -286,7 +286,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 7.9183,
+                  "X": 8.6443,
                   "Y": 69.6699
                 },
                 "Scale": {
@@ -296,15 +296,15 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.0396,
+                  "X": 0.0432,
                   "Y": 0.3483
                 },
                 "PreSize": {
                   "X": 5.01,
                   "Y": 0.635
                 },
-                "LeftMargin": -493.0817,
-                "RightMargin": -308.9183,
+                "LeftMargin": -492.3557,
+                "RightMargin": -309.6443,
                 "TopMargin": 66.8301,
                 "BottomMargin": 6.1699,
                 "Tag": 132,
@@ -313,7 +313,7 @@
                   "X": 1002.0,
                   "Y": 127.0
                 },
-                "Name": "Image_49",
+                "Name": "bg",
                 "ctype": "ImageViewObjectData"
               },
               {
@@ -358,6 +358,7 @@
                   "X": 87.0,
                   "Y": 87.0
                 },
+                "Alpha": 0,
                 "Name": "avatar",
                 "ctype": "ImageViewObjectData"
               },
@@ -492,7 +493,7 @@
                       "X": 312.0,
                       "Y": 105.0
                     },
-                    "Name": "Image_52",
+                    "Name": "bg",
                     "ctype": "ImageViewObjectData"
                   },
                   {
@@ -537,17 +538,19 @@
                       "X": 67.0,
                       "Y": 68.0
                     },
-                    "Name": "Image_3",
+                    "Name": "man_icon",
                     "ctype": "ImageViewObjectData"
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "1.000.000.00$",
+                    "LabelText": "-----------------",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
                     "OutlineColor": {
                       "R": 0,
                       "G": 0,
@@ -580,20 +583,20 @@
                       "Y": 0.5204
                     },
                     "PreSize": {
-                      "X": 0.885,
+                      "X": 0.865,
                       "Y": 0.8857
                     },
-                    "LeftMargin": -5.9324,
-                    "RightMargin": 28.9324,
+                    "LeftMargin": -3.9324,
+                    "RightMargin": 30.9324,
                     "TopMargin": 1.2869,
                     "BottomMargin": 2.7131,
                     "Tag": 116,
                     "ActionTag": 1833338586,
                     "Size": {
-                      "X": 177.0,
+                      "X": 173.0,
                       "Y": 31.0
                     },
-                    "Name": "Text_1",
+                    "Name": "lbMan",
                     "ctype": "TextObjectData"
                   },
                   {
@@ -668,7 +671,7 @@
                       "X": 50.0,
                       "Y": 50.0
                     },
-                    "Name": "Button_5",
+                    "Name": "btnPlusMan",
                     "ctype": "ButtonObjectData"
                   }
                 ],
@@ -677,12 +680,12 @@
                   "X": 200.0,
                   "Y": 35.0
                 },
-                "Name": "Panel_3",
+                "Name": "Panel_Man",
                 "ctype": "PanelObjectData"
               },
               {
                 "FontSize": 18,
-                "LabelText": "vishiha123",
+                "LabelText": "-------------",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "Fonts/tahoma.ttf",
@@ -719,25 +722,25 @@
                   "Y": 0.3199
                 },
                 "PreSize": {
-                  "X": 0.435,
+                  "X": 0.47,
                   "Y": 0.12
                 },
                 "LeftMargin": -345.7608,
-                "RightMargin": 458.7608,
+                "RightMargin": 451.7608,
                 "TopMargin": 124.0168,
                 "BottomMargin": 51.9832,
                 "Tag": 134,
                 "ActionTag": -860299745,
                 "Size": {
-                  "X": 87.0,
+                  "X": 94.0,
                   "Y": 24.0
                 },
-                "Name": "Text_14",
+                "Name": "lbUserName",
                 "ctype": "TextObjectData"
               },
               {
                 "FontSize": 18,
-                "LabelText": "ID #19876350",
+                "LabelText": "----------------",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "Fonts/tahoma.ttf",
@@ -777,20 +780,20 @@
                   "Y": 0.1881
                 },
                 "PreSize": {
-                  "X": 0.605,
+                  "X": 0.575,
                   "Y": 0.12
                 },
                 "LeftMargin": -345.9559,
-                "RightMargin": 424.9559,
+                "RightMargin": 430.9559,
                 "TopMargin": 150.3879,
                 "BottomMargin": 25.6121,
                 "Tag": 135,
                 "ActionTag": 1487563279,
                 "Size": {
-                  "X": 121.0,
+                  "X": 115.0,
                   "Y": 24.0
                 },
-                "Name": "Text_14_0",
+                "Name": "lbUserID",
                 "ctype": "TextObjectData"
               },
               {
@@ -879,7 +882,7 @@
                       "X": 312.0,
                       "Y": 105.0
                     },
-                    "Name": "Image_52",
+                    "Name": "bg",
                     "ctype": "ImageViewObjectData"
                   },
                   {
@@ -924,17 +927,19 @@
                       "X": 67.0,
                       "Y": 68.0
                     },
-                    "Name": "Image_3",
+                    "Name": "vang_icon",
                     "ctype": "ImageViewObjectData"
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "1.000.000.00$",
+                    "LabelText": "--------------------",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
                     "OutlineColor": {
                       "R": 0,
                       "G": 0,
@@ -970,20 +975,20 @@
                       "Y": 0.4924
                     },
                     "PreSize": {
-                      "X": 0.885,
+                      "X": 1.015,
                       "Y": 0.8857
                     },
-                    "LeftMargin": 3.8715,
-                    "RightMargin": 19.1285,
+                    "LeftMargin": -9.1285,
+                    "RightMargin": 6.1285,
                     "TopMargin": 2.2669,
                     "BottomMargin": 1.7331,
                     "Tag": 141,
                     "ActionTag": 322122576,
                     "Size": {
-                      "X": 177.0,
+                      "X": 203.0,
                       "Y": 31.0
                     },
-                    "Name": "Text_1",
+                    "Name": "lbGold",
                     "ctype": "TextObjectData"
                   },
                   {
@@ -1058,7 +1063,7 @@
                       "X": 50.0,
                       "Y": 50.0
                     },
-                    "Name": "Button_5",
+                    "Name": "btnPlusGold",
                     "ctype": "ButtonObjectData"
                   }
                 ],
@@ -1067,7 +1072,7 @@
                   "X": 200.0,
                   "Y": 35.0
                 },
-                "Name": "Panel_3_0",
+                "Name": "Panel_Gold",
                 "ctype": "PanelObjectData"
               }
             ],
@@ -1112,7 +1117,7 @@
               "Y": 1.0035
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -1447,6 +1452,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 640.0,
@@ -1463,7 +1470,7 @@
               "Y": 0.845
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1500,8 +1507,8 @@
             "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
-              "X": 647.26,
-              "Y": 327.8293
+              "X": 647.296,
+              "Y": 327.816
             },
             "Scale": {
               "ScaleX": 1.4046,
@@ -1514,15 +1521,15 @@
               "Y": 0.4553
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 647.26,
-            "RightMargin": 432.74,
-            "TopMargin": 192.1707,
-            "BottomMargin": 327.8293,
+            "LeftMargin": 647.296,
+            "RightMargin": 432.704,
+            "TopMargin": 192.184,
+            "BottomMargin": 327.816,
             "Tag": 108,
             "Children": [
               {
@@ -1876,6 +1883,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 93.4214,
@@ -1892,7 +1901,7 @@
               "Y": 0.1429
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -1990,7 +1999,7 @@
               "Y": 0.2192
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2070,6 +2079,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 231.1775,
@@ -2086,7 +2097,7 @@
               "Y": 0.1855
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 231.1775,

@@ -121,9 +121,10 @@ var GameManagerWeb = cc.Class.extend({
         var listFishCheck = [];
         for(var i=0;i<this._entities.length;i++){
             if(this._entities[i]._type == Entity.FISH && this._entities[i]._nodeDisplay){
-                var sprite = this._entities[i]._nodeDisplay.getChildByTag(0);
-                var convertPos = sprite.convertToNodeSpaceAR(screenPos);
-                var contentSize = sprite.getContentSize();
+                var node = this._entities[i]._nodeDisplay;
+                var convertPos = node.convertToNodeSpaceAR(screenPos);
+                var data = fishData.data["fish_type_"+this._entities[i].fishType];
+                var contentSize =cc.size(data["box"][0] * PM_RATIO * 2,data["box"][1] * PM_RATIO * 2);
 
                 var rect_check = cc.rect(-contentSize.width/2,-contentSize.height/2,contentSize.width,contentSize.height);
                 if(cc.rectContainsPoint(rect_check,convertPos)){
@@ -141,8 +142,6 @@ var GameManagerWeb = cc.Class.extend({
             for(var i=0;i<listFishCheck.length;i++){
                 test.push(listFishCheck[i]._nodeDisplay.getLocalZOrder());
             }
-            cc.log(JSON.stringify(test))
-
             return listFishCheck[0];
         }
         return null;

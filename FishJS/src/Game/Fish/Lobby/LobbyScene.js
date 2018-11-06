@@ -67,18 +67,50 @@ var LobbyScene = BaseLayer.extend({
 
         GameClient.getInstance().setListener(lobbyListenner);
 
+
+        //for UI
+        this.panelBottom = this.getControl("Panel_bottom");
+        this.panelMan = this.getControl("Panel_Man",this.panelBottom);
+        this.panelGold = this.getControl("Panel_Gold",this.panelBottom);
+
+        this.avatar = this.getControl("avatar",this.panelBottom);
+        this.lbUserName = this.getControl("lbUserName",this.panelBottom);
+        this.lbUserID = this.getControl("lbUserID",this.panelBottom);
+
+        this.lbMan = this.getControl("lbMan",this.panelMan);
+        this.customizeButton("btnPlusMan",LobbyScene.BTN_PLUS_MAN,this.panelMan);
+
+        this.lbGold = this.getControl("lbGold",this.panelGold);
+        this.customizeButton("btnPlusGold",LobbyScene.BTN_PLUS_GOLD,this.panelGold);
+
+    },
+    onEnter: function(){
+        this._super();
+        sceneMgr.addLoading("Loading...",true);
+        //GameClient.getInstance().connect("35.240.162.131",8080);
+    },
+    onUpdateData: function(){
+        this.lbUserName.setString(gameData.userData.userName);
+        this.lbUserID.setString("#ID "+gameData.userData.uID)
+        this.lbGold.setString(gameData.userData.gold);
+
+        this.lbMan.setString(gameData.userData.vinMoney);
+
     },
     onButtonReleased: function(btn,id){
         switch (id){
             case 0:{
-                cc.director.runScene(makeScene(new DemoScene()));
+                sceneMgr.openWithScene(new DemoScene());
+
                 break;
             }
             case 1:{
                 //GameClient.getInstance().connect("127.0.0.1",8080);
                 //GameClient.getInstance().connect("192.168.0.127",8080);
 
-                GameClient.getInstance().connect("35.240.162.131",8080);
+                //GameClient.getInstance().connect("35.240.162.131",8080);
+                var pkQuickJoin = new CmdSendQuickJoin();
+                GameClient.getInstance().sendPacket(pkQuickJoin);
                 break;
             }
             case 2:{
@@ -92,3 +124,7 @@ var LobbyScene = BaseLayer.extend({
         }
     }
 })
+
+LobbyScene.BTN_PLUS_MAN = 1;
+LobbyScene.BTN_PLUS_GOLD = 2;
+LobbyScene.BTN_BACK = 3;

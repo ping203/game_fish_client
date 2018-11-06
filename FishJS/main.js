@@ -89,9 +89,8 @@ cc.game.onStart = function(){
         matranMap.loadData();
         cc.audioEngine.setMusicVolume(1);
 
-
-        var scene = new GameScene();
-        cc.director.runScene(makeScene(new LobbyScene()));
+        sceneMgr.openWithScene(new LoginScene());
+        //cc.director.runScene(makeScene());
     }, this);
 };
 cc.game.run();

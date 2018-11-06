@@ -27,7 +27,6 @@ var SceneMgr = cc.Class.extend({
         this.backScenes = [];       // queue scene back from other scene
 
         this.ignoreGuis = [];
-        this.ignoreGuis.push("ChatScene");  // default scene not cache
     },
 
     getRunningScene: function () {
@@ -38,7 +37,15 @@ var SceneMgr = cc.Class.extend({
     getMainLayer : function () {
         var curScene = this.getRunningScene();
         if(curScene === undefined || curScene == null) return null;
-        return curScene.getMainLayer();
+        if(curScene instanceof cc.TransitionScene)
+        {
+            return curScene._inScene.getMainLayer();
+        }
+        else
+        {
+            return curScene.getMainLayer();
+        }
+
     },
 
     checkMainLayer : function (layer) {
@@ -91,29 +98,6 @@ var SceneMgr = cc.Class.extend({
             loading.removeFromParent();
         }
     },
-
-    takeScreenShot: function () {
-        if (jsb.fileUtils.isFileExist(jsb.fileUtils.getWritablePath() + "screentshot.png")) {
-            jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "screentshot.png");
-        }
-        var text = new cc.RenderTexture(cc.winSize.width, cc.winSize.height, cc.Texture2D.PIXEL_FORMAT_RGBA8888, 0x88F0);
-        text.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
-        text.begin();
-        sceneMgr.getRunningScene().visit();
-        text.end();
-
-        var ret = text.saveToFile("screentshot.png", 1);
-
-        var path = "";
-        if (ret) {
-            if (gamedata.sound) {
-                cc.audioEngine.playEffect(lobby_sounds.chupanh, false);
-            }
-            path = jsb.fileUtils.getWritablePath() + "screentshot.png";
-        }
-        return path;
-    },
-
     updateCurrentGUI: function (data) {
         var gui = this.getRunningScene().getMainLayer();
         gui.onUpdateGUI(data);
@@ -150,8 +134,10 @@ var SceneMgr = cc.Class.extend({
 
         var scene = new BaseScene();
         scene.addChild(curLayer);
+        this.layerGUI = curLayer;
 
         cc.director.runScene(new cc.TransitionFade(BaseLayer.TIME_APPEAR_GUI, scene));
+        //cc.director.runScene()
     },
 
     addQueueScene : function (layer) {
@@ -414,7 +400,7 @@ var SceneMgr = cc.Class.extend({
 
         var dlg = this.openGUI(CheckLogic.getDialogClassName(), Dialog.ZODER, Dialog.TAG);
         dlg.setAddG(message, target, selector);
-    },
+    }
 });
 
 var Loading = cc.Layer.extend({
@@ -445,25 +431,19 @@ var Loading = cc.Layer.extend({
             this.addChild(this._layerColor);
         }
 
-        //
-        //for (var i = 0; i < 5; i++) {
-        //    this.test = new cc.Sprite("common/greendot.png");
-        //    this.test.setPositionY(cc.winSize.height - this.test.getContentSize().height / 2);
-        //    this.addChild(this.test);
-        //
-        //    this.test.runAction(cc.repeatForever(cc.sequence(cc.delayTime(i * .125), engine.CircleMove.create(2, cc.winSize.width / 2 + 200), cc.delayTime((5 - i) * .125))));
-        //}
+        var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("loadingCircle_01.png"));
+        this.addChild(sp);
+        sp.setPosition(cc.winSize.width/2,cc.winSize.height/2+ 10);
+        var animation = new cc.Animation()
 
-        this.commonbg = new cc.Sprite("common_loading_icon.png");
-        this.addChild(this.commonbg);
-        this.commonbg.setPosition(cc.p(cc.winSize.width/2,cc.winSize.height/2 + 15));
-        this.commonbg.setScale(.75);
+        for (var i = 1; i <= 10; i++) {
+            var frameName = "loadingCircle_" + ((i<10)?"0"+i:i) + ".png";
+            animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame(frameName))
+        }
+        animation.setDelayPerUnit(0.1);
+        var action = cc.animate(animation);
+        sp.runAction(cc.repeatForever(action));
 
-        this.commoncircel = new cc.Sprite("common_loading_circle.png");
-        this.addChild(this.commoncircel);
-        this.commoncircel.setPosition(cc.p(cc.winSize.width/2,cc.winSize.height/2 + 15));
-        this.commoncircel.setScale(.75);
-        this.commoncircel.runAction(cc.repeatForever(cc.rotateBy(2.5,360)));
 
 
         var scale = cc.director.getWinSize().width / 800;

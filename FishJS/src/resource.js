@@ -34,6 +34,9 @@ var g_resources = [
     "res/fishData/fishes-2.plist",
     "res/fishData/fishes-3.plist",
 
+    "res/fishData/loading/loading.plist",
+
+
     "res/GUI/ScreenGame/Background/particle_texture.plist",
 
     "res/Fish2D.json",

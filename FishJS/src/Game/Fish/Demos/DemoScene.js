@@ -205,11 +205,28 @@ var PathReader = cc.Class.extend({
 
             }
         }
-
-
-
         return ret;
+    },
+    getListPointAtPathID: function(id){
+        var obj = this.jsonDataPathNormals["P_N_"+id];
+        var ret = [];
+        if(!obj["data"])
+            return [];
 
+        for(var i=0;i<obj["data"].length;i++){
+            if(obj["data"][i]["r_1"] && obj["data"][i]["r_2"])
+            {
+                var x = Math.min(obj["data"][i]["r_1"]["x"],obj["data"][i]["r_2"]["x"]) + Math.abs(obj["data"][i]["r_1"]["x"]-obj["data"][i]["r_2"]["x"]) * Math.random();
+                var y = Math.min(obj["data"][i]["r_1"]["y"],obj["data"][i]["r_2"]["y"]) + Math.abs(obj["data"][i]["r_1"]["y"]-obj["data"][i]["r_2"]["y"]) * Math.random();
+                ret.push(vec2(x,y))
+            }
+            else
+            {
+                ret.push(vec2(obj["data"][i]["x"],obj["data"][i]["y"]));
+
+            }
+        }
+        return ret;
     }
 })
 
@@ -376,6 +393,8 @@ var MapDemo = cc.Class.extend({
 
         this.matrixMap = new MatrixMap();
 
+        this.bossTypeDuocChon = 26;
+
     },
     resetMap: function(){
         for(var i=0;i<this.listFishGenerator.length;i++){
@@ -422,6 +441,10 @@ var MapDemo = cc.Class.extend({
 
         }
         this.matrixMap.resetMap();
+
+        this.bossTypeDuocChon = 26 + Math.floor(Math.random() * 3);
+        if(this.bossTypeDuocChon > 28)
+            this.bossTypeDuocChon = 28;
     },
     /*get matran map*/
 
@@ -434,20 +457,44 @@ var MapDemo = cc.Class.extend({
 
         for(var i=0;i<this.listFishGenerator.length;i++){
             var fg = this.listFishGenerator[i];
+            if(fg.type >= 26 && (fg.type != this.bossTypeDuocChon))
+                continue;
             if(fg.update(dt)) {
                 var f = new FishLogic();
                 f.type = fg.type;
-                var size = fg.fishDataReader["paths"].length;
-                var rr = Math.floor(Math.random() * size);if(rr >= size)rr = size-1;
 
-                f.pathData  = PathReader.getInstance().getNormalPath(fg.fishDataReader["paths"][rr]);
-                f.pathData.totalTime = fg.fishDataReal.time_xuat_hien + 4;
+                f.pathData = this.createPathData(fg.fishDataReader,fg.fishDataReal, f.type >= 26);
                 f.fishRealData = fg.fishDataReal;
                 listFishGenerated.push(f);
             }
         }
     return listFishGenerated;
-}
+    },
+    createPathData: function(fishDataReader,fishDataReal,isBoss){
+        var size = fishDataReader["paths"].length;
+        var rr = Math.floor(Math.random() * size);if(rr >= size)rr = size-1;
+        if(!isBoss )      // neu ca ko phai boss 26 27 28 thi` moi~ path data chi co 1 curve,
+       {
+           var ret = PathReader.getInstance().getNormalPath(fishDataReader["paths"][rr]);
+           ret.totalTime = fishDataReal.time_xuat_hien + 4;
+           return ret;
+       }
+       else
+       {
+           var listPath = fishDataReader["paths_boss"][rr];
+           var ret = new PathData();
+           for(var i=0;i<listPath.length;i++){
+               var points = PathReader.getInstance().getListPointAtPathID(listPath[i]);
+               cc.log(JSON.stringify(points));
+               for(var j=0;j<points.length;j++){
+                   ret.listPoints.push(points[j]);
+               }
+           }
+           ret.totalTime = fishDataReal.time_xuat_hien;
+           return ret;
+       }
+
+    }
 
 })
 

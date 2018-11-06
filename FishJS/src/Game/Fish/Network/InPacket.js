@@ -9,11 +9,12 @@ CmdReceivedLogin = CmdReceivedCommon.extend({
     },
     readData: function(){
         this.uID = this.getInt();
-        this.username = this.getString();
+        this.userName = this.getString();
         this.displayName = this.getString();
         this.avatar = this.getString();
         this.balance = this.getLong();
         this.vipType = this.getByte();
+        this.vinMoney = this.getLong();
     }
 })
 

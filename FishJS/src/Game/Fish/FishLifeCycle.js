@@ -34,7 +34,7 @@ var FishLifeCycle = cc.Class.extend({
             this.players[position].setIsMyPlayer(position == this.myChair);
         }
 
-        //fishSound.playMusicBackgroundGame();
+        fishSound.playMusicBackgroundGame();
     },
     onUserJoin: function(pk)
     {

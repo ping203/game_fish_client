@@ -7,13 +7,12 @@ var fishSound = fishSound || {};
 
 fishSound.playMusicLobby = function()
 {
-    //audioEngine.stopBackgroundMusic();
-    audioEngine.playMusic("res/sounds/fish/bg_matran.mp3",true);
+    audioEngine.playMusic("res/sounds/lobby/bg_lobby.mp3",true);
 }
 
 fishSound.playMusicBackgroundGame = function()
 {
-    //audioEngine.stopBackgroundMusic();
+    audioEngine.stopBackgroundMusic(false);
     audioEngine.playMusic("res/sounds/fish/bg_03.mp3",true);
 }
 

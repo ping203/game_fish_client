@@ -59,8 +59,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 385.3734,
-              "Y": 464.0216
+              "X": 398.1887,
+              "Y": 450.3518
             },
             "Scale": {
               "ScaleX": 2.2676,
@@ -69,17 +69,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.3011,
-              "Y": 0.6445
+              "X": 0.3111,
+              "Y": 0.6255
             },
             "PreSize": {
               "X": 0.0359,
               "Y": 0.05
             },
-            "LeftMargin": 362.3734,
-            "RightMargin": 871.6266,
-            "TopMargin": 237.9784,
-            "BottomMargin": 446.0216,
+            "LeftMargin": 375.1887,
+            "RightMargin": 858.8113,
+            "TopMargin": 251.6482,
+            "BottomMargin": 432.3518,
             "Tag": 98,
             "ActionTag": -257601392,
             "Size": {
@@ -93,16 +93,15 @@
             "FontSize": 20,
             "IsCustomSize": true,
             "LabelText": "",
-            "PlaceHolderText": "Text Field",
+            "PlaceHolderText": "username...............",
             "MaxLengthText": 10,
             "TouchEnable": true,
             "AnchorPoint": {
-              "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 493.579,
-              "Y": 461.167
+              "X": 482.9465,
+              "Y": 471.4179
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -111,24 +110,65 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.3856,
-              "Y": 0.6405
+              "X": 0.3773,
+              "Y": 0.6547
             },
             "PreSize": {
-              "X": 0.0672,
+              "X": 0.1141,
               "Y": 0.0319
             },
-            "LeftMargin": 450.579,
-            "RightMargin": 743.421,
-            "TopMargin": 247.333,
-            "BottomMargin": 449.667,
+            "LeftMargin": 482.9465,
+            "RightMargin": 651.0535,
+            "TopMargin": 237.0821,
+            "BottomMargin": 459.9179,
             "Tag": 99,
             "ActionTag": 1530591117,
             "Size": {
-              "X": 86.0,
+              "X": 146.0,
               "Y": 23.0
             },
-            "Name": "TextField_1",
+            "Name": "username",
+            "ctype": "TextFieldObjectData"
+          },
+          {
+            "FontSize": 20,
+            "IsCustomSize": true,
+            "LabelText": "",
+            "PlaceHolderText": "password",
+            "MaxLengthText": 10,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 483.8857,
+              "Y": 439.2028
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.378,
+              "Y": 0.61
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.0319
+            },
+            "LeftMargin": 483.8857,
+            "RightMargin": 596.1143,
+            "TopMargin": 269.2972,
+            "BottomMargin": 427.7028,
+            "Tag": 151,
+            "ActionTag": -1150471050,
+            "Size": {
+              "X": 200.0,
+              "Y": 23.0
+            },
+            "Name": "password",
             "ctype": "TextFieldObjectData"
           }
         ],

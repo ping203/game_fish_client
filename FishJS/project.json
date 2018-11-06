@@ -51,6 +51,8 @@
         "src/Game/Fish/GameLogic/MathUtil.js",
         "src/Game/Fish/GameLogic/Path.js",
         "src/Game/Fish/GameLogic/Map.js",
+      "src/Game/Fish/GameData.js",
+
 
       "src/Game/Fish/Network/InPacket.js",
       "src/Game/Fish/Network/OutPacket.js",

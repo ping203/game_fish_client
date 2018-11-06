@@ -7,7 +7,7 @@ CmdSendLogin = CmdSendCommon.extend({
     {
         this._super();
         this.initData(1000);
-        this.setCmdId(CMD.CMD_LOGIN);
+        this.setCmdId(CMD.CMD_LOGIN_BY_TOKEN);
 
     },
     putData: function(username,password){

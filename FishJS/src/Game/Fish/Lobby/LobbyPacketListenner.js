@@ -13,8 +13,7 @@ var LobbyPacketListenner = cc.Class.extend({
         if(result)
         {
             var pk = new CmdSendLogin();
-            var username = "vishiha" + Math.floor((Math.random() * 1000) + 1)
-            pk.putData(username,"hoang154");
+            pk.putData(gameData.nickName,gameData.accessToken);
             GameClient.getInstance().sendPacket(pk);
         }
 
@@ -27,10 +26,22 @@ var LobbyPacketListenner = cc.Class.extend({
         switch (cmd){
             case CMD.CMD_LOGIN:
             {
-                var pk = new CmdReceivedLogin(pkg);
+                var pk = new CmdReceivedLogin(pkg); // update user info
 
-                var pkQuickJoin = new CmdSendQuickJoin();
-                GameClient.getInstance().sendPacket(pkQuickJoin);
+                gameData.userData.userName = pk.userName;
+                gameData.userData.displayName = pk.displayName;
+                gameData.userData.uID = pk.uID;
+                gameData.userData.avatar = pk.avatar;
+                gameData.userData.gold = pk.balance;
+                gameData.userData.vinMoney = pk.vinMoney;
+
+                cc.log("Login Sucessful")
+                fishSound.playMusicLobby();
+                var lobby = sceneMgr.getMainLayer();
+                lobby.onUpdateData();
+
+
+                sceneMgr.clearLoading();
                 break;
             }
 

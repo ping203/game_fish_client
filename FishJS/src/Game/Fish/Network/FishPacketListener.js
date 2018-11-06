@@ -26,7 +26,7 @@ var FishPacketListener = cc.Class.extend({
             {
                 var pk = new CmdReceivedUpdateRound(p);
                 pk.clean();
-                cc.log("update round");
+                cc.log("update round" + fishLifeCycle);
                 cc.log(JSON.stringify(pk));
                 fishLifeCycle.onUpdateRound(pk);
                 break;

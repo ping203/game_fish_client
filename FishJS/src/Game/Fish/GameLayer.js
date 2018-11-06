@@ -232,8 +232,10 @@ var GameLayerUI = BaseLayer.extend({
         path.calculate();
         var fish = new Fish();
         fish.id = id;
+        fish.fishType = typeFish;
         fish.setNodeDisplay(sp);
         fish.startWithPath(path,elapsedTime);
+        fish.enableFlip(typeFish>= 26);
 
         this.gameMgr.createBodyForFish(fish,vec2(fishData.data["fish_type_"+typeFish]["box"][0]/2,fishData.data["fish_type_"+typeFish]["box"][1]/2));
 
@@ -378,7 +380,7 @@ var GameLayerUI = BaseLayer.extend({
         var pos = fishSp.getPosition();
 
         var str = "" + StringUtility.standartNumber(Math.abs(money));
-        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/fonts/Tien bac-export.fnt":"res/fonts/Tien bac-export.fnt";
+        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/fonts/Tien vang-export.fnt":"res/fonts/Tien bac-export.fnt";
         var moneyLb =  new cc.LabelBMFont(str,fontFile,0);
         moneyLb.setPosition(pos);
 
@@ -407,9 +409,9 @@ var GameLayerUI = BaseLayer.extend({
         if(fishLifeCycle.myChair == index)
             sp.setColor(cc.color(255,100,0));
         sp.setOpacity(150);
-        sp.setScale(.5);
+        sp.setScale(.35);
         sp.setPosition(pos);
-        sp.runAction(cc.sequence(cc.spawn(cc.fadeIn(.25),cc.scaleTo(.25,.7)),cc.fadeTo(.35,0),cc.removeSelf()));
+        sp.runAction(cc.sequence(cc.spawn(cc.fadeIn(.25),new cc.EaseBackOut(cc.scaleTo(.25,.55))),cc.fadeTo(.35,0),cc.removeSelf()));
     },
 
     createWater: function()
@@ -443,12 +445,17 @@ var GameLayerUI = BaseLayer.extend({
             sp.setOpacity(100);
             //sp.setFlippedX(true);
         }
+        if(data["isBoss"])
+        {
+            var sp = new cc.Sprite("res/fishData/effect/boss_chan_"+(type - 25) +".png");
+            node.addChild(sp,1,2);
+            sp.runAction(cc.repeatForever(cc.rotateBy(5,360)));
+        }
         var sp2 = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("fish_" +type +"_01.png"));
         var action =cc.repeatForever(cc.animate(animation));action.setTag(110);
         sp2.runAction(action);
-        node.addChild(sp2,1,0);
+        node.addChild(sp2,2,0);
         sp2.setPosition( data["sprite_offset"][0], data["sprite_offset"][1]);
-        //sp2.setFlippedX(true);
         if(Config.DEBUG)
         {
             var ww = data["box"][0] * PM_RATIO;
@@ -458,8 +465,9 @@ var GameLayerUI = BaseLayer.extend({
             color.setScale( 1 / data["scale"]);
             node.addChild(color,0);
 
-        }
+            sp2.setVisible(false);
 
+        }
         node.setScale(data["scale"]);
         node.setLocalZOrder(Math.floor(data["zorder"]));
 

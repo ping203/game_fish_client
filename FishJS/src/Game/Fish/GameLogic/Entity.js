@@ -102,12 +102,17 @@ var FishCommonWeb = EntityWeb.extend({
         this.path = null;
         this.enable_auto_die = true;
 
+
+        this.enable_flip = false;
+        this.tmpFlipCheck = false;
+
     },
     startWithPath: function(path,timeElapsed)
     {
         this.path = path;
         this.paused = false;
         this.time = timeElapsed;
+        this.path.setPathListener(this);
 
         this.update(0);
 
@@ -115,6 +120,23 @@ var FishCommonWeb = EntityWeb.extend({
     enableAutoDie: function(die)
     {
         this.enable_auto_die = die;
+    },
+    enableFlip: function(flip){
+        this.enable_flip = flip;
+    },
+    onNewCurve: function(curve){
+        if(!this.enable_flip || !this._nodeDisplay)
+            return;
+        //cc.log(curve);
+        var offset = (curve.v3 || curve.v2 || curve.v1).x - curve.v0.x;
+
+        var sp = this._nodeDisplay.getChildByTag(0);
+        if(sp)
+        {
+            sp.setFlippedX(offset > 0);
+            //sp.setScale(.1)
+        }
+
     },
     update: function(dt)
     {
@@ -130,10 +152,6 @@ var FishCommonWeb = EntityWeb.extend({
                 this.released = true;
             }
         }
-
-        //var position = this.path.getPositionFromTime(this.time);
-        //var angle = this.path.getCurrentAngle();
-        //cc.log(JSON.stringify(position) + "    _" + angle);
         var ret = {};
         ret.position = this.path.getPositionFromTime(this.time);
         ret.angle = this.path.getCurrentAngleRad();
