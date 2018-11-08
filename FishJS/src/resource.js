@@ -59,6 +59,10 @@ var g_resources = [
     "res/fonts/Tien bac-export.fnt",
     "res/fishData/effect/bong_nuoc_effect.plist",
     "res/fishData/effect/coin1.plist",
+
+    "res/fishData/coin/coin0.plist",
+    "res/fishData/coin/coin1.plist",
+
     "res/fishData/effect/spray.plist",
 
     "res/GUI/Lobby/Anim/Chien_ngay/skeleton.json",

@@ -30,6 +30,8 @@ var LoginScene = BaseLayer.extend({
         this.lbUsername.setString( cc.sys.localStorage.getItem("username") || "");
         this.lbPassword.setString( cc.sys.localStorage.getItem("password") || "");
 
+
+
     },
     onButtonReleased: function(btn,id){
         switch (id)
@@ -83,7 +85,8 @@ var LoginScene = BaseLayer.extend({
 
             sceneMgr.openWithScene(new LobbyScene());
 
-            GameClient.getInstance().connect("192.168.0.146",8080);
+            //GameClient.getInstance().connect("192.168.0.146",8080);
+            GameClient.getInstance().connect("35.240.162.131",8080);
 
         }
     },

@@ -10,10 +10,10 @@ fishSound.playMusicLobby = function()
     audioEngine.playMusic("res/sounds/lobby/bg_lobby.mp3",true);
 }
 
-fishSound.playMusicBackgroundGame = function()
+fishSound.playMusicBackgroundGame = function(id)
 {
-    audioEngine.stopBackgroundMusic(false);
-    audioEngine.playMusic("res/sounds/fish/bg_03.mp3",true);
+    audioEngine.stopMusic(false);
+    audioEngine.playMusic("res/sounds/game/bg_game_"+id+".mp3",true);
 }
 
 fishSound.playEffectShoot = function()
@@ -25,6 +25,10 @@ fishSound.playEffectFishHit = function()
 {
     audioEngine.playEffect("res/sounds/fish/sound_hit_03.mp3",false);
 
+}
+
+fishSound.stopMusic = function(){
+    audioEngine.stopMusic(false);
 }
 
 fishSound.playEffectFishDie = function(type)

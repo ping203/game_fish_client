@@ -83,18 +83,25 @@ var LobbyScene = BaseLayer.extend({
         this.lbGold = this.getControl("lbGold",this.panelGold);
         this.customizeButton("btnPlusGold",LobbyScene.BTN_PLUS_GOLD,this.panelGold);
 
+        this.bg = this.getControl("bg");
+
     },
     onEnter: function(){
         this._super();
         sceneMgr.addLoading("Loading...",true);
         //GameClient.getInstance().connect("35.240.162.131",8080);
+
     },
     onUpdateData: function(){
         this.lbUserName.setString(gameData.userData.userName);
         this.lbUserID.setString("#ID "+gameData.userData.uID)
-        this.lbGold.setString(gameData.userData.gold);
+        this.lbGold.setString(StringUtility.standartNumber(gameData.userData.gold) +"$");
 
-        this.lbMan.setString(gameData.userData.vinMoney);
+        this.lbMan.setString(StringUtility.standartNumber(gameData.userData.vinMoney) +"$");
+
+        this.bg.setVisible(true);
+        this.bg.setOpacity(0);
+        this.bg.runAction(cc.fadeIn(.35));
 
     },
     onButtonReleased: function(btn,id){

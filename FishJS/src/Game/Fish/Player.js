@@ -6,7 +6,7 @@ var PlayerData = cc.Class.extend({
     ctor: function()
     {
         this.chair = -1;
-        this.rawInfo = null;
+        this.rawData = null;
     }
 })
 
@@ -98,6 +98,8 @@ var Player = cc.Node.extend({
         this.lbMoney1 = bg_thongtin.getChildByName("lbMoney");
         this.lbMoney2 = bg_thongtin.getChildByName("lbMoney2");
 
+        this.bgThongTin = bg_thongtin;
+
         this.gunMoney = this.ui.getChildByName("money");
         this.btnPlus = this.ui.getChildByName("btnPlus");
         this.btnSub = this.ui.getChildByName("btnSub");
@@ -150,12 +152,17 @@ var Player = cc.Node.extend({
     {
         this.panel.setVisible(bool);
         this.isEnabled = bool;
+        this.setIsMyPlayer(false);
+        this.bgThongTin.setVisible(bool);
+        this.gunMoney.setVisible(bool);
+        this.gun.setVisible(bool);
+
     },
     updateInfo: function()
     {
         this.lbName.setString(this.playerData.rawData["displayName"]);
-        this.lbMoney1.setString(this.playerData.rawData["balance"]);
-        this.lbMoney2.setString(this.playerData.rawData["balance"]);
+        this.lbMoney1.setString(this.playerData.rawData["bean"]);
+        this.lbMoney2.setString(this.playerData.rawData["bean"]);
     },
     setHold: function(fish){
         this.holdFishInfo.isHolding = true;

@@ -62,7 +62,7 @@ CmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
         this.info["username"] = this.getString();
         this.info["displayName"] = this.getString();
         this.info["avatar"] = this.getString();
-        this.info["balance"] = this.getLong();
+        this.info["balance"] = this.info["bean"] = this.getLong();
         this.info["vipType"] = this.getByte();
 
         this.info["position"] = this.getByte();

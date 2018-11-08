@@ -59,13 +59,20 @@ var GameLayerUI = BaseLayer.extend({
         panel_display.addChild(water,3);
         water.setPosition(cc.winSize.width /2 ,cc.winSize.height / 2);
 
-        water.setScaleX(cc.winSize.width / water.getContentSize().width);
-        water.setScaleY(cc.winSize.height / water.getContentSize().height);
+        water.setScaleX(cc.winSize.width / 1024);
+        water.setScaleY(cc.winSize.height / 576);
 
         this.particleBongNuoc = new cc.ParticleSystem("res/fishData/effect/bong_nuoc_effect.plist");
         this.topLayer.addChild(this.particleBongNuoc);
         this.particleBongNuoc.setPosition(0,0);
         this.particleBongNuoc.setVisible(false);
+
+        this.backgrounds = [];
+        var panel_bg = this.getControl("Panel_bg");
+        this.backgrounds.push(this.getControl("bg0",panel_bg));
+        this.backgrounds.push(this.getControl("bg1",panel_bg));
+        this.backgrounds.push(this.getControl("bg2",panel_bg));
+
 
         this.players = [];
         for(var i =0 ;i< MAX_PLAYER;i++)
@@ -74,7 +81,7 @@ var GameLayerUI = BaseLayer.extend({
             var player = new Player(panel,this);
             player.index = i;
             this.players.push(player);
-            panel.setVisible(false);
+            //panel.setVisible(false);
 
             player.btnPlus.setPressedActionEnabled(true);
             player.btnPlus.setTag(GameLayerUI.BTN_PLUS);
@@ -83,6 +90,8 @@ var GameLayerUI = BaseLayer.extend({
             player.btnSub.setPressedActionEnabled(true);
             player.btnSub.setTag(GameLayerUI.BTN_SUB);
             player.btnSub.addTouchEventListener(this.onTouchEventHandler,this);
+
+            player.enable(false);
         }
         this.time = 0;
 
@@ -370,7 +379,7 @@ var GameLayerUI = BaseLayer.extend({
         this.particleBongNuoc.runAction(cc.sequence(cc.fadeOut(.5),cc.hide()));
 
     },
-    createEffectFishDie: function(fishSp,money,playerIndex)
+    createEffectFishDie: function(fishSp,money,playerIndex,withCoin)
     {
         if(!fishSp)
         {
@@ -401,6 +410,9 @@ var GameLayerUI = BaseLayer.extend({
 
         //effect gold
         var goldSp = this.createEffectMoney(pos,playerIndex);
+
+        if(withCoin)
+            this.createEffectCoin(pos);
     },
     createEffectFishFired: function(pos,index)
     {
@@ -493,7 +505,7 @@ var GameLayerUI = BaseLayer.extend({
                     fishLifeCycle.myBetIdx = (fishLifeCycle.bets.length-1);
 
                 fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx]);
-
+                this.shakeScreen();
                 break;
             }
             case GameLayerUI.BTN_SUB:
@@ -536,6 +548,76 @@ var GameLayerUI = BaseLayer.extend({
         ))
 
         return node;
+    },
+    startMusic: function(){
+
+        this.currentBG = Math.floor(Math.random() * 3);
+        if(this.currentBG > 2)
+            this.currentBG = 2;
+
+        this.backgrounds[0].setVisible(false);
+        this.backgrounds[1].setVisible(false);
+        this.backgrounds[2].setVisible(false);
+
+        this.backgrounds[this.currentBG].setVisible(true);
+
+        fishSound.playMusicBackgroundGame(this.currentBG);
+
+        var action = cc.sequence(cc.delayTime(100),cc.callFunc(function(){
+            var lastBG = this.currentBG;
+            this.currentBG++;
+            if(this.currentBG > 2)
+                this.currentBG -= 3;
+
+            this.backgrounds[0].setVisible(false);
+            this.backgrounds[1].setVisible(false);
+            this.backgrounds[2].setVisible(false);
+
+            this.backgrounds[lastBG].setVisible(true);
+            this.backgrounds[lastBG].runAction(cc.fadeOut(.5));
+            this.backgrounds[this.currentBG].setVisible(true);
+            this.backgrounds[this.currentBG].setOpacity(0);
+            this.backgrounds[this.currentBG].runAction(cc.fadeIn(.5));
+
+            fishSound.playMusicBackgroundGame(this.currentBG);
+        }.bind(this))).repeatForever();
+        action.setTag(1111);
+        this.runAction(action);
+
+    },
+    stopMusic: function(){
+        fishSound.stopMusic();
+        this.stopActionByTag(1111);
+    },
+    createEffectCoin: function(pos){
+
+        var node = new cc.Node();
+        var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("coin.0000.png"));
+        cc.log(sp);
+        this.effectLayer.addChild(node);
+        var animation = new cc.Animation();
+        for (var i = 0; i < 90; i++) {
+            var frameName = "coin.00"+ (i<10?"0"+i:i) + ".png";
+            animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame(frameName));
+        }
+        animation.setDelayPerUnit(0.02);
+        var action = cc.animate(animation);
+        sp.runAction(action);
+        sp.runAction(cc.sequence(cc.delayTime(0.02 * 90 - 0.25),cc.fadeOut(.25)));
+
+        node.addChild(sp);
+        sp.setScale(2.25);
+
+        node.setPosition(pos);
+        node.runAction(cc.sequence(cc.delayTime(0.02 * 90),cc.removeSelf()))
+        this.shakeScreen();
+        return node;
+    },
+    shakeScreen: function(){
+        this.stopActionByTag(9);
+        var shake = cc.sequence(cc.moveBy(.0175,cc.p(3,3)),cc.moveBy(.035,cc.p(-6,-6)),cc.moveBy(.0175,cc.p(3,3))).repeat(2);
+        shake.setTag(9);
+        this.runAction(shake);
     }
 
 

@@ -33,8 +33,7 @@ var FishLifeCycle = cc.Class.extend({
 
             this.players[position].setIsMyPlayer(position == this.myChair);
         }
-
-        fishSound.playMusicBackgroundGame();
+        this.gameScene.startMusic();
     },
     onUserJoin: function(pk)
     {
@@ -78,6 +77,9 @@ var FishLifeCycle = cc.Class.extend({
         var position = data.position;
         if(position != this.position)
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
+
+        this.players[position].playerData.rawData["bean"] = data.user_money;
+        this.players[position].updateInfo();
     },
     onShootResult: function(pk)
     {
@@ -89,8 +91,7 @@ var FishLifeCycle = cc.Class.extend({
                 var fishSp = fish.getNodeDisplay();
                 fish.setNodeDisplay(null);
 
-                // cc.log(JSON.stringify(fish));
-                this.gameScene.createEffectFishDie(fishSp,pk.won_money,pk.position);
+                this.gameScene.createEffectFishDie(fishSp,pk.won_money,pk.position,fish.fishType > 10);
                 this.gameScene.gameMgr.destroyEntity(fish);
 
                 fishSound.playEffectFishDie(fish.id);

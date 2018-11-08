@@ -140,7 +140,6 @@
                   "X": 1280.0,
                   "Y": 720.0
                 },
-                "VisibleForFrame": false,
                 "Name": "bg0",
                 "ctype": "ImageViewObjectData"
               },
@@ -228,6 +227,7 @@
                   "X": 1280.0,
                   "Y": 720.0
                 },
+                "VisibleForFrame": false,
                 "Name": "bg1",
                 "ctype": "ImageViewObjectData"
               },
@@ -4883,27 +4883,27 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 75.5211,
-                  "Y": 14.836
+                  "X": 46.4151,
+                  "Y": 16.9546
                 },
                 "Scale": {
-                  "ScaleX": 0.4996,
-                  "ScaleY": 0.4996
+                  "ScaleX": 0.4172,
+                  "ScaleY": 0.4172
                 },
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.3776,
-                  "Y": 0.0742
+                  "X": 0.2321,
+                  "Y": 0.0848
                 },
                 "PreSize": {
                   "X": 0.77,
                   "Y": 0.775
                 },
-                "LeftMargin": -1.4789,
-                "RightMargin": 47.4789,
-                "TopMargin": 107.664,
-                "BottomMargin": -62.664,
+                "LeftMargin": -30.5849,
+                "RightMargin": 76.5849,
+                "TopMargin": 105.5454,
+                "BottomMargin": -60.5454,
                 "Tag": 116,
                 "ActionTag": -1604838559,
                 "Size": {

@@ -77,7 +77,8 @@ var DemoScene = BaseLayer.extend({
                 var fishSp = fish.getNodeDisplay();
                 fish.setNodeDisplay(null);
 
-                this.gameScene.createEffectFishDie(fishSp,result.won_money,0);
+
+                this.gameScene.createEffectFishDie(fishSp,result.won_money,0,fish.fishType > 10);
                 this.gameScene.gameMgr.destroyEntity(fish);
 
                 fishSound.playEffectFishDie(fish.id);
