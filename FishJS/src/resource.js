@@ -38,6 +38,7 @@ var g_resources = [
 
 
     "res/GUI/ScreenGame/Background/particle_texture.plist",
+    "res/fonts/tahoma.ttf",
 
     "res/Fish2D.json",
     "res/Path_normals.json",
@@ -62,6 +63,8 @@ var g_resources = [
 
     "res/fishData/coin/coin0.plist",
     "res/fishData/coin/coin1.plist",
+    "res/fishData/coin/xuxu.plist",
+
 
     "res/fishData/effect/spray.plist",
 

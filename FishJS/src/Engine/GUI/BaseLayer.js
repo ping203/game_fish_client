@@ -518,13 +518,13 @@ var BaseLayer  = cc.Layer.extend({
  * CREATE CONTROL
  */
 BaseLayer.createLabelText = function (txt,color) {
-    var ret = new ccui.Text()
+    var ret = new ccui.Text();
     ret.setAnchorPoint(cc.p(0.5, 0.5));
-    ret.setFontName("fonts/tahoma.ttf");
+    ret.setFontName("res/fonts/tahoma.ttf");
     ret.setFontSize(25);
     ret.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
     if(txt !== undefined) ret.setString(txt);
-    if(color !== undefined) ret.setColor(color);
+    //if(color !== undefined) ret.setColor(color);
     return ret;
 };
 

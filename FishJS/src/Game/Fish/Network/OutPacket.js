@@ -46,6 +46,26 @@ CmdSendQuickJoin  = CmdSendCommon.extend({
     }
 })
 
+CmdSendQuit  = CmdSendCommon.extend({
+    ctor: function()
+    {
+        this._super();
+        this.initData(100);
+        this.setCmdId(CMD.CMD_USER_EXIT);
+        this.putData();
+
+    },
+    putData: function(){
+
+        //pack
+        this.packHeader();
+
+        //update
+        this.updateSize();
+    }
+})
+
+
 CmdSendStartShoot = CmdSendCommon.extend(
     {
         ctor:function()

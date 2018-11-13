@@ -36,7 +36,6 @@ var FishPacketListener = cc.Class.extend({
                 var pk = new CmdReceivedStartShoot(p);
                 pk.clean();
                 fishLifeCycle.onStartShoot(pk);
-                cc.log(JSON.stringify(pk));
 
                 break;
             }
@@ -54,6 +53,13 @@ var FishPacketListener = cc.Class.extend({
                 var ujoin = new CmdReceivedUserJoinRoom(p);
                 fishLifeCycle.onUserJoin(ujoin);
                 ujoin.clean();
+
+                break;
+            }
+            case CMD.CMD_USER_EXIT:
+            {
+                var pk = new CmdReceivedUserExitRoom(p);
+                fishLifeCycle.onUserExit(pk);
 
                 break;
             }
@@ -119,6 +125,13 @@ fishBZ.sendShootFish =  function(bet,fish_id)
 fishBZ.sendLockFish = function(isLock,fish_id){
     var pk = new CmdSendLockFish();
     pk.putData(isLock,fish_id);
+    GameClient.getInstance().sendPacket(pk);
+    pk.clean();
+}
+
+fishBZ.sendQuit = function()
+{
+    var pk = new CmdSendQuit();
     GameClient.getInstance().sendPacket(pk);
     pk.clean();
 }

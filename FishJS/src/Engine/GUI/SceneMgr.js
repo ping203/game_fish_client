@@ -39,7 +39,7 @@ var SceneMgr = cc.Class.extend({
         if(curScene === undefined || curScene == null) return null;
         if(curScene instanceof cc.TransitionScene)
         {
-            return curScene._inScene.getMainLayer();
+            return (cc.sys.isNative?curScene.getInScene():curScene._inScene).getMainLayer();
         }
         else
         {

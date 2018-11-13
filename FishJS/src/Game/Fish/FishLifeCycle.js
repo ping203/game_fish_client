@@ -45,6 +45,16 @@ var FishLifeCycle = cc.Class.extend({
         this.players[position].updateInfo();
 
     },
+    onUserExit: function(pk){
+        if(pk.position == this.myChair)     // minh` quit game
+        {
+            var lobbyScene = new LobbyScene();
+            lobbyScene.onUpdateData();
+            sceneMgr.openWithScene(lobbyScene);
+        }
+        else    // user khac quit
+            this.players[pk.position].enable(false);
+    },
     onUpdateRound: function(pk)
     {
           if(pk.gameState == GameManager.STATE_NORMAL_MAP)
@@ -59,10 +69,6 @@ var FishLifeCycle = cc.Class.extend({
 
           }
     },
-    onUserQuit: function(pk)
-    {
-
-    },
 
     onAddFish: function(pk)
     {
@@ -76,10 +82,13 @@ var FishLifeCycle = cc.Class.extend({
     {
         var position = data.position;
         if(position != this.position)
+        {
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
+            this.players[position].setGunBet(data.bet,false);
+        }
 
         this.players[position].playerData.rawData["bean"] = data.user_money;
-        this.players[position].updateInfo();
+        this.players[position].updateInfo()
     },
     onShootResult: function(pk)
     {
@@ -95,6 +104,10 @@ var FishLifeCycle = cc.Class.extend({
                 this.gameScene.gameMgr.destroyEntity(fish);
 
                 fishSound.playEffectFishDie(fish.id);
+            }
+            if(pk.position == this.position)        // effect money for player
+            {
+                this.gameScene.effectMoney(pk.position,pk.won_money);
             }
         }
 

@@ -20,35 +20,36 @@ var LobbyScene = BaseLayer.extend({
         var node_shop = this.getControl("node_shop",this.btnShop);
 
         var top_center = this.getControl("Panel_top_center");
-        var logo = new sp.SkeletonAnimation("res/GUI/Lobby/Anim/logo/skeleton.json","res/GUI/Lobby/Anim/logo/skeleton.atlas");
+        var logo = sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/logo/skeleton.json","res/GUI/Lobby/Anim/logo/skeleton.atlas");
+        cc.log(logo);
         logo.setAnimation(0,"animation",true);
         logo.setScale(.65);
         top_center.addChild(logo);
 
 
-        var animChoiNgay =  new sp.SkeletonAnimation("res/GUI/Lobby/Anim/Chien_ngay/skeleton.json","res/GUI/Lobby/Anim/Chien_ngay/skeleton.atlas");
+        var animChoiNgay =  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/Chien_ngay/skeleton.json","res/GUI/Lobby/Anim/Chien_ngay/skeleton.atlas");
         animChoiNgay.setAnimation(0,"animation",true);
         animChoiNgay.setScale(.65);
 
         node_choingay.addChild(animChoiNgay);
 
-        var animChoiThu=  new sp.SkeletonAnimation("res/GUI/Lobby/Anim/Choi_thu/skeleton.json","res/GUI/Lobby/Anim/Choi_thu/skeleton.atlas");
+        var animChoiThu=  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/Choi_thu/skeleton.json","res/GUI/Lobby/Anim/Choi_thu/skeleton.atlas");
         animChoiThu.setAnimation(0,"animation",true);
         animChoiThu.setScale(.65);
 
         node_choithu.addChild(animChoiThu);
 
-        var animShop=  new sp.SkeletonAnimation("res/GUI/Lobby/Anim/Shop/skeleton.json","res/GUI/Lobby/Anim/Shop/skeleton.atlas");
+        var animShop=  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/Shop/skeleton.json","res/GUI/Lobby/Anim/Shop/skeleton.atlas");
         animShop.setAnimation(0,"animation",true);
         animShop.setScale(.65);
 
         node_shop.addChild(animShop);
 
-        var animLeft =  new sp.SkeletonAnimation("res/GUI/Lobby/Anim/Shop/skeleton.json","res/GUI/Lobby/Anim/Shop/skeleton.atlas");
+        var animLeft =  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/Shop/skeleton.json","res/GUI/Lobby/Anim/Shop/skeleton.atlas");
         animLeft.setAnimation(0,"animation",true);
         animLeft.setScale(.65);
 
-        var animCua =  new sp.SkeletonAnimation("res/GUI/Lobby/Anim/cua/skeleton.json","res/GUI/Lobby/Anim/cua/skeleton.atlas");
+        var animCua =  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/cua/skeleton.json","res/GUI/Lobby/Anim/cua/skeleton.atlas");
         animCua.setAnimation(0,"animation",true);
         animCua.setScale(.3);
 
@@ -63,9 +64,6 @@ var LobbyScene = BaseLayer.extend({
         }.bind(animCua)
 
         animCua.runAction(cc.sequence(cc.moveBy(30,cc.p(850,0)),cc.callFunc(func),cc.moveBy(30,cc.p(-850,0))).repeatForever());
-
-
-        GameClient.getInstance().setListener(lobbyListenner);
 
 
         //for UI
@@ -86,9 +84,13 @@ var LobbyScene = BaseLayer.extend({
         this.bg = this.getControl("bg");
 
     },
+    withLogin: function(){
+        this.need_login = true;
+    },
     onEnter: function(){
         this._super();
-        sceneMgr.addLoading("Loading...",true);
+        if(this.need_login)
+            sceneMgr.addLoading("Loading...",true);
         //GameClient.getInstance().connect("35.240.162.131",8080);
 
     },

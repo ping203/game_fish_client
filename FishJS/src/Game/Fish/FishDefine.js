@@ -16,15 +16,13 @@ var FishData = cc.Class.extend({
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-1.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-2.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-3.plist");
+
         cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/coin1.plist");
-        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes-4.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/spray.plist");
-
         cc.spriteFrameCache.addSpriteFrames("res/fishData/loading/loading.plist");
-
         cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/coin0.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/coin1.plist");
-
+        cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/xuxu.plist");
 
 
 

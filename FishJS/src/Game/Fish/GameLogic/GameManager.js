@@ -325,6 +325,11 @@ var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
     getFishByID: function(id)
     {
         return this.fishEntities[""+id];
+    },
+    destroyEntity: function(entity)
+    {
+        this._super(entity);
+        entity.released = true;
     }
 
 });

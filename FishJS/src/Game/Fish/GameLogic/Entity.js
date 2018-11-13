@@ -12,10 +12,14 @@ var EntityWeb = cc.Class.extend({
         this._nodeDisplay = null;
         this._id = -1;
         this.released = false;
+        this.contentSize  = cc.size(0,0);
     },
     update : function(dt)
     {
 
+    },
+    isNeedRemove: function(){
+        return this.need_remove;
     },
     setPosition: function(x,y)
     {
@@ -67,6 +71,9 @@ var EntityWeb = cc.Class.extend({
     getType: function()
     {
         return this._type;
+    },
+    setContentSize: function(size){
+        this.contentSize = size;
     }
 })
 
@@ -112,7 +119,7 @@ var FishCommonWeb = EntityWeb.extend({
         this.path = path;
         this.paused = false;
         this.time = timeElapsed;
-        this.path.setPathListener(this);
+        this.path.setPathListener(this.onNewCurve.bind(this));
 
         this.update(0);
 
@@ -212,6 +219,9 @@ var BulletWeb = Entity.extend({
     },
     setHoldInfo: function(hInfo){
         this.holdInfo = hInfo;
+    },
+    getHoldInfo: function(){
+        return this.holdInfo;
     }
 
 })

@@ -38,20 +38,26 @@ var GameLayerUI = BaseLayer.extend({
 
         this.bulletLayer = new cc.Layer();
         this.effectLayer = new cc.Layer();
+        this.effectLayerTop = new cc.Layer();
+
         this.topLayer = new cc.Layer();
         this.fish2DLayer = new Display2DScene();
         this.fish3DScene = new Display3DScene();
         var panel_display = this.getControl("Panel_Fish");
+        this.panel_diaplay = panel_display;
         panel_display.addChild(this.fish3DScene,1);
         panel_display.addChild(this.fish2DLayer,2);
         panel_display.addChild(this.effectLayer,4);
         var top_panel = this.getControl("Panel_Top");
         top_panel.addChild(this.topLayer,40);
         top_panel.addChild(this.bulletLayer,3);
+        top_panel.addChild(this.effectLayerTop,5);
 
 
         var panel_ui = this.getControl("Panel_UI");
         this.customizeButton("btnHold",GameLayerUI.BTN_HOLD_FISH,panel_ui);
+        this.customizeButton("btnMenu",GameLayerUI.BTN_MENU,panel_ui);
+
 
         var water = this.createWater();
         water.setOpacity(100);
@@ -124,9 +130,9 @@ var GameLayerUI = BaseLayer.extend({
         }
 
         var collide_check = false;
-        if(bullet.holdInfo && bullet.holdInfo.isHolding)
+        if(bullet.getHoldInfo() && bullet.getHoldInfo().getIsHolding())
         {
-            collide_check = (bullet.holdInfo.fishForHold == fish);
+            collide_check = (bullet.getHoldInfo().getFish() == fish);
         }
         else
             collide_check = true;
@@ -186,8 +192,8 @@ var GameLayerUI = BaseLayer.extend({
         this.bulletLayer.addChild(sprite);
 
         var destPosition = screenPosition;
-        if(fishLifeCycle.myPlayer.holdFishInfo.isHolding){
-            var posBody = fishLifeCycle.myPlayer.holdFishInfo.fishForHold.getBodyPosition();
+        if(fishLifeCycle.myPlayer.holdFishInfo.getIsHolding()){
+            var posBody = fishLifeCycle.myPlayer.holdFishInfo.getFish().getBodyPosition();
             destPosition = vec2(posBody.x * PM_RATIO,posBody.y * PM_RATIO);
         }
 
@@ -203,7 +209,7 @@ var GameLayerUI = BaseLayer.extend({
         bullet.setNodeDisplay( sprite);
         this.gameMgr.createBodyForBullet(bullet,vec2(.5,.5));
         this.gameMgr.shootBullet(bullet,vec2(gun_pos.x / PM_RATIO,gun_pos.y / PM_RATIO),vec2((location.x - gun_pos.x) / PM_RATIO,(location.y - gun_pos.y) / PM_RATIO));
-        if(player.holdFishInfo.isHolding){
+        if(player.holdFishInfo.getIsHolding()){
             bullet.setHoldInfo(player.holdFishInfo);
         }
         bullet.update(0);
@@ -228,7 +234,7 @@ var GameLayerUI = BaseLayer.extend({
         //matranMap.start(0,0)
 
     },
-    addFish: function(id,typeFish,pathData,pathTime,elapsedTime)
+    addFish: function(id,typeFish,pathData,pathTime,elapsedTime)        // add fish khi ban thuong
     {
         var sp = this.createFishAnim(typeFish);
         this.fish2DLayer.addChild(sp);
@@ -245,6 +251,7 @@ var GameLayerUI = BaseLayer.extend({
         fish.setNodeDisplay(sp);
         fish.startWithPath(path,elapsedTime);
         fish.enableFlip(typeFish>= 26);
+        fish.setContentSize(cc.size(fishData.data["fish_type_"+typeFish]["box"][0] * PM_RATIO * 2,fishData.data["fish_type_"+typeFish]["box"][1] * PM_RATIO * 2));
 
         this.gameMgr.createBodyForFish(fish,vec2(fishData.data["fish_type_"+typeFish]["box"][0]/2,fishData.data["fish_type_"+typeFish]["box"][1]/2));
 
@@ -281,10 +288,12 @@ var GameLayerUI = BaseLayer.extend({
                 if(this.gameMgr.state != GameManager.STATE_PREPARE)
                 {
                     this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
-                    fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     if(this.actionListener && this.actionListener.onStartShoot){
                         this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     }
+                    else
+                        fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+
                     fishSound.playEffectShoot();
                 }
                 else{
@@ -295,13 +304,13 @@ var GameLayerUI = BaseLayer.extend({
 
         // for holding Fish display
         for(var i=0;i<this.players.length;i++){
-            if(this.players[i].isEnabled && this.players[i].holdFishInfo.isHolding && this.players[i].holdFishInfo.fishForHold){
-                if(this.players[i].holdFishInfo.fishForHold.released)
+            if(this.players[i].isEnabled && this.players[i].holdFishInfo.getIsHolding() && this.players[i].holdFishInfo.getFish()){
+                if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released)
                 {
                     this.players[i].releaseHold();
                     continue;
                 }
-                var posBody = this.players[i].holdFishInfo.fishForHold.getBodyPosition();
+                var posBody = this.players[i].holdFishInfo.getFish().getBodyPosition();
                 var screenPosBody = vec2(posBody.x * PM_RATIO,posBody.y * PM_RATIO);
                 this.players[i].setAngleForGun(screenPosBody);
 
@@ -347,10 +356,12 @@ var GameLayerUI = BaseLayer.extend({
         if(this.enable_shoot && this.gameMgr.state != GameManager.STATE_PREPARE)
         {
             this.shoot(fishLifeCycle.myPlayer,location);
-            fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
             if(this.actionListener && this.actionListener.onStartShoot){
                 this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
             }
+            else
+                fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
+
             fishSound.playEffectShoot();
             this.enable_shoot = false;
         }
@@ -408,8 +419,9 @@ var GameLayerUI = BaseLayer.extend({
         moneyLb.runAction(cc.sequence(new cc.EaseBackOut(cc.scaleTo(.2,.85)),new cc.EaseBackOut(cc.scaleTo(.15,.6)),new cc.EaseBackOut(cc.scaleTo(.2,.85))));
         moneyLb.runAction(cc.sequence(cc.fadeIn(.25),cc.delayTime(1),cc.fadeOut(.25),cc.removeSelf()));
 
+        //
         //effect gold
-        var goldSp = this.createEffectMoney(pos,playerIndex);
+        var goldSp = this.createEffectMoney(pos,playerIndex,money);
 
         if(withCoin)
             this.createEffectCoin(pos);
@@ -424,6 +436,10 @@ var GameLayerUI = BaseLayer.extend({
         sp.setScale(.35);
         sp.setPosition(pos);
         sp.runAction(cc.sequence(cc.spawn(cc.fadeIn(.25),new cc.EaseBackOut(cc.scaleTo(.25,.55))),cc.fadeTo(.35,0),cc.removeSelf()));
+    },
+    effectMoney: function(playerPosition,won_money)
+    {
+
     },
 
     createWater: function()
@@ -489,7 +505,7 @@ var GameLayerUI = BaseLayer.extend({
     onButtonReleased: function(btn,id){
         switch (id){
             case GameLayerUI.BTN_HOLD_FISH:{
-                if(!fishLifeCycle.myPlayer.holdFishInfo.isHolding)
+                if(!fishLifeCycle.myPlayer.holdFishInfo.getIsHolding())
                     fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = true;
                 else
                 {
@@ -504,7 +520,7 @@ var GameLayerUI = BaseLayer.extend({
                 if(fishLifeCycle.myBetIdx >= (fishLifeCycle.bets.length-1))
                     fishLifeCycle.myBetIdx = (fishLifeCycle.bets.length-1);
 
-                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx]);
+                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx],true);
                 this.shakeScreen();
                 break;
             }
@@ -514,22 +530,79 @@ var GameLayerUI = BaseLayer.extend({
                 if(fishLifeCycle.myBetIdx <= 0)
                     fishLifeCycle.myBetIdx = 0;
 
-                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx]);
+                fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx],true);
+                break;
+            }
+            case GameLayerUI.BTN_MENU:
+            {
+                fishBZ.sendQuit();
                 break;
             }
         }
     },
-    createEffectMoney: function(pos,playerIndex)
+    createEffectMoney: function(pos,playerIndex,money)
     {
         var node = new cc.Node();
         var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("coin1_0.png"));
-        this.effectLayer.addChild(node);
+        this.effectLayerTop.addChild(node);
         var animation = new cc.Animation();
         for (var i = 0; i < 5; i++) {
             var frameName = "coin1_"+ i + ".png";
             animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame(frameName));
         }
         animation.setDelayPerUnit(0.075);
+        var action = cc.animate(animation);
+        sp.runAction(cc.repeatForever(action));
+
+        sp.setRotation(90);;
+        sp.setColor(cc.color(220,220,220))
+        node.addChild(sp);
+        sp.setScale(.75);
+
+        var destPos = this.players[playerIndex].lbMoney.convertToWorldSpaceAR(cc.p(0,0));
+        var offset = cc.p(pos.x - destPos.x,pos.y - destPos.y);
+        var distance = Math.sqrt(offset.x * offset.x + offset.y * offset.y);
+        var time = distance / 1280;
+        node.setPosition(pos.x , pos. y + 20);
+        node.runAction(cc.sequence(cc.moveTo(.15,cc.p(pos.x,pos.y + 80)),new cc.EaseBounceOut(cc.moveBy(.45,cc.p(0,-100))),
+            cc.delayTime(.15),cc.moveTo(time,cc.p(destPos)),cc.removeSelf()
+        ))
+        sp.runAction(cc.sequence(cc.delayTime(.15 +.45 +.15+time -.15),cc.fadeOut(.15)));
+
+
+        if(playerIndex == fishLifeCycle.position)
+        {
+            var txt = BaseLayer.createLabelText("+"+StringUtility.standartNumber(money)+"$",cc.color(255,255,255));
+            txt.setFontSize(22);
+            txt.setPosition(destPos);
+            this.effectLayerTop.addChild(txt);
+            var timeDelay = .15 +.45 +.15+time -.15;
+            txt.setVisible(false);
+            txt.runAction(cc.sequence(cc.delayTime(timeDelay),cc.show(),cc.moveBy(1,cc.p(0,100)),cc.removeSelf()));
+            txt.runAction(cc.sequence(cc.delayTime(timeDelay +.5),cc.fadeOut(.5)));
+
+            //this.players[playerIndex].lbMoney.stopAllActions();
+            this.players[playerIndex].lbMoney.runAction(cc.sequence(cc.delayTime(timeDelay),cc.callFunc(function(){
+                this.setScale(2.5);
+                this.runAction(cc.scaleTo(.35,1));
+            }.bind(this.players[playerIndex].lbMoney))))
+        }
+
+
+
+        return node;
+    },
+    createEffectMoney2: function(pos,playerIndex)
+    {
+        var node = new cc.Node();
+        var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("xu_00000.png"));
+        this.effectLayer.addChild(node);
+        var animation = new cc.Animation();
+        for (var i = 0; i < 80; i++) {
+            var frameName = "xu_000"+ (i<10?"0"+i:i) + ".png";
+            animation.addSpriteFrame(cc.spriteFrameCache.getSpriteFrame(frameName));
+        }
+        animation.setDelayPerUnit(0.01);
         var action = cc.animate(animation);
         sp.runAction(cc.repeatForever(action));
 
@@ -593,7 +666,6 @@ var GameLayerUI = BaseLayer.extend({
 
         var node = new cc.Node();
         var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("coin.0000.png"));
-        cc.log(sp);
         this.effectLayer.addChild(node);
         var animation = new cc.Animation();
         for (var i = 0; i < 90; i++) {
@@ -607,6 +679,7 @@ var GameLayerUI = BaseLayer.extend({
 
         node.addChild(sp);
         sp.setScale(2.25);
+        sp.setColor(cc.color(220,220,220));
 
         node.setPosition(pos);
         node.runAction(cc.sequence(cc.delayTime(0.02 * 90),cc.removeSelf()))
@@ -614,10 +687,10 @@ var GameLayerUI = BaseLayer.extend({
         return node;
     },
     shakeScreen: function(){
-        this.stopActionByTag(9);
+        this.panel_diaplay.stopActionByTag(9);
         var shake = cc.sequence(cc.moveBy(.0175,cc.p(3,3)),cc.moveBy(.035,cc.p(-6,-6)),cc.moveBy(.0175,cc.p(3,3))).repeat(2);
         shake.setTag(9);
-        this.runAction(shake);
+        this.panel_diaplay.runAction(shake);
     }
 
 

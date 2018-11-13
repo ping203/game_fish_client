@@ -10,14 +10,22 @@ var PlayerData = cc.Class.extend({
     }
 })
 
-var HoldFishInfo = cc.Class.extend({
+var HoldFishInfoWeb = cc.Class.extend({
     ctor: function(){
         this.prepare_hold = false;
         this.isHolding = false;
         this.fishForHold = null;
         this.player = null;
-    }
+    },
+    setIsHolding: function(hold){ this.isHolding = hold; },
+    getIsHolding: function(){ return this.isHolding; },
+    setPlayer: function(p){ this.player = p; },
+    getPlayer: function(){ return this.player; },
+    setFish: function(f){ this.fishForHold = f; },
+    getFish: function(){ return this.fishForHold; }
 })
+
+var HoldFishInfo = cc.sys.isNative?engine.HoldFishInfo:HoldFishInfoWeb;
 
 var MAX_SP_HOLD = 15;
 var OFFSET_DEFAULT = 70;
@@ -95,8 +103,7 @@ var Player = cc.Node.extend({
         var bg_thongtin = this.panel.getChildByName("bg_thongtin");
         // player info label
         this.lbName = bg_thongtin.getChildByName("username");
-        this.lbMoney1 = bg_thongtin.getChildByName("lbMoney");
-        this.lbMoney2 = bg_thongtin.getChildByName("lbMoney2");
+        this.lbMoney = bg_thongtin.getChildByName("lbMoney");
 
         this.bgThongTin = bg_thongtin;
 
@@ -104,9 +111,14 @@ var Player = cc.Node.extend({
         this.btnPlus = this.ui.getChildByName("btnPlus");
         this.btnSub = this.ui.getChildByName("btnSub");
 
+        this.txtWaiting = this.panel.getChildByName("waiting");
+
+        this.txtWaiting.setOpacity(200);
+        this.txtWaiting.runAction(cc.sequence(cc.fadeTo(1,100),cc.fadeTo(1,200)).repeatForever());
+
 
         this.holdFishInfo = new HoldFishInfo();
-        this.holdFishInfo.player = this;
+        this.holdFishInfo.setPlayer(this);
         this.nodeDisplayHold = new NodeDisplayHold();
         this.fire_real.addChild(this.nodeDisplayHold);
 
@@ -150,34 +162,40 @@ var Player = cc.Node.extend({
     },
     enable: function(bool)
     {
-        this.panel.setVisible(bool);
+        this.panel.setVisible(true);
         this.isEnabled = bool;
         this.setIsMyPlayer(false);
         this.bgThongTin.setVisible(bool);
         this.gunMoney.setVisible(bool);
-        this.gun.setVisible(bool);
+        this.node.setVisible(bool);
+        this.txtWaiting.setVisible(!bool);
 
     },
     updateInfo: function()
     {
         this.lbName.setString(this.playerData.rawData["displayName"]);
-        this.lbMoney1.setString(this.playerData.rawData["bean"]);
-        this.lbMoney2.setString(this.playerData.rawData["bean"]);
+        this.lbMoney.setString(StringUtility.standartNumber(this.playerData.rawData["bean"]) +"$");
     },
     setHold: function(fish){
-        this.holdFishInfo.isHolding = true;
-        this.holdFishInfo.fishForHold = fish;
+        this.holdFishInfo.setIsHolding(true);
+        this.holdFishInfo.setFish(fish);
     },
     releaseHold: function(){
-        this.holdFishInfo.isHolding = false;
+        this.holdFishInfo.setIsHolding(false);
         this.nodeDisplayHold.setLength(0);
     },
     setIsMyPlayer: function(isMy){
         this.btnPlus.setVisible(isMy)
         this.btnSub.setVisible(isMy)
     },
-    setGunBet: function(betGun){
+    setGunBet: function(betGun,effect){
         this.gunMoney.setString(""+betGun);
+        if(this.index == fishLifeCycle.myChair && effect)
+        {
+            this.gunMoney.setScale(3);
+            this.gunMoney.runAction(cc.scaleTo(.25,1));
+        }
+
     }
 
 

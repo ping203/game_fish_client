@@ -2,12 +2,6 @@
  * Created by HOANGNGUYEN on 9/6/2018.
  */
 
-var PathChangeCurveListener = cc.Class.extend({
-    onNewCurve: function(curve){
-
-    }
-})
-
 var PathWeb = cc.Class.extend({
     ctor: function(duration)
     {
@@ -107,7 +101,7 @@ var PathWeb = cc.Class.extend({
         var curve_choose = this.getCurveFromPercentTimeLine(t);
         if(this.pathListener && (this._currentCurve !== curve_choose))
         {
-            this.pathListener.onNewCurve(curve_choose);
+            this.pathListener.call(this.pathListener,curve_choose);
             this._currentCurve = curve_choose;
         }
         var curve_duration = curve_choose.getLength() * this.duration / this.total_length;

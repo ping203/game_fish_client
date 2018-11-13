@@ -128,7 +128,7 @@ var OutPacket = cc.Class.extend(
             this.updateUnsignedShortAtPos(this._length - 4, 2);
         },
         getData: function () {
-            return this._data.slice(0, this._length);
+            return this._data.subarray(0, this._length);
         },
         _stringConvertToByteArray: function (strData) {
             if (strData == null)
