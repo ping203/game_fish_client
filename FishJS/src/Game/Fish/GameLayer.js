@@ -36,22 +36,34 @@ var GameLayerUI = BaseLayer.extend({
     initGUI: function()
     {
 
+        this.backgrounds = [];
+        var panel_bg = this.getControl("Panel_bg");             // panel BG
+        this.panel_bg = panel_bg;
+        this.backgrounds.push(this.getControl("bg0",panel_bg));
+        this.backgrounds.push(this.getControl("bg1",panel_bg));
+        this.backgrounds.push(this.getControl("bg2",panel_bg));
+        //// end bg
+
         this.bulletLayer = new cc.Layer();
         this.effectLayer = new cc.Layer();
         this.effectLayerTop = new cc.Layer();
 
         this.topLayer = new cc.Layer();
-        this.fish2DLayer = new Display2DScene();
-        this.fish3DScene = new Display3DScene();
-        var panel_display = this.getControl("Panel_Fish");
+        this.fish2DLayer = new Display2DScene();                // add fishSprite to this
+        this.fish3DScene = new Display3DScene();                // add fish3D to this
+        var panel_display = this.getControl("Panel_Fish");      // panel tren bg nhung duoi' UI
         this.panel_diaplay = panel_display;
         panel_display.addChild(this.fish3DScene,1);
         panel_display.addChild(this.fish2DLayer,2);
-        panel_display.addChild(this.effectLayer,4);
-        var top_panel = this.getControl("Panel_Top");
-        top_panel.addChild(this.topLayer,40);
-        top_panel.addChild(this.bulletLayer,3);
-        top_panel.addChild(this.effectLayerTop,5);
+        panel_display.addChild(this.effectLayer,4);             // layer effect chinh'
+
+        ////////
+
+
+        var top_panel = this.getControl("Panel_Top");           // top panel (tren ca UI)
+        top_panel.addChild(this.topLayer,40);                   // top layer chua bong' nuoc' khi touch move
+        top_panel.addChild(this.bulletLayer,3);                 // layer chua' bullet
+        top_panel.addChild(this.effectLayerTop,5);              // add coin khi fish die va` money lb
 
 
         var panel_ui = this.getControl("Panel_UI");
@@ -73,11 +85,7 @@ var GameLayerUI = BaseLayer.extend({
         this.particleBongNuoc.setPosition(0,0);
         this.particleBongNuoc.setVisible(false);
 
-        this.backgrounds = [];
-        var panel_bg = this.getControl("Panel_bg");
-        this.backgrounds.push(this.getControl("bg0",panel_bg));
-        this.backgrounds.push(this.getControl("bg1",panel_bg));
-        this.backgrounds.push(this.getControl("bg2",panel_bg));
+
 
 
         this.players = [];
@@ -322,10 +330,10 @@ var GameLayerUI = BaseLayer.extend({
             }
         }
     },
-    onCreateFish: function(id,fish_type,path)       // create fish in matran
+    onCreateFish: function(id,fish_type,path,time_xuat_hien,elapsedTime)       // create fish in matran
     {
         //cc.log("id :" + id +" fish: "+fish_type);
-        this.addFish(id,fish_type,path,8,0);
+        this.addFish(id,fish_type,path,time_xuat_hien,elapsedTime);
     },
     onTouchBegan: function(touch,event)
     {
@@ -535,20 +543,13 @@ var GameLayerUI = BaseLayer.extend({
             }
             case GameLayerUI.BTN_MENU:
             {
-                fishBZ.sendQuit();
-                this.gameMgr.destroyAllEntity();
-
-                var currentFishLayer = this.fish2DLayer;
-                this.fish2DLayer = new Display2DScene();
-                this.panel_diaplay.addChild(this.fish2DLayer,2);
-                //currentFishLayer.removeFromParent();
+                //fishBZ.sendQuit();
 
 
-                var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/Text_Boss_Coming.json","res/FX/Text_Boss_Coming.atlas");
-                catranAnim.setAnimation(0,"BossTextAnim",true);
 
-                this.addChild(catranAnim,20);
-                catranAnim.setPosition(cc.winSize.width/2,400);
+                this.cleanScreenForCatran();
+
+
 
                 break;
             }
@@ -707,8 +708,79 @@ var GameLayerUI = BaseLayer.extend({
         this.panel_diaplay.runAction(shake);
     },
 
-    animCatranDen: function(){
 
+    // chuan bi cho ca tran
+    stateToPrepare: function(time){
+        cc.log("prepare")
+        this.animCatranDen();
+        this.stopActionByTag(1111);     // khong doi background cho den khi normal map tro lai
+        this.runAction(cc.sequence(cc.delayTime(time - 1.5),cc.callFunc(function(){
+            this.effectLayer.removeAllChildren();
+            this.cleanScreenForCatran();
+        }.bind(this))))
+    },
+    cleanScreenForCatran: function(){
+
+        this.bulletLayer.removeAllChildren();
+
+        this.gameMgr.destroyAllEntity(false);
+
+        var currentFishLayer = this.fish2DLayer;
+        this.fish2DLayer = new Display2DScene();
+        this.panel_diaplay.addChild(this.fish2DLayer,2);
+
+        var bgPath = this.currentBG==0?"res/GUI/ScreenGame/Background/bg.jpg":((this.currentBG==1)?"res/GUI/ScreenGame/Background/bg1.jpg":"res/GUI/ScreenGame/Background/bg2.jpg");
+
+        var bgTmp = new cc.Sprite(bgPath);
+        bgTmp.setScaleX(cc.winSize.width / 1920);
+        bgTmp.setScaleY(cc.winSize.height / 1080);
+        bgTmp.setPosition(cc.winSize.width/2,cc.winSize.height/2);
+
+        var stencil = new cc.Sprite(bgPath);
+        stencil.setScaleX(cc.winSize.width / 1920);
+        stencil.setScaleY(cc.winSize.height / 1080);
+        stencil.setPosition(cc.winSize.width/2,cc.winSize.height/2);
+
+        var TIME_CLEAN = 1.5;
+
+        var clipping = new cc.ClippingNode(stencil);
+        clipping.setAlphaThreshold(0);
+        clipping.addChild(bgTmp);
+        clipping.setInverted(true);
+        currentFishLayer.addChild(clipping,100);
+        stencil.runAction(cc.moveBy(TIME_CLEAN,cc.p(-cc.winSize.width - 30,0)));
+
+        currentFishLayer.runAction(cc.sequence(cc.delayTime(TIME_CLEAN),cc.removeSelf()));
+
+        var wave = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("wave_01.png"));
+        wave.setScaleY(cc.winSize.height / wave.getContentSize().height);
+        var animation = cc.animationCache.getAnimation("wave_move");
+        wave.runAction(cc.repeatForever(cc.animate(animation)));
+
+        currentFishLayer.addChild(wave,101);
+        wave.setPosition(cc.winSize.width + 30,cc.winSize.height/2);
+        wave.runAction(cc.sequence(cc.moveBy(TIME_CLEAN,cc.p(-cc.winSize.width - 30,0))));
+    },
+
+
+
+    animCatranDen: function(){
+        var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/FXCaTran.json","res/FX/FXCaTran.atlas");
+        catranAnim.setAnimation(0,"animation",true);
+        this.effectLayer.addChild(catranAnim,20);
+        catranAnim.setPosition(cc.winSize.width/2,0);
+    },
+    bossComing: function(){
+        var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/Text_Boss_Coming.json","res/FX/Text_Boss_Coming.atlas");
+        catranAnim.setAnimation(0,"BossTextAnim",true);
+
+        this.addChild(catranAnim,20);
+        catranAnim.setPosition(cc.winSize.width/2,400);
+    },
+
+    stateToNormalMap: function(){
+        this.stopMusic();
+        this.startMusic();
     }
 
 

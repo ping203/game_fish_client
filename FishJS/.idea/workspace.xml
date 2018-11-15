@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameLayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameLayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8271605" vertical-offset="2795" max-vertical-offset="3536">
-              <caret line="710" column="0" selection-start-line="710" selection-start-column="0" selection-end-line="710" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5239" max-vertical-offset="6681">
+              <caret line="727" column="48" selection-start-line="727" selection-start-column="48" selection-end-line="727" selection-end-column="48" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
                 <element signature="e#72#206#0" expanded="false" />
@@ -37,99 +37,75 @@
                 <element signature="e#284#292#0" expanded="false" />
                 <element signature="e#332#340#0" expanded="false" />
                 <element signature="e#408#577#0" expanded="false" />
-                <element signature="e#2435#3082#0" expanded="false" />
-                <element signature="e#3386#3428#0" expanded="false" />
-                <element signature="e#3461#3685#0" expanded="false" />
-                <element signature="e#3749#5143#0" expanded="false" />
-                <element signature="e#3787#3900#0" expanded="false" />
-                <element signature="e#4017#4098#0" expanded="false" />
-                <element signature="e#4171#5136#0" expanded="false" />
-                <element signature="e#4796#5125#0" expanded="false" />
-                <element signature="e#4962#5111#0" expanded="false" />
-                <element signature="e#5206#5855#0" expanded="false" />
-                <element signature="e#5291#5341#0" expanded="false" />
-                <element signature="e#5430#5480#0" expanded="false" />
-                <element signature="e#5569#5664#0" expanded="false" />
-                <element signature="e#5753#5847#0" expanded="false" />
-                <element signature="e#5905#7051#0" expanded="false" />
-                <element signature="e#6140#6318#0" expanded="false" />
-                <element signature="e#6955#7019#0" expanded="false" />
-                <element signature="e#7081#7604#0" expanded="false" />
-                <element signature="e#7157#7423#0" expanded="false" />
-                <element signature="e#7709#8609#0" expanded="false" />
-                <element signature="e#7895#7994#0" expanded="false" />
-                <element signature="e#8640#11222#0" expanded="false" />
-                <element signature="e#8713#8762#0" expanded="false" />
-                <element signature="e#8865#9077#0" expanded="false" />
-                <element signature="e#8969#9067#0" expanded="false" />
-                <element signature="e#9141#10142#0" expanded="false" />
-                <element signature="e#9247#10132#0" expanded="false" />
-                <element signature="e#9375#9998#0" expanded="false" />
-                <element signature="e#9532#9748#0" expanded="false" />
-                <element signature="e#10019#10118#0" expanded="false" />
-                <element signature="e#10226#11216#0" expanded="false" />
-                <element signature="e#10358#11206#0" expanded="false" />
-                <element signature="e#10501#10601#0" expanded="false" />
-                <element signature="e#11305#11409#0" expanded="false" />
-                <element signature="e#11455#13210#0" expanded="false" />
-                <element signature="e#11868#12294#0" expanded="false" />
-                <element signature="e#11960#12090#0" expanded="false" />
-                <element signature="e#12120#12189#0" expanded="false" />
-                <element signature="e#12385#12928#0" expanded="false" />
-                <element signature="e#12515#12693#0" expanded="false" />
-                <element signature="e#12993#13076#0" expanded="false" />
-                <element signature="e#13256#13565#0" expanded="false" />
-                <element signature="e#13611#13822#0" expanded="false" />
-                <element signature="e#13897#15309#0" expanded="false" />
-                <element signature="e#13927#14006#0" expanded="false" />
-                <element signature="e#15362#15795#0" expanded="false" />
-                <element signature="e#15853#15861#0" expanded="false" />
-                <element signature="e#15896#16340#0" expanded="false" />
-                <element signature="e#16045#16182#0" expanded="false" />
-                <element signature="e#17108#17308#0" expanded="false" />
-                <element signature="e#17658#17998#0" expanded="false" />
-                <element signature="e#18228#18581#0" expanded="false" />
-                <element signature="e#18416#18544#0" expanded="false" />
-                <element signature="e#20131#22347#0" expanded="false" />
-                <element signature="e#20374#20520#0" expanded="false" />
-                <element signature="e#22403#23634#0" expanded="false" />
-                <element signature="e#22645#22804#0" expanded="false" />
-                <element signature="e#23662#24904#0" expanded="false" />
-                <element signature="e#24120#24806#0" expanded="false" />
-                <element signature="e#24931#25005#0" expanded="false" />
-                <element signature="e#25042#25907#0" expanded="false" />
-                <element signature="e#25286#25446#0" expanded="false" />
-                <element signature="e#25936#26186#0" expanded="false" />
+                <element signature="e#2873#3520#0" expanded="false" />
+                <element signature="e#3824#3866#0" expanded="false" />
+                <element signature="e#3899#4123#0" expanded="false" />
+                <element signature="e#4187#5581#0" expanded="false" />
+                <element signature="e#4225#4338#0" expanded="false" />
+                <element signature="e#4455#4536#0" expanded="false" />
+                <element signature="e#4609#5574#0" expanded="false" />
+                <element signature="e#5234#5563#0" expanded="false" />
+                <element signature="e#5400#5549#0" expanded="false" />
+                <element signature="e#5644#6293#0" expanded="false" />
+                <element signature="e#5729#5779#0" expanded="false" />
+                <element signature="e#5868#5918#0" expanded="false" />
+                <element signature="e#6007#6102#0" expanded="false" />
+                <element signature="e#6191#6285#0" expanded="false" />
+                <element signature="e#6343#7489#0" expanded="false" />
+                <element signature="e#6578#6756#0" expanded="false" />
+                <element signature="e#7393#7457#0" expanded="false" />
+                <element signature="e#7519#8042#0" expanded="false" />
+                <element signature="e#7595#7861#0" expanded="false" />
+                <element signature="e#8333#8432#0" expanded="false" />
+                <element signature="e#9970#10186#0" expanded="false" />
+                <element signature="e#10457#10556#0" expanded="false" />
+                <element signature="e#10939#11039#0" expanded="false" />
+                <element signature="e#13003#13181#0" expanded="false" />
+                <element signature="e#13481#13564#0" expanded="false" />
+                <element signature="e#15637#15639#0" expanded="false" />
+                <element signature="e#16384#16828#0" expanded="false" />
+                <element signature="e#16533#16670#0" expanded="false" />
+                <element signature="e#16869#18610#0" expanded="false" />
+                <element signature="e#17072#17560#0" expanded="false" />
+                <element signature="e#17596#17796#0" expanded="false" />
+                <element signature="e#18146#18486#0" expanded="false" />
+                <element signature="e#18650#20010#0" expanded="false" />
+                <element signature="e#18660#20004#0" expanded="false" />
+                <element signature="e#18716#19069#0" expanded="false" />
+                <element signature="e#18904#19032#0" expanded="false" />
+                <element signature="e#19121#19489#0" expanded="false" />
+                <element signature="e#19540#19816#0" expanded="false" />
+                <element signature="e#19868#19994#0" expanded="false" />
+                <element signature="e#20071#22287#0" expanded="false" />
+                <element signature="e#20314#20460#0" expanded="false" />
+                <element signature="e#21397#22257#0" expanded="false" />
+                <element signature="e#22102#22204#0" expanded="false" />
+                <element signature="e#22343#23574#0" expanded="false" />
+                <element signature="e#22585#22744#0" expanded="false" />
+                <element signature="e#23602#24844#0" expanded="false" />
+                <element signature="e#24982#25847#0" expanded="false" />
+                <element signature="e#25226#25386#0" expanded="false" />
+                <element signature="e#25876#26126#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Game/Config.js">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="865" max-vertical-offset="1785">
+              <caret line="93" column="49" selection-start-line="93" selection-start-column="49" selection-end-line="93" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <file leaf-file-name="project.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="1887">
-              <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FishDefine.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Game/Fish/FishDefine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1394">
-              <caret line="57" column="77" selection-start-line="57" selection-start-column="77" selection-end-line="57" selection-end-column="77" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1479">
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -138,11 +114,69 @@
       <file leaf-file-name="LobbyScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="2023">
-              <caret line="36" column="53" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="53" />
-              <folding>
-                <element signature="e#4322#5206#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="2380">
+              <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginScene.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LoginScene.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.59615386" vertical-offset="1479" max-vertical-offset="10302">
+              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FishPacketListener.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/FishPacketListener.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1517" max-vertical-offset="2414">
+              <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WsClient.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Engine/Network/WsClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1173">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLogic/GameManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.37931" vertical-offset="5337" max-vertical-offset="6307">
+              <caret line="347" column="22" selection-start-line="347" selection-start-column="22" selection-end-line="347" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameClient.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/GameClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1258">
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LobbyPacketListenner.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyPacketListenner.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1224">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,9 +201,7 @@
         <option value="$PROJECT_DIR$/src/Game/Constant.js" />
         <option value="$PROJECT_DIR$/src/Engine/GUI/BaseScene.js" />
         <option value="$PROJECT_DIR$/src/Engine/Network/WsClient.js" />
-        <option value="$PROJECT_DIR$/res/fishes_matran.json" />
         <option value="$PROJECT_DIR$/res/Path_normals.json" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/GameLogic/Map.js" />
         <option value="$PROJECT_DIR$/src/Engine/Network/InPacket.js" />
         <option value="$PROJECT_DIR$/src/Engine/Network/OutPacket.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Network/GameClient.js" />
@@ -177,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/extras/curves/QuadraticCurve.js" />
         <option value="$PROJECT_DIR$/frameworks/cocos2d-html5/extensions/ccui/uiwidgets/UIButton.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/GameLogic/Path.js" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/Constant.js" />
         <option value="$PROJECT_DIR$/res/Fish2D.json" />
         <option value="$PROJECT_DIR$/res/fishes_banthuong.json" />
         <option value="$PROJECT_DIR$/src/Engine/GUI/SceneMgr.js" />
@@ -187,22 +218,25 @@
         <option value="$PROJECT_DIR$/src/Game/Fish/GameLogic/Entity.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/FishSound.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Network/InPacket.js" />
-        <option value="$PROJECT_DIR$/project.json" />
         <option value="$PROJECT_DIR$/src/Engine/GUI/BaseLayer.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Player.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Network/OutPacket.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Network/FishPacketListener.js" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyScene.js" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/FishLifeCycle.js" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/Demos/DemoScene.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/Lobby/LoginScene.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/GameLogic/GameManager.js" />
-        <option value="$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyPacketListenner.js" />
-        <option value="$PROJECT_DIR$/src/Game/Config.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/src/resource.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/FishDefine.js" />
+        <option value="$PROJECT_DIR$/src/Game/Config.js" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/GameLogic/Map.js" />
+        <option value="$PROJECT_DIR$/res/fishes_matran.json" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/FishLifeCycle.js" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/Constant.js" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/Demos/DemoScene.js" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyPacketListenner.js" />
         <option value="$PROJECT_DIR$/src/Game/Fish/GameLayer.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/project.json" />
+        <option value="$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyScene.js" />
       </list>
     </option>
   </component>
@@ -212,8 +246,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1479" />
-    <option name="height" value="890" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -332,7 +366,111 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Lobby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DisplayScenes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FishJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,42 +511,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FishJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FishJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FishJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FishJS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,16 +604,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1479" height="890" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.49965823" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21189336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21127503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22151089" sideWeight="0.4178082" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -520,6 +621,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.49965823" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -548,34 +650,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/extras/core/Path.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2646" max-vertical-offset="10693">
-          <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/fishes_matran.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="340">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Path_normals.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="8877" selection-start-line="0" selection-start-column="8877" selection-end-line="0" selection-end-column="8877" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/extensions/cocostudio/components/CCComAudio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="4539">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/transitions/CCTransition.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="24820">
@@ -670,13 +744,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1479">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/labelttf/CCLabelTTF.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33186814" vertical-offset="87" max-vertical-offset="16660">
@@ -714,16 +781,7 @@
             <element signature="e#841#2176#0" expanded="false" />
             <element signature="e#3994#4039#0" expanded="false" />
             <element signature="e#4075#4121#0" expanded="false" />
-            <marker date="1541691511982" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/InPacket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="4216">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2868" max-vertical-offset="4080">
           <caret line="116" column="11" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="2618">
           <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,23 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2975">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/FishPacketListener.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2414">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/FishLifeCycle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2550">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,23 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="153.15384" vertical-offset="4271" max-vertical-offset="4998">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Constant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45152724" vertical-offset="0" max-vertical-offset="753">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LoginScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="10302">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,15 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.206897" vertical-offset="96511" max-vertical-offset="184654">
           <caret line="5712" column="19" selection-start-line="5712" selection-start-column="13" selection-end-line="5712" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Demos/DemoScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.4827585" vertical-offset="7720" max-vertical-offset="11611">
-          <caret line="472" column="6" selection-start-line="472" selection-start-column="6" selection-end-line="472" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,42 +832,96 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="67807" max-vertical-offset="81617">
+          <caret line="4000" column="0" selection-start-line="4000" selection-start-column="0" selection-end-line="4000" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38628158" vertical-offset="1180" max-vertical-offset="1734">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="1887">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fishData/wave/wave_move.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fishData/wave/wave_0.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/clipping-nodes/CCClippingNode.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="787" max-vertical-offset="3876">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="3876">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/FishDefine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLogic/Map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1649">
+          <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/fishes_matran.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
+          <caret line="12" column="164" selection-start-line="12" selection-start-column="164" selection-end-line="12" selection-end-column="164" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLogic/GameManager.js">
+    <entry file="file://$PROJECT_DIR$/res/FX/FXCaTran.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/InPacket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3672" max-vertical-offset="6307">
-          <caret line="211" column="24" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3009" max-vertical-offset="4216">
+          <caret line="209" column="2" selection-start-line="209" selection-start-column="2" selection-end-line="209" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine/Network/WsClient.js">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/FishLifeCycle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1173">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="2737">
+          <caret line="123" column="50" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/GameClient.js">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Demos/DemoScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1258">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyPacketListenner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="610" max-vertical-offset="1190">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="11679">
+          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -868,65 +934,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyScene.js">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Constant.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="2023">
-          <caret line="36" column="53" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="53" />
-          <folding>
-            <element signature="e#4322#5206#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="67807" max-vertical-offset="81617">
-          <caret line="4000" column="0" selection-start-line="4000" selection-start-column="0" selection-end-line="4000" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/FishPacketListener.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38628158" vertical-offset="1180" max-vertical-offset="1734">
-          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1517" max-vertical-offset="2414">
+          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/pointer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/src/Engine/Network/WsClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862069" vertical-offset="714" max-vertical-offset="1751">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1173">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Network/GameClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="1887">
-          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1258">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game/Fish/FishDefine.js">
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyPacketListenner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1394">
-          <caret line="57" column="77" selection-start-line="57" selection-start-column="77" selection-end-line="57" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1224">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLogic/GameManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.37931" vertical-offset="5337" max-vertical-offset="6307">
+          <caret line="347" column="22" selection-start-line="347" selection-start-column="22" selection-end-line="347" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game/Fish/GameLayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8271605" vertical-offset="2795" max-vertical-offset="3536">
-          <caret line="710" column="0" selection-start-line="710" selection-start-column="0" selection-end-line="710" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5239" max-vertical-offset="6681">
+          <caret line="727" column="48" selection-start-line="727" selection-start-column="48" selection-end-line="727" selection-end-column="48" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
             <element signature="e#72#206#0" expanded="false" />
@@ -935,70 +994,88 @@
             <element signature="e#284#292#0" expanded="false" />
             <element signature="e#332#340#0" expanded="false" />
             <element signature="e#408#577#0" expanded="false" />
-            <element signature="e#2435#3082#0" expanded="false" />
-            <element signature="e#3386#3428#0" expanded="false" />
-            <element signature="e#3461#3685#0" expanded="false" />
-            <element signature="e#3749#5143#0" expanded="false" />
-            <element signature="e#3787#3900#0" expanded="false" />
-            <element signature="e#4017#4098#0" expanded="false" />
-            <element signature="e#4171#5136#0" expanded="false" />
-            <element signature="e#4796#5125#0" expanded="false" />
-            <element signature="e#4962#5111#0" expanded="false" />
-            <element signature="e#5206#5855#0" expanded="false" />
-            <element signature="e#5291#5341#0" expanded="false" />
-            <element signature="e#5430#5480#0" expanded="false" />
-            <element signature="e#5569#5664#0" expanded="false" />
-            <element signature="e#5753#5847#0" expanded="false" />
-            <element signature="e#5905#7051#0" expanded="false" />
-            <element signature="e#6140#6318#0" expanded="false" />
-            <element signature="e#6955#7019#0" expanded="false" />
-            <element signature="e#7081#7604#0" expanded="false" />
-            <element signature="e#7157#7423#0" expanded="false" />
-            <element signature="e#7709#8609#0" expanded="false" />
-            <element signature="e#7895#7994#0" expanded="false" />
-            <element signature="e#8640#11222#0" expanded="false" />
-            <element signature="e#8713#8762#0" expanded="false" />
-            <element signature="e#8865#9077#0" expanded="false" />
-            <element signature="e#8969#9067#0" expanded="false" />
-            <element signature="e#9141#10142#0" expanded="false" />
-            <element signature="e#9247#10132#0" expanded="false" />
-            <element signature="e#9375#9998#0" expanded="false" />
-            <element signature="e#9532#9748#0" expanded="false" />
-            <element signature="e#10019#10118#0" expanded="false" />
-            <element signature="e#10226#11216#0" expanded="false" />
-            <element signature="e#10358#11206#0" expanded="false" />
-            <element signature="e#10501#10601#0" expanded="false" />
-            <element signature="e#11305#11409#0" expanded="false" />
-            <element signature="e#11455#13210#0" expanded="false" />
-            <element signature="e#11868#12294#0" expanded="false" />
-            <element signature="e#11960#12090#0" expanded="false" />
-            <element signature="e#12120#12189#0" expanded="false" />
-            <element signature="e#12385#12928#0" expanded="false" />
-            <element signature="e#12515#12693#0" expanded="false" />
-            <element signature="e#12993#13076#0" expanded="false" />
-            <element signature="e#13256#13565#0" expanded="false" />
-            <element signature="e#13611#13822#0" expanded="false" />
-            <element signature="e#13897#15309#0" expanded="false" />
-            <element signature="e#13927#14006#0" expanded="false" />
-            <element signature="e#15362#15795#0" expanded="false" />
-            <element signature="e#15853#15861#0" expanded="false" />
-            <element signature="e#15896#16340#0" expanded="false" />
-            <element signature="e#16045#16182#0" expanded="false" />
-            <element signature="e#17108#17308#0" expanded="false" />
-            <element signature="e#17658#17998#0" expanded="false" />
-            <element signature="e#18228#18581#0" expanded="false" />
-            <element signature="e#18416#18544#0" expanded="false" />
-            <element signature="e#20131#22347#0" expanded="false" />
-            <element signature="e#20374#20520#0" expanded="false" />
-            <element signature="e#22403#23634#0" expanded="false" />
-            <element signature="e#22645#22804#0" expanded="false" />
-            <element signature="e#23662#24904#0" expanded="false" />
-            <element signature="e#24120#24806#0" expanded="false" />
-            <element signature="e#24931#25005#0" expanded="false" />
-            <element signature="e#25042#25907#0" expanded="false" />
-            <element signature="e#25286#25446#0" expanded="false" />
-            <element signature="e#25936#26186#0" expanded="false" />
+            <element signature="e#2873#3520#0" expanded="false" />
+            <element signature="e#3824#3866#0" expanded="false" />
+            <element signature="e#3899#4123#0" expanded="false" />
+            <element signature="e#4187#5581#0" expanded="false" />
+            <element signature="e#4225#4338#0" expanded="false" />
+            <element signature="e#4455#4536#0" expanded="false" />
+            <element signature="e#4609#5574#0" expanded="false" />
+            <element signature="e#5234#5563#0" expanded="false" />
+            <element signature="e#5400#5549#0" expanded="false" />
+            <element signature="e#5644#6293#0" expanded="false" />
+            <element signature="e#5729#5779#0" expanded="false" />
+            <element signature="e#5868#5918#0" expanded="false" />
+            <element signature="e#6007#6102#0" expanded="false" />
+            <element signature="e#6191#6285#0" expanded="false" />
+            <element signature="e#6343#7489#0" expanded="false" />
+            <element signature="e#6578#6756#0" expanded="false" />
+            <element signature="e#7393#7457#0" expanded="false" />
+            <element signature="e#7519#8042#0" expanded="false" />
+            <element signature="e#7595#7861#0" expanded="false" />
+            <element signature="e#8333#8432#0" expanded="false" />
+            <element signature="e#9970#10186#0" expanded="false" />
+            <element signature="e#10457#10556#0" expanded="false" />
+            <element signature="e#10939#11039#0" expanded="false" />
+            <element signature="e#13003#13181#0" expanded="false" />
+            <element signature="e#13481#13564#0" expanded="false" />
+            <element signature="e#15637#15639#0" expanded="false" />
+            <element signature="e#16384#16828#0" expanded="false" />
+            <element signature="e#16533#16670#0" expanded="false" />
+            <element signature="e#16869#18610#0" expanded="false" />
+            <element signature="e#17072#17560#0" expanded="false" />
+            <element signature="e#17596#17796#0" expanded="false" />
+            <element signature="e#18146#18486#0" expanded="false" />
+            <element signature="e#18650#20010#0" expanded="false" />
+            <element signature="e#18660#20004#0" expanded="false" />
+            <element signature="e#18716#19069#0" expanded="false" />
+            <element signature="e#18904#19032#0" expanded="false" />
+            <element signature="e#19121#19489#0" expanded="false" />
+            <element signature="e#19540#19816#0" expanded="false" />
+            <element signature="e#19868#19994#0" expanded="false" />
+            <element signature="e#20071#22287#0" expanded="false" />
+            <element signature="e#20314#20460#0" expanded="false" />
+            <element signature="e#21397#22257#0" expanded="false" />
+            <element signature="e#22102#22204#0" expanded="false" />
+            <element signature="e#22343#23574#0" expanded="false" />
+            <element signature="e#22585#22744#0" expanded="false" />
+            <element signature="e#23602#24844#0" expanded="false" />
+            <element signature="e#24982#25847#0" expanded="false" />
+            <element signature="e#25226#25386#0" expanded="false" />
+            <element signature="e#25876#26126#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="865" max-vertical-offset="1785">
+          <caret line="93" column="49" selection-start-line="93" selection-start-column="49" selection-end-line="93" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1479">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LobbyScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="2380">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game/Fish/Lobby/LoginScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.59615386" vertical-offset="1479" max-vertical-offset="10302">
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

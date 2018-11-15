@@ -58,6 +58,8 @@ var LobbyPacketListenner = cc.Class.extend({
     onDisconnect: function(){
         //this.gameListenner.onDisconnect();
         cc.log("on Disconnected");
+        sceneMgr.openWithScene(new LoginScene());
+
     }
 })
 

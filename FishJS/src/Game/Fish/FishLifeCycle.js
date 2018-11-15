@@ -114,11 +114,22 @@ var FishLifeCycle = cc.Class.extend({
     },
     onStateChange: function(pk)
     {
-        cc.log(JSON.stringify(pk));
         this.gameScene.gameMgr.state = pk.state;
-
         if(this.gameScene.gameMgr.state != GameManager.STATE_MATRIX_MAP)
             matranMap.paused = true;
+        switch (pk.state)
+        {
+            case GameManager.STATE_PREPARE:
+            {
+                this.gameScene.stateToPrepare(10);
+                break;
+            }
+            case GameManager.STATE_NORMAL_MAP:
+            {
+                this.gameScene.stateToNormalMap();
+                break;
+            }
+        }
     },
     onMatrixData: function(pk)
     {

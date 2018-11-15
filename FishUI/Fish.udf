@@ -35,7 +35,7 @@
           <FilePathData Path="GameLayer.csd" />
           <FilePathData Path="LoginLayer.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="LobbyScene.csd" />
+        <ActiveDocument Path="GameLayer.csd" />
       </Value>
     </Item>
   </Properties>

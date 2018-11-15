@@ -91,7 +91,7 @@ var LobbyScene = BaseLayer.extend({
         this._super();
         if(this.need_login)
             sceneMgr.addLoading("Loading...",true);
-        //GameClient.getInstance().connect("35.240.162.131",8080);
+
 
     },
     onUpdateData: function(){
@@ -114,10 +114,6 @@ var LobbyScene = BaseLayer.extend({
                 break;
             }
             case 1:{
-                //GameClient.getInstance().connect("127.0.0.1",8080);
-                //GameClient.getInstance().connect("192.168.0.127",8080);
-
-                //GameClient.getInstance().connect("35.240.162.131",8080);
                 var pkQuickJoin = new CmdSendQuickJoin();
                 GameClient.getInstance().sendPacket(pkQuickJoin);
                 break;

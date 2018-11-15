@@ -12,7 +12,6 @@ var MatranMap = cc.Class.extend({
     },
     loadData: function(){
         var jsonData = fishData.matrixData.data;
-        cc.log(jsonData.length);
         for(var i=0;i<jsonData.length;i++)
         {
             var ll = new MatranMap.Line();
@@ -50,7 +49,6 @@ var MatranMap = cc.Class.extend({
             tmp+=this.listLine[i].so_luong;
         }
         this.paused = false;
-        //cc.log(JSON.stringify(this));
     },
     update: function(dt)
     {
@@ -66,7 +64,7 @@ var MatranMap = cc.Class.extend({
             {
                 var id = Math.floor((ll.MOC - ll.start_time) / ll.delay_time) + ll.startID;
                 if(this.listener)
-                    this.listener.onCreateFish(id,ll.fish_type,ll.path);
+                    this.listener.onCreateFish(id,ll.fish_type,ll.path,ll.time_xuat_hien,0);
                 ll.MOC += ll.delay_time;
             }
         }

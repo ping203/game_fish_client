@@ -58,9 +58,13 @@ var DemoScene = BaseLayer.extend({
 
         if(state == GameManager.STATE_NORMAL_MAP){
             this.gameLogic.reset();
+            this.gameScene.stateToNormalMap();
         }
         else if(state == GameManager.STATE_MATRIX_MAP){
             matranMap.start(0,this.gameLogic.gameMap.getMatranMap().getStartID());
+        }
+        else if(state == GameManager.STATE_PREPARE){
+            this.gameScene.stateToPrepare(TIME_PREPARE);
         }
     },
     // for action
