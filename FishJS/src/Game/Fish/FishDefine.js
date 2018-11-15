@@ -23,7 +23,7 @@ var FishData = cc.Class.extend({
         cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/coin0.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/coin1.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/coin/xuxu.plist");
-
+        cc.spriteFrameCache.addSpriteFrames("res/fishData/wave/wave_0.plist");
 
 
         cc.animationCache.addAnimations("res/fishData/anim/fish_01_swim.plist");
@@ -54,6 +54,9 @@ var FishData = cc.Class.extend({
         cc.animationCache.addAnimations("res/fishData/anim/fish_26_swim.plist");
         cc.animationCache.addAnimations("res/fishData/anim/fish_27_swim.plist");
         cc.animationCache.addAnimations("res/fishData/anim/fish_28_swim.plist");
+
+        cc.animationCache.addAnimations("res/fishData/wave/wave_move.plist");
+
 
     },
     loadFishModel: function()

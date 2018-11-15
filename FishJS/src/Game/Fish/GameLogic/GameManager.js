@@ -197,6 +197,29 @@ var GameManagerWeb = cc.Class.extend({
         entity.need_remove = true;
         entity.released = true;
     },
+    destroyAllEntity: function(destroyNode){
+        var count = this._entities.length;
+        while(count--)
+        {
+            if(this._entities[count]._nodeDisplay)
+            {
+                if(destroyNode)
+                    this._entities[count]._nodeDisplay.removeFromParent();
+                else if(this._entities[count]._nodeDisplay.getChildByTag(0))
+                {
+                    this._entities[count]._nodeDisplay.getChildByTag(0).stopAllActions();
+                    if(this._entities[count]._nodeDisplay.getChildByTag(1))
+                        this._entities[count]._nodeDisplay.getChildByTag(1).stopAllActions();
+
+                }
+            }
+            this._world.DestroyBody(this._entities[count]._body);
+        }
+        this._entities = [];
+    },
+    destroyWordl: function(){
+
+    },
 
     BeginContact: function(contact)
     {

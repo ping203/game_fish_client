@@ -88,8 +88,8 @@ var LoginScene = BaseLayer.extend({
             sceneMgr.openWithScene(lobbyScene);
 
             GameClient.getInstance().setListener(lobbyListenner);
-            GameClient.getInstance().connect("192.168.0.113",8080);
-            //GameClient.getInstance().connect("35.240.162.131",8080);
+            //GameClient.getInstance().connect("192.168.0.113",8080);
+            GameClient.getInstance().connect("35.240.162.131",8080);
 
         }
     },

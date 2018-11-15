@@ -329,6 +329,7 @@
               "X": 200.0,
               "Y": 200.0
             },
+            "VisibleForFrame": false,
             "Name": "Panel_bg",
             "ctype": "PanelObjectData"
           },

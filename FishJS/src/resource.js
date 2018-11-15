@@ -87,7 +87,18 @@ var g_resources = [
 
     "res/GUI/Lobby/Anim/Shop/skeleton.json",
     "res/GUI/Lobby/Anim/Shop/skeleton.atlas",
-    "res/GUI/Lobby/Anim/Shop/skeleton.png"
+    "res/GUI/Lobby/Anim/Shop/skeleton.png",
+
+    "res/FX/FXCaTran.atlas",
+    "res/FX/FXCaTran.json",
+    "res/FX/FXCaTran.png",
+
+    "res/FX/Text_Boss_Coming.atlas",
+    "res/FX/Text_Boss_Coming.json",
+    "res/FX/Text_Boss_Coming.png",
+
+    "res/fishData/wave/wave_0.plist",
+    "res/fishData/wave/wave_move.plist"
 
 
 

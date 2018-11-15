@@ -229,7 +229,7 @@ var GameLayerUI = BaseLayer.extend({
 
         cc.eventManager.addListener(this._listener,this);
 
-        this.scheduleUpdate();
+        this.scheduleUpdateWithPriority(100);
         matranMap.listener = this;
         //matranMap.start(0,0)
 
@@ -536,6 +536,20 @@ var GameLayerUI = BaseLayer.extend({
             case GameLayerUI.BTN_MENU:
             {
                 fishBZ.sendQuit();
+                this.gameMgr.destroyAllEntity();
+
+                var currentFishLayer = this.fish2DLayer;
+                this.fish2DLayer = new Display2DScene();
+                this.panel_diaplay.addChild(this.fish2DLayer,2);
+                //currentFishLayer.removeFromParent();
+
+
+                var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/Text_Boss_Coming.json","res/FX/Text_Boss_Coming.atlas");
+                catranAnim.setAnimation(0,"BossTextAnim",true);
+
+                this.addChild(catranAnim,20);
+                catranAnim.setPosition(cc.winSize.width/2,400);
+
                 break;
             }
         }
@@ -691,6 +705,10 @@ var GameLayerUI = BaseLayer.extend({
         var shake = cc.sequence(cc.moveBy(.0175,cc.p(3,3)),cc.moveBy(.035,cc.p(-6,-6)),cc.moveBy(.0175,cc.p(3,3))).repeat(2);
         shake.setTag(9);
         this.panel_diaplay.runAction(shake);
+    },
+
+    animCatranDen: function(){
+
     }
 
 
