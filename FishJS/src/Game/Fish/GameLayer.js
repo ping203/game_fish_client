@@ -546,11 +546,15 @@ var GameLayerUI = BaseLayer.extend({
             }
             case GameLayerUI.BTN_MENU:
             {
-                //fishBZ.sendQuit();
-
-
-
-                this.cleanScreenForCatran();
+                if(!this.actionListener)
+                    fishBZ.sendQuit();
+                else
+                {
+                    var lobbyScene = new LobbyScene();
+                    lobbyScene.onUpdateData();
+                    sceneMgr.openWithScene(lobbyScene);
+                }
+                break;
 
 
 

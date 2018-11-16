@@ -86,6 +86,10 @@ var FishLifeCycle = cc.Class.extend({
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
             this.players[position].setGunBet(data.bet,false);
         }
+        else
+        {
+            gameData.userData.gold = data.user_money;
+        }
 
         this.players[position].playerData.rawData["bean"] = data.user_money;
         this.players[position].updateInfo()
@@ -108,6 +112,7 @@ var FishLifeCycle = cc.Class.extend({
             if(pk.position == this.position)        // effect money for player
             {
                 this.gameScene.effectMoney(pk.position,pk.won_money);
+                gameData.userData.gold = pk.user_money;
             }
         }
 
