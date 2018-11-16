@@ -161,9 +161,12 @@ var GameLayerUI = BaseLayer.extend({
 
             if(fish.id !== undefined && bullet.playerID == fishLifeCycle.myChair)
             {
-                fishBZ.sendShootFish(fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
                 if(this.actionListener && this.actionListener.onShootFish){
                     this.actionListener.onShootFish.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
+                }
+                else
+                {
+                    fishBZ.sendShootFish(fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
                 }
             }
 
@@ -584,6 +587,7 @@ var GameLayerUI = BaseLayer.extend({
         ))
         sp.runAction(cc.sequence(cc.delayTime(.15 +.45 +.15+time -.15),cc.fadeOut(.15)));
 
+        fishSound.playEffectCoin();
 
         if(playerIndex == fishLifeCycle.position)
         {
@@ -699,6 +703,7 @@ var GameLayerUI = BaseLayer.extend({
         node.setPosition(pos);
         node.runAction(cc.sequence(cc.delayTime(0.02 * 90),cc.removeSelf()))
         this.shakeScreen();
+        fishSound.playEffectBoom();
         return node;
     },
     shakeScreen: function(){
@@ -711,25 +716,28 @@ var GameLayerUI = BaseLayer.extend({
 
     // chuan bi cho ca tran
     stateToPrepare: function(time){
-        cc.log("prepare")
+
         this.animCatranDen();
         this.stopActionByTag(1111);     // khong doi background cho den khi normal map tro lai
         this.runAction(cc.sequence(cc.delayTime(time - 1.5),cc.callFunc(function(){
             this.effectLayer.removeAllChildren();
             this.cleanScreenForCatran();
         }.bind(this))))
+
+        this.check_matrix = false;
     },
     cleanScreenForCatran: function(){
 
         this.bulletLayer.removeAllChildren();
 
-        this.gameMgr.destroyAllEntity(false);
+        if(!this.check_matrix)
+            this.gameMgr.destroyAllEntity(false);
 
         var currentFishLayer = this.fish2DLayer;
         this.fish2DLayer = new Display2DScene();
         this.panel_diaplay.addChild(this.fish2DLayer,2);
 
-        var bgPath = this.currentBG==0?"res/GUI/ScreenGame/Background/bg.jpg":((this.currentBG==1)?"res/GUI/ScreenGame/Background/bg1.jpg":"res/GUI/ScreenGame/Background/bg2.jpg");
+        var bgPath = this.currentBG==0?"res/GUI/ScreenGame/Background/bg2.jpg":((this.currentBG==1)?"res/GUI/ScreenGame/Background/bg.jpg":"res/GUI/ScreenGame/Background/bg1.jpg");
 
         var bgTmp = new cc.Sprite(bgPath);
         bgTmp.setScaleX(cc.winSize.width / 1920);
@@ -739,7 +747,7 @@ var GameLayerUI = BaseLayer.extend({
         var stencil = new cc.Sprite(bgPath);
         stencil.setScaleX(cc.winSize.width / 1920);
         stencil.setScaleY(cc.winSize.height / 1080);
-        stencil.setPosition(cc.winSize.width/2,cc.winSize.height/2);
+        stencil.setPosition(cc.winSize.width /2.0,cc.winSize.height/2);
 
         var TIME_CLEAN = 1.5;
 
@@ -781,6 +789,12 @@ var GameLayerUI = BaseLayer.extend({
     stateToNormalMap: function(){
         this.stopMusic();
         this.startMusic();
+    },
+    stateToMatrixMap: function(){
+
+        this.gameMgr.destroyAllEntity(false);
+        this.check_matrix = true;
+
     }
 
 

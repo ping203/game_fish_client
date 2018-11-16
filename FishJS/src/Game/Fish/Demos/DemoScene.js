@@ -35,6 +35,7 @@ var DemoScene = BaseLayer.extend({
     onEnter: function(){
         this._super();
         this.scheduleUpdate();
+        this.gameScene.startMusic();
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);
@@ -61,6 +62,7 @@ var DemoScene = BaseLayer.extend({
             this.gameScene.stateToNormalMap();
         }
         else if(state == GameManager.STATE_MATRIX_MAP){
+            this.gameScene.stateToMatrixMap();
             matranMap.start(0,this.gameLogic.gameMap.getMatranMap().getStartID());
         }
         else if(state == GameManager.STATE_PREPARE){

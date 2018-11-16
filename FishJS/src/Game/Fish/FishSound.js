@@ -27,6 +27,18 @@ fishSound.playEffectFishHit = function()
 
 }
 
+fishSound.playEffectCoin = function()
+{
+    audioEngine.playEffect("res/sounds/game/coin.mp3",false);
+
+}
+
+fishSound.playEffectBoom = function()
+{
+    audioEngine.playEffect("res/sounds/game/bom.mp3",false);
+
+}
+
 fishSound.stopMusic = function(){
     audioEngine.stopMusic(false);
 }
