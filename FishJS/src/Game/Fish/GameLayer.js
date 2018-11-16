@@ -411,7 +411,7 @@ var GameLayerUI = BaseLayer.extend({
         var pos = fishSp.getPosition();
 
         var str = "" + StringUtility.standartNumber(Math.abs(money));
-        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/fonts/Tien vang-export.fnt":"res/fonts/Tien bac-export.fnt";
+        var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/GUI/Fonts/Tien vang-export.fnt":"res/GUI/Fonts/Tien bac-export.fnt";
         var moneyLb =  new cc.LabelBMFont(str,fontFile,0);
         moneyLb.setPosition(pos);
 
@@ -553,6 +553,8 @@ var GameLayerUI = BaseLayer.extend({
                     var lobbyScene = new LobbyScene();
                     lobbyScene.onUpdateData();
                     sceneMgr.openWithScene(lobbyScene);
+                    fishSound.stopMusic();
+                    fishSound.playMusicLobby();
                 }
                 break;
 
@@ -601,7 +603,7 @@ var GameLayerUI = BaseLayer.extend({
             this.effectLayerTop.addChild(txt);
             var timeDelay = .15 +.45 +.15+time -.15;
             txt.setVisible(false);
-            txt.runAction(cc.sequence(cc.delayTime(timeDelay),cc.show(),cc.moveBy(1,cc.p(0,100)),cc.removeSelf()));
+            txt.runAction(cc.sequence(cc.delayTime(timeDelay),cc.show(),cc.moveBy(1,cc.p(0,playerIndex>=2?-100:100)),cc.removeSelf()));
             txt.runAction(cc.sequence(cc.delayTime(timeDelay +.5),cc.fadeOut(.5)));
 
             //this.players[playerIndex].lbMoney.stopAllActions();
@@ -741,7 +743,7 @@ var GameLayerUI = BaseLayer.extend({
         this.fish2DLayer = new Display2DScene();
         this.panel_diaplay.addChild(this.fish2DLayer,2);
 
-        var bgPath = this.currentBG==0?"res/GUI/ScreenGame/Background/bg2.jpg":((this.currentBG==1)?"res/GUI/ScreenGame/Background/bg.jpg":"res/GUI/ScreenGame/Background/bg1.jpg");
+        var bgPath = this.currentBG==0?"res/GUI/ScreenGame/Background/bg2.jpg":((this.currentBG==1)?"res/GUI/ScreenGame/Background/bg.jpg":"res/GUI/ScreenGame/Background/bg3.jpg");
 
         var bgTmp = new cc.Sprite(bgPath);
         bgTmp.setScaleX(cc.winSize.width / 1920);

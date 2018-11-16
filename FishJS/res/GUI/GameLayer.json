@@ -381,14 +381,14 @@
           },
           {
             "FileData": {
-              "Type": "PlistSubImage",
-              "Path": "Trident_empty.png",
-              "Plist": "ScreenGame/Guns/AtlasGuns.plist"
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
             },
-            "Scale9OriginX": 147,
-            "Scale9OriginY": 35,
-            "Scale9Width": 153,
-            "Scale9Height": 37,
+            "Scale9OriginX": -101,
+            "Scale9OriginY": 11,
+            "Scale9Width": 248,
+            "Scale9Height": 24,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -463,14 +463,14 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "Trident_empty.png",
-                  "Plist": "ScreenGame/Guns/AtlasGuns.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
-                "Scale9OriginX": 147,
-                "Scale9OriginY": 35,
-                "Scale9Width": 153,
-                "Scale9Height": 37,
+                "Scale9OriginX": -101,
+                "Scale9OriginY": 11,
+                "Scale9Width": 248,
+                "Scale9Height": 24,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -508,8 +508,8 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/Particles/TridentParticle.plist",
+                  "Type": "Default",
+                  "Path": "Default/defaultParticle.plist",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -833,7 +833,7 @@
                     "LabelText": "1.000.000$........",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Fonts/arialbd.ttf",
+                      "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -869,18 +869,18 @@
                       "Y": 0.4338
                     },
                     "PreSize": {
-                      "X": 0.6086,
-                      "Y": 0.1391
+                      "X": 0.7204,
+                      "Y": 0.1435
                     },
-                    "LeftMargin": 92.8144,
-                    "RightMargin": 26.1856,
-                    "TopMargin": 114.2296,
-                    "BottomMargin": 83.7704,
+                    "LeftMargin": 75.8144,
+                    "RightMargin": 9.1856,
+                    "TopMargin": 113.7296,
+                    "BottomMargin": 83.2704,
                     "Tag": 49,
                     "ActionTag": -1980223621,
                     "Size": {
-                      "X": 185.0,
-                      "Y": 32.0
+                      "X": 219.0,
+                      "Y": 33.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -1575,49 +1575,6 @@
             "Tag": 53,
             "Children": [
               {
-                "LabelText": "WAITING",
-                "LabelBMFontFile_CNB": {
-                  "Type": "Normal",
-                  "Path": "Lobby/Popup/Fonts/yellow-export.fnt",
-                  "Plist": ""
-                },
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 141.8646,
-                  "Y": 182.6284
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.7093,
-                  "Y": 0.9131
-                },
-                "PreSize": {
-                  "X": 0.575,
-                  "Y": 0.235
-                },
-                "LeftMargin": 84.3646,
-                "RightMargin": 0.6354,
-                "TopMargin": -6.1284,
-                "BottomMargin": 159.1284,
-                "Tag": 256,
-                "ActionTag": -470826255,
-                "Size": {
-                  "X": 115.0,
-                  "Y": 47.0
-                },
-                "VisibleForFrame": false,
-                "Name": "BitmapFontLabel_1",
-                "ctype": "TextBMFontObjectData"
-              },
-              {
                 "FileData": {
                   "Type": "Normal",
                   "Path": "ScreenGame/UI_Ingame/khung_ava.png",
@@ -1849,8 +1806,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "Fonts/arialbd.ttf",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1859,7 +1816,6 @@
                       "G": 0,
                       "B": 0
                     },
-                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -1896,8 +1852,8 @@
                     "Tag": 149,
                     "ActionTag": -1128986007,
                     "Size": {
-                      "X": 185.0,
-                      "Y": 32.0
+                      "X": 182.0,
+                      "Y": 31.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -2823,8 +2779,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "Fonts/arialbd.ttf",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2833,7 +2789,6 @@
                       "G": 0,
                       "B": 0
                     },
-                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -2870,8 +2825,8 @@
                     "Tag": 156,
                     "ActionTag": -808831615,
                     "Size": {
-                      "X": 185.0,
-                      "Y": 32.0
+                      "X": 182.0,
+                      "Y": 31.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -3800,8 +3755,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "Fonts/arialbd.ttf",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -3810,7 +3765,6 @@
                       "G": 0,
                       "B": 0
                     },
-                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -3847,8 +3801,8 @@
                     "Tag": 163,
                     "ActionTag": 215349011,
                     "Size": {
-                      "X": 185.0,
-                      "Y": 32.0
+                      "X": 182.0,
+                      "Y": 31.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -4761,7 +4715,7 @@
       "UsedResources": [
         "Default/Button_Disable.png",
         "Default/defaultParticle.plist",
-        "Fonts/arialbd.ttf",
+        "Default/ImageFile.png",
         "Fonts/SoDan.fnt",
         "Fonts/SoDan.png",
         "Fonts/tahomabd.ttf",
@@ -4774,9 +4728,6 @@
         "ScreenGame/Background/bg3.jpg",
         "ScreenGame/Background/bubble.png",
         "ScreenGame/Background/particle_texture.plist",
-        "ScreenGame/Guns/AtlasGuns.plist",
-        "ScreenGame/Guns/AtlasGuns.png",
-        "ScreenGame/Particles/TridentParticle.plist",
         "ScreenGame/UI_Ingame/ava_nho.png",
         "ScreenGame/UI_Ingame/button_plus_normal.png",
         "ScreenGame/UI_Ingame/button_plus_pressed.png",

@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode" : 1,
-    "showFPS" : true,
+    "showFPS" : false,
     "frameRate" : 60,
     "id" : "gameCanvas",
     "renderMode" : 0,
@@ -23,14 +23,17 @@
          "src/Engine/Utils/NativeBridge.js",
          "src/Engine/Utils/StringUtility.js",
          "src/Engine/Utils/LocalizedString.js",
-      "src/Engine/Flatbuffers/flatbuffers.js",
       "src/Engine/Network/WsClient.js",
-
       "src/Engine/Network/InPacket.js",
       "src/Engine/Network/OutPacket.js",
-      "src/Engine/Protocols/client_request_generated.js",
-      "src/Engine/Protocols/common_generated.js",
-      "src/Engine/Protocols/server_response_generated.js",
+
+      "src/Engine/extras/core/Curve.js",
+      "src/Engine/extras/core/CurvePath.js",
+      "src/Engine/extras/core/Interpolate.js",
+      "src/Engine/extras/core/Path.js",
+      "src/Engine/extras/curves/CubicBezierCurve.js",
+      "src/Engine/extras/curves/LineCurve.js",
+      "src/Engine/extras/curves/QuadraticCurve.js",
 
       "src/Game/Config.js",
       "src/Game/Constant.js",
@@ -66,13 +69,7 @@
 
       "src/Game/Fish/Demos/DemoScene.js",
 
-      "src/extras/core/Curve.js",
-        "src/extras/core/CurvePath.js",
-        "src/extras/core/Interpolate.js",
-        "src/extras/core/Path.js",
-        "src/extras/curves/CubicBezierCurve.js",
-      "src/extras/curves/LineCurve.js",
-      "src/extras/curves/QuadraticCurve.js",
+
 
 
       "src/resource.js"

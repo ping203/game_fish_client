@@ -7,7 +7,7 @@ var fishSound = fishSound || {};
 
 fishSound.playMusicLobby = function()
 {
-    audioEngine.playMusic("res/sounds/lobby/bg_lobby.mp3",true);
+    audioEngine.playMusic("res/sounds/lobby/bg_lobby_1.mp3",true);
 }
 
 fishSound.playMusicBackgroundGame = function(id)
@@ -18,13 +18,7 @@ fishSound.playMusicBackgroundGame = function(id)
 
 fishSound.playEffectShoot = function()
 {
-    audioEngine.playEffect("res/sounds/fish/sound_fire_01.mp3",false);
-}
-
-fishSound.playEffectFishHit = function()
-{
-    audioEngine.playEffect("res/sounds/fish/sound_hit_03.mp3",false);
-
+    audioEngine.playEffect("res/sounds/game/fire1.mp3",false);
 }
 
 fishSound.playEffectCoin = function()
@@ -35,7 +29,7 @@ fishSound.playEffectCoin = function()
 
 fishSound.playEffectBoom = function()
 {
-    audioEngine.playEffect("res/sounds/game/bom.mp3",false);
+    audioEngine.playEffect("res/sounds/game/bom3.mp3",false);
 
 }
 
@@ -45,10 +39,6 @@ fishSound.stopMusic = function(){
 
 fishSound.playEffectFishDie = function(type)
 {
-    return;
-    if(type > 16)
-        type = 16;
-    audioEngine.playEffect("res/sounds/fish/die/" +type + ".mp3",false);
 }
 
 

@@ -90,6 +90,7 @@ cc.game.onStart = function(){
         fishData.load();
         matranMap.loadData();
         cc.audioEngine.setMusicVolume(1);
+        ccs.load("res/GUI/GameLayer.json");
 
         sceneMgr.openWithScene(new LoginScene());
         //sceneMgr.openWithScene(new DemoScene());

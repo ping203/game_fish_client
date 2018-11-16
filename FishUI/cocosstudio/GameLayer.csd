@@ -103,7 +103,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="gay" ActionTag="117900689" VisibleForFrame="False" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="gay" ActionTag="117900689" VisibleForFrame="False" Tag="5" RotationSkewX="-90.0000" RotationSkewY="-90.0000" IconVisible="False" LeftMargin="-180.6900" RightMargin="1013.6900" TopMargin="272.0953" BottomMargin="340.9047" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="-101" Scale9OriginY="11" Scale9Width="248" Scale9Height="24" ctype="ImageViewObjectData">
             <Size X="447.0000" Y="107.0000" />
             <Children>
               <AbstractNodeData Name="Particle_2" ActionTag="1016150746" Tag="52" IconVisible="True" LeftMargin="373.6724" RightMargin="73.3276" TopMargin="50.6213" BottomMargin="56.3787" ctype="ParticleObjectData">
@@ -117,7 +117,7 @@
                 <FileData Type="Default" Path="Default/defaultParticle.plist" Plist="" />
                 <BlendFunc Src="775" Dst="1" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Image_2" ActionTag="1600097099" Tag="6" IconVisible="False" LeftMargin="0.7947" RightMargin="-0.7947" TopMargin="0.3883" BottomMargin="-0.3883" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="147" Scale9OriginY="35" Scale9Width="153" Scale9Height="37" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_2" ActionTag="1600097099" Tag="6" IconVisible="False" LeftMargin="0.7947" RightMargin="-0.7947" TopMargin="0.3883" BottomMargin="-0.3883" LeftEage="147" RightEage="147" TopEage="35" BottomEage="35" Scale9OriginX="-101" Scale9OriginY="11" Scale9Width="248" Scale9Height="24" ctype="ImageViewObjectData">
                 <Size X="447.0000" Y="107.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="224.2947" Y="53.1117" />
@@ -125,7 +125,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5018" Y="0.4964" />
                 <PreSize X="1.0000" Y="1.0000" />
-                <FileData Type="PlistSubImage" Path="Trident_empty.png" Plist="ScreenGame/Guns/AtlasGuns.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Particle_1" ActionTag="-40996458" Tag="51" IconVisible="True" LeftMargin="170.2338" RightMargin="276.7662" TopMargin="50.5291" BottomMargin="56.4709" ctype="ParticleObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -135,7 +135,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3808" Y="0.5278" />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="ScreenGame/Particles/TridentParticle.plist" Plist="" />
+                <FileData Type="Default" Path="Default/defaultParticle.plist" Plist="" />
                 <BlendFunc Src="770" Dst="1" />
               </AbstractNodeData>
             </Children>
@@ -145,7 +145,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0334" Y="0.5478" />
             <PreSize X="0.3492" Y="0.1486" />
-            <FileData Type="PlistSubImage" Path="Trident_empty.png" Plist="ScreenGame/Guns/AtlasGuns.plist" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="player_0" ActionTag="152389595" Tag="7" IconVisible="False" LeftMargin="184.1754" RightMargin="895.8246" TopMargin="517.9312" BottomMargin="2.0688" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
@@ -195,15 +195,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="185.0000" Y="32.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="219.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Normal" Path="Fonts/arialbd.ttf" Plist="" />
+                    <PreSize X="0.7204" Y="0.1435" />
+                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -382,16 +382,6 @@
           <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="865.5502" RightMargin="214.4498" TopMargin="518.4618" BottomMargin="1.5382" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="BitmapFontLabel_1" ActionTag="-470826255" VisibleForFrame="False" Tag="256" IconVisible="False" LeftMargin="84.3646" RightMargin="0.6354" TopMargin="-6.1284" BottomMargin="159.1284" LabelText="WAITING" ctype="TextBMFontObjectData">
-                <Size X="115.0000" Y="47.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="141.8646" Y="182.6284" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7093" Y="0.9131" />
-                <PreSize X="0.5750" Y="0.2350" />
-                <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
-              </AbstractNodeData>
               <AbstractNodeData Name="bg_thongtin" ActionTag="-1635095029" Tag="144" IconVisible="False" LeftMargin="188.3929" RightMargin="-292.3929" TopMargin="29.4250" BottomMargin="-59.4250" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
                 <Size X="304.0000" Y="230.0000" />
                 <Children>
@@ -437,15 +427,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1128986007" Tag="149" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="185.0000" Y="32.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-1128986007" Tag="149" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="182.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6096" Y="0.4338" />
                     <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Normal" Path="Fonts/arialbd.ttf" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -669,15 +659,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-808831615" Tag="156" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="185.0000" Y="32.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-808831615" Tag="156" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="182.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6096" Y="0.4338" />
                     <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Normal" Path="Fonts/arialbd.ttf" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -901,15 +891,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="215349011" Tag="163" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="185.0000" Y="32.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="215349011" Tag="163" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="182.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6096" Y="0.4338" />
                     <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Normal" Path="Fonts/arialbd.ttf" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

@@ -51,6 +51,8 @@ var FishLifeCycle = cc.Class.extend({
             var lobbyScene = new LobbyScene();
             lobbyScene.onUpdateData();
             sceneMgr.openWithScene(lobbyScene);
+            fishSound.stopMusic();
+            fishSound.playMusicLobby();
         }
         else    // user khac quit
             this.players[pk.position].enable(false);
