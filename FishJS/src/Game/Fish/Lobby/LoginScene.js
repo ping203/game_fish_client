@@ -6,13 +6,13 @@ var wsClient = null;
 
 var BASE_URL = "http://130.211.249.69:8081/api?";
 
-var LoginScene = BaseLayer.extend({
+var LoginScene = BCBaseLayer.extend({
     ctor: function()
     {
         this._super();
         this.initWithBinaryFile("res/GUI/LoginLayer.json");
 
-        GameClient.getInstance().setListener(lobbyListenner);
+        BCGameClient.getInstance().setListener(lobbyListenner);
 
 
 
@@ -85,11 +85,11 @@ var LoginScene = BaseLayer.extend({
 
             var lobbyScene = new LobbyScene();
             lobbyScene.withLogin();
-            sceneMgr.openWithScene(lobbyScene);
+            bcSceneMgr.openWithScene(lobbyScene);
 
-            GameClient.getInstance().setListener(lobbyListenner);
-            //GameClient.getInstance().connect("192.168.0.113",8080);
-            GameClient.getInstance().connect("35.240.162.131",8080);
+            BCGameClient.getInstance().setListener(lobbyListenner);
+            //BCGameClient.getInstance().connect("192.168.0.113",8080);
+            BCGameClient.getInstance().connect("35.240.162.131",8080);
 
         }
     },

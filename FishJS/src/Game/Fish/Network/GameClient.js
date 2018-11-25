@@ -3,7 +3,7 @@
  */
 
 
-var GameClientListener = cc.Class.extend({
+var BCGameClientListener = cc.Class.extend({
     onReceived: function(cmd,pkg)
     {
 
@@ -16,11 +16,11 @@ var GameClientListener = cc.Class.extend({
     }
 })
 
-var GameClient = cc.Class.extend({
+var BCGameClient = cc.Class.extend({
     ctor: function()
     {
         this.listenner = null;
-        this.wsClient = new WebsocketClient();
+        this.wsClient = new BCWebsocketClient();
 
         this.connected = false;
     },
@@ -62,8 +62,8 @@ var GameClient = cc.Class.extend({
 
 var gameclient_instance = null;
 
-GameClient.getInstance = function(){
+BCGameClient.getInstance = function(){
     if(gameclient_instance == null)
-        gameclient_instance = new GameClient();
+        gameclient_instance = new BCGameClient();
     return gameclient_instance;
 }

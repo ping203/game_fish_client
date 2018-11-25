@@ -862,7 +862,10 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {},
+                    "CColor": {
+                      "G": 216,
+                      "B": 66
+                    },
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.6096,
@@ -943,7 +946,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 91.2766,
-                  "Y": 52.8228
+                  "Y": 48.82
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -953,7 +956,7 @@
                 "IconVisible": true,
                 "PrePosition": {
                   "X": 0.4564,
-                  "Y": 0.2641
+                  "Y": 0.2441
                 },
                 "PreSize": {
                   "X": 0.0,
@@ -961,8 +964,8 @@
                 },
                 "LeftMargin": 91.2766,
                 "RightMargin": 108.7234,
-                "TopMargin": 147.1772,
-                "BottomMargin": 52.8228,
+                "TopMargin": 151.18,
+                "BottomMargin": 48.82,
                 "Tag": 41,
                 "Children": [
                   {
@@ -1806,8 +1809,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Default",
-                      "Path": "",
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1816,6 +1819,7 @@
                       "G": 0,
                       "B": 0
                     },
+                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -1835,25 +1839,28 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {},
+                    "CColor": {
+                      "G": 216,
+                      "B": 66
+                    },
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.6096,
                       "Y": 0.4338
                     },
                     "PreSize": {
-                      "X": 0.6086,
-                      "Y": 0.1391
+                      "X": 0.7204,
+                      "Y": 0.1435
                     },
-                    "LeftMargin": 92.8144,
-                    "RightMargin": 26.1856,
-                    "TopMargin": 114.2296,
-                    "BottomMargin": 83.7704,
+                    "LeftMargin": 75.8144,
+                    "RightMargin": 9.1856,
+                    "TopMargin": 113.7296,
+                    "BottomMargin": 83.2704,
                     "Tag": 149,
                     "ActionTag": -1128986007,
                     "Size": {
-                      "X": 182.0,
-                      "Y": 31.0
+                      "X": 219.0,
+                      "Y": 33.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -1916,7 +1923,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 152.7901,
-                  "Y": 52.5928
+                  "Y": 49.59
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1926,7 +1933,7 @@
                 "IconVisible": true,
                 "PrePosition": {
                   "X": 0.764,
-                  "Y": 0.263
+                  "Y": 0.248
                 },
                 "PreSize": {
                   "X": 0.0,
@@ -1934,8 +1941,8 @@
                 },
                 "LeftMargin": 152.7901,
                 "RightMargin": 47.2099,
-                "TopMargin": 147.4072,
-                "BottomMargin": 52.5928,
+                "TopMargin": 150.41,
+                "BottomMargin": 49.59,
                 "Tag": 119,
                 "Children": [
                   {
@@ -2779,8 +2786,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Default",
-                      "Path": "",
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2789,6 +2796,7 @@
                       "G": 0,
                       "B": 0
                     },
+                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -2808,25 +2816,28 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {},
+                    "CColor": {
+                      "G": 216,
+                      "B": 66
+                    },
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.6096,
                       "Y": 0.4338
                     },
                     "PreSize": {
-                      "X": 0.6086,
-                      "Y": 0.1391
+                      "X": 0.7204,
+                      "Y": 0.1435
                     },
-                    "LeftMargin": 92.8144,
-                    "RightMargin": 26.1856,
-                    "TopMargin": 114.2296,
-                    "BottomMargin": 83.7704,
+                    "LeftMargin": 75.8144,
+                    "RightMargin": 9.1856,
+                    "TopMargin": 113.7296,
+                    "BottomMargin": 83.2704,
                     "Tag": 156,
                     "ActionTag": -808831615,
                     "Size": {
-                      "X": 182.0,
-                      "Y": 31.0
+                      "X": 219.0,
+                      "Y": 33.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -2889,7 +2900,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 134.21,
-                  "Y": 130.65
+                  "Y": 132.65
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -2901,7 +2912,7 @@
                 "IconVisible": true,
                 "PrePosition": {
                   "X": 0.6711,
-                  "Y": 0.6532
+                  "Y": 0.6632
                 },
                 "PreSize": {
                   "X": 0.0,
@@ -2909,8 +2920,8 @@
                 },
                 "LeftMargin": 134.21,
                 "RightMargin": 65.79,
-                "TopMargin": 69.35,
-                "BottomMargin": 130.65,
+                "TopMargin": 67.35,
+                "BottomMargin": 132.65,
                 "Tag": 131,
                 "Children": [
                   {
@@ -3755,8 +3766,8 @@
                     "FontSize": 26,
                     "LabelText": "1.000.000$........",
                     "FontResource": {
-                      "Type": "Default",
-                      "Path": "",
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -3765,6 +3776,7 @@
                       "G": 0,
                       "B": 0
                     },
+                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -3784,25 +3796,28 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {},
+                    "CColor": {
+                      "G": 216,
+                      "B": 66
+                    },
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.6096,
                       "Y": 0.4338
                     },
                     "PreSize": {
-                      "X": 0.6086,
-                      "Y": 0.1391
+                      "X": 0.7204,
+                      "Y": 0.1435
                     },
-                    "LeftMargin": 92.8144,
-                    "RightMargin": 26.1856,
-                    "TopMargin": 114.2296,
-                    "BottomMargin": 83.7704,
+                    "LeftMargin": 75.8144,
+                    "RightMargin": 9.1856,
+                    "TopMargin": 113.7296,
+                    "BottomMargin": 83.2704,
                     "Tag": 163,
                     "ActionTag": 215349011,
                     "Size": {
-                      "X": 182.0,
-                      "Y": 31.0
+                      "X": 219.0,
+                      "Y": 33.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -3865,7 +3880,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 152.5,
-                  "Y": 133.2217
+                  "Y": 136.22
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3877,7 +3892,7 @@
                 "IconVisible": true,
                 "PrePosition": {
                   "X": 0.7625,
-                  "Y": 0.6661
+                  "Y": 0.6811
                 },
                 "PreSize": {
                   "X": 0.0,
@@ -3885,8 +3900,8 @@
                 },
                 "LeftMargin": 152.5,
                 "RightMargin": 47.5,
-                "TopMargin": 66.7783,
-                "BottomMargin": 133.2217,
+                "TopMargin": 63.78,
+                "BottomMargin": 136.22,
                 "Tag": 143,
                 "Children": [
                   {
@@ -4590,8 +4605,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 46.4151,
-                  "Y": 16.9546
+                  "X": 17.3846,
+                  "Y": 11.6805
                 },
                 "Scale": {
                   "ScaleX": 0.4609,
@@ -4600,17 +4615,17 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.2321,
-                  "Y": 0.0848
+                  "X": 0.0869,
+                  "Y": 0.0584
                 },
                 "PreSize": {
                   "X": 0.77,
                   "Y": 0.775
                 },
-                "LeftMargin": -30.5849,
-                "RightMargin": 76.5849,
-                "TopMargin": 105.5454,
-                "BottomMargin": -60.5454,
+                "LeftMargin": -59.6154,
+                "RightMargin": 105.6154,
+                "TopMargin": 110.8195,
+                "BottomMargin": -65.8195,
                 "Tag": 116,
                 "ActionTag": -1604838559,
                 "Size": {
@@ -4694,6 +4709,81 @@
                 },
                 "Name": "btnMenu",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/UI_Ingame/btnWeb.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/UI_Ingame/btnWeb.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 84,
+                "Scale9Height": 92,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 94.0253,
+                  "Y": 16.0974
+                },
+                "Scale": {
+                  "ScaleX": 0.54,
+                  "ScaleY": 0.54
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4701,
+                  "Y": 0.0805
+                },
+                "PreSize": {
+                  "X": 0.57,
+                  "Y": 0.57
+                },
+                "LeftMargin": 37.0253,
+                "RightMargin": 48.9747,
+                "TopMargin": 126.9026,
+                "BottomMargin": -40.9026,
+                "Tag": 102,
+                "ActionTag": -1641004758,
+                "Size": {
+                  "X": 114.0,
+                  "Y": 114.0
+                },
+                "Name": "btnAuto",
+                "ctype": "ButtonObjectData"
               }
             ],
             "ActionTag": -1004251529,
@@ -4729,6 +4819,7 @@
         "ScreenGame/Background/bubble.png",
         "ScreenGame/Background/particle_texture.plist",
         "ScreenGame/UI_Ingame/ava_nho.png",
+        "ScreenGame/UI_Ingame/btnWeb.png",
         "ScreenGame/UI_Ingame/button_plus_normal.png",
         "ScreenGame/UI_Ingame/button_plus_pressed.png",
         "ScreenGame/UI_Ingame/button_sub_normal.png",

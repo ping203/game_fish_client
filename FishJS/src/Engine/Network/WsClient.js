@@ -1,5 +1,5 @@
-var WebSocket = WebSocket || window.WebSocket || window.MozWebSocket;
-var WebsocketClient = cc.Class.extend({
+var BCWebSocket = WebSocket || window.WebSocket || window.MozWebSocket;
+var BCWebsocketClient = cc.Class.extend({
     ctor: function () {
         this.listener = null;
         this.ws = null;
@@ -19,7 +19,7 @@ var WebsocketClient = cc.Class.extend({
     },
     connect: function (host, port, isSsl, listenner) {
         console.log("create websocket client begin");
-        this.ws = new WebSocket("ws" + (isSsl ? "s" : "") + "://" + host + ":" + port + "/websocket");
+        this.ws = new BCWebSocket("ws" + (isSsl ? "s" : "") + "://" + host + ":" + port + "/websocket");
         this.listener = listenner;
         this.ws.binaryType = "arraybuffer";
         this.ws.onopen = this.onSocketConnect.bind(this);

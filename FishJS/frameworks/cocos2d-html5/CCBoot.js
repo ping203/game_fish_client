@@ -1045,7 +1045,7 @@ cc.loader = (function () {
          * @returns {*}
          * @private
          */
-        _loadResIterator: function (item, index, cb) {
+        _loadResIterator: function (item, index, cb,basePath) {
             var self = this, url = null;
             var type = item.type;
             if (type) {
@@ -1072,6 +1072,7 @@ cc.loader = (function () {
                 var basePath = loader.getBasePath ? loader.getBasePath() : self.resPath;
                 realUrl = self.getUrl(basePath, url);
             }
+            cc.log(realUrl);
 
             if (cc.game.config["noCache"] && typeof realUrl === "string") {
                 if (self._noCacheRex.test(realUrl))
@@ -1128,7 +1129,7 @@ cc.loader = (function () {
          * @param {function|Object} [loadCallback]
          * @return {cc.AsyncPool}
          */
-        load: function (resources, option, loadCallback) {
+        load: function (resources, option, loadCallback,basePath) {
             var self = this;
             var len = arguments.length;
             if (len === 0)
@@ -1158,7 +1159,7 @@ cc.loader = (function () {
                         if (option.trigger)
                             option.trigger.call(option.triggerTarget, arr[0], aPool.size, aPool.finishedSize);   //call trigger
                         AsyncPoolCallback(err, arr[0]);
-                    });
+                    },basePath);
                 },
                 option.cb, option.cbTarget);
             asyncPool.flow();

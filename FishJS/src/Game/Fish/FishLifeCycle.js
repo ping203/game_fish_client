@@ -9,7 +9,7 @@ var FishLifeCycle = cc.Class.extend({
     onJoinRoomSucess: function(pk)
     {
         this.gameScene = new GameLayerUI();
-        sceneMgr.openWithScene(this.gameScene);
+        bcSceneMgr.openWithScene(this.gameScene);
         this.players = this.gameScene.players;
 
         // read Data
@@ -34,6 +34,7 @@ var FishLifeCycle = cc.Class.extend({
             this.players[position].setIsMyPlayer(position == this.myChair);
         }
         this.gameScene.startMusic();
+        this.gameScene.playerScreen();
     },
     onUserJoin: function(pk)
     {
@@ -50,7 +51,7 @@ var FishLifeCycle = cc.Class.extend({
         {
             var lobbyScene = new LobbyScene();
             lobbyScene.onUpdateData();
-            sceneMgr.openWithScene(lobbyScene);
+            bcSceneMgr.openWithScene(lobbyScene);
             fishSound.stopMusic();
             fishSound.playMusicLobby();
         }
@@ -59,14 +60,14 @@ var FishLifeCycle = cc.Class.extend({
     },
     onUpdateRound: function(pk)
     {
-          if(pk.gameState == GameManager.STATE_NORMAL_MAP)
+          if(pk.gameState == BCGameManager.STATE_NORMAL_MAP)
           {
               for(var i=0;i<pk.listFish.length;i++)
               {
                   this.gameScene.addFish(pk.listFish[i].id,pk.listFish[i].type,pk.listFish[i].listPoint,pk.listFish[i].totalTime,pk.listFish[i].elapsedTime);
               }
           }
-          else if(pk.gameState == GameManager.STATE_MATRIX_MAP)
+          else if(pk.gameState == BCGameManager.STATE_MATRIX_MAP)
           {
 
           }
@@ -87,13 +88,14 @@ var FishLifeCycle = cc.Class.extend({
         {
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
             this.players[position].setGunBet(data.bet,false);
+            fishSound.playEffectShoot();
         }
         else
         {
             gameData.userData.gold = data.user_money;
         }
 
-        this.players[position].playerData.rawData["bean"] = data.user_money;
+        this.players[position].playerData.rawData["gold"] = data.user_money;
         this.players[position].updateInfo()
     },
     onShootResult: function(pk)
@@ -122,16 +124,16 @@ var FishLifeCycle = cc.Class.extend({
     onStateChange: function(pk)
     {
         this.gameScene.gameMgr.state = pk.state;
-        if(this.gameScene.gameMgr.state != GameManager.STATE_MATRIX_MAP)
+        if(this.gameScene.gameMgr.state != BCGameManager.STATE_MATRIX_MAP)
             matranMap.paused = true;
         switch (pk.state)
         {
-            case GameManager.STATE_PREPARE:
+            case BCGameManager.STATE_PREPARE:
             {
                 this.gameScene.stateToPrepare(10);
                 break;
             }
-            case GameManager.STATE_NORMAL_MAP:
+            case BCGameManager.STATE_NORMAL_MAP:
             {
                 this.gameScene.stateToNormalMap();
                 break;

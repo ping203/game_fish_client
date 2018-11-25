@@ -2,7 +2,7 @@
  * Created by admin on 10/27/18.
  */
 
-var DemoScene = BaseLayer.extend({
+var DemoScene = BCBaseLayer.extend({
     ctor: function()
     {
         this._super();
@@ -14,19 +14,16 @@ var DemoScene = BaseLayer.extend({
         fishLifeCycle.gameScene = this.gameScene;
         fishLifeCycle.players = this.gameScene.players;
 
-        fishLifeCycle.bets = [50,100,500,1000,5000];
+        fishLifeCycle.bets = [100,200,500,1000,5000];
         fishLifeCycle.myChair = fishLifeCycle.position = 0;
-        fishLifeCycle.myBetIdx = 0;
+        fishLifeCycle.myBetIdx = 4;
 
-        //fishLifeCycle.players[fishLifeCycle.myChair].enable(true);
         fishLifeCycle.myPlayer = fishLifeCycle.players[fishLifeCycle.myChair];
-
+        fishLifeCycle.myPlayer.playerData.rawData = gameData.userData;
+        fishLifeCycle.myPlayer.enable(true);
+        fishLifeCycle.myPlayer.updateInfo();
         fishLifeCycle.myPlayer.setIsMyPlayer(true);
-        fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[0])
-
-        fishLifeCycle.players[0].playerData.rawData = null;
-        fishLifeCycle.players[0].enable(true);
-        //this.players[0].updateInfo();
+        fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx])
 
         this.gameLogic = new GameLogicDemo();
         this.gameLogic.setListener(this);
@@ -36,6 +33,7 @@ var DemoScene = BaseLayer.extend({
         this._super();
         this.scheduleUpdate();
         this.gameScene.startMusic();
+        this.gameScene.playerScreen();
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);
@@ -54,18 +52,18 @@ var DemoScene = BaseLayer.extend({
 
         this.gameScene.gameMgr.state = state;
 
-        if(this.gameScene.gameMgr.state != GameManager.STATE_MATRIX_MAP)
+        if(this.gameScene.gameMgr.state != BCGameManager.STATE_MATRIX_MAP)
             matranMap.paused = true;
 
-        if(state == GameManager.STATE_NORMAL_MAP){
+        if(state == BCGameManager.STATE_NORMAL_MAP){
             this.gameLogic.reset();
             this.gameScene.stateToNormalMap();
         }
-        else if(state == GameManager.STATE_MATRIX_MAP){
+        else if(state == BCGameManager.STATE_MATRIX_MAP){
             this.gameScene.stateToMatrixMap();
             matranMap.start(0,this.gameLogic.gameMap.getMatranMap().getStartID());
         }
-        else if(state == GameManager.STATE_PREPARE){
+        else if(state == BCGameManager.STATE_PREPARE){
             this.gameScene.stateToPrepare(TIME_PREPARE);
         }
     },
@@ -523,7 +521,7 @@ var GameLogicDemo = cc.Class.extend({
 
         this.listFishes = {};       // current fish in map
 
-        this.state = GameManager.STATE_NORMAL_MAP;
+        this.state = BCGameManager.STATE_NORMAL_MAP;
 
 
         this.listenner = null;
@@ -533,10 +531,10 @@ var GameLogicDemo = cc.Class.extend({
     },
     update: function(dt) {
 
-        if(this.state == GameManager.STATE_NORMAL_MAP) {
+        if(this.state == BCGameManager.STATE_NORMAL_MAP) {
             this.time += dt;
             if(this.time >= TIME_NORMAL_MAP) {
-                this.state = GameManager.STATE_PREPARE;
+                this.state = BCGameManager.STATE_PREPARE;
                 this.time = 0;
                 this.listFishes = [];
                 if(this.listenner != null) {
@@ -548,10 +546,10 @@ var GameLogicDemo = cc.Class.extend({
             }
 
         }
-        if(this.state == GameManager.STATE_PREPARE) {
+        if(this.state == BCGameManager.STATE_PREPARE) {
             this.time += dt;
             if(this.time >= TIME_PREPARE) {
-                this.state = GameManager.STATE_MATRIX_MAP;
+                this.state = BCGameManager.STATE_MATRIX_MAP;
                 this.time = 0;
 
                 this.gameMap.getMatranMap().setStartID(++this.count);
@@ -560,10 +558,10 @@ var GameLogicDemo = cc.Class.extend({
                 }
             }
         }
-        if(this.state == GameManager.STATE_MATRIX_MAP) {
+        if(this.state == BCGameManager.STATE_MATRIX_MAP) {
             this.time += dt;
             if(this.time >= TIME_MATRAN_MAP) {
-                this.state = GameManager.STATE_NORMAL_MAP;
+                this.state = BCGameManager.STATE_NORMAL_MAP;
                 this.time = 0;
                 if(this.listenner != null) {
                     this.listenner.onStateChange(this.state);        // luc nay se send thong tin cua ma tran ca' ve
@@ -627,7 +625,7 @@ var GameLogicDemo = cc.Class.extend({
 
     shoot: function(id,bet) {
         var result = new ShootResult();
-        if(this.state == GameManager.STATE_NORMAL_MAP) {
+        if(this.state == BCGameManager.STATE_NORMAL_MAP) {
             var f = this.getFish(id);
             if(f) {
                 result.success = this.shootTest(f.fishRealData.ti_le_ban / 100.0);
@@ -639,7 +637,7 @@ var GameLogicDemo = cc.Class.extend({
             }
             return result;
         }
-        else if(this.state == GameManager.STATE_MATRIX_MAP) {
+        else if(this.state == BCGameManager.STATE_MATRIX_MAP) {
             result.success = true;
             result.won_money = 0;
 
@@ -661,7 +659,7 @@ var GameLogicDemo = cc.Class.extend({
     },
     shootTest: function(percent) {
         var test = Math.random();
-        return test <= percent;
+        return test <= percent * 3.0;
     //        return true;
     },
 
@@ -670,7 +668,7 @@ var GameLogicDemo = cc.Class.extend({
         this.count = 0;
         this.listFishes = {};
         this.gameMap.resetMap();             // gen lai Map thuong`
-        this.state = GameManager.STATE_NORMAL_MAP;
+        this.state = BCGameManager.STATE_NORMAL_MAP;
     }
 })
 

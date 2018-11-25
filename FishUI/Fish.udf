@@ -28,15 +28,5 @@
         <LastRunType Value="Windows" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="LobbyScene.csd" />
-          <FilePathData Path="GameLayer.csd" />
-          <FilePathData Path="LoginLayer.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="GameLayer.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

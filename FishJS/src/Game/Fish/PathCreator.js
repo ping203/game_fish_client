@@ -2,7 +2,7 @@
  * Created by admin on 9/6/18.
  */
 
-var PathCreator = BaseLayer.extend({
+var PathCreator = BCBaseLayer.extend({
     ctor: function () {
         this._super();
         this.initWithBinaryFile("res/GUI/CreatePathScene.json");
@@ -38,7 +38,7 @@ var PathCreator = BaseLayer.extend({
         this.layerTest = new cc.Layer();
         this.addChild(this.layerTest,2);
 
-        this.gameMgr = new GameManager(new Setting());
+        this.gameMgr = new BCGameManager(new Setting());
         this.gameMgr._displayLayer = this.layerTest;
 
 

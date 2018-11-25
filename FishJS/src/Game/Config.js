@@ -8,6 +8,7 @@ Config.SERVER_PRIVATE = "120.138.65.103";
 Config.PORT = 452;
 
 Config.DEBUG = false;
+Config.STAND_ALONE = false;
 //Config.SERVER_LOCAL = "45.76.156.167";
 Config.SERVER_LOCAL = "127.0.0.1";
 Config.PORT_LOCAL = 444;

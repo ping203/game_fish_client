@@ -1,5 +1,5 @@
 
-var g_resources_fishes = ["res/bullet.png",
+var g_resources = ["res/bullet.png",
 "res/caustics.png",
 "res/Fish2D.json",
 "res/Fish3D.json",

@@ -127,6 +127,7 @@
             <Image Name="ava_nho.png" />
             <Image Name="btn_add_normal.png" />
             <Image Name="btn_add_pressed.png" />
+            <Image Name="btnWeb.png" />
             <Image Name="bullet.png" />
             <Image Name="button_plus_normal.png" />
             <Image Name="button_plus_pressed.png" />
@@ -156,6 +157,7 @@
         <Project Name="GameLayer.csd" Type="Layer" />
         <Project Name="LobbyScene.csd" Type="Scene" />
         <Project Name="LoginLayer.csd" Type="Scene" />
+        <Project Name="ShopGUI.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

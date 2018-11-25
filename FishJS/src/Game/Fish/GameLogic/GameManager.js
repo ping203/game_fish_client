@@ -52,8 +52,8 @@ var GameManagerWeb = cc.Class.extend({
         wallFixtureDef.density = 1.0;
         wallFixtureDef.friction = 0.0;
         wallFixtureDef.restitution = 1.0;
-        wallFixtureDef.filter.categoryBits = GameManager.WALL_BIT;
-        wallFixtureDef.filter.maskBits = GameManager.BULLET_BIT;
+        wallFixtureDef.filter.categoryBits = BCGameManager.WALL_BIT;
+        wallFixtureDef.filter.maskBits = BCGameManager.BULLET_BIT;
         this.wall = new Wall();
 
         this.wall._body = this._world.CreateBody(wallBodyDef);
@@ -107,8 +107,8 @@ var GameManagerWeb = cc.Class.extend({
         this.fishFixtureFef.density = 1.0;
         this.fishFixtureFef.restitution = 1.0;
         this.fishFixtureFef.friction = 0.0;
-        this.fishFixtureFef.filter.categoryBits = GameManager.FISH_BIT;
-        this.fishFixtureFef.filter.maskBits = GameManager.BULLET_BIT;
+        this.fishFixtureFef.filter.categoryBits = BCGameManager.FISH_BIT;
+        this.fishFixtureFef.filter.maskBits = BCGameManager.BULLET_BIT;
         this.fishFixtureFef.shape = new b2PolygonShape;
         this.fishFixtureFef.shape.SetAsBox(0.5,1);
 
@@ -291,8 +291,8 @@ var GameManagerWeb = cc.Class.extend({
         bulletFixtureFef.density = 1.0;
         bulletFixtureFef.restitution = 1.0;
         bulletFixtureFef.friction = 0.0;
-        bulletFixtureFef.filter.categoryBits = GameManager.BULLET_BIT;
-        bulletFixtureFef.filter.maskBits = GameManager.WALL_BIT | GameManager.FISH_BIT;
+        bulletFixtureFef.filter.categoryBits = BCGameManager.BULLET_BIT;
+        bulletFixtureFef.filter.maskBits = BCGameManager.WALL_BIT | BCGameManager.FISH_BIT;
         bulletFixtureFef.shape = new b2PolygonShape;
         bulletFixtureFef.shape.SetAsBox(body_box.x,body_box.y);
 
@@ -311,8 +311,8 @@ var GameManagerWeb = cc.Class.extend({
         fishFixtureFef.density = 1.0;
         fishFixtureFef.restitution = 1.0;
         fishFixtureFef.friction = 0.0;
-        fishFixtureFef.filter.categoryBits = GameManager.FISH_BIT;
-        fishFixtureFef.filter.maskBits = GameManager.BULLET_BIT;
+        fishFixtureFef.filter.categoryBits = BCGameManager.FISH_BIT;
+        fishFixtureFef.filter.maskBits = BCGameManager.BULLET_BIT;
         fishFixtureFef.shape = new b2PolygonShape;
         fishFixtureFef.shape.SetAsBox(body_box.x,body_box.y);
 
@@ -334,12 +334,12 @@ var GameManagerWeb = cc.Class.extend({
 
 
 var Setting = cc.sys.isNative?engine.Setting:SettingWeb;
-var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
+var BCGameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
     ctor: function(setting)
     {
         this._super(setting);
         this.fishEntities = {};
-        this.state = GameManager.STATE_NORMAL_MAP;
+        this.state = BCGameManager.STATE_NORMAL_MAP;
     },
     saveFish: function(id,fish)
     {
@@ -357,10 +357,10 @@ var GameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
 
 });
 
-GameManager.WALL_BIT = 0x0001;
-GameManager.FISH_BIT = 0x0002;
-GameManager.BULLET_BIT = 0x0004;
+BCGameManager.WALL_BIT = 0x0001;
+BCGameManager.FISH_BIT = 0x0002;
+BCGameManager.BULLET_BIT = 0x0004;
 
-GameManager.STATE_NORMAL_MAP = 0;
-GameManager.STATE_PREPARE = 1;
-GameManager.STATE_MATRIX_MAP = 2;
+BCGameManager.STATE_NORMAL_MAP = 0;
+BCGameManager.STATE_PREPARE = 1;
+BCGameManager.STATE_MATRIX_MAP = 2;

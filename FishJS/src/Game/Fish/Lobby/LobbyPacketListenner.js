@@ -14,7 +14,7 @@ var LobbyPacketListenner = cc.Class.extend({
         {
             var pk = new CmdSendLogin();
             pk.putData(gameData.nickName,gameData.accessToken);
-            GameClient.getInstance().sendPacket(pk);
+            BCGameClient.getInstance().sendPacket(pk);
         }
 
 
@@ -37,11 +37,10 @@ var LobbyPacketListenner = cc.Class.extend({
 
                 cc.log("Login Sucessful")
                 fishSound.playMusicLobby();
-                var lobby = sceneMgr.getMainLayer();
+                var lobby = bcSceneMgr.getMainLayer();
                 lobby.onUpdateData();
 
-
-                sceneMgr.clearLoading();
+                bcSceneMgr.clearLoading();
                 break;
             }
 
@@ -58,7 +57,7 @@ var LobbyPacketListenner = cc.Class.extend({
     onDisconnect: function(){
         //this.gameListenner.onDisconnect();
         cc.log("on Disconnected");
-        sceneMgr.openWithScene(new LoginScene());
+        bcSceneMgr.openWithScene(new LoginScene());
 
     }
 })

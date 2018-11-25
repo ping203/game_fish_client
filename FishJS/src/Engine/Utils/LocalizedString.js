@@ -4,7 +4,7 @@
 
 var g_localization = null;
 
-var LocalizedString = cc.Class.extend({
+var BCLocalizedString = cc.Class.extend({
 
     ctor : function () {
         this._localizedStrings = {};
@@ -21,7 +21,7 @@ var LocalizedString = cc.Class.extend({
 
     loadLocalized : function (fname) {
         var contents = "";
-        fname = fname || "Localized_vi";
+        fname = fname;
 
         cc.log("###Load Localized : " + fname);
 
@@ -71,7 +71,7 @@ var LocalizedString = cc.Class.extend({
 
                     if(keyStr in this._localizedStrings)
                     {
-                        cc.log("ERROR : LocalizedString added key " + keyStr + " in " + fname);
+                        cc.log("ERROR : BCLocalizedString added key " + keyStr + " in " + fname);
                     }
                     else
                     {
@@ -204,26 +204,26 @@ var LocalizedString = cc.Class.extend({
     }
 });
 
-LocalizedString.preload = function () {
+BCLocalizedString.preload = function () {
     if(g_localization == null)
     {
-        g_localization = new LocalizedString();
+        g_localization = new BCLocalizedString();
     }
     return g_localization.preloadLocalized();
 },
 
-LocalizedString.add = function (fname) {
+BCLocalizedString.add = function (fname) {
         if(g_localization == null)
         {
-            g_localization = new LocalizedString();
+            g_localization = new BCLocalizedString();
         }
         return g_localization.loadLocalized(fname);
 };
 
-LocalizedString.to = function (keyLocalized) {
+BCLocalizedString.to = function (keyLocalized) {
     if(g_localization == null)
     {
-        g_localization = new LocalizedString();
+        g_localization = new BCLocalizedString();
         g_localization.preloadLocalized();
     }
     return g_localization.getText(keyLocalized);
@@ -233,14 +233,14 @@ var GameConfig = function () {
 
 };
 
-LocalizedString.config = function (key) {
+BCLocalizedString.config = function (key) {
     if(g_localization == null)
     {
-        g_localization = new LocalizedString();
+        g_localization = new BCLocalizedString();
     }
     return g_localization.getGameConfig(key);
 };
 
 var localized = function(keyLocalized) {
-    return LocalizedString.to(keyLocalized)
+    return BCLocalizedString.to(keyLocalized)
 };

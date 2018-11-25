@@ -10,7 +10,7 @@ ccui.Helper.seekWidgetByName = function(parent,name)
     return parent.getChildByName(name);
 }
 
-var BaseLayer  = cc.Layer.extend({
+var BCBaseLayer  = cc.Layer.extend({
     
     ctor: function(id){
         cc.Layer.prototype.ctor.call(this);
@@ -351,9 +351,9 @@ var BaseLayer  = cc.Layer.extend({
 
     setDelayInit : function (time) {
         if(time === undefined)
-            time = BaseLayer.TIME_APPEAR_GUI;
-        if(time < BaseLayer.TIME_APPEAR_GUI)
-            time = BaseLayer.TIME_APPEAR_GUI;
+            time = BCBaseLayer.TIME_APPEAR_GUI;
+        if(time < BCBaseLayer.TIME_APPEAR_GUI)
+            time = BCBaseLayer.TIME_APPEAR_GUI;
 
         this.runAction(cc.sequence(cc.delayTime(time),cc.callFunc(this.functionDelayInit,this)));
     },
@@ -517,7 +517,7 @@ var BaseLayer  = cc.Layer.extend({
 /*
  * CREATE CONTROL
  */
-BaseLayer.createLabelText = function (txt,color) {
+BCBaseLayer.createLabelText = function (txt,color) {
     var ret = new ccui.Text();
     ret.setAnchorPoint(cc.p(0.5, 0.5));
     ret.setFontName("res/fonts/tahoma.ttf");
@@ -528,7 +528,7 @@ BaseLayer.createLabelText = function (txt,color) {
     return ret;
 };
 
-BaseLayer.createEditBox = function (tf) {
+BCBaseLayer.createEditBox = function (tf) {
     var ret = new cc.EditBox(tf.getContentSize(), new cc.Scale9Sprite());
     ret.setFontName(tf.getFontName());
     ret.setFontSize(tf.getFontSize());
@@ -541,7 +541,7 @@ BaseLayer.createEditBox = function (tf) {
     return ret;
 };
 
-BaseLayer.subLabelText = function (lb, str) {
+BCBaseLayer.subLabelText = function (lb, str) {
     if(lb === undefined || lb == null) return;
     if(str === undefined || str == null) return;
 
@@ -559,7 +559,7 @@ BaseLayer.subLabelText = function (lb, str) {
     }
 };
 
-BaseLayer.TIME_APPEAR_GUI = 0.35;
+BCBaseLayer.TIME_APPEAR_GUI = 0.35;
 
 var RichLabelText = cc.Node.extend({
 
@@ -587,7 +587,7 @@ var RichLabelText = cc.Node.extend({
         {
             var info = txts[i];
 
-            var lb = BaseLayer.createLabelText();
+            var lb = BCBaseLayer.createLabelText();
             if(info.font) lb.setFontName(info.font);
             if(info.size) lb.setFontSize(info.size);
             if(info.color) lb.setColor(info.color);

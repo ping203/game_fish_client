@@ -1,5 +1,5 @@
 var INDEX_SIZE_PACKET = 1;
-var InPacket = cc.Class.extend({
+var BCInPacket = cc.Class.extend({
     ctor: function () {
 
     },
@@ -158,7 +158,7 @@ var InPacketData = {
         this.init(pkg);
     }
 };
-var CmdReceivedCommon = InPacket.extend({
+var CmdReceivedCommon = BCInPacket.extend({
     ctor: function(pkg){
         this._super();
         this.init(pkg);

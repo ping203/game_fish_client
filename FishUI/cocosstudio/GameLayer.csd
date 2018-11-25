@@ -200,7 +200,7 @@
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
+                    <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.6096" Y="0.4338" />
                     <PreSize X="0.7204" Y="0.1435" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
@@ -226,7 +226,7 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="455922431" Tag="41" IconVisible="True" LeftMargin="91.2766" RightMargin="108.7234" TopMargin="147.1772" BottomMargin="52.8228" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="455922431" Tag="41" IconVisible="True" LeftMargin="91.2766" RightMargin="108.7234" TopMargin="151.1800" BottomMargin="48.8200" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="sung" ActionTag="641217244" Tag="117" IconVisible="True" LeftMargin="-3.0000" RightMargin="3.0000" TopMargin="2.2530" BottomMargin="-2.2530" ctype="SingleNodeObjectData">
@@ -351,10 +351,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="91.2766" Y="52.8228" />
+                <Position X="91.2766" Y="48.8200" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4564" Y="0.2641" />
+                <PrePosition X="0.4564" Y="0.2441" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="waiting" ActionTag="909616542" VisibleForFrame="False" Tag="258" IconVisible="False" LeftMargin="27.1040" RightMargin="57.8960" TopMargin="149.9207" BottomMargin="3.0793" LabelText="WAITING" ctype="TextBMFontObjectData">
@@ -427,15 +427,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1128986007" Tag="149" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="182.0000" Y="31.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-1128986007" Tag="149" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="219.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
+                    <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Default" Path="" Plist="" />
+                    <PreSize X="0.7204" Y="0.1435" />
+                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -458,7 +458,7 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="-1383580229" Tag="119" IconVisible="True" LeftMargin="152.7901" RightMargin="47.2099" TopMargin="147.4072" BottomMargin="52.5928" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="-1383580229" Tag="119" IconVisible="True" LeftMargin="152.7901" RightMargin="47.2099" TopMargin="150.4100" BottomMargin="49.5900" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="sung" ActionTag="-1560530727" Tag="120" IconVisible="True" LeftMargin="-3.0000" RightMargin="3.0000" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
@@ -583,10 +583,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="152.7901" Y="52.5928" />
+                <Position X="152.7901" Y="49.5900" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7640" Y="0.2630" />
+                <PrePosition X="0.7640" Y="0.2480" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="waiting" ActionTag="-1718226091" VisibleForFrame="False" Tag="165" IconVisible="False" LeftMargin="91.2819" RightMargin="-6.2819" TopMargin="144.8222" BottomMargin="8.1778" LabelText="WAITING" ctype="TextBMFontObjectData">
@@ -659,15 +659,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-808831615" Tag="156" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="182.0000" Y="31.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-808831615" Tag="156" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="219.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
+                    <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Default" Path="" Plist="" />
+                    <PreSize X="0.7204" Y="0.1435" />
+                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -690,7 +690,7 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="1375388040" Tag="131" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="134.2100" RightMargin="65.7900" TopMargin="69.3500" BottomMargin="130.6500" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="1375388040" Tag="131" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="134.2100" RightMargin="65.7900" TopMargin="67.3500" BottomMargin="132.6500" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="sung" ActionTag="1236375401" Tag="132" IconVisible="True" LeftMargin="-3.0701" RightMargin="3.0701" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
@@ -815,10 +815,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="134.2100" Y="130.6500" />
+                <Position X="134.2100" Y="132.6500" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6711" Y="0.6532" />
+                <PrePosition X="0.6711" Y="0.6632" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="waiting" ActionTag="-1307074425" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="81.7430" RightMargin="3.2570" TopMargin="3.8369" BottomMargin="149.1631" LabelText="WAITING" ctype="TextBMFontObjectData">
@@ -891,15 +891,15 @@
                     <PreSize X="0.1875" Y="0.2478" />
                     <FileData Type="Normal" Path="ScreenGame/UI_Ingame/gold.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="215349011" Tag="163" IconVisible="False" LeftMargin="92.8144" RightMargin="26.1856" TopMargin="114.2296" BottomMargin="83.7704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="182.0000" Y="31.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="215349011" Tag="163" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="219.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="185.3144" Y="99.7704" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
+                    <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.6086" Y="0.1391" />
-                    <FontResource Type="Default" Path="" Plist="" />
+                    <PreSize X="0.7204" Y="0.1435" />
+                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -922,7 +922,7 @@
                 <PreSize X="1.5200" Y="1.1500" />
                 <FileData Type="Normal" Path="ScreenGame/UI_Ingame/khung_ava.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="node" ActionTag="-1903671060" Tag="143" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="152.5000" RightMargin="47.5000" TopMargin="66.7783" BottomMargin="133.2217" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="node" ActionTag="-1903671060" Tag="143" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="152.5000" RightMargin="47.5000" TopMargin="63.7800" BottomMargin="136.2200" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="sung" ActionTag="-1652783757" Tag="144" IconVisible="True" LeftMargin="-3.0701" RightMargin="3.0701" TopMargin="2.2500" BottomMargin="-2.2500" ctype="SingleNodeObjectData">
@@ -1047,10 +1047,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="152.5000" Y="133.2217" />
+                <Position X="152.5000" Y="136.2200" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7625" Y="0.6661" />
+                <PrePosition X="0.7625" Y="0.6811" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="waiting" ActionTag="534812107" VisibleForFrame="False" Tag="167" IconVisible="False" LeftMargin="100.6252" RightMargin="-15.6252" TopMargin="0.5152" BottomMargin="152.4848" LabelText="WAITING" ctype="TextBMFontObjectData">
@@ -1091,13 +1091,13 @@
           <AbstractNodeData Name="Panel_UI" ActionTag="-1004251529" Tag="115" IconVisible="False" LeftMargin="605.4634" RightMargin="474.5366" TopMargin="504.6108" BottomMargin="15.3892" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="btnHold" ActionTag="-1604838559" Tag="116" IconVisible="False" LeftMargin="-30.5849" RightMargin="76.5849" TopMargin="105.5454" BottomMargin="-60.5454" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="124" Scale9Height="133" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnHold" ActionTag="-1604838559" Tag="116" IconVisible="False" LeftMargin="-59.6154" RightMargin="105.6154" TopMargin="110.8195" BottomMargin="-65.8195" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="124" Scale9Height="133" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="154.0000" Y="155.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="46.4151" Y="16.9546" />
+                <Position X="17.3846" Y="11.6805" />
                 <Scale ScaleX="0.4609" ScaleY="0.4609" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2321" Y="0.0848" />
+                <PrePosition X="0.0869" Y="0.0584" />
                 <PreSize X="0.7700" Y="0.7750" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
@@ -1118,6 +1118,21 @@
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Normal" Path="Lobby/btn_logout.png" Plist="" />
                 <NormalFileData Type="Normal" Path="Lobby/btn_logout.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="btnAuto" ActionTag="-1641004758" Tag="102" IconVisible="False" LeftMargin="37.0253" RightMargin="48.9747" TopMargin="126.9026" BottomMargin="-40.9026" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="84" Scale9Height="92" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="114.0000" Y="114.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="94.0253" Y="16.0974" />
+                <Scale ScaleX="0.5400" ScaleY="0.5400" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.4701" Y="0.0805" />
+                <PreSize X="0.5700" Y="0.5700" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Normal" Path="ScreenGame/UI_Ingame/btnWeb.png" Plist="" />
+                <NormalFileData Type="Normal" Path="ScreenGame/UI_Ingame/btnWeb.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

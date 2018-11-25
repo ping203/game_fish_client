@@ -4,13 +4,13 @@
  * - Loading Toast
  * - Dialog
  */
-var LOADING_TAG = 9998;
-var WAITING_TAG = 9997;
+var BC_LOADING_TAG = 9998;
+var BC_WAITING_TAG = 9997;
 
 var TOAST_FLOAT_TAG = 99998;
 var LOADING_FLOAT_TAG = 99999;
 
-var SceneMgr = cc.Class.extend({
+var BCSceneMgr = cc.Class.extend({
 
     ctor: function () {
         this.ccWhite = cc.color(203, 204, 206, 0);
@@ -35,6 +35,10 @@ var SceneMgr = cc.Class.extend({
     },
     
     getMainLayer : function () {
+        if(lobbyThanBien)
+        {
+            return lobbyThanBien.getChildByTag(BCBaseScene.TAG_LAYER);
+        }
         var curScene = this.getRunningScene();
         if(curScene === undefined || curScene == null) return null;
         if(curScene instanceof cc.TransitionScene)
@@ -53,23 +57,23 @@ var SceneMgr = cc.Class.extend({
     },
 
     addLoading: function (text, fog) {
-        var loading = this.layerGUI.getChildByTag(LOADING_TAG);
+        var loading = this.layerGUI.getChildByTag(BC_LOADING_TAG);
         if (loading) {
             loading.stopAllActions();
             loading.removeFromParent();
         }
 
-        var loading = new Loading(text, fog);
+        var loading = new BCLoading(text, fog);
         this.layerGUI.addChild(loading);
 
-        loading.setLocalZOrder(LOADING_TAG);
-        loading.setTag(LOADING_TAG);
+        loading.setLocalZOrder(BC_LOADING_TAG);
+        loading.setTag(BC_LOADING_TAG);
         return loading;
     },
 
     clearLoading: function () {
 
-        var loading = this.layerGUI.getChildByTag(LOADING_TAG);
+        var loading = this.layerGUI.getChildByTag(BC_LOADING_TAG);
         if (loading) {
             loading.stopAllActions();
             loading.removeFromParent();
@@ -77,7 +81,7 @@ var SceneMgr = cc.Class.extend({
     },
     
     addWaiting : function () {
-        var loading = this.layerGUI.getChildByTag(WAITING_TAG);
+        var loading = this.layerGUI.getChildByTag(BC_WAITING_TAG);
         if (loading) {
             loading.stopAllActions();
             loading.removeFromParent();
@@ -86,13 +90,13 @@ var SceneMgr = cc.Class.extend({
         var loading = new Waiting();
         this.layerGUI.addChild(loading);
 
-        loading.setLocalZOrder(WAITING_TAG);
-        loading.setTag(WAITING_TAG);
+        loading.setLocalZOrder(BC_WAITING_TAG);
+        loading.setTag(BC_WAITING_TAG);
         return loading;
     },
 
     clearWaiting : function () {
-        var loading = this.layerGUI.getChildByTag(WAITING_TAG);
+        var loading = this.layerGUI.getChildByTag(BC_WAITING_TAG);
         if (loading) {
             loading.stopAllActions();
             loading.removeFromParent();
@@ -105,6 +109,14 @@ var SceneMgr = cc.Class.extend({
 
     // hungdd's function
     openWithScene: function (layer, callback, direct) {
+        if(lobbyThanBien)
+        {
+            this.layerGUI = lobbyThanBien;
+            lobbyThanBien.removeAllChildren();
+            layer.setTag(BCBaseScene.TAG_LAYER);
+            lobbyThanBien.addChild(layer);
+            return;
+        }
         var curLayer = null;
 
         if (layer instanceof  LoginScene) {
@@ -132,11 +144,11 @@ var SceneMgr = cc.Class.extend({
             }
         }
 
-        var scene = new BaseScene();
+        var scene = new BCBaseScene();
         scene.addChild(curLayer);
         this.layerGUI = curLayer;
 
-        cc.director.runScene(new cc.TransitionFade(BaseLayer.TIME_APPEAR_GUI, scene));
+        cc.director.runScene(new cc.TransitionFade(BCBaseLayer.TIME_APPEAR_GUI, scene));
         //cc.director.runScene()
     },
 
@@ -244,7 +256,7 @@ var SceneMgr = cc.Class.extend({
             curLayer = new window[layer];
         }
 
-        var scene = new BaseScene();
+        var scene = new BCBaseScene();
         scene.addChild(curLayer);
         cc.director.runScene(scene);
 
@@ -329,11 +341,11 @@ var SceneMgr = cc.Class.extend({
             }
         }
 
-        this.getRunningScene().addChild(this.layerGUI, BaseScene.TAG_GUI, BaseScene.TAG_GUI);
+        this.getRunningScene().addChild(this.layerGUI, BCBaseScene.TAG_GUI, BCBaseScene.TAG_GUI);
 
         if(Config.ENABLE_CHEAT)
         {
-            sceneMgr.openGUI(CheatCenterScene.className,CheatCenterScene.TAG,CheatCenterScene.TAG);
+            bcSceneMgr.openGUI(CheatCenterScene.className,CheatCenterScene.TAG,CheatCenterScene.TAG);
         }
 
         gamedata.onEnterScene();
@@ -403,7 +415,7 @@ var SceneMgr = cc.Class.extend({
     }
 });
 
-var Loading = cc.Layer.extend({
+var BCLoading = cc.Layer.extend({
 
     ctor: function (text, fog) {
 
@@ -452,9 +464,9 @@ var Loading = cc.Layer.extend({
         this._label = new ccui.Text();
         this._label.setAnchorPoint(cc.p(0.5, 0.5));
         this._label.setFontName("fonts/tahoma.ttf");
-        this._label.setFontSize(SceneMgr.FONT_SIZE_DEFAULT);
+        this._label.setFontSize(BCSceneMgr.FONT_SIZE_DEFAULT);
         this._label.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
-        this._label.setColor(sceneMgr.ccWhite);
+        this._label.setColor(bcSceneMgr.ccWhite);
         this._label.setString(this._message);
         this._label.setScale(scale);
         this._label.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 - 50);
@@ -557,30 +569,30 @@ var Waiting = cc.Layer.extend({
     }
 });
 
-SceneMgr.sharedInstance = null;
-SceneMgr.firstInit = true;
+BCSceneMgr.sharedInstance = null;
+BCSceneMgr.firstInit = true;
 
-SceneMgr.FONT_NORMAL = "fonts/tahoma.ttf";
-SceneMgr.FONT_BOLD = "fonts/tahomabd.ttf";
-SceneMgr.FONT_SIZE_DEFAULT = 26;
+BCSceneMgr.FONT_NORMAL = "fonts/tahoma.ttf";
+BCSceneMgr.FONT_BOLD = "fonts/tahomabd.ttf";
+BCSceneMgr.FONT_SIZE_DEFAULT = 26;
 
-SceneMgr.convertPosToParent = function (parent, target) {
+BCSceneMgr.convertPosToParent = function (parent, target) {
     if(!parent || !target || !target.getParent()) return cc.p(0,0);
     return parent.convertToNodeSpace(target.getParent().convertToWorldSpace(target.getPosition()));
 }
 
-SceneMgr.getInstance = function () {
-    if (SceneMgr.firstInit) {
-        SceneMgr.sharedInstance = new SceneMgr();
-        SceneMgr.firstInit = false;
+BCSceneMgr.getInstance = function () {
+    if (BCSceneMgr.firstInit) {
+        BCSceneMgr.sharedInstance = new BCSceneMgr();
+        BCSceneMgr.firstInit = false;
     }
-    return SceneMgr.sharedInstance;
+    return BCSceneMgr.sharedInstance;
 }
 
-var sceneMgr = SceneMgr.getInstance();
+var bcSceneMgr = BCSceneMgr.getInstance();
 
-// Toast on Top Screen
-var Toast = cc.Layer.extend({
+// BCToast on Top Screen
+var BCToast = cc.Layer.extend({
 
     ctor: function(time,message){
         this._super();
@@ -609,9 +621,9 @@ var Toast = cc.Layer.extend({
         //this._label.setTextAreaSize(cc.size(cc.winSize.width * 0.5, 40));
 
         this._label.setFontName("fonts/tahoma.ttf");
-        this._label.setFontSize(SceneMgr.FONT_SIZE_DEFAULT);
+        this._label.setFontSize(BCSceneMgr.FONT_SIZE_DEFAULT);
         this._label.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
-        this._label.setColor(sceneMgr.ccWhite);
+        this._label.setColor(bcSceneMgr.ccWhite);
         this._label.setString(this._message);
         this._label.setScale(scale);
         this._label._setWidth(cc.winSize.width * 0.9);
@@ -629,17 +641,17 @@ var Toast = cc.Layer.extend({
     }
 });
 
-Toast.makeToast = function(time,message){
-    var instance = new Toast(time,message);
-    sceneMgr.layerGUI.addChild(instance);
-    instance.setLocalZOrder(LOADING_TAG);
+BCToast.makeToast = function(time,message){
+    var instance = new BCToast(time,message);
+    bcSceneMgr.layerGUI.addChild(instance);
+    instance.setLocalZOrder(BC_LOADING_TAG);
     return instance;
 };
 
-Toast.SHORT = 1.0;
-Toast.LONG = 2.0;
+BCToast.SHORT = 1.0;
+BCToast.LONG = 2.0;
 
-// Toast Float center scene
+// BCToast Float center scene
 var ToastFloat = cc.Node.extend({
 
     ctor : function () {
@@ -678,7 +690,7 @@ var ToastFloat = cc.Node.extend({
     setToast : function (txt,time) {
         if(txt)
         {
-            this.lb = BaseLayer.createLabelText(txt);
+            this.lb = BCBaseLayer.createLabelText(txt);
             this.lb.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
             this.lb.setTextVerticalAlignment(cc.TEXT_ALIGNMENT_CENTER);
             this.lb.ignoreContentAdaptWithSize(false);
@@ -686,7 +698,7 @@ var ToastFloat = cc.Node.extend({
             var winSize = cc.director.getWinSize();
 
             var lbSize = this.lb.getContentSize();
-            var deltaWidth = winSize.width*Toast.DELTA_WIDTH;
+            var deltaWidth = winSize.width*BCToast.DELTA_WIDTH;
             if(lbSize.width > deltaWidth)
             {
 
@@ -726,7 +738,7 @@ ToastFloat.makeToast = function (time, text) {
     var winSize = cc.director.getWinSize();
     toast.setPosition(winSize.width/2,winSize.height*ToastFloat.POSITION_Y);
 
-    sceneMgr.layerGUI.addChild(toast);
+    bcSceneMgr.layerGUI.addChild(toast);
     toast.setLocalZOrder(TOAST_FLOAT_TAG);
 };
 
@@ -776,7 +788,7 @@ var LoadingFloat = cc.Node.extend({
 
         if(text)
         {
-            this.lb = BaseLayer.createLabelText(text);
+            this.lb = BCBaseLayer.createLabelText(text);
             this.lb.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
             this.lb.setTextVerticalAlignment(cc.TEXT_ALIGNMENT_CENTER);
             this.lb.setPositionY(this.img.getPositionY() - this.img.getContentSize().height);
@@ -855,7 +867,7 @@ LoadingFloat.makeLoading = function (txt,fog,timeout,callback) {
     {
         LoadingFloat.instance = new LoadingFloat();
 
-        sceneMgr.layerGUI.addChild(LoadingFloat.instance);
+        bcSceneMgr.layerGUI.addChild(LoadingFloat.instance);
         LoadingFloat.instance.setLocalZOrder(LOADING_FLOAT_TAG);
     }
 
@@ -902,7 +914,7 @@ var EffectMgr = cc.Class.extend({
         lb.des = des;
         lb.delta = parseInt((des - cur) / numChange);
         lb.delay = delayTime;
-        lb.setString(StringUtility.pointNumber(lb.cur));
+        lb.setString(BCStringUtility.pointNumber(lb.cur));
         if(isNew)
             this.arLbPoints.push(lb);
     },
@@ -995,9 +1007,9 @@ var EffectMgr = cc.Class.extend({
                 }
 
                 lb.cur += lb.delta;
-                lb.setString(StringUtility.pointNumber(lb.cur));
+                lb.setString(BCStringUtility.pointNumber(lb.cur));
                 if (lb.cur > lb.des) {
-                    lb.setString(StringUtility.pointNumber(lb.des));
+                    lb.setString(BCStringUtility.pointNumber(lb.des));
                     this.arLbPoints.splice(i, 1);
                 }
             }

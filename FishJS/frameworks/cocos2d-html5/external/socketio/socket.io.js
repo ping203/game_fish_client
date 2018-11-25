@@ -3330,8 +3330,8 @@
   var debug = _dereq_('debug')('engine.io-client:websocket');
 
   /**
-   * `ws` exposes a WebSocket-compatible interface in
-   * Node, or the `WebSocket` or `MozWebSocket` globals
+   * `ws` exposes a BCWebSocket-compatible interface in
+   * Node, or the `BCWebSocket` or `MozWebSocket` globals
    * in the browser.
    */
 
@@ -3344,7 +3344,7 @@
   module.exports = WS;
 
   /**
-   * WebSocket transport constructor.
+   * BCWebSocket transport constructor.
    *
    * @api {Object} connection options
    * @api public
@@ -3404,7 +3404,7 @@
     opts.ciphers = this.ciphers;
     opts.rejectUnauthorized = this.rejectUnauthorized;
 
-    this.ws = new WebSocket(uri, protocols, opts);
+    this.ws = new BCWebSocket(uri, protocols, opts);
 
     if (this.ws.binaryType === undefined) {
       this.supportsBinary = false;
@@ -3548,7 +3548,7 @@
   };
 
   /**
-   * Feature detection for WebSocket.
+   * Feature detection for BCWebSocket.
    *
    * @return {Boolean} whether this transport is available.
    * @api public
@@ -5053,7 +5053,7 @@
           return continuationByte & 0x3F;
         }
 
-        // If we end up here, it¡¯s not a continuation byte
+        // If we end up here, itï¿½ï¿½s not a continuation byte
         throw Error('Invalid continuation byte');
       }
 
@@ -5293,7 +5293,7 @@
   var global = (function() { return this; })();
 
   /**
-   * WebSocket constructor.
+   * BCWebSocket constructor.
    */
 
   var WebSocket = global.WebSocket || global.MozWebSocket;
@@ -5305,7 +5305,7 @@
   module.exports = WebSocket ? ws : null;
 
   /**
-   * WebSocket constructor.
+   * BCWebSocket constructor.
    *
    * The third `opts` options object gets ignored in web browsers, since it's
    * non-standard, and throws a TypeError if passed to the constructor.
@@ -5320,9 +5320,9 @@
   function ws(uri, protocols, opts) {
     var instance;
     if (protocols) {
-      instance = new WebSocket(uri, protocols);
+      instance = new BCWebSocket(uri, protocols);
     } else {
-      instance = new WebSocket(uri);
+      instance = new BCWebSocket(uri);
     }
     return instance;
   }

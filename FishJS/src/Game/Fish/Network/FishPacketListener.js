@@ -28,14 +28,16 @@ var FishPacketListener = cc.Class.extend({
                 pk.clean();
                 cc.log("update round" + fishLifeCycle);
                 cc.log(JSON.stringify(pk));
-                fishLifeCycle.onUpdateRound(pk);
+                //if(fishLifeCycle)
+                    fishLifeCycle.onUpdateRound(pk);
                 break;
             }
             case CMD.CMD_START_SHOOT:
             {
                 var pk = new CmdReceivedStartShoot(p);
                 pk.clean();
-                fishLifeCycle.onStartShoot(pk);
+                if(fishLifeCycle)
+                    fishLifeCycle.onStartShoot(pk);
 
                 break;
             }
@@ -43,7 +45,8 @@ var FishPacketListener = cc.Class.extend({
             {
                 var pk = new CmdReceivedShootResult(p);
                 pk.clean();
-                fishLifeCycle.onShootResult(pk);
+                if(fishLifeCycle)
+                    fishLifeCycle.onShootResult(pk);
                 if(pk.isSuccess)
                     cc.log(JSON.stringify(pk));
                 break;
@@ -106,7 +109,7 @@ fishBZ.sendStartShoot = function(bet,x,y)
 {
     var pk = new CmdSendStartShoot();
     pk.putData(bet,x,y);
-    GameClient.getInstance().sendPacket(pk);
+    BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }
 
@@ -114,7 +117,7 @@ fishBZ.sendShootFish =  function(bet,fish_id)
 {
     var pk = new CmdSendShootSuccess();
     pk.putData(bet,fish_id);
-    GameClient.getInstance().sendPacket(pk);
+    BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
     //cc.log("-------------------------------")
     //cc.log(fishLifeCycle.players[fishLifeCycle.myChair].playerData.rawData["username"] + "send shoot fish :" + fish_id );
@@ -125,13 +128,13 @@ fishBZ.sendShootFish =  function(bet,fish_id)
 fishBZ.sendLockFish = function(isLock,fish_id){
     var pk = new CmdSendLockFish();
     pk.putData(isLock,fish_id);
-    GameClient.getInstance().sendPacket(pk);
+    BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }
 
 fishBZ.sendQuit = function()
 {
     var pk = new CmdSendQuit();
-    GameClient.getInstance().sendPacket(pk);
+    BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }

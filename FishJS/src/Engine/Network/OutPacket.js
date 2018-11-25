@@ -6,7 +6,7 @@ var BIT_IS_BIG_SIZE_INDEX = 3;
 var BYTE_PACKET_SIZE_INDEX = 1;
 var BIG_HEADER_SIZE = 5;
 var NORMAL_HEADER_SIZE = 3;
-var OutPacket = cc.Class.extend(
+var BCOutPacket = cc.Class.extend(
     {
         ctor: function () {
             this._controllerId = 1;
@@ -222,12 +222,12 @@ var PacketHeaderAnalyze = {
 var OutPacketData = {
     _jData: "{}"
 };
-// var  CmdSendCommon = $.extend(true, OutPacketData, OutPacket);
+// var  CmdSendCommon = $.extend(true, OutPacketData, BCOutPacket);
 // CmdSendCommon.extend = function (sub) {
 //     return $.extend(true, sub, CmdSendCommon);
 // }
 
-var CmdSendCommon = OutPacket.extend({
+var CmdSendCommon = BCOutPacket.extend({
     ctor: function(){
         this._super();
     }

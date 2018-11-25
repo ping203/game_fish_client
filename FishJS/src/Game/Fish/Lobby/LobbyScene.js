@@ -2,7 +2,7 @@
  * Created by HOANG on 10/27/2018.
  */
 
-var LobbyScene = BaseLayer.extend({
+var LobbyScene = BCBaseLayer.extend({
     ctor: function(){
         this._super();
         this.initWithBinaryFile("res/GUI/LobbyScene.json");
@@ -11,9 +11,9 @@ var LobbyScene = BaseLayer.extend({
         var panel_center = this.getControl("Panel_center");
 
 
-        this.btnChoiThu = this.customizeButton("btnChoiThu",0,panel_center);
-        this.btnChoiNgay = this.customizeButton("btnChoiNgay",1,panel_center);
-        this.btnShop = this.customizeButton("btnShop",2,panel_center);
+        this.btnChoiThu = this.customizeButton("btnChoiThu",LobbyScene.BTN_PLAY_DEMO,panel_center);
+        this.btnChoiNgay = this.customizeButton("btnChoiNgay",LobbyScene.BTN_PLAY_NOW,panel_center);
+        this.btnShop = this.customizeButton("btnShop",LobbyScene.BTN_SHOP,panel_center);
 
         var node_choingay = this.getControl("node_choingay",this.btnChoiNgay);
         var node_choithu = this.getControl("node_choithu",this.btnChoiThu);
@@ -21,7 +21,6 @@ var LobbyScene = BaseLayer.extend({
 
         var top_center = this.getControl("Panel_top_center");
         var logo = sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/logo/skeleton.json","res/GUI/Lobby/Anim/logo/skeleton.atlas");
-        cc.log(logo);
         logo.setAnimation(0,"animation",true);
         logo.setScale(.65);
         top_center.addChild(logo);
@@ -83,47 +82,59 @@ var LobbyScene = BaseLayer.extend({
 
         this.bg = this.getControl("bg");
 
+        this.panelBack = this.getControl("Panel_top_left");
+        this.customizeButton("btnQuit",LobbyScene.BTN_BACK,this.panelBack);
+
+
     },
     withLogin: function(){
         this.need_login = true;
+        this.avatar.setVisible(false);
     },
     onEnter: function(){
         this._super();
         if(this.need_login)
-            sceneMgr.addLoading("Loading...",true);
+            bcSceneMgr.addLoading("Loading...",true);
 
 
     },
     onUpdateData: function(){
         this.lbUserName.setString(gameData.userData.userName);
         this.lbUserID.setString("#ID "+gameData.userData.uID)
-        this.lbGold.setString(StringUtility.standartNumber(gameData.userData.gold) +"$");
+        this.lbGold.setString(BCStringUtility.standartNumber(gameData.userData.gold) +"$");
 
-        this.lbMan.setString(StringUtility.standartNumber(gameData.userData.vinMoney) +"$");
+        this.lbMan.setString(BCStringUtility.standartNumber(gameData.userData.vinMoney) +"$");
 
         this.bg.setVisible(true);
         this.bg.setOpacity(0);
         this.bg.runAction(cc.fadeIn(.35));
 
+        this.avatar.setVisible(true);
+
     },
     onButtonReleased: function(btn,id){
         switch (id){
-            case 0:{
-                sceneMgr.openWithScene(new DemoScene());
+            case LobbyScene.BTN_PLAY_DEMO:{
+                bcSceneMgr.openWithScene(new DemoScene());
 
                 break;
             }
-            case 1:{
+            case LobbyScene.BTN_PLAY_NOW:{
                 var pkQuickJoin = new CmdSendQuickJoin();
-                GameClient.getInstance().sendPacket(pkQuickJoin);
+                BCGameClient.getInstance().sendPacket(pkQuickJoin);
                 break;
             }
-            case 2:{
-                var spine = new sp.SkeletonAnimation("res/FX/laser_02.json","res/FX/laser_02.atlas");
-                spine.setAnimation(0,"laser_02",true);
-                spine.setPosition(300,300);
-                this.addChild(spine);
-                cc.log(spine);
+            case LobbyScene.BTN_SHOP:{
+
+                break;
+            }
+            case LobbyScene.BTN_BACK:
+            {
+                if(lobbyThanBien)
+                {
+                    lobbyThanBien.onExitGame();
+                    return;
+                }
                 break;
             }
         }
@@ -133,3 +144,6 @@ var LobbyScene = BaseLayer.extend({
 LobbyScene.BTN_PLUS_MAN = 1;
 LobbyScene.BTN_PLUS_GOLD = 2;
 LobbyScene.BTN_BACK = 3;
+LobbyScene.BTN_PLAY_NOW = 4;
+LobbyScene.BTN_PLAY_DEMO = 5;
+LobbyScene.BTN_SHOP = 6;

@@ -2,7 +2,7 @@
  * Created by HOANGNGUYEN on 7/20/2015.
  */
 
-var BaseScene = cc.Scene.extend({
+var BCBaseScene = cc.Scene.extend({
 
     ctor: function(){
         this._super();
@@ -13,8 +13,8 @@ var BaseScene = cc.Scene.extend({
     },
 
     addChild: function(child,tag,oder){
-        if(tag === undefined) tag = BaseScene.TAG_LAYER;
-        if(oder === undefined) oder = BaseScene.TAG_LAYER;
+        if(tag === undefined) tag = BCBaseScene.TAG_LAYER;
+        if(oder === undefined) oder = BCBaseScene.TAG_LAYER;
 
         cc.Scene.prototype.addChild.call(this,child);
         child.setTag(tag);
@@ -24,25 +24,25 @@ var BaseScene = cc.Scene.extend({
     },
 
     getMainLayer: function(){
-        return this.getChildByTag(BaseScene.TAG_LAYER);
+        return this.getChildByTag(BCBaseScene.TAG_LAYER);
     },
     
     getLayerGUI : function () {
-        return this.getChildByTag(BaseScene.TAG_GUI);
-    },
+        return this.getChildByTag(BCBaseScene.TAG_GUI);
+    }
 });
 
-BaseScene.TAG_LAYER = 101;
-BaseScene.TAG_GUI = 102;
+BCBaseScene.TAG_LAYER = 101;
+BCBaseScene.TAG_GUI = 102;
 
-BaseScene.createWithLayer = function(layer){
-    var scene = new BaseScene();
+BCBaseScene.createWithLayer = function(layer){
+    var scene = new BCBaseScene();
     scene.addChild(layer);
     return scene;
 };
 
 makeScene = function(layer){
-    var scene = new BaseScene();
+    var scene = new BCBaseScene();
     scene.addChild(layer);
     return scene;
 };

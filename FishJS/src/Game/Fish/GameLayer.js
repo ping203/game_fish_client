@@ -23,7 +23,7 @@ var ActionListener = cc.Class.extend({
 })
 
 
-var GameLayerUI = BaseLayer.extend({
+var GameLayerUI = BCBaseLayer.extend({
     ctor: function()
     {
         this._super();
@@ -69,6 +69,8 @@ var GameLayerUI = BaseLayer.extend({
         var panel_ui = this.getControl("Panel_UI");
         this.customizeButton("btnHold",GameLayerUI.BTN_HOLD_FISH,panel_ui);
         this.customizeButton("btnMenu",GameLayerUI.BTN_MENU,panel_ui);
+        this.customizeButton("btnAuto",GameLayerUI.BTN_AUTO,panel_ui);
+
 
 
         var water = this.createWater();
@@ -114,9 +116,11 @@ var GameLayerUI = BaseLayer.extend({
         this.time_auto_shoot = 0;
         this.enable_shoot = true;
 
-        this.auto_shoot = false;
         this.hold_mouse = false;
         this.point_to_shoot = vec2(0,0);
+
+        this.auto_shoot = false;
+        this.last_touch_point = null;
 
     },
     setActionListener: function(lis){
@@ -125,7 +129,7 @@ var GameLayerUI = BaseLayer.extend({
 
     initBox2D: function()
     {
-        this.gameMgr = new GameManager(new Setting());
+        this.gameMgr = new BCGameManager(new Setting());
         this.gameMgr.setEntityCollisionListener(this.onEntityCollision.bind(this));
         this.gameMgr.setOnContactPreSolve(this.onContactPreSolve.bind(this));
     },
@@ -196,8 +200,29 @@ var GameLayerUI = BaseLayer.extend({
 
     },
 
+    shootAuto: function () {
+        var screenPos = this.last_touch_point?this.last_touch_point:vec2(cc.winSize.width/2,cc.winSize.height/2);
+
+        if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
+        {
+            this.shoot(fishLifeCycle.myPlayer,screenPos);
+            if(this.actionListener && this.actionListener.onStartShoot){
+                this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],screenPos.x / PM_RATIO,screenPos.y / PM_RATIO);
+            }
+            else
+                fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],screenPos.x / PM_RATIO,screenPos.y / PM_RATIO);
+            fishSound.playEffectShoot();
+        }
+        else{
+            fishLifeCycle.myPlayer.setAngleForGun(screenPos);
+        }
+
+
+    },
+
     shoot: function(player,screenPosition)
     {
+        this.enable_shoot = false;
         var sprite = new cc.Sprite("res/bullet.png");
         sprite.setScale(.75);
         this.bulletLayer.addChild(sprite);
@@ -214,7 +239,7 @@ var GameLayerUI = BaseLayer.extend({
 
         var location = vec2(destPosition.x,destPosition.y);
         var gun_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
-        var bullet = new Bullet(4);
+        var bullet = new Bullet(BULLET_LIVE);
         bullet.playerID = player.index;
         bullet.released = false;
         bullet.setNodeDisplay( sprite);
@@ -272,46 +297,12 @@ var GameLayerUI = BaseLayer.extend({
     },
     update: function(dt)
     {
-        if(this.gameMgr.state == GameManager.STATE_MATRIX_MAP)
+        if(this.gameMgr.state == BCGameManager.STATE_MATRIX_MAP)
         {
             matranMap.update(1.0/60);
         }
 
         this.gameMgr.update(dt);
-
-        // for enable shoot
-        if(!this.enable_shoot)
-        {
-            this.time_for_shoot += dt;
-            if(this.time_for_shoot >= DELAY_SHOOT)
-            {
-                this.time_for_shoot = 0;
-                this.enable_shoot = true;
-            }
-        }
-        //  for hold mouse
-        if(this.hold_mouse)
-        {
-            this.time_auto_shoot += dt;
-            if(this.time_auto_shoot >= DELAY_SHOOT)
-            {
-                this.time_auto_shoot = 0;
-                if(this.gameMgr.state != GameManager.STATE_PREPARE)
-                {
-                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
-                    if(this.actionListener && this.actionListener.onStartShoot){
-                        this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
-                    }
-                    else
-                        fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
-
-                    fishSound.playEffectShoot();
-                }
-                else{
-                    fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
-                }
-            }
-        }
 
         // for holding Fish display
         for(var i=0;i<this.players.length;i++){
@@ -332,6 +323,42 @@ var GameLayerUI = BaseLayer.extend({
                 this.players[i].nodeDisplayHold.setLength(length);
             }
         }
+
+        // for enable shoot
+        if(!this.enable_shoot)
+        {
+            this.time_for_shoot += dt;
+            if(this.time_for_shoot >= DELAY_SHOOT)
+            {
+                this.time_for_shoot = 0;
+                this.enable_shoot = true;
+            }
+        }
+        if(!this.enable_shoot)
+            return;
+        //  for hold mouse
+        if(this.auto_shoot)
+        {
+            this.shootAuto(fishLifeCycle.myPlayer);
+        }
+        else if(this.hold_mouse)
+        {
+                if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
+                {
+                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
+                    if(this.actionListener && this.actionListener.onStartShoot){
+                        this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    }
+                    else
+                        fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    fishSound.playEffectShoot();
+                }
+                else{
+                    fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
+                }
+        }
+
+
     },
     onCreateFish: function(id,fish_type,path,time_xuat_hien,elapsedTime)       // create fish in matran
     {
@@ -343,7 +370,7 @@ var GameLayerUI = BaseLayer.extend({
         if((touch.getID() !== undefined) && touch.getID() != 0)
             return false;
         var location = touch.getLocation();
-
+        this.last_touch_point = location;
 
         this.particleBongNuoc.stopAllActions();
         this.particleBongNuoc.setOpacity(100);
@@ -364,7 +391,7 @@ var GameLayerUI = BaseLayer.extend({
             return true;
         }
 
-        if(this.enable_shoot && this.gameMgr.state != GameManager.STATE_PREPARE)
+        if(this.enable_shoot && this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
             this.shoot(fishLifeCycle.myPlayer,location);
             if(this.actionListener && this.actionListener.onStartShoot){
@@ -374,9 +401,9 @@ var GameLayerUI = BaseLayer.extend({
                 fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
 
             fishSound.playEffectShoot();
-            this.enable_shoot = false;
+
         }
-        else if(this.gameMgr.state == GameManager.STATE_PREPARE){
+        else if(this.gameMgr.state == BCGameManager.STATE_PREPARE){
             fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
         }
         this.point_to_shoot = location;
@@ -390,6 +417,8 @@ var GameLayerUI = BaseLayer.extend({
         if((touch.getID() !== undefined) && touch.getID() != 0)
             return false;
         this.point_to_shoot = touch.getLocation();
+        this.last_touch_point = this.point_to_shoot;
+
         fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
         this.particleBongNuoc.setPosition(this.point_to_shoot.x,this.point_to_shoot.y - 40);
     },
@@ -397,6 +426,8 @@ var GameLayerUI = BaseLayer.extend({
     {
         if((touch.getID() !== undefined) && touch.getID() != 0)
             return false;
+        this.last_touch_point = touch.getLocation();
+
         this.hold_mouse = false;
         this.particleBongNuoc.runAction(cc.sequence(cc.fadeOut(.5),cc.hide()));
 
@@ -410,7 +441,7 @@ var GameLayerUI = BaseLayer.extend({
         }
         var pos = fishSp.getPosition();
 
-        var str = "" + StringUtility.standartNumber(Math.abs(money));
+        var str = "" + BCStringUtility.standartNumber(Math.abs(money));
         var fontFile = (playerIndex == fishLifeCycle.myChair)?"res/GUI/Fonts/Tien vang-export.fnt":"res/GUI/Fonts/Tien bac-export.fnt";
         var moneyLb =  new cc.LabelBMFont(str,fontFile,0);
         moneyLb.setPosition(pos);
@@ -421,7 +452,6 @@ var GameLayerUI = BaseLayer.extend({
         spF.stopActionByTag(110);           //end action swim
         if(fishSp.getChildByTag(1))
             fishSp.getChildByTag(1).stopAllActions();
-        //spF.setColor(cc.color(150,0,0));
         spF.runAction(cc.sequence(cc.delayTime(.85),cc.fadeOut(.15)));
         fishSp.runAction(cc.sequence(cc.delayTime(1),cc.removeSelf()));
         //effect money
@@ -439,7 +469,7 @@ var GameLayerUI = BaseLayer.extend({
     },
     createEffectFishFired: function(pos,index)
     {
-        var sp = new cc.Sprite("res/GUI/ScreenGame/FXNew/FXBulletHit/net2.png");
+        var sp = new cc.Sprite("res/fishData/effect/net2.png");
         this.effectLayer.addChild(sp);
         if(fishLifeCycle.myChair == index)
             sp.setColor(cc.color(255,100,0));
@@ -504,7 +534,7 @@ var GameLayerUI = BaseLayer.extend({
             color.setScale( 1 / data["scale"]);
             node.addChild(color,0);
 
-            sp2.setVisible(false);
+            //sp2.setVisible(false);
 
         }
         node.setScale(data["scale"]);
@@ -552,7 +582,7 @@ var GameLayerUI = BaseLayer.extend({
                 {
                     var lobbyScene = new LobbyScene();
                     lobbyScene.onUpdateData();
-                    sceneMgr.openWithScene(lobbyScene);
+                    bcSceneMgr.openWithScene(lobbyScene);
                     fishSound.stopMusic();
                     fishSound.playMusicLobby();
                 }
@@ -560,6 +590,11 @@ var GameLayerUI = BaseLayer.extend({
 
 
 
+                break;
+            }
+            case GameLayerUI.BTN_AUTO:
+            {
+                this.auto_shoot = !this.auto_shoot;
                 break;
             }
         }
@@ -595,9 +630,9 @@ var GameLayerUI = BaseLayer.extend({
 
         fishSound.playEffectCoin();
 
-        if(playerIndex == fishLifeCycle.position)
+        if(playerIndex == fishLifeCycle.position || true)
         {
-            var txt = BaseLayer.createLabelText("+"+StringUtility.standartNumber(money)+"$",cc.color(255,255,255));
+            var txt = BCBaseLayer.createLabelText("+"+BCStringUtility.standartNumber(money)+"$",cc.color(255,255,255));
             txt.setFontSize(22);
             txt.setPosition(destPos);
             this.effectLayerTop.addChild(txt);
@@ -607,7 +642,8 @@ var GameLayerUI = BaseLayer.extend({
             txt.runAction(cc.sequence(cc.delayTime(timeDelay +.5),cc.fadeOut(.5)));
 
             //this.players[playerIndex].lbMoney.stopAllActions();
-            this.players[playerIndex].lbMoney.runAction(cc.sequence(cc.delayTime(timeDelay),cc.callFunc(function(){
+            if(playerIndex == fishLifeCycle.position)
+                this.players[playerIndex].lbMoney.runAction(cc.sequence(cc.delayTime(timeDelay),cc.callFunc(function(){
                 this.setScale(2.5);
                 this.runAction(cc.scaleTo(.35,1));
             }.bind(this.players[playerIndex].lbMoney))))
@@ -718,7 +754,43 @@ var GameLayerUI = BaseLayer.extend({
         shake.setTag(9);
         this.panel_diaplay.runAction(shake);
     },
+    playerScreen: function () {
+        var sp = new cc.Sprite("res/GUI/ScreenGame/Background/playerPos.png");
+        switch (fishLifeCycle.position)
+        {
+            case 0:
+            {
+                sp.setAnchorPoint(cc.p(0.2,0));
+                sp.setPositionX(cc.winSize.width * 0.2);
+                break;
+            }
+            case 1:
+            {
+                sp.setFlippedX(true);
+                sp.setAnchorPoint(cc.p(0.8,0));
+                sp.setPosition(cc.winSize.width * 0.8,0);
+                break;
+            }
+            case 2:
+            {
+                sp.setFlippedX(true);
+                sp.setFlippedY(true);
+                sp.setAnchorPoint(cc.p(0.8,1));
+                sp.setPosition(cc.winSize.width * 0.8,cc.winSize.height);
+                break;
+            }
+            case 3:
+            {
+                sp.setAnchorPoint(cc.p(0.2,1));
+                sp.setFlippedY(true);
+                sp.setPosition(cc.winSize.width * 0.2,cc.winSize.height);
+                break;
+            }
+        }
+        this.addChild(sp,10);
+        sp.runAction(cc.sequence(cc.delayTime(1),cc.scaleTo(.85,10),cc.removeSelf()));
 
+    },
 
     // chuan bi cho ca tran
     stateToPrepare: function(time){
@@ -811,3 +883,4 @@ GameLayerUI.BTN_MENU = 1;
 
 GameLayerUI.BTN_PLUS = 2;
 GameLayerUI.BTN_SUB = 3;
+GameLayerUI.BTN_AUTO = 4;

@@ -2,12 +2,12 @@
  * Created by hoangnq on 8/14/15.
  */
 
-var StringUtility = function () {
+var BCStringUtility = function () {
 }
 
-StringUtility.JSON_ERROR_DEFAULT = -99999;
+BCStringUtility.JSON_ERROR_DEFAULT = -99999;
 
-StringUtility.standartNumber = function (number) {            // Hien thi number theo chuan{
+BCStringUtility.standartNumber = function (number) {            // Hien thi number theo chuan{
     var tmp = "" + number;
     if (tmp.length < 4) {
         return tmp;
@@ -25,34 +25,34 @@ StringUtility.standartNumber = function (number) {            // Hien thi number
     return tmp2;
 }
 
-StringUtility.formatNumberSymbol = function (number) {
+BCStringUtility.formatNumberSymbol = function (number) {
     var retVal = "";
     if (number < 0)
         retVal = "-";
     number = Math.floor(Math.abs(number));
 
     if (number >= 1000000000) {
-        return retVal + StringUtility.numberConvert(number, 1000000000) + "B";
+        return retVal + BCStringUtility.numberConvert(number, 1000000000) + "B";
     }
     else if (number >= 1000000) {
-        return retVal + StringUtility.numberConvert(number, 1000000) + "M";
+        return retVal + BCStringUtility.numberConvert(number, 1000000) + "M";
     }
     else if (number >= 1000) {
-        return retVal + StringUtility.numberConvert(number, 1000) + "K";
+        return retVal + BCStringUtility.numberConvert(number, 1000) + "K";
     } else {
         retVal = retVal + number;
     }
     return retVal;
 }
 
-StringUtility.pointNumber = function (number) {
+BCStringUtility.pointNumber = function (number) {
     if (typeof number === 'undefined')
         return "";
     var ret = Math.floor(Math.abs(number));
     return ret.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-StringUtility.numberConvert = function (number, div) {
+BCStringUtility.numberConvert = function (number, div) {
     var a = parseInt(number / (div / 100));
     var b = parseInt(a / 100);
 
@@ -75,11 +75,11 @@ StringUtility.numberConvert = function (number, div) {
     }
 }
 
-StringUtility.replaceAll = function (text, searchText, replaceText) {
+BCStringUtility.replaceAll = function (text, searchText, replaceText) {
     return text.split(searchText).join(replaceText);
 }
 
-StringUtility.subStringText = function (text, lb) {
+BCStringUtility.subStringText = function (text, lb) {
     if (typeof lb === 'undefined') return text;
 
     var str = lb.getString();
@@ -88,30 +88,30 @@ StringUtility.subStringText = function (text, lb) {
     return text.substring(0, str.length - 3) + "...";
 }
 
-StringUtility.subStringTextLength = function (text, length) {
+BCStringUtility.subStringTextLength = function (text, length) {
     if(text.length <= length) return text;
 
     return text.substring(0,length-2) + "...";
 }
 
-StringUtility.checkStringNormal = function (text) {
+BCStringUtility.checkStringNormal = function (text) {
     var reg = new RegExp("^([a-zA-Z0-9.,?!]{1,})$");
     return reg.test(text);
 }
 
-StringUtility.parseJSON = function (json) {
+BCStringUtility.parseJSON = function (json) {
     var ret = null;
     try {
         ret = JSON.parse(json);
     }
     catch (e) {
         ret = {};
-        ret.error = StringUtility.JSON_ERROR_DEFAULT;
+        ret.error = BCStringUtility.JSON_ERROR_DEFAULT;
     }
     return ret;
 }
 
-StringUtility.getFontDefault = function (fnt) {
+BCStringUtility.getFontDefault = function (fnt) {
 
     var defaultPath = "fonts/";
     var defaultFont = "tahoma.ttf";
@@ -132,7 +132,7 @@ StringUtility.getFontDefault = function (fnt) {
     return defaultPath + path;
 }
 
-StringUtility.getStringLocalized = function (str) {
+BCStringUtility.getStringLocalized = function (str) {
     if(str === undefined || str == null || str == "") return str;
 
     var sLocalized = "str_";
@@ -141,7 +141,7 @@ StringUtility.getStringLocalized = function (str) {
 
     if(idxLocalized > -1)
     {
-        return LocalizedString.to(str.substring(idxLocalized + sizeLocalized,str.length));
+        return BCLocalizedString.to(str.substring(idxLocalized + sizeLocalized,str.length));
     }
     else
     {
@@ -394,4 +394,4 @@ function md5 (string, key, raw) {
     return rawHMACMD5(key, string)
 }
 
-StringUtility.md5 = md5;
+BCStringUtility.md5 = md5;

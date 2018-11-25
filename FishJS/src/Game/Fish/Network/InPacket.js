@@ -38,7 +38,7 @@ CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
             info["username"] = this.getString();
             info["displayName"] = this.getString();
             info["avatar"] = this.getString();
-            info["balance"] = info["bean"]= this.getLong();
+            info["balance"] = info["gold"]= this.getLong();
             info["vipType"] = this.getByte();
 
             info["position"] = this.getByte();
@@ -62,7 +62,7 @@ CmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
         this.info["username"] = this.getString();
         this.info["displayName"] = this.getString();
         this.info["avatar"] = this.getString();
-        this.info["balance"] = this.info["bean"] = this.getLong();
+        this.info["balance"] = this.info["gold"] = this.getLong();
         this.info["vipType"] = this.getByte();
 
         this.info["position"] = this.getByte();
@@ -111,7 +111,7 @@ CmdReceivedUpdateRound = CmdReceivedCommon.extend({
         this.listFish = [];
         this.startID = -1;
         this.timeElapsed = 0;
-        if(this.gameState == GameManager.STATE_NORMAL_MAP)
+        if(this.gameState == BCGameManager.STATE_NORMAL_MAP)
         {
             var length = this.getShort();
             for(var j=0;j<length;j++)
@@ -135,11 +135,11 @@ CmdReceivedUpdateRound = CmdReceivedCommon.extend({
                 this.listFish.push(f);
             }
         }
-        else if(this.gameState == GameManager.STATE_PREPARE)
+        else if(this.gameState == BCGameManager.STATE_PREPARE)
         {
             this.timeElapsed = this.getFloat();
         }
-        else if(this.gameState == GameManager.STATE_MATRIX_MAP)
+        else if(this.gameState == BCGameManager.STATE_MATRIX_MAP)
         {
             this.timeElapsed = this.getFloat();
             this.startID = this.getInt();

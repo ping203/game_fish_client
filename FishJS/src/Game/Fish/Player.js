@@ -174,7 +174,7 @@ var Player = cc.Node.extend({
     updateInfo: function()
     {
         this.lbName.setString(this.playerData.rawData["displayName"]);
-        this.lbMoney.setString(StringUtility.standartNumber(this.playerData.rawData["bean"]) +"$");
+        this.lbMoney.setString(BCStringUtility.standartNumber(this.playerData.rawData["gold"]) +"$");
     },
     setHold: function(fish){
         this.holdFishInfo.setIsHolding(true);
