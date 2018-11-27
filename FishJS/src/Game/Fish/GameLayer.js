@@ -68,9 +68,19 @@ var GameLayerUI = BCBaseLayer.extend({
 
         var panel_ui = this.getControl("Panel_UI");
         this.customizeButton("btnHold",GameLayerUI.BTN_HOLD_FISH,panel_ui);
-        this.customizeButton("btnMenu",GameLayerUI.BTN_MENU,panel_ui);
-        this.customizeButton("btnAuto",GameLayerUI.BTN_AUTO,panel_ui);
+        this.btnMenu = this.customizeButton("btnMenu",GameLayerUI.BTN_MENU,panel_ui);
+        this.btnAuto = this.customizeButton("btnAuto",GameLayerUI.BTN_AUTO,panel_ui);
+        this.btnAuto.tick = this.btnAuto.getChildByName("tick");
 
+
+        this.panel_menu = this.getControl("panel_menu",panel_ui);
+        this.panel_menu.originalPos = this.panel_menu.getPosition();
+        this.txtLock = this.getControl("txtLockFish",panel_ui);
+
+        this.customizeButton("btnHome",GameLayerUI.BTN_QUIT,this.panel_menu);
+        this.btnMusic = this.customizeButton("btnMusic",GameLayerUI.BTN_MUSIC,this.panel_menu);
+        this.btnSound = this.customizeButton("btnSound",GameLayerUI.BTN_SOUND,this.panel_menu);
+        this.customizeButton("btnFish",GameLayerUI.BTN_FISH,this.panel_menu);
 
 
         var water = this.createWater();
@@ -87,6 +97,8 @@ var GameLayerUI = BCBaseLayer.extend({
         this.particleBongNuoc.setPosition(0,0);
         this.particleBongNuoc.setVisible(false);
 
+
+        this.loadUIMusicSound();
 
 
 
@@ -200,6 +212,12 @@ var GameLayerUI = BCBaseLayer.extend({
 
     },
 
+    setAutoShootFlag: function (flag) {
+        this.auto_shoot = flag;
+        // ui for btn auto
+        this.btnAuto.tick.setVisible(flag);
+    },
+
     shootAuto: function () {
         var screenPos = this.last_touch_point?this.last_touch_point:vec2(cc.winSize.width/2,cc.winSize.height/2);
 
@@ -211,17 +229,16 @@ var GameLayerUI = BCBaseLayer.extend({
             }
             else
                 fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],screenPos.x / PM_RATIO,screenPos.y / PM_RATIO);
-            fishSound.playEffectShoot();
         }
         else{
             fishLifeCycle.myPlayer.setAngleForGun(screenPos);
         }
-
-
     },
 
     shoot: function(player,screenPosition)
     {
+        fishSound.playEffectShoot();
+
         this.enable_shoot = false;
         var sprite = new cc.Sprite("res/bullet.png");
         sprite.setScale(.75);
@@ -299,7 +316,7 @@ var GameLayerUI = BCBaseLayer.extend({
     {
         if(this.gameMgr.state == BCGameManager.STATE_MATRIX_MAP)
         {
-            matranMap.update(1.0/60);
+            matranMap.update(dt);
         }
 
         this.gameMgr.update(dt);
@@ -336,22 +353,37 @@ var GameLayerUI = BCBaseLayer.extend({
         }
         if(!this.enable_shoot)
             return;
-        //  for hold mouse
+
         if(this.auto_shoot)
         {
-            this.shootAuto(fishLifeCycle.myPlayer);
+            if(this.checkMoney())
+                this.shootAuto(fishLifeCycle.myPlayer);
+            else
+            {
+                this.setAutoShootFlag(!this.auto_shoot);
+                this.checkMoneyForShootDialog();
+            }
         }
         else if(this.hold_mouse)
         {
                 if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
                 {
-                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
-                    if(this.actionListener && this.actionListener.onStartShoot){
-                        this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    if(this.checkMoney())
+                    {
+                        this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
+                        if(this.actionListener && this.actionListener.onStartShoot){
+                            this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                        }
+                        else
+                            fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     }
                     else
-                        fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
-                    fishSound.playEffectShoot();
+                    {
+                        this.hold_mouse = false;
+                        this.checkMoneyForShootDialog();
+                    }
+
+
                 }
                 else{
                     fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
@@ -369,6 +401,13 @@ var GameLayerUI = BCBaseLayer.extend({
     {
         if((touch.getID() !== undefined) && touch.getID() != 0)
             return false;
+        if(this.isShowMenu)
+        {
+            this.btnMenu.setVisible(true);
+            this.isShowMenu = false;
+            this.panel_menu.runAction(cc.sequence(cc.moveTo(.35,this.panel_menu.originalPos.x,this.panel_menu.originalPos.y).easing(cc.easeBackIn()),cc.hide()));
+        }
+
         var location = touch.getLocation();
         this.last_touch_point = location;
 
@@ -380,16 +419,28 @@ var GameLayerUI = BCBaseLayer.extend({
         if(fishLifeCycle.myPlayer.holdFishInfo.prepare_hold){
             var fish_find = this.gameMgr.getFishByPos(location);
             if(fish_find){
-                fishLifeCycle.myPlayer.setHold(fish_find);
-                fishBZ.sendLockFish(true,fish_find.id);
+                if(fish_find.fishType < 28)
+                {
+                    fishLifeCycle.myPlayer.setHold(fish_find);
+                    fishBZ.sendLockFish(true,fish_find.id);
+                }
+                else
+                {
+                    cc.log("Khong the khoa' loai. ca' nay`");
+                }
+                this.txtLock.setVisible(false);
+                fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
             }
-            else
-            {
-                fishLifeCycle.myPlayer.releaseHold();
-            }
-            fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
+            // else
+            // {
+            //     fishLifeCycle.myPlayer.releaseHold();
+            // }
+            // fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
             return true;
         }
+
+        if(!this.checkMoneyForShootDialog())
+            return false;
 
         if(this.enable_shoot && this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
@@ -400,7 +451,6 @@ var GameLayerUI = BCBaseLayer.extend({
             else
                 fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
 
-            fishSound.playEffectShoot();
 
         }
         else if(this.gameMgr.state == BCGameManager.STATE_PREPARE){
@@ -546,12 +596,18 @@ var GameLayerUI = BCBaseLayer.extend({
     onButtonReleased: function(btn,id){
         switch (id){
             case GameLayerUI.BTN_HOLD_FISH:{
+
                 if(!fishLifeCycle.myPlayer.holdFishInfo.getIsHolding())
+                {
                     fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = true;
+                    this.txtLock.setVisible(true);
+                }
                 else
                 {
                     fishLifeCycle.myPlayer.releaseHold();
                     fishBZ.sendLockFish(false,-1);
+                    this.txtLock.setVisible(false);
+
                 }
                 break;
             }
@@ -562,7 +618,7 @@ var GameLayerUI = BCBaseLayer.extend({
                     fishLifeCycle.myBetIdx = (fishLifeCycle.bets.length-1);
 
                 fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx],true);
-                this.shakeScreen();
+
                 break;
             }
             case GameLayerUI.BTN_SUB:
@@ -574,10 +630,15 @@ var GameLayerUI = BCBaseLayer.extend({
                 fishLifeCycle.myPlayer.setGunBet(fishLifeCycle.bets[fishLifeCycle.myBetIdx],true);
                 break;
             }
-            case GameLayerUI.BTN_MENU:
+            case GameLayerUI.BTN_QUIT:
             {
                 if(!this.actionListener)
-                    fishBZ.sendQuit();
+                {
+                    BCDialog.showDialog("Bạn muốn thoát khỏi phòng chơi?",this,function (id) {
+                        if(id == BCDialog.BTN_OK)
+                            fishBZ.sendQuit();
+                    })
+                }
                 else
                 {
                     var lobbyScene = new LobbyScene();
@@ -588,13 +649,47 @@ var GameLayerUI = BCBaseLayer.extend({
                 }
                 break;
 
-
+            }
+            case GameLayerUI.BTN_MENU:
+            {
+                this.panel_menu.stopAllActions();
+                if(!this.isShowMenu)
+                {
+                    btn.setVisible(false);
+                    this.isShowMenu = true;
+                    this.panel_menu.runAction(cc.sequence(cc.show(),cc.moveTo(.35,this.panel_menu.originalPos.x - 320,this.panel_menu.originalPos.y).easing(cc.easeBackOut())));
+                }
+                else
+                {
+                    this.isShowMenu = false;
+                    this.panel_menu.runAction(cc.sequence(cc.moveTo(.35,this.panel_menu.originalPos.x,this.panel_menu.originalPos.y).easing(cc.easeBackIn()),cc.hide()));
+                }
 
                 break;
             }
             case GameLayerUI.BTN_AUTO:
             {
-                this.auto_shoot = !this.auto_shoot;
+                if(!this.actionListener && !this.checkMoneyForShootDialog())
+                    break;
+                this.setAutoShootFlag(!this.auto_shoot);
+                break;
+            }
+            case GameLayerUI.BTN_MUSIC:
+            {
+                gameData.enableMusic = !gameData.enableMusic;
+                gameData.saveStorage();
+                this.loadUIMusicSound();
+                break;
+            }
+            case GameLayerUI.BTN_SOUND:
+            {
+                gameData.enableSound = !gameData.enableSound;
+                gameData.saveStorage();
+                if(gameData.enableSound) {
+                    this.btnSound.loadTextures("button/btnSound.png", "button/btnSound.png", "button/btnSound.png", 1);
+                }
+                else
+                    this.btnSound.loadTextures("button/btnSoundOff.png", "button/btnSoundOff.png", "button/btnSoundOff.png", 1);
                 break;
             }
         }
@@ -788,7 +883,7 @@ var GameLayerUI = BCBaseLayer.extend({
             }
         }
         this.addChild(sp,10);
-        sp.runAction(cc.sequence(cc.delayTime(1),cc.scaleTo(.85,10),cc.removeSelf()));
+        sp.runAction(cc.sequence(cc.delayTime(.75),cc.scaleTo(.85,10),cc.removeSelf()));
 
     },
 
@@ -796,7 +891,7 @@ var GameLayerUI = BCBaseLayer.extend({
     stateToPrepare: function(time){
 
         this.animCatranDen();
-        this.stopActionByTag(1111);     // khong doi background cho den khi normal map tro lai
+        // this.stopActionByTag(1111);     // khong doi background cho den khi normal map tro lai
         this.runAction(cc.sequence(cc.delayTime(time - 1.5),cc.callFunc(function(){
             this.effectLayer.removeAllChildren();
             this.cleanScreenForCatran();
@@ -847,9 +942,6 @@ var GameLayerUI = BCBaseLayer.extend({
         wave.setPosition(cc.winSize.width + 30,cc.winSize.height/2);
         wave.runAction(cc.sequence(cc.moveBy(TIME_CLEAN,cc.p(-cc.winSize.width - 30,0))));
     },
-
-
-
     animCatranDen: function(){
         var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/FXCaTran.json","res/FX/FXCaTran.atlas");
         catranAnim.setAnimation(0,"animation",true);
@@ -863,15 +955,55 @@ var GameLayerUI = BCBaseLayer.extend({
         this.addChild(catranAnim,20);
         catranAnim.setPosition(cc.winSize.width/2,400);
     },
-
     stateToNormalMap: function(){
-        this.stopMusic();
-        this.startMusic();
+        // this.stopMusic();
+        // this.startMusic();
     },
     stateToMatrixMap: function(){
 
         this.gameMgr.destroyAllEntity(false);
         this.check_matrix = true;
+
+    },
+    checkMoney: function () {
+        if(this.actionListener)
+            return (fishLifeCycle.bets[fishLifeCycle.myBetIdx] <= fishLifeCycle.myPlayer.playerData.rawData["gold"]);
+        return (fishLifeCycle.bets[fishLifeCycle.myBetIdx] <= gameData.userData["gold"]);
+    },
+    checkMoneyForShootDialog: function () {
+        if(this.actionListener)
+            return true;
+        if(!this.checkMoney())
+        {
+            BCDialog.showDialog("   Bạn cần nạp thêm vàng để tiếp tục chơi!",this,function (id) {
+                if(id == BCDialog.BTN_OK)
+                {
+
+                }
+            })
+            return false;
+        }
+        return true;
+    },
+
+    loadUIMusicSound: function () {
+        if(gameData.enableMusic)
+        {
+            fishSound.playMusicBackgroundGame(this.currentBG);
+            this.btnMusic.loadTextures("button/btnMusic.png","button/btnMusic.png","button/btnMusic.png",1);
+        }
+        else
+        {
+            fishSound.stopMusic();
+            this.btnMusic.loadTextures("button/btnMusicOff.png","button/btnMusicOff.png","button/btnMusicOff.png",1);
+        }
+
+        if(gameData.enableSound) {
+            this.btnSound.loadTextures("button/btnSound.png", "button/btnSound.png", "button/btnSound.png", 1);
+        }
+        else
+            this.btnSound.loadTextures("button/btnSoundOff.png", "button/btnSoundOff.png", "button/btnSoundOff.png", 1);
+
 
     }
 
@@ -884,3 +1016,8 @@ GameLayerUI.BTN_MENU = 1;
 GameLayerUI.BTN_PLUS = 2;
 GameLayerUI.BTN_SUB = 3;
 GameLayerUI.BTN_AUTO = 4;
+
+GameLayerUI.BTN_QUIT = 5;
+GameLayerUI.BTN_MUSIC = 6;
+GameLayerUI.BTN_SOUND = 7;
+GameLayerUI.BTN_FISH = 8;

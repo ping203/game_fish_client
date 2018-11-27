@@ -2,6 +2,8 @@
  * Created by admin on 9/11/18.
  */
 
+var BC = BC || {};
+
 var b2Vec2,b2BodyDef,b2Body,b2FixtureDef,b2World,b2PolygonShape,b2EdgeShape,b2Filter,b2ContactListener;
 if(cc.sys.isNative)
 {

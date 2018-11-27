@@ -1,0 +1,293 @@
+{
+  "ID": "6939c8e8-8903-42e7-8d63-d813ae094313",
+  "Version": "3.10.0.0",
+  "Name": "DialogGUI",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/bg_thongbao.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 224,
+            "Scale9OriginY": 181,
+            "Scale9Width": 232,
+            "Scale9Height": 188,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 417.6
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.58
+            },
+            "PreSize": {
+              "X": 0.5313,
+              "Y": 0.7639
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 300.0,
+            "RightMargin": 300.0,
+            "TopMargin": 27.4,
+            "BottomMargin": 142.6,
+            "Tag": 2,
+            "Children": [
+              {
+                "FontSize": 24,
+                "LabelText": "Ban muon thoat khoi game?  jjjjjjjjjjjj\njjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "Fonts/tahoma.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 342.9254,
+                  "Y": 244.2856
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5043,
+                  "Y": 0.4442
+                },
+                "PreSize": {
+                  "X": 0.5897,
+                  "Y": 0.1691
+                },
+                "LeftMargin": 142.4254,
+                "RightMargin": 136.5746,
+                "TopMargin": 259.2144,
+                "BottomMargin": 197.7856,
+                "Tag": 5,
+                "ActionTag": -1326926591,
+                "Size": {
+                  "X": 401.0,
+                  "Y": 93.0
+                },
+                "Name": "lbText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/xacnhan.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/xacnhan.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 135,
+                "Scale9Height": 45,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 345.5606,
+                  "Y": 121.099
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5082,
+                  "Y": 0.2202
+                },
+                "PreSize": {
+                  "X": 0.2426,
+                  "Y": 0.1218
+                },
+                "LeftMargin": 263.0606,
+                "RightMargin": 251.9394,
+                "TopMargin": 395.401,
+                "BottomMargin": 87.599,
+                "Tag": 3,
+                "ActionTag": 841644071,
+                "Size": {
+                  "X": 165.0,
+                  "Y": 67.0
+                },
+                "Name": "btnOK",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 16,
+                "Scale9Height": 14,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.7427,
+                  "Y": 293.1211
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8482,
+                  "Y": 0.5329
+                },
+                "PreSize": {
+                  "X": 0.0882,
+                  "Y": 0.1091
+                },
+                "LeftMargin": 546.7427,
+                "RightMargin": 73.2573,
+                "TopMargin": 226.8789,
+                "BottomMargin": 263.1211,
+                "Tag": 4,
+                "ActionTag": -907065704,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 60.0
+                },
+                "Alpha": 0,
+                "Name": "btnCancel",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -412138560,
+            "Size": {
+              "X": 680.0,
+              "Y": 550.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/Button_Normal.png",
+        "Default/Button_Press.png",
+        "Fonts/tahoma.ttf",
+        "Lobby/Popup/bg_thongbao.png",
+        "Lobby/Popup/xacnhan.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

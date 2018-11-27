@@ -2,7 +2,7 @@
  * Created by HOANG on 9/22/2018.
  */
 
-CmdSendLogin = CmdSendCommon.extend({
+BCCmdSendLogin = CmdSendCommon.extend({
     ctor: function()
     {
         this._super();
@@ -23,7 +23,7 @@ CmdSendLogin = CmdSendCommon.extend({
     }
 })
 
-CmdSendQuickJoin  = CmdSendCommon.extend({
+BCCmdSendQuickJoin  = CmdSendCommon.extend({
     ctor: function()
     {
         this._super();
@@ -46,7 +46,7 @@ CmdSendQuickJoin  = CmdSendCommon.extend({
     }
 })
 
-CmdSendQuit  = CmdSendCommon.extend({
+BCCmdSendQuit  = CmdSendCommon.extend({
     ctor: function()
     {
         this._super();
@@ -66,7 +66,7 @@ CmdSendQuit  = CmdSendCommon.extend({
 })
 
 
-CmdSendStartShoot = CmdSendCommon.extend(
+BCCmdSendStartShoot = CmdSendCommon.extend(
     {
         ctor:function()
         {
@@ -89,7 +89,7 @@ CmdSendStartShoot = CmdSendCommon.extend(
     }
 )
 
-CmdSendChangeBet = CmdSendCommon.extend(
+BCCmdSendChangeBet = CmdSendCommon.extend(
     {
         ctor:function()
         {
@@ -108,7 +108,7 @@ CmdSendChangeBet = CmdSendCommon.extend(
     }
 )
 
-CmdSendShootSuccess = CmdSendCommon.extend(
+BCCmdSendShootSuccess = CmdSendCommon.extend(
     {
         ctor:function()
         {
@@ -128,7 +128,7 @@ CmdSendShootSuccess = CmdSendCommon.extend(
     }
 )
 
-CmdSendLockFish = CmdSendCommon.extend(
+BCCmdSendLockFish = CmdSendCommon.extend(
     {
         ctor:function()
         {

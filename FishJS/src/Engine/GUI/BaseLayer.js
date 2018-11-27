@@ -46,6 +46,7 @@ var BCBaseLayer  = cc.Layer.extend({
         this._layerColor = new cc.LayerColor(cc.BLACK);
         this.addChild(this._layerColor);
         this._layerColor.setVisible(false);
+        this._layerColor.setOpacity(0);
 
         this._layerGUI = new cc.Layer();
         this._layerGUI.setLocalZOrder(999);

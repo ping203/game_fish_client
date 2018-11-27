@@ -32,6 +32,9 @@ var BCGameClient = cc.Class.extend({
     {
         this.wsClient.connect(ip,port,false,this);
     },
+    disconnect: function () {
+        this.wsClient.closeSocket();
+    },
     onFinishConnect: function(result){
         this.connected = result;
         if(this.listenner)

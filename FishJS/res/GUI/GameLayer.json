@@ -5,9 +5,85 @@
   "Content": {
     "Content": {
       "Animation": {
-        "Duration": 0,
+        "Duration": 10,
         "Speed": 1.0,
-        "Timelines": [],
+        "Timelines": [
+          {
+            "ActionTag": 880935830,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 50.8636,
+                "Y": 494.9574,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 631.4586,
+                "Y": 432.847,
+                "FrameIndex": 10,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 880935830,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 10,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 880935830,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 10,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
         "ctype": "TimelineActionData"
       },
       "AnimationList": [],
@@ -47,7 +123,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -69,8 +145,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 639.0,
-                  "Y": 359.0
+                  "X": 640.0,
+                  "Y": 360.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -79,17 +155,15 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 3.195,
-                  "Y": 1.795
+                  "X": 3.2,
+                  "Y": 1.8
                 },
                 "PreSize": {
                   "X": 6.4,
                   "Y": 3.6
                 },
-                "LeftMargin": -1.0,
-                "RightMargin": -1079.0,
-                "TopMargin": -519.0,
-                "BottomMargin": -1.0,
+                "RightMargin": -1080.0,
+                "TopMargin": -520.0,
                 "Tag": 11,
                 "Children": [
                   {
@@ -365,7 +439,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -591,7 +665,7 @@
               "Y": 0.0029
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "LeftMargin": 184.1754,
@@ -602,9 +676,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/khung_ava.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "khung_ava.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9OriginX": 100,
                 "Scale9OriginY": 75,
@@ -640,9 +714,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/ava_nho.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "ava_nho.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 29,
                     "Scale9OriginY": 29,
@@ -785,13 +859,13 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/gold.png",
+                      "Path": "Lobby/ico_MAN.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 14,
                     "Scale9OriginY": 14,
-                    "Scale9Width": 29,
-                    "Scale9Height": 29,
+                    "Scale9Width": 39,
+                    "Scale9Height": 40,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -801,8 +875,8 @@
                       "Y": 41.7478
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.8305,
+                      "ScaleY": 0.8305
                     },
                     "CColor": {},
                     "IconVisible": false,
@@ -811,20 +885,19 @@
                       "Y": 0.1815
                     },
                     "PreSize": {
-                      "X": 0.1875,
-                      "Y": 0.2478
+                      "X": 0.2204,
+                      "Y": 0.2957
                     },
-                    "LeftMargin": 17.0764,
-                    "RightMargin": 229.9236,
-                    "TopMargin": 159.7522,
-                    "BottomMargin": 13.2478,
+                    "LeftMargin": 12.0764,
+                    "RightMargin": 224.9236,
+                    "TopMargin": 154.2522,
+                    "BottomMargin": 7.7478,
                     "Tag": 48,
                     "ActionTag": 473010689,
                     "Size": {
-                      "X": 57.0,
-                      "Y": 57.0
+                      "X": 67.0,
+                      "Y": 68.0
                     },
-                    "VisibleForFrame": false,
                     "Name": "Image_4_0_1",
                     "ctype": "ImageViewObjectData"
                   },
@@ -890,9 +963,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/co.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "co.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 13,
@@ -932,6 +1005,63 @@
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 26,
+                    "LabelText": "----------------",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 184.3294,
+                      "Y": 42.7628
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6063,
+                      "Y": 0.1859
+                    },
+                    "PreSize": {
+                      "X": 0.5855,
+                      "Y": 0.1435
+                    },
+                    "LeftMargin": 95.3294,
+                    "RightMargin": 30.6706,
+                    "TopMargin": 170.7372,
+                    "BottomMargin": 26.2628,
+                    "Tag": 111,
+                    "ActionTag": 652313722,
+                    "Size": {
+                      "X": 178.0,
+                      "Y": 33.0
+                    },
+                    "Name": "lbMoney_0",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": -575713470,
@@ -996,9 +1126,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_gun .png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_gun .png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -1107,9 +1237,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/nong_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "nong_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -1152,9 +1282,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/duoi_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "duoi_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -1240,14 +1370,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -1315,14 +1445,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -1378,9 +1508,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 46,
                         "Scale9OriginY": 52,
@@ -1566,7 +1696,7 @@
               "Y": 0.0021
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -1579,9 +1709,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/khung_ava.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "khung_ava.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9OriginX": 100,
                 "Scale9OriginY": 75,
@@ -1617,9 +1747,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/ava_nho.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "ava_nho.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 29,
                     "Scale9OriginY": 29,
@@ -1762,13 +1892,13 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/gold.png",
+                      "Path": "Lobby/ico_MAN.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 14,
                     "Scale9OriginY": 14,
-                    "Scale9Width": 29,
-                    "Scale9Height": 29,
+                    "Scale9Width": 39,
+                    "Scale9Height": 40,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -1778,8 +1908,8 @@
                       "Y": 41.7478
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.8615,
+                      "ScaleY": 0.8615
                     },
                     "CColor": {},
                     "IconVisible": false,
@@ -1788,20 +1918,19 @@
                       "Y": 0.1815
                     },
                     "PreSize": {
-                      "X": 0.1875,
-                      "Y": 0.2478
+                      "X": 0.2204,
+                      "Y": 0.2957
                     },
-                    "LeftMargin": 17.0764,
-                    "RightMargin": 229.9236,
-                    "TopMargin": 159.7522,
-                    "BottomMargin": 13.2478,
+                    "LeftMargin": 12.0764,
+                    "RightMargin": 224.9236,
+                    "TopMargin": 154.2522,
+                    "BottomMargin": 7.7478,
                     "Tag": 148,
                     "ActionTag": 252730163,
                     "Size": {
-                      "X": 57.0,
-                      "Y": 57.0
+                      "X": 67.0,
+                      "Y": 68.0
                     },
-                    "VisibleForFrame": false,
                     "Name": "Image_4_0_1",
                     "ctype": "ImageViewObjectData"
                   },
@@ -1867,9 +1996,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/co.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "co.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 13,
@@ -1909,6 +2038,63 @@
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 26,
+                    "LabelText": "----------------",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 185.3152,
+                      "Y": 43.3158
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6096,
+                      "Y": 0.1883
+                    },
+                    "PreSize": {
+                      "X": 0.5855,
+                      "Y": 0.1435
+                    },
+                    "LeftMargin": 96.3152,
+                    "RightMargin": 29.6848,
+                    "TopMargin": 170.1842,
+                    "BottomMargin": 26.8158,
+                    "Tag": 112,
+                    "ActionTag": -887825722,
+                    "Size": {
+                      "X": 178.0,
+                      "Y": 33.0
+                    },
+                    "Name": "lbMoney_0",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": -1635095029,
@@ -1973,9 +2159,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_gun .png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_gun .png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -2084,9 +2270,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/nong_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "nong_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -2129,9 +2315,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/duoi_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "duoi_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -2217,14 +2403,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -2292,14 +2478,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -2355,9 +2541,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 46,
                         "Scale9OriginY": 52,
@@ -2543,7 +2729,7 @@
               "Y": 0.7429
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2556,9 +2742,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/khung_ava.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "khung_ava.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9OriginX": 100,
                 "Scale9OriginY": 75,
@@ -2594,9 +2780,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/ava_nho.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "ava_nho.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 29,
                     "Scale9OriginY": 29,
@@ -2739,24 +2925,24 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/gold.png",
+                      "Path": "Lobby/ico_MAN.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 14,
                     "Scale9OriginY": 14,
-                    "Scale9Width": 29,
-                    "Scale9Height": 29,
+                    "Scale9Width": 39,
+                    "Scale9Height": 40,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
                       "X": 45.5764,
-                      "Y": 41.7478
+                      "Y": 41.7477
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.8638,
+                      "ScaleY": 0.8638
                     },
                     "CColor": {},
                     "IconVisible": false,
@@ -2765,20 +2951,19 @@
                       "Y": 0.1815
                     },
                     "PreSize": {
-                      "X": 0.1875,
-                      "Y": 0.2478
+                      "X": 0.2204,
+                      "Y": 0.2957
                     },
-                    "LeftMargin": 17.0764,
-                    "RightMargin": 229.9236,
-                    "TopMargin": 159.7522,
-                    "BottomMargin": 13.2478,
+                    "LeftMargin": 12.0764,
+                    "RightMargin": 224.9236,
+                    "TopMargin": 154.2523,
+                    "BottomMargin": 7.7477,
                     "Tag": 155,
                     "ActionTag": -1493839467,
                     "Size": {
-                      "X": 57.0,
-                      "Y": 57.0
+                      "X": 67.0,
+                      "Y": 68.0
                     },
-                    "VisibleForFrame": false,
                     "Name": "Image_4_0_1",
                     "ctype": "ImageViewObjectData"
                   },
@@ -2844,9 +3029,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/co.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "co.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 13,
@@ -2886,6 +3071,63 @@
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 26,
+                    "LabelText": "-----------------",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 183.3856,
+                      "Y": 41.0879
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6032,
+                      "Y": 0.1786
+                    },
+                    "PreSize": {
+                      "X": 0.6217,
+                      "Y": 0.1435
+                    },
+                    "LeftMargin": 88.8856,
+                    "RightMargin": 26.1144,
+                    "TopMargin": 172.4121,
+                    "BottomMargin": 24.5879,
+                    "Tag": 113,
+                    "ActionTag": -775767129,
+                    "Size": {
+                      "X": 189.0,
+                      "Y": 33.0
+                    },
+                    "Name": "lbMoney_0",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": 1343566148,
@@ -2952,9 +3194,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_gun .png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_gun .png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -3063,9 +3305,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/nong_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "nong_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -3108,9 +3350,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/duoi_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "duoi_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -3196,14 +3438,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -3271,14 +3513,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_gun .png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -3334,9 +3576,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 46,
                         "Scale9OriginY": 52,
@@ -3524,7 +3766,7 @@
               "Y": 0.7375
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "VerticalEdge": "TopEdge",
@@ -3536,9 +3778,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/khung_ava.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "khung_ava.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9OriginX": 100,
                 "Scale9OriginY": 75,
@@ -3574,9 +3816,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/ava_nho.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "ava_nho.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 29,
                     "Scale9OriginY": 29,
@@ -3719,13 +3961,13 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/gold.png",
+                      "Path": "Lobby/ico_MAN.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 14,
                     "Scale9OriginY": 14,
-                    "Scale9Width": 29,
-                    "Scale9Height": 29,
+                    "Scale9Width": 39,
+                    "Scale9Height": 40,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -3735,8 +3977,8 @@
                       "Y": 41.7478
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.8727,
+                      "ScaleY": 0.8727
                     },
                     "CColor": {},
                     "IconVisible": false,
@@ -3745,20 +3987,19 @@
                       "Y": 0.1815
                     },
                     "PreSize": {
-                      "X": 0.1875,
-                      "Y": 0.2478
+                      "X": 0.2204,
+                      "Y": 0.2957
                     },
-                    "LeftMargin": 17.0764,
-                    "RightMargin": 229.9236,
-                    "TopMargin": 159.7522,
-                    "BottomMargin": 13.2478,
+                    "LeftMargin": 12.0764,
+                    "RightMargin": 224.9236,
+                    "TopMargin": 154.2522,
+                    "BottomMargin": 7.7478,
                     "Tag": 162,
                     "ActionTag": -1505724745,
                     "Size": {
-                      "X": 57.0,
-                      "Y": 57.0
+                      "X": 67.0,
+                      "Y": 68.0
                     },
-                    "VisibleForFrame": false,
                     "Name": "Image_4_0_1",
                     "ctype": "ImageViewObjectData"
                   },
@@ -3824,9 +4065,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "ScreenGame/UI_Ingame/co.png",
-                      "Plist": ""
+                      "Type": "PlistSubImage",
+                      "Path": "co.png",
+                      "Plist": "ScreenGame/Ingame.plist"
                     },
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 13,
@@ -3866,6 +4107,63 @@
                     },
                     "Name": "Image_1",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 26,
+                    "LabelText": "-----------------",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Fonts/tahomabd.ttf",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 183.167,
+                      "Y": 41.3619
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6025,
+                      "Y": 0.1798
+                    },
+                    "PreSize": {
+                      "X": 0.6217,
+                      "Y": 0.1435
+                    },
+                    "LeftMargin": 88.667,
+                    "RightMargin": 26.333,
+                    "TopMargin": 172.1381,
+                    "BottomMargin": 24.8619,
+                    "Tag": 114,
+                    "ActionTag": -1994444559,
+                    "Size": {
+                      "X": 189.0,
+                      "Y": 33.0
+                    },
+                    "Name": "lbMoney_0",
+                    "ctype": "TextObjectData"
                   }
                 ],
                 "ActionTag": -2022178428,
@@ -3932,9 +4230,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_gun .png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_gun .png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -4043,9 +4341,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/nong_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "nong_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -4088,9 +4386,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/duoi_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "duoi_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 64,
                         "Scale9OriginY": 65,
@@ -4176,14 +4474,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_plus_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_plus_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -4251,14 +4549,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_pressed.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_pressed.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/button_sub_normal.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "button_sub_normal.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -4314,9 +4612,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "ScreenGame/UI_Ingame/de_sung.png",
-                          "Plist": ""
+                          "Type": "PlistSubImage",
+                          "Path": "de_sung.png",
+                          "Plist": "ScreenGame/Ingame.plist"
                         },
                         "Scale9OriginX": 46,
                         "Scale9OriginY": 52,
@@ -4504,7 +4802,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -4551,7 +4849,7 @@
               "Y": 0.0214
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "LeftMargin": 605.4634,
@@ -4574,14 +4872,14 @@
                   "Plist": ""
                 },
                 "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/giu_ca.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "giu_ca.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/giu_ca.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "giu_ca.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -4649,20 +4947,20 @@
                   "Plist": ""
                 },
                 "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "Lobby/btn_logout.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "button/btnSetting.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "Lobby/btn_logout.png",
-                  "Plist": ""
+                  "Type": "PlistSubImage",
+                  "Path": "button/btnSetting.png",
+                  "Plist": "ScreenGame/Ingame.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 35,
-                "Scale9Height": 43,
+                "Scale9Width": 60,
+                "Scale9Height": 68,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -4676,36 +4974,36 @@
                 "ShadowOffsetY": -2.0,
                 "TouchEnable": true,
                 "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
+                  "ScaleX": 0.625,
+                  "ScaleY": 0.5673
                 },
                 "Position": {
-                  "X": 635.6083,
-                  "Y": 356.9867
+                  "X": 649.9086,
+                  "Y": 390.9399
                 },
                 "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
+                  "ScaleX": 0.6212,
+                  "ScaleY": 0.6212
                 },
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 3.178,
-                  "Y": 1.7849
+                  "X": 3.2495,
+                  "Y": 1.9547
                 },
                 "PreSize": {
-                  "X": 0.325,
-                  "Y": 0.325
+                  "X": 0.45,
+                  "Y": 0.45
                 },
-                "LeftMargin": 603.1083,
-                "RightMargin": -468.1083,
-                "TopMargin": -189.4867,
-                "BottomMargin": 324.4867,
+                "LeftMargin": 593.6586,
+                "RightMargin": -483.6586,
+                "TopMargin": -229.8829,
+                "BottomMargin": 339.8829,
                 "Tag": 168,
                 "ActionTag": -943653433,
                 "Size": {
-                  "X": 65.0,
-                  "Y": 65.0
+                  "X": 90.0,
+                  "Y": 90.0
                 },
                 "Name": "btnMenu",
                 "ctype": "ButtonObjectData"
@@ -4725,19 +5023,19 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/btnWeb.png",
+                  "Path": "ScreenGame/btnAuto.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "ScreenGame/UI_Ingame/btnWeb.png",
+                  "Path": "ScreenGame/btnAuto.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 84,
-                "Scale9Height": 92,
+                "Scale9Width": 42,
+                "Scale9Height": 47,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -4759,8 +5057,8 @@
                   "Y": 16.0974
                 },
                 "Scale": {
-                  "ScaleX": 0.54,
-                  "ScaleY": 0.54
+                  "ScaleX": 0.9971,
+                  "ScaleY": 0.9971
                 },
                 "CColor": {},
                 "IconVisible": false,
@@ -4769,21 +5067,514 @@
                   "Y": 0.0805
                 },
                 "PreSize": {
-                  "X": 0.57,
-                  "Y": 0.57
+                  "X": 0.36,
+                  "Y": 0.345
                 },
-                "LeftMargin": 37.0253,
-                "RightMargin": 48.9747,
-                "TopMargin": 126.9026,
-                "BottomMargin": -40.9026,
+                "LeftMargin": 58.0253,
+                "RightMargin": 69.9747,
+                "TopMargin": 149.4026,
+                "BottomMargin": -18.4026,
                 "Tag": 102,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "tick.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9OriginX": 13,
+                    "Scale9OriginY": 15,
+                    "Scale9Width": 14,
+                    "Scale9Height": 16,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 39.0651,
+                      "Y": 56.3514
+                    },
+                    "Scale": {
+                      "ScaleX": 0.4743,
+                      "ScaleY": 0.4743
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5426,
+                      "Y": 0.8167
+                    },
+                    "PreSize": {
+                      "X": 0.5556,
+                      "Y": 0.6667
+                    },
+                    "LeftMargin": 19.0651,
+                    "RightMargin": 12.9349,
+                    "TopMargin": -10.3514,
+                    "BottomMargin": 33.3514,
+                    "Tag": 110,
+                    "ActionTag": 1458682353,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 46.0
+                    },
+                    "VisibleForFrame": false,
+                    "Name": "tick",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
                 "ActionTag": -1641004758,
                 "Size": {
-                  "X": 114.0,
-                  "Y": 114.0
+                  "X": 72.0,
+                  "Y": 69.0
                 },
                 "Name": "btnAuto",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 969.8616,
+                  "Y": 347.9183
+                },
+                "Scale": {
+                  "ScaleX": 0.7366,
+                  "ScaleY": 0.7366
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 4.8493,
+                  "Y": 1.7396
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "LeftMargin": 969.8616,
+                "RightMargin": -969.8616,
+                "TopMargin": -347.9183,
+                "BottomMargin": 347.9183,
+                "Tag": 109,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/borderSetting.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9OriginX": 37,
+                    "Scale9OriginY": 128,
+                    "Scale9Width": 39,
+                    "Scale9Height": 134,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -195.4078,
+                      "Y": 58.6431
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "RotationSkewX": 90.0,
+                    "RotationSkewY": 90.0,
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.977,
+                      "Y": 0.2932
+                    },
+                    "PreSize": {
+                      "X": 0.565,
+                      "Y": 1.95
+                    },
+                    "LeftMargin": -251.9078,
+                    "RightMargin": 338.9078,
+                    "TopMargin": -53.6431,
+                    "BottomMargin": -136.3569,
+                    "Tag": 108,
+                    "ActionTag": -925714018,
+                    "Size": {
+                      "X": 113.0,
+                      "Y": 390.0
+                    },
+                    "Name": "bg",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnHome.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnHome.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 60,
+                    "Scale9Height": 68,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -338.6225,
+                      "Y": 58.1602
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -1.6931,
+                      "Y": 0.2908
+                    },
+                    "PreSize": {
+                      "X": 0.45,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": -383.6225,
+                    "RightMargin": 493.6225,
+                    "TopMargin": 96.8398,
+                    "BottomMargin": 13.1602,
+                    "Tag": 110,
+                    "ActionTag": 1429461006,
+                    "Size": {
+                      "X": 90.0,
+                      "Y": 90.0
+                    },
+                    "Name": "btnHome",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnMusic.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnMusic.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 60,
+                    "Scale9Height": 68,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -243.6583,
+                      "Y": 58.1602
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -1.2183,
+                      "Y": 0.2908
+                    },
+                    "PreSize": {
+                      "X": 0.45,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": -288.6583,
+                    "RightMargin": 398.6583,
+                    "TopMargin": 96.8398,
+                    "BottomMargin": 13.1602,
+                    "Tag": 111,
+                    "ActionTag": -1243411186,
+                    "Size": {
+                      "X": 90.0,
+                      "Y": 90.0
+                    },
+                    "Name": "btnMusic",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnSound.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnSound.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 60,
+                    "Scale9Height": 68,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.53,
+                      "ScaleY": 0.4803
+                    },
+                    "Position": {
+                      "X": -142.6132,
+                      "Y": 56.387
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.7131,
+                      "Y": 0.2819
+                    },
+                    "PreSize": {
+                      "X": 0.45,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": -190.3132,
+                    "RightMargin": 300.3132,
+                    "TopMargin": 96.84,
+                    "BottomMargin": 13.16,
+                    "Tag": 112,
+                    "ActionTag": -1913680133,
+                    "Size": {
+                      "X": 90.0,
+                      "Y": 90.0
+                    },
+                    "Name": "btnSound",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnFish.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "button/btnFish.png",
+                      "Plist": "ScreenGame/Ingame.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 60,
+                    "Scale9Height": 68,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -55.9627,
+                      "Y": 58.1602
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.2798,
+                      "Y": 0.2908
+                    },
+                    "PreSize": {
+                      "X": 0.45,
+                      "Y": 0.45
+                    },
+                    "LeftMargin": -100.9627,
+                    "RightMargin": 210.9627,
+                    "TopMargin": 96.8398,
+                    "BottomMargin": 13.1602,
+                    "Tag": 113,
+                    "ActionTag": 964362934,
+                    "Size": {
+                      "X": 90.0,
+                      "Y": 90.0
+                    },
+                    "Name": "btnFish",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -1106395602,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 200.0
+                },
+                "VisibleForFrame": false,
+                "Name": "panel_menu",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "IMG_TEXT_LOCK_FISH.png",
+                  "Plist": "ScreenGame/AtlasUnknowItems.plist"
+                },
+                "Scale9OriginX": 157,
+                "Scale9OriginY": 20,
+                "Scale9Width": 164,
+                "Scale9Height": 23,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 50.8636,
+                  "Y": 494.9574
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2543,
+                  "Y": 2.4748
+                },
+                "PreSize": {
+                  "X": 2.39,
+                  "Y": 0.315
+                },
+                "LeftMargin": -188.1364,
+                "RightMargin": -89.8636,
+                "TopMargin": -326.4574,
+                "BottomMargin": 463.4574,
+                "Tag": 111,
+                "ActionTag": 880935830,
+                "Size": {
+                  "X": 478.0,
+                  "Y": 63.0
+                },
+                "VisibleForFrame": false,
+                "Name": "txtLockFish",
+                "ctype": "ImageViewObjectData"
               }
             ],
             "ActionTag": -1004251529,
@@ -4809,29 +5600,20 @@
         "Fonts/SoDan.fnt",
         "Fonts/SoDan.png",
         "Fonts/tahomabd.ttf",
-        "Lobby/btn_logout.png",
+        "Lobby/ico_MAN.png",
         "Lobby/ico_VANG.png",
         "Lobby/Popup/Fonts/yellow-export.fnt",
         "Lobby/Popup/Fonts/yellow-export.png",
+        "ScreenGame/AtlasUnknowItems.plist",
+        "ScreenGame/AtlasUnknowItems.png",
         "ScreenGame/Background/bg.jpg",
         "ScreenGame/Background/bg2.jpg",
         "ScreenGame/Background/bg3.jpg",
         "ScreenGame/Background/bubble.png",
         "ScreenGame/Background/particle_texture.plist",
-        "ScreenGame/UI_Ingame/ava_nho.png",
-        "ScreenGame/UI_Ingame/btnWeb.png",
-        "ScreenGame/UI_Ingame/button_plus_normal.png",
-        "ScreenGame/UI_Ingame/button_plus_pressed.png",
-        "ScreenGame/UI_Ingame/button_sub_normal.png",
-        "ScreenGame/UI_Ingame/button_sub_pressed.png",
-        "ScreenGame/UI_Ingame/co.png",
-        "ScreenGame/UI_Ingame/de_gun .png",
-        "ScreenGame/UI_Ingame/de_sung.png",
-        "ScreenGame/UI_Ingame/duoi_sung.png",
-        "ScreenGame/UI_Ingame/giu_ca.png",
-        "ScreenGame/UI_Ingame/gold.png",
-        "ScreenGame/UI_Ingame/khung_ava.png",
-        "ScreenGame/UI_Ingame/nong_sung.png"
+        "ScreenGame/btnAuto.png",
+        "ScreenGame/Ingame.plist",
+        "ScreenGame/Ingame.png"
       ],
       "ctype": "GameFileData"
     }

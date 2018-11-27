@@ -34,13 +34,13 @@ var NodeDisplayHold = cc.Node.extend({
         this._super();
         this.sprites = [];
         for(var i=0;i<MAX_SP_HOLD;i++){
-            var sp = new cc.Sprite("res/GUI/ScreenGame/UI_Ingame/hold_icon.png");
+            var sp = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("IMG_LOCKFISH_CHAIN.png"));
             sp.setVisible(false);
-            sp.setScale(.45);
+            sp.setScale(1);
             this.addChild(sp);
             this.sprites.push(sp);
         }
-        this.holdSprite = new cc.Sprite("res/GUI/ScreenGame/UI_Ingame/hold_fish.png")
+        this.holdSprite = new cc.Sprite(cc.spriteFrameCache.getSpriteFrame("hold_fish.png"));
         this.addChild(this.holdSprite,1);
         this.holdSprite.setScale(.35);
         this.holdSprite.setOpacity(200);

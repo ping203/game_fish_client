@@ -89,7 +89,7 @@ var LoginScene = BCBaseLayer.extend({
 
             BCGameClient.getInstance().setListener(lobbyListenner);
             //BCGameClient.getInstance().connect("192.168.0.113",8080);
-            BCGameClient.getInstance().connect("35.240.162.131",8080);
+            BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
 
         }
     },

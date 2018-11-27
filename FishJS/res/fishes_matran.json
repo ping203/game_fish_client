@@ -8,8 +8,11 @@
     {"name":"line_5","delay_time":0.75,"fish_type":7,"so_luong":80,"start_time":0,"end_time":59.25,"time_xuat_hien":10,"path":[{"x":-5,"y":5},{"x":45,"y":5}]},
     {"name":"line_6","delay_time":0.75,"fish_type":8,"so_luong":80,"start_time":60,"end_time":112,"time_xuat_hien":10,"path":[{"x":-5,"y":5},{"x":45,"y":5}]},
     {"name":"line_7","delay_time":0.75,"fish_type":9,"so_luong":80,"start_time":0,"end_time":59.25,"time_xuat_hien":10,"path":[{"x":45,"y":17.5},{"x":-5,"y":17.5}]},
+    {"name":"line_8","delay_time":0.75,"fish_type":10,"so_luong":80,"start_time":60,"end_time":112,"time_xuat_hien":10,"path":[{"x":45,"y":17.5},{"x":-5,"y":17.5}]},
 
-    {"name":"line_8","delay_time":0.75,"fish_type":10,"so_luong":80,"start_time":60,"end_time":112,"time_xuat_hien":12,"path":[{"x":-5,"y":17.5},{"x":45,"y":17.5}]},
-    {"name":"line_9","delay_time":2.5,"fish_type":11,"so_luong":48,"start_time":0,"end_time":110,"time_xuat_hien":17,"path":[{"x":-5,"y":11.25},{"x":45,"y":11.25}]}
+    {"name":"line_9","delay_time":5,"fish_type":23,"so_luong":8,"start_time":0,"end_time":39.5,"time_xuat_hien":12,"path":[{"x":-5,"y":11.25},{"x":45,"y":11.25}]},
+    {"name":"line_10","delay_time":7,"fish_type":24,"so_luong":5,"start_time":40,"end_time":74.5,"time_xuat_hien":15,"path":[{"x":-5,"y":11.25},{"x":45,"y":11.25}]},
+    {"name":"line_11","delay_time":10,"fish_type":25,"so_luong":4,"start_time":75,"end_time":104.5,"time_xuat_hien":17,"path":[{"x":-5,"y":11.25},{"x":45,"y":11.25}]}
+
   ]
 }

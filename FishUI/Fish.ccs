@@ -55,7 +55,6 @@
               <Image Name="btn_tieuvang_active.png" />
             </Folder>
             <Folder Name="Fonts">
-              <TTF Name="UTM Swiss 721 Black Condensed.ttf" />
               <TTF Name="UTM Swiss Condensed.ttf" />
               <TTF Name="UTM Swiss CondensedBold.ttf" />
               <Image Name="yellow.png" />
@@ -116,6 +115,33 @@
           <Image Name="opacity.png" />
         </Folder>
         <Folder Name="ScreenGame">
+          <PlistImageFolder Image="AtlasUnknowItems.png" PListFile="AtlasUnknowItems.plist" Name=".AtlasUnknowItems_PList.Dir">
+            <PlistImageFile Name="ExitMsg.png" Key="ExitMsg.png" />
+            <PlistImageFile Name="IMG_BG_NOTIFY_BAR.png" Key="IMG_BG_NOTIFY_BAR.png" />
+            <PlistImageFile Name="IMG_BG_NOTIFY_BAR_LOBBY.png" Key="IMG_BG_NOTIFY_BAR_LOBBY.png" />
+            <PlistImageFile Name="IMG_BORDER_OPTIONGAME.png" Key="IMG_BORDER_OPTIONGAME.png" />
+            <PlistImageFile Name="IMG_BTN_CANCEL_LOCK_FISH.png" Key="IMG_BTN_CANCEL_LOCK_FISH.png" />
+            <PlistImageFile Name="IMG_BTN_CLOSEGAME.png" Key="IMG_BTN_CLOSEGAME.png" />
+            <PlistImageFile Name="IMG_BTN_EXIT_GAME.png" Key="IMG_BTN_EXIT_GAME.png" />
+            <PlistImageFile Name="IMG_BTN_FULL_SCREEN.png" Key="IMG_BTN_FULL_SCREEN.png" />
+            <PlistImageFile Name="IMG_BTN_HESO.png" Key="IMG_BTN_HESO.png" />
+            <PlistImageFile Name="IMG_BTN_LOCK_FISH.png" Key="IMG_BTN_LOCK_FISH.png" />
+            <PlistImageFile Name="IMG_BTN_MUSIC_GAME.png" Key="IMG_BTN_MUSIC_GAME.png" />
+            <PlistImageFile Name="IMG_BTN_OPTIN_INGAME.png" Key="IMG_BTN_OPTIN_INGAME.png" />
+            <PlistImageFile Name="IMG_BTN_OPTIN_INGAME_EXTEND.png" Key="IMG_BTN_OPTIN_INGAME_EXTEND.png" />
+            <PlistImageFile Name="IMG_BTN_SOUND_GAME.png" Key="IMG_BTN_SOUND_GAME.png" />
+            <PlistImageFile Name="IMG_COIN.png" Key="IMG_COIN.png" />
+            <PlistImageFile Name="IMG_HP_BAR.png" Key="IMG_HP_BAR.png" />
+            <PlistImageFile Name="IMG_HP_CURRENT_0.png" Key="IMG_HP_CURRENT_0.png" />
+            <PlistImageFile Name="IMG_HP_CURRENT_1.png" Key="IMG_HP_CURRENT_1.png" />
+            <PlistImageFile Name="IMG_HP_CURRENT_2.png" Key="IMG_HP_CURRENT_2.png" />
+            <PlistImageFile Name="IMG_HP_CURRENT_3.png" Key="IMG_HP_CURRENT_3.png" />
+            <PlistImageFile Name="IMG_LEVEL_TEXT.png" Key="IMG_LEVEL_TEXT.png" />
+            <PlistImageFile Name="IMG_LOADING.png" Key="IMG_LOADING.png" />
+            <PlistImageFile Name="IMG_LOCKFISH_BG.png" Key="IMG_LOCKFISH_BG.png" />
+            <PlistImageFile Name="IMG_LOCKFISH_CHAIN.png" Key="IMG_LOCKFISH_CHAIN.png" />
+            <PlistImageFile Name="IMG_TEXT_LOCK_FISH.png" Key="IMG_TEXT_LOCK_FISH.png" />
+          </PlistImageFolder>
           <Folder Name="Background">
             <Image Name="bg.jpg" />
             <Image Name="bg2.jpg" />
@@ -123,37 +149,50 @@
             <PlistParticleFile Name="particle_texture.plist" />
             <Image Name="playerPos.png" />
           </Folder>
-          <Folder Name="UI_Ingame">
-            <Image Name="ava_nho.png" />
-            <Image Name="btn_add_normal.png" />
-            <Image Name="btn_add_pressed.png" />
-            <Image Name="btnWeb.png" />
-            <Image Name="bullet.png" />
-            <Image Name="button_plus_normal.png" />
-            <Image Name="button_plus_pressed.png" />
-            <Image Name="button_sub_normal.png" />
-            <Image Name="button_sub_pressed.png" />
-            <Image Name="co.png" />
-            <Image Name="de_gun .png" />
-            <Image Name="de_sung.png" />
-            <Image Name="diamond.png" />
-            <Image Name="duoi_sung.png" />
-            <Image Name="gift.png" />
-            <Image Name="giu_ca.png" />
-            <Image Name="gold.png" />
-            <Image Name="hold_fish.png" />
-            <Image Name="hold_icon.png" />
-            <Image Name="khung_ava.png" />
-            <Image Name="khung_time.png" />
-            <Image Name="light.png" />
-            <Image Name="ngoc.png" />
-            <Image Name="nong_sung.png" />
-            <Image Name="v2.png_1.png" />
-            <Image Name="v2.png_124.png" />
-            <Image Name="v3.png_1.png" />
-          </Folder>
+          <PlistImageFolder Image="Ingame.png" PListFile="Ingame.plist" Name=".Ingame_PList.Dir">
+            <PlistImageFile Name="ava_nho.png" Key="ava_nho.png" />
+            <PlistImageFile Name="btn_add_normal.png" Key="btn_add_normal.png" />
+            <PlistImageFile Name="btn_add_pressed.png" Key="btn_add_pressed.png" />
+            <PlistImageFile Name="btnAuto.png" Key="btnAuto.png" />
+            <PlistImageFile Name="btnWeb.png" Key="btnWeb.png" />
+            <PlistImageFile Name="bullet.png" Key="bullet.png" />
+            <PlistImageFile Name="button_borderSetting.png" Key="button/borderSetting.png" />
+            <PlistImageFile Name="button_btnFish.png" Key="button/btnFish.png" />
+            <PlistImageFile Name="button_btnHome.png" Key="button/btnHome.png" />
+            <PlistImageFile Name="button_btnMusic.png" Key="button/btnMusic.png" />
+            <PlistImageFile Name="button_btnMusicOff.png" Key="button/btnMusicOff.png" />
+            <PlistImageFile Name="button_btnSetting.png" Key="button/btnSetting.png" />
+            <PlistImageFile Name="button_btnSound.png" Key="button/btnSound.png" />
+            <PlistImageFile Name="button_btnSoundOff.png" Key="button/btnSoundOff.png" />
+            <PlistImageFile Name="button_plus_normal.png" Key="button_plus_normal.png" />
+            <PlistImageFile Name="button_plus_pressed.png" Key="button_plus_pressed.png" />
+            <PlistImageFile Name="button_sub_normal.png" Key="button_sub_normal.png" />
+            <PlistImageFile Name="button_sub_pressed.png" Key="button_sub_pressed.png" />
+            <PlistImageFile Name="co.png" Key="co.png" />
+            <PlistImageFile Name="de_gun .png" Key="de_gun .png" />
+            <PlistImageFile Name="de_sung.png" Key="de_sung.png" />
+            <PlistImageFile Name="diamond.png" Key="diamond.png" />
+            <PlistImageFile Name="duoi_sung.png" Key="duoi_sung.png" />
+            <PlistImageFile Name="gift.png" Key="gift.png" />
+            <PlistImageFile Name="giu_ca.png" Key="giu_ca.png" />
+            <PlistImageFile Name="gold.png" Key="gold.png" />
+            <PlistImageFile Name="hold_fish.png" Key="hold_fish.png" />
+            <PlistImageFile Name="hold_icon.png" Key="hold_icon.png" />
+            <PlistImageFile Name="item_mask.png" Key="item_mask.png" />
+            <PlistImageFile Name="khung_ava.png" Key="khung_ava.png" />
+            <PlistImageFile Name="khung_time.png" Key="khung_time.png" />
+            <PlistImageFile Name="light.png" Key="light.png" />
+            <PlistImageFile Name="ngoc.png" Key="ngoc.png" />
+            <PlistImageFile Name="nong_sung.png" Key="nong_sung.png" />
+            <PlistImageFile Name="tick.png" Key="tick.png" />
+            <PlistImageFile Name="v2.png_1.png" Key="v2.png_1.png" />
+            <PlistImageFile Name="v2.png_124.png" Key="v2.png_124.png" />
+            <PlistImageFile Name="v3.png_1.png" Key="v3.png_1.png" />
+          </PlistImageFolder>
+          <Image Name="btnAuto.png" />
         </Folder>
         <Project Name="CreatePathScene.csd" Type="Scene" />
+        <Project Name="DialogGUI.csd" Type="Scene" />
         <Project Name="GameLayer.csd" Type="Layer" />
         <Project Name="LobbyScene.csd" Type="Scene" />
         <Project Name="LoginLayer.csd" Type="Scene" />

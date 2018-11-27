@@ -14,12 +14,13 @@ var DemoScene = BCBaseLayer.extend({
         fishLifeCycle.gameScene = this.gameScene;
         fishLifeCycle.players = this.gameScene.players;
 
-        fishLifeCycle.bets = [100,200,500,1000,5000];
+        fishLifeCycle.bets = [50,100,500,1000,5000];
         fishLifeCycle.myChair = fishLifeCycle.position = 0;
         fishLifeCycle.myBetIdx = 4;
 
         fishLifeCycle.myPlayer = fishLifeCycle.players[fishLifeCycle.myChair];
         fishLifeCycle.myPlayer.playerData.rawData = gameData.userData;
+        fishLifeCycle.myPlayer.playerData.rawData["gold"] = MONEY_DEMO;
         fishLifeCycle.myPlayer.enable(true);
         fishLifeCycle.myPlayer.updateInfo();
         fishLifeCycle.myPlayer.setIsMyPlayer(true);
@@ -33,7 +34,7 @@ var DemoScene = BCBaseLayer.extend({
         this._super();
         this.scheduleUpdate();
         this.gameScene.startMusic();
-        this.gameScene.playerScreen();
+        // this.gameScene.playerScreen();
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);
@@ -69,7 +70,8 @@ var DemoScene = BCBaseLayer.extend({
     },
     // for action
     onStartShoot: function(bet,x,y){
-
+        fishLifeCycle.myPlayer.playerData.rawData["gold"] -= bet;
+        fishLifeCycle.myPlayer.updateInfo();
     },
     onShootFish: function(bet,fish_id){
         var result = this.gameLogic.shoot(fish_id,bet);
@@ -84,6 +86,10 @@ var DemoScene = BCBaseLayer.extend({
 
                 this.gameScene.createEffectFishDie(fishSp,result.won_money,0,fish.fishType > 10);
                 this.gameScene.gameMgr.destroyEntity(fish);
+
+                fishLifeCycle.myPlayer.playerData.rawData["gold"] += result.won_money;
+                fishLifeCycle.myPlayer.updateInfo();
+
 
                 fishSound.playEffectFishDie(fish.id);
             }
@@ -643,7 +649,7 @@ var GameLogicDemo = cc.Class.extend({
 
             if(this.gameMap.getMatranMap().isFishAvaiable(id)) {
                 var fishDat = this.gameMap.getMatranMap().getFishByID(id);
-                result.success = true;
+                result.success = this.shootTest(fishDat.ti_le_ban / 100.0);
                 if(result.success) {
                     result.won_money = Math.floor( fishDat.ti_le_an * bet);
                     this.gameMap.getMatranMap().addFishToRemovedList(id);
@@ -659,7 +665,7 @@ var GameLogicDemo = cc.Class.extend({
     },
     shootTest: function(percent) {
         var test = Math.random();
-        return test <= percent * 3.0;
+        return test <= percent * 2.0;
     //        return true;
     },
 

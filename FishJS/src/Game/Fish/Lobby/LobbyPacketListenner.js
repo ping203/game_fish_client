@@ -12,9 +12,30 @@ var LobbyPacketListenner = cc.Class.extend({
         cc.log("connect :" + result);
         if(result)
         {
-            var pk = new CmdSendLogin();
+            var pk = new BCCmdSendLogin();
             pk.putData(gameData.nickName,gameData.accessToken);
             BCGameClient.getInstance().sendPacket(pk);
+        }
+        else
+        {
+            bcSceneMgr.clearLoading();
+            // BCDialog.showDialog("Kết nối đến máy chủ thất bại, vui lòng thử lại!",this,function (id) {
+            //     if(id == BCDialog.BTN_OK)
+            //         BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
+            //     else
+            //     {
+            //         if(lobbyThanBien)
+            //         {
+            //             fishSound.stopMusic();
+            //             lobbyThanBien.onExitGame();
+            //         }
+            //         else
+            //         {
+            //             BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
+            //         }
+            //
+            //     }
+            // })
         }
 
 
@@ -26,7 +47,7 @@ var LobbyPacketListenner = cc.Class.extend({
         switch (cmd){
             case CMD.CMD_LOGIN:
             {
-                var pk = new CmdReceivedLogin(pkg); // update user info
+                var pk = new BCCmdReceivedLogin(pkg); // update user info
 
                 gameData.userData.userName = pk.userName;
                 gameData.userData.displayName = pk.displayName;
@@ -57,7 +78,17 @@ var LobbyPacketListenner = cc.Class.extend({
     onDisconnect: function(){
         //this.gameListenner.onDisconnect();
         cc.log("on Disconnected");
-        bcSceneMgr.openWithScene(new LoginScene());
+
+        // bcSceneMgr.openWithScene(new LoginScene());
+
+        BCDialog.showDialog("Bạn đã bị ngắt kết nối từ máy chủ!",this,function () {
+            var lobbyScene = new LobbyScene();
+            lobbyScene.withLogin();
+            bcSceneMgr.openWithScene(lobbyScene);
+            //
+            BCGameClient.getInstance().setListener(lobbyListenner);
+            BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
+        })
 
     }
 })

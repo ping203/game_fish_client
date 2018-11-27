@@ -2,7 +2,7 @@
  * Created by HOANG on 9/22/2018.
  */
 
-CmdReceivedLogin = CmdReceivedCommon.extend({
+BCCmdReceivedLogin = CmdReceivedCommon.extend({
     ctor: function(pkg){
         this._super(pkg);
         this.readData();
@@ -18,7 +18,7 @@ CmdReceivedLogin = CmdReceivedCommon.extend({
     }
 })
 
-CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
+BCCmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -50,7 +50,7 @@ CmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
 
 
 
-CmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
+BCCmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -70,7 +70,7 @@ CmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
 })
 
 
-CmdReceivedUserExitRoom = CmdReceivedCommon.extend({
+BCCmdReceivedUserExitRoom = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -83,7 +83,7 @@ CmdReceivedUserExitRoom = CmdReceivedCommon.extend({
 })
 
 
-CmdReceivedStartShoot = CmdReceivedCommon.extend({
+BCCmdReceivedStartShoot = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -100,7 +100,7 @@ CmdReceivedStartShoot = CmdReceivedCommon.extend({
     }
 })
 
-CmdReceivedUpdateRound = CmdReceivedCommon.extend({
+BCCmdReceivedUpdateRound = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -148,7 +148,7 @@ CmdReceivedUpdateRound = CmdReceivedCommon.extend({
     }}
 )
 
-CmdReceivedAddFish = CmdReceivedCommon.extend({
+BCCmdReceivedAddFish = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -182,7 +182,7 @@ CmdReceivedAddFish = CmdReceivedCommon.extend({
     }
 })
 
-CmdReceivedShootResult = CmdReceivedCommon.extend({
+BCCmdReceivedShootResult = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -198,7 +198,7 @@ CmdReceivedShootResult = CmdReceivedCommon.extend({
     }
 })
 
-CmdReceivedStateChange = CmdReceivedCommon.extend({
+BCCmdReceivedStateChange = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -206,10 +206,11 @@ CmdReceivedStateChange = CmdReceivedCommon.extend({
     },
     readData: function(){
         this.state = this.getByte();
+        this.time = this.getFloat();
     }
 })
 
-CmdReceivedMatrixData = CmdReceivedCommon.extend({
+BCCmdReceivedMatrixData = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);
@@ -224,7 +225,7 @@ CmdReceivedMatrixData = CmdReceivedCommon.extend({
 
 
 
-CmdReceivedLockFish = CmdReceivedCommon.extend({
+BCCmdReceivedLockFish = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {
         this._super(pkg);

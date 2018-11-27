@@ -21,24 +21,23 @@ var LobbyThanBien = cc.Layer.extend({
             box2D_init();
             fishData.load();
             matranMap.loadData();
-            //ccs.load("res/GUI/GameLayer.json");
+            gameData.loadStorage();
+            ccs.load("res/GUI/GameLayer.json");
 
-             //var sys = cc.sys;
-             //if(!sys.isNative)
-             //    document.body.style.cursor= "url('http://35.240.162.131/res/pointer.png'), auto";
-
+             var sys = cc.sys;
+             if(!sys.isNative)
+                document.body.style.cursor= "url('http://35.240.162.131/res/pointer.png'), auto";
 
             lobbyThanBien.onOpenGameDone();
 
-            //bcSceneMgr.openWithScene(new LoginScene());
+            cc.loader.resPath = "";
 
-
-             var lobbyScene = new LobbyScene();
-             lobbyScene.withLogin();
-             bcSceneMgr.openWithScene(lobbyScene);
+            var lobbyScene = new LobbyScene();
+            lobbyScene.withLogin();
+            bcSceneMgr.openWithScene(lobbyScene);
             //
-            // BCGameClient.getInstance().setListener(lobbyListenner);
-            // BCGameClient.getInstance().connect("35.240.162.131",8080);
+            BCGameClient.getInstance().setListener(lobbyListenner);
+            BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
 
         });
 

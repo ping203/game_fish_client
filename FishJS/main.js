@@ -82,14 +82,12 @@
         // The game will be resized when browser size change
         cc.view.resizeWithBrowserSize(true);
 
-        // cc.loader.resPath = "http://35.240.162.131";
-
-
         //load resources
         cc.LoaderScene.preload(g_resources_fishes, function () {
             box2D_init();
             fishData.load();
             matranMap.loadData();
+            gameData.loadStorage();
             ccs.load("res/GUI/GameLayer.json");
 
             bcSceneMgr.openWithScene(new LoginScene());

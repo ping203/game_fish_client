@@ -120,21 +120,37 @@ var LobbyScene = BCBaseLayer.extend({
                 break;
             }
             case LobbyScene.BTN_PLAY_NOW:{
-                var pkQuickJoin = new CmdSendQuickJoin();
+                var pkQuickJoin = new BCCmdSendQuickJoin();
                 BCGameClient.getInstance().sendPacket(pkQuickJoin);
+                bcSceneMgr.addLoading("Đang vào phòng chơi, vui lòng chờ...",true);
                 break;
             }
             case LobbyScene.BTN_SHOP:{
-
+                var shop = new ShopLayer();
+                this.addChild(shop,10);
                 break;
             }
             case LobbyScene.BTN_BACK:
             {
-                if(lobbyThanBien)
-                {
-                    lobbyThanBien.onExitGame();
-                    return;
-                }
+
+                BCDialog.showDialog("Bạn chắc chắn muốn thoát game?",this,function (id) {
+                    if(id == BCDialog.BTN_OK)
+                    {
+                        if(lobbyThanBien)
+                        {
+                            BCGameClient.getInstance().disconnect();
+                            fishSound.stopMusic();
+                            lobbyThanBien.onExitGame();
+
+                        }
+                        else
+                        {
+                            cc.director.end();
+                        }
+                    }
+                })
+
+
                 break;
             }
         }
@@ -147,3 +163,65 @@ LobbyScene.BTN_BACK = 3;
 LobbyScene.BTN_PLAY_NOW = 4;
 LobbyScene.BTN_PLAY_DEMO = 5;
 LobbyScene.BTN_SHOP = 6;
+
+
+
+var BCDialog = BCBaseLayer.extend({
+    ctor: function () {
+        this._super();
+        this.initWithBinaryFile("res/GUI/DialogGUI.json");
+        this.target = this.callback = null;
+    },
+    initGUI: function () {
+        this._bg = this.getControl("bg");
+        this._btnOK = this.customizeButton("btnOK", BCDialog.BTN_OK,this._bg);
+        this._btnCancel = this.customizeButton("btnCancel", BCDialog.BTN_CANCEL,this._bg);
+
+        this._lbMessage = this.getControl("lbText",this._bg);
+
+
+    },
+    customizeGUI: function () {
+        this.setFog(true);
+    },
+    onEnterFinish: function () {
+        this.setShowHideAnimate(this._bg);
+    },
+
+    set: function (msg, target, selector) {
+        this._lbMessage.setString(msg);
+        this.target = target;
+        this.callback = selector;
+    },
+    onButtonReleased: function (btn,id) {
+        this.btnID = id;
+        this.onClose();
+    },
+    onClose: function () {
+        this._super();
+        if(this.callback)
+        {
+            this.callback.call(this.target,this.btnID);
+        }
+    }
+})
+
+
+
+BCDialog.showDialog = function (msg, target, selector) {
+    var mainLayer = bcSceneMgr.getMainLayer();
+    if(mainLayer.getChildByTag(BCDialog.TAG))
+    {
+        mainLayer.removeChildByTag(BCDialog.TAG);
+    }
+    var dialog = new BCDialog();
+    dialog.set(msg,target,selector);
+    mainLayer.addChild(dialog,BCDialog.ZORDER,BCDialog.TAG);
+    return dialog;
+}
+
+BCDialog.BTN_OK = 0;
+BCDialog.BTN_CANCEL = 1;
+
+BCDialog.ZORDER = 100;
+BCDialog.TAG = 1324;

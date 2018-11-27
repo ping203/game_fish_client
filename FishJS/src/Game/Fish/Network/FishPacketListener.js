@@ -12,7 +12,7 @@ var FishPacketListener = cc.Class.extend({
         switch (cmd) {
             case CMD.CMD_QUICK_JOIN:
             {
-                var pk = new CmdReceivedJoinRoomSuccess(p);
+                var pk = new BCCmdReceivedJoinRoomSuccess(p);
                 pk.clean();
 
                 cc.log(JSON.stringify(pk));
@@ -24,17 +24,17 @@ var FishPacketListener = cc.Class.extend({
             }
             case CMD.CMD_UPDATE_ROUND:
             {
-                var pk = new CmdReceivedUpdateRound(p);
+                var pk = new BCCmdReceivedUpdateRound(p);
                 pk.clean();
                 cc.log("update round" + fishLifeCycle);
                 cc.log(JSON.stringify(pk));
-                //if(fishLifeCycle)
+                if(fishLifeCycle)
                     fishLifeCycle.onUpdateRound(pk);
                 break;
             }
             case CMD.CMD_START_SHOOT:
             {
-                var pk = new CmdReceivedStartShoot(p);
+                var pk = new BCCmdReceivedStartShoot(p);
                 pk.clean();
                 if(fishLifeCycle)
                     fishLifeCycle.onStartShoot(pk);
@@ -43,7 +43,7 @@ var FishPacketListener = cc.Class.extend({
             }
             case CMD.CMD_SHOOT_RESULT:
             {
-                var pk = new CmdReceivedShootResult(p);
+                var pk = new BCCmdReceivedShootResult(p);
                 pk.clean();
                 if(fishLifeCycle)
                     fishLifeCycle.onShootResult(pk);
@@ -53,7 +53,7 @@ var FishPacketListener = cc.Class.extend({
             }
             case CMD.CMD_USER_JOIN_ROOM:
             {
-                var ujoin = new CmdReceivedUserJoinRoom(p);
+                var ujoin = new BCCmdReceivedUserJoinRoom(p);
                 fishLifeCycle.onUserJoin(ujoin);
                 ujoin.clean();
 
@@ -61,14 +61,14 @@ var FishPacketListener = cc.Class.extend({
             }
             case CMD.CMD_USER_EXIT:
             {
-                var pk = new CmdReceivedUserExitRoom(p);
+                var pk = new BCCmdReceivedUserExitRoom(p);
                 fishLifeCycle.onUserExit(pk);
 
                 break;
             }
             case CMD.CMD_ADD_FISH:
             {
-                var pk = new CmdReceivedAddFish(p);
+                var pk = new BCCmdReceivedAddFish(p);
                 pk.clean();
                 //cc.log("add fish :" +JSON.stringify(pk.listFish.length));
                 fishLifeCycle.onAddFish(pk);
@@ -78,21 +78,21 @@ var FishPacketListener = cc.Class.extend({
             }
             case CMD.CMD_STATE_CHANGE:
             {
-                var pk = new CmdReceivedStateChange(p);
+                var pk = new BCCmdReceivedStateChange(p);
                 pk.clean();
                 fishLifeCycle.onStateChange(pk);
                 break;
             }
             case CMD.CMD_MATRIX_DATA:
             {
-                var pk = new CmdReceivedMatrixData(p);
+                var pk = new BCCmdReceivedMatrixData(p);
                 pk.clean();
                 fishLifeCycle.onMatrixData(pk);
                 break;
             }
             case CMD.CMD_LOCK_FISH:
             {
-                var pk = new CmdReceivedLockFish(p);
+                var pk = new BCCmdReceivedLockFish(p);
                 pk.clean();
                 fishLifeCycle.onLockFish(pk);
                 break;
@@ -107,7 +107,7 @@ var fishBZ = {}
 
 fishBZ.sendStartShoot = function(bet,x,y)
 {
-    var pk = new CmdSendStartShoot();
+    var pk = new BCCmdSendStartShoot();
     pk.putData(bet,x,y);
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
@@ -115,7 +115,7 @@ fishBZ.sendStartShoot = function(bet,x,y)
 
 fishBZ.sendShootFish =  function(bet,fish_id)
 {
-    var pk = new CmdSendShootSuccess();
+    var pk = new BCCmdSendShootSuccess();
     pk.putData(bet,fish_id);
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
@@ -126,7 +126,7 @@ fishBZ.sendShootFish =  function(bet,fish_id)
 }
 
 fishBZ.sendLockFish = function(isLock,fish_id){
-    var pk = new CmdSendLockFish();
+    var pk = new BCCmdSendLockFish();
     pk.putData(isLock,fish_id);
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
@@ -134,7 +134,7 @@ fishBZ.sendLockFish = function(isLock,fish_id){
 
 fishBZ.sendQuit = function()
 {
-    var pk = new CmdSendQuit();
+    var pk = new BCCmdSendQuit();
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }

@@ -8,6 +8,7 @@ var FishLifeCycle = cc.Class.extend({
     },
     onJoinRoomSucess: function(pk)
     {
+
         this.gameScene = new GameLayerUI();
         bcSceneMgr.openWithScene(this.gameScene);
         this.players = this.gameScene.players;
@@ -88,7 +89,7 @@ var FishLifeCycle = cc.Class.extend({
         {
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
             this.players[position].setGunBet(data.bet,false);
-            fishSound.playEffectShoot();
+
         }
         else
         {
@@ -117,6 +118,8 @@ var FishLifeCycle = cc.Class.extend({
             {
                 this.gameScene.effectMoney(pk.position,pk.won_money);
                 gameData.userData.gold = pk.user_money;
+                this.players[this.position].playerData.rawData["gold"] = pk.user_money;
+                this.players[this.position].updateInfo()
             }
         }
 
@@ -130,7 +133,7 @@ var FishLifeCycle = cc.Class.extend({
         {
             case BCGameManager.STATE_PREPARE:
             {
-                this.gameScene.stateToPrepare(10);
+                this.gameScene.stateToPrepare(pk.time);
                 break;
             }
             case BCGameManager.STATE_NORMAL_MAP:
