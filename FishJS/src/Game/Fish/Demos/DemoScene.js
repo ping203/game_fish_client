@@ -19,7 +19,7 @@ var DemoScene = BCBaseLayer.extend({
         fishLifeCycle.myBetIdx = 4;
 
         fishLifeCycle.myPlayer = fishLifeCycle.players[fishLifeCycle.myChair];
-        fishLifeCycle.myPlayer.playerData.rawData = gameData.userData;
+        fishLifeCycle.myPlayer.playerData.rawData = JSON.parse(JSON.stringify(gameData.userData));
         fishLifeCycle.myPlayer.playerData.rawData["gold"] = MONEY_DEMO;
         fishLifeCycle.myPlayer.enable(true);
         fishLifeCycle.myPlayer.updateInfo();

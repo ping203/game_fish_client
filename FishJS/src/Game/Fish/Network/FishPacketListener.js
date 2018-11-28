@@ -107,10 +107,11 @@ var fishBZ = {}
 
 fishBZ.sendStartShoot = function(bet,x,y)
 {
-    var pk = new BCCmdSendStartShoot();
-    pk.putData(bet,x,y);
-    BCGameClient.getInstance().sendPacket(pk);
-    pk.clean();
+        var pk = new BCCmdSendStartShoot();
+        pk.putData(bet,x,y);
+        BCGameClient.getInstance().sendPacket(pk);
+        pk.clean();
+
 }
 
 fishBZ.sendShootFish =  function(bet,fish_id)
