@@ -324,7 +324,7 @@ var GameLayerUI = BCBaseLayer.extend({
         // for holding Fish display
         for(var i=0;i<this.players.length;i++){
             if(this.players[i].isEnabled && this.players[i].holdFishInfo.getIsHolding() && this.players[i].holdFishInfo.getFish()){
-                if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released)
+                if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released || this.players[i].holdFishInfo.getFish().isOutsite())
                 {
                     this.players[i].releaseHold();
                     continue;
@@ -425,6 +425,8 @@ var GameLayerUI = BCBaseLayer.extend({
                 }
                 else
                 {
+                    if(fish_find.fishType < 26)     // voi 3 loai boss thi ko can` vi` no boi vong quanh
+                        fish_find.enableCheckOutsite(true);
                     fishLifeCycle.myPlayer.setHold(fish_find);
                     fishBZ.sendLockFish(true,fish_find.id);
                 }

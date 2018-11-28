@@ -242,7 +242,7 @@
   "fish_type_25" :{
     "name" : "Ca Dau Dua Vang Den",
     "anim_swim" : "",
-    "scale" : 0.75,
+    "scale" : 1,
     "zorder": 9,
     "box": [2.25,8],
     "shadow": true,

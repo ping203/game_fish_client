@@ -2,10 +2,13 @@
  * Created by admin on 9/3/18.
  */
 
+var WORLD_WIDTH = 40;
+var WORLD_HEIGHT = 22.5;
+
 var SettingWeb = cc.Class.extend({
     ctor: function()
     {
-        this.world_size = vec2(40,22.5);
+        this.world_size = vec2(WORLD_WIDTH,WORLD_HEIGHT);
         this.bullet_vel = 40;
         this.bullet_live = 10;
 

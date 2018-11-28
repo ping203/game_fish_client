@@ -108,9 +108,11 @@ var FishCommonWeb = EntityWeb.extend({
         this.paused = true;
         this.path = null;
         this.enable_auto_die = true;
+        this.outsite = false;
 
 
         this.enable_flip = false;
+        this.enable_check_outside = false;
         this.tmpFlipCheck = false;
 
     },
@@ -130,6 +132,12 @@ var FishCommonWeb = EntityWeb.extend({
     },
     enableFlip: function(flip){
         this.enable_flip = flip;
+    },
+    enableCheckOutsite: function(check){
+        this.enable_check_outside = check;
+    },
+    isOutsite: function () {
+        return this.outsite;
     },
     onNewCurve: function(curve){
         if(!this.enable_flip || !this._nodeDisplay)
@@ -168,7 +176,14 @@ var FishCommonWeb = EntityWeb.extend({
             this._nodeDisplay.setRotation(ret.angle * 180 / Math.PI);
         }
 
-        this.setTransform(vec2(ret.position.x / PM_RATIO,ret.position.y / PM_RATIO),-ret.angle);
+        var bodyPos = vec2(ret.position.x / PM_RATIO,ret.position.y / PM_RATIO);
+        this.setTransform(bodyPos,-ret.angle);
+
+        if(this.enable_check_outside)
+        {
+            var rect = cc.rect(-1.5,-1.5,WORLD_WIDTH + 3,WORLD_HEIGHT + 3);
+            this.outsite = !cc.rectContainsPoint(rect,bodyPos);
+        }
     }
 
 })
