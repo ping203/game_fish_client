@@ -285,7 +285,10 @@ var GameLayerUI = BCBaseLayer.extend({
         this.scheduleUpdateWithPriority(100);
         matranMap.listener = this;
         //matranMap.start(0,0)
-
+        window.updateListener = this.doUpdate.bind(this);
+    },
+    onExit: function () {
+        window.updateListener = null;
     },
     addFish: function(id,typeFish,pathData,pathTime,elapsedTime)        // add fish khi ban thuong
     {
@@ -314,7 +317,11 @@ var GameLayerUI = BCBaseLayer.extend({
     },
     update: function(dt)
     {
-        if(this.gameMgr.state == BCGameManager.STATE_MATRIX_MAP)
+        this.doUpdate(dt);
+    },
+    doUpdate: function (dt) {
+        // cc.log("do update");
+        if(this.gameMgr.state === BCGameManager.STATE_MATRIX_MAP)
         {
             matranMap.update(dt);
         }
@@ -366,31 +373,29 @@ var GameLayerUI = BCBaseLayer.extend({
         }
         else if(this.hold_mouse)
         {
-                if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
+            if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
+            {
+                if(this.checkMoney())
                 {
-                    if(this.checkMoney())
-                    {
-                        this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
-                        if(this.actionListener && this.actionListener.onStartShoot){
-                            this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
-                        }
-                        else
-                            fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
+                    if(this.actionListener && this.actionListener.onStartShoot){
+                        this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     }
                     else
-                    {
-                        this.hold_mouse = false;
-                        this.checkMoneyForShootDialog();
-                    }
+                        fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
+                }
+                else
+                {
+                    this.hold_mouse = false;
+                    this.checkMoneyForShootDialog();
+                }
 
 
-                }
-                else{
-                    fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
-                }
+            }
+            else{
+                fishLifeCycle.myPlayer.setAngleForGun(this.point_to_shoot);
+            }
         }
-
-
     },
     onCreateFish: function(id,fish_type,path,time_xuat_hien,elapsedTime)       // create fish in matran
     {
@@ -448,8 +453,11 @@ var GameLayerUI = BCBaseLayer.extend({
             if(this.actionListener && this.actionListener.onStartShoot){
                 this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
             }
-            else
-                fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
+            else {
+                // for (var i = 0; i < 10; i ++) {
+                    fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx], location.x / PM_RATIO, location.y / PM_RATIO);
+                // }
+            }
 
 
         }

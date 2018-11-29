@@ -2436,6 +2436,7 @@ cc.game = /** @lends cc.game# */{
      * Pause the game.
      */
     pause: function () {
+        cc.log("Paused");
         if (this._paused) return;
         this._paused = true;
         // Pause audio engine
@@ -2446,14 +2447,26 @@ cc.game = /** @lends cc.game# */{
         if (this._intervalId)
             window.cancelAnimationFrame(this._intervalId);
         this._intervalId = 0;
+
+        // Start play by sharedworker
+        if (this.webWorker && window.updateListener) {
+            cc.log("start update from web worker");
+            this.webWorker.port.postMessage({type: "start"});
+        }
     },
 
     /**
      * Resume the game from pause.
      */
     resume: function () {
+        cc.log("resumed");
         if (!this._paused) return;
         this._paused = false;
+
+        if (this.webWorker && window.updateListener) {
+            this.webWorker.port.postMessage({type: "pause"});
+        }
+
         // Resume audio engine
         if (cc.audioEngine) {
             cc.audioEngine._resumePlaying();
@@ -2484,6 +2497,10 @@ cc.game = /** @lends cc.game# */{
      * End game, it will close the game window
      */
     end: function () {
+        if (this.webWorker) {
+            this.webWorker.port.postMessage({type: "stop"});
+            this.webWorker.port.close();
+        }
         close();
     },
 
@@ -2647,6 +2664,12 @@ cc.game = /** @lends cc.game# */{
 
         director.setDisplayStats(config[CONFIG_KEY.showFPS]);
 
+        if (!this.webWorker) {
+            this.webWorker = new SharedWorker("src/Engine/SharedWebworker.js");
+            this.webWorker.port.start();
+            this.webWorker.port.addEventListener("message", this._handleMainLoop);
+        }
+
         callback = function () {
             if (!self._paused) {
                 if (frameRate === 30) {
@@ -2663,6 +2686,16 @@ cc.game = /** @lends cc.game# */{
 
         self._intervalId = window.requestAnimFrame(callback);
         self._paused = false;
+    },
+
+    _handleMainLoop: function (e) {
+        // bcSceneMgr.getMainLayer().doUpdate(1000/60);
+
+        if (window.updateListener) {
+            cc.log("on update");
+            window.updateListener(1000/60.0);
+            // bcSceneMgr.getMainLayer().doUpdate(1000/60);
+        }
     },
 
 //  @Game loading section
