@@ -149,7 +149,12 @@ var FishCommonWeb = EntityWeb.extend({
         if(sp)
         {
             sp.setFlippedX(offset > 0);
-            //sp.setScale(.1)
+        }
+
+        sp = this._nodeDisplay.getChildByTag(1);
+        if(sp)
+        {
+            sp.setFlippedX(offset > 0);
         }
 
     },
