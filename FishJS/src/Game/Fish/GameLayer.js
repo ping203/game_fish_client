@@ -331,7 +331,7 @@ var GameLayerUI = BCBaseLayer.extend({
         // for holding Fish display
         for(var i=0;i<this.players.length;i++){
             if(this.players[i].isEnabled && this.players[i].holdFishInfo.getIsHolding() && this.players[i].holdFishInfo.getFish()){
-                if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released)
+                if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released || this.players[i].holdFishInfo.getFish().isOutsite())
                 {
                     this.players[i].releaseHold();
                     continue;
@@ -424,14 +424,16 @@ var GameLayerUI = BCBaseLayer.extend({
         if(fishLifeCycle.myPlayer.holdFishInfo.prepare_hold){
             var fish_find = this.gameMgr.getFishByPos(location);
             if(fish_find){
-                if(fish_find.fishType < 28)
+                if((fish_find.fishType >= 19 && fish_find.fishType <= 22) || fish_find.fishType == 25)
                 {
-                    fishLifeCycle.myPlayer.setHold(fish_find);
-                    fishBZ.sendLockFish(true,fish_find.id);
+                    cc.log("Khong the khoa' loai. ca' nay`");
                 }
                 else
                 {
-                    cc.log("Khong the khoa' loai. ca' nay`");
+                    if(fish_find.fishType < 26)     // voi 3 loai boss thi ko can` vi` no boi vong quanh
+                        fish_find.enableCheckOutsite(true);
+                    fishLifeCycle.myPlayer.setHold(fish_find);
+                    fishBZ.sendLockFish(true,fish_find.id);
                 }
                 this.txtLock.setVisible(false);
                 fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
@@ -604,6 +606,9 @@ var GameLayerUI = BCBaseLayer.extend({
     onButtonReleased: function(btn,id){
         switch (id){
             case GameLayerUI.BTN_HOLD_FISH:{
+
+                if(this.gameMgr.state == BCGameManager.STATE_PREPARE)
+                    break;
 
                 if(!fishLifeCycle.myPlayer.holdFishInfo.getIsHolding())
                 {
@@ -911,6 +916,16 @@ var GameLayerUI = BCBaseLayer.extend({
 
         this.bulletLayer.removeAllChildren();
 
+        // clean hold
+
+        for(var i =0 ;i< MAX_PLAYER;i++)
+        {
+            this.players[i].releaseHold();
+        }
+        fishLifeCycle.myPlayer.holdFishInfo.prepare_hold = false;
+        this.txtLock.setVisible(false);
+
+        // destroy all
         if(!this.check_matrix)
             this.gameMgr.destroyAllEntity(false);
 

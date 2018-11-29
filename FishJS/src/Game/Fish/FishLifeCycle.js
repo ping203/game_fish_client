@@ -156,6 +156,7 @@ var FishLifeCycle = cc.Class.extend({
             cc.log("find :" + fishNeedLock);
             if(fishNeedLock)
             {
+                fishNeedLock.enableCheckOutsite(true);
                 this.players[pk.player_position].setHold(fishNeedLock);
             }
         }

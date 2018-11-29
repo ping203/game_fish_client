@@ -14,7 +14,7 @@ fishSound.playMusicLobby = function()
 
 fishSound.playMusicBackgroundGame = function(id)
 {
-    if(!gameData.enableMusic)
+    if(!gameData.enableMusic || !id)
         return;
     audioEngine.stopMusic(false);
     audioEngine.playMusic("res/sounds/game/bg_game_"+id+".mp3",true);
