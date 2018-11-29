@@ -18,6 +18,20 @@ BCCmdReceivedLogin = CmdReceivedCommon.extend({
     }
 })
 
+
+BCCmdReceivedExchange = CmdReceivedCommon.extend({
+    ctor: function(pkg){
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.isToVin = false;
+        this.money_exchange = this.getLong();
+        this.gold = this.getLong();
+        this.vinMoney = this.getLong();
+    }
+})
+
 BCCmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {

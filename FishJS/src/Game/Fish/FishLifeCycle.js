@@ -50,7 +50,12 @@ var FishLifeCycle = cc.Class.extend({
             this.gameScene.effectLayer.removeAllChildren(true);
             this.gameScene.panel_diaplay.stopAllActions();
             this.gameScene.effectLayerTop.removeAllChildren(true);
+            this.gameScene.fish2DLayerDie.removeAllChildren(true);
+
             this.gameScene.stopAllActions();
+
+            this.myPlayer.lbMoney.stopAllActions();
+            this.myPlayer.lbMoney.setScale(1);
         }
 
     },

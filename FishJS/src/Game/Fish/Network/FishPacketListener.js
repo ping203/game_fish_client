@@ -140,3 +140,10 @@ fishBZ.sendQuit = function()
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }
+
+fishBZ.sendExchange = function (money, isToVin, captcha) {
+    var pk = new BCCmdSendExchange();
+    pk.putData(money,isToVin,captcha);
+    BCGameClient.getInstance().sendPacket(pk);
+    pk.clean();
+}

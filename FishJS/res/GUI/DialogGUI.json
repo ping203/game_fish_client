@@ -42,7 +42,7 @@
               "Y": 0.58
             },
             "PreSize": {
-              "X": 0.5313,
+              "X": 0.5312,
               "Y": 0.7639
             },
             "HorizontalEdge": "BothEdge",
@@ -58,16 +58,11 @@
                 "LabelText": "Ban muon thoat khoi game?  jjjjjjjjjjjj\njjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "Fonts/tahoma.ttf",
+                  "Path": "Fonts/tahomabd.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
-                "OutlineColor": {
-                  "R": 0,
-                  "G": 0,
-                  "B": 0
-                },
-                "OutlineEnabled": true,
+                "OutlineColor": {},
                 "ShadowColor": {
                   "R": 110,
                   "G": 110,
@@ -81,31 +76,35 @@
                 },
                 "Position": {
                   "X": 342.9254,
-                  "Y": 244.2856
+                  "Y": 230.29
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {},
+                "CColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.5043,
-                  "Y": 0.4442
+                  "Y": 0.4187
                 },
                 "PreSize": {
-                  "X": 0.5897,
-                  "Y": 0.1691
+                  "X": 0.6912,
+                  "Y": 0.1582
                 },
-                "LeftMargin": 142.4254,
-                "RightMargin": 136.5746,
-                "TopMargin": 259.2144,
-                "BottomMargin": 197.7856,
+                "LeftMargin": 107.9254,
+                "RightMargin": 102.0746,
+                "TopMargin": 276.21,
+                "BottomMargin": 186.79,
                 "Tag": 5,
                 "ActionTag": -1326926591,
                 "Size": {
-                  "X": 401.0,
-                  "Y": 93.0
+                  "X": 470.0,
+                  "Y": 87.0
                 },
                 "Name": "lbText",
                 "ctype": "TextObjectData"
@@ -282,7 +281,7 @@
         "Default/Button_Disable.png",
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
-        "Fonts/tahoma.ttf",
+        "Fonts/tahomabd.ttf",
         "Lobby/Popup/bg_thongbao.png",
         "Lobby/Popup/xacnhan.png"
       ],

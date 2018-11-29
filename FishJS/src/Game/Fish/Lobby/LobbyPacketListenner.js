@@ -65,6 +65,16 @@ var LobbyPacketListenner = cc.Class.extend({
                 break;
             }
 
+            case CMD.CMD_EXCHANGE:
+            {
+                var pk = new BCCmdReceivedExchange(pkg);
+                bcSceneMgr.clearLoading();
+
+
+
+                break;
+            }
+
             default :
             {
                 this.gameListenner.onReceived(cmd,pkg);

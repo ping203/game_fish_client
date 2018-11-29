@@ -50,11 +50,15 @@ var GameLayerUI = BCBaseLayer.extend({
 
         this.topLayer = new cc.Layer();
         this.fish2DLayer = new Display2DScene();                // add fishSprite to this
+        this.fish2DLayerDie = new Display2DScene();                // for fish die , ta add vo layer nay` de de kiem soat
+
         this.fish3DScene = new Display3DScene();                // add fish3D to this
         var panel_display = this.getControl("Panel_Fish");      // panel tren bg nhung duoi' UI
         this.panel_diaplay = panel_display;
         panel_display.addChild(this.fish3DScene,1);
         panel_display.addChild(this.fish2DLayer,2);
+        panel_display.addChild(this.fish2DLayerDie,2);
+
         panel_display.addChild(this.effectLayer,4);             // layer effect chinh'
 
         ////////
@@ -507,14 +511,15 @@ var GameLayerUI = BCBaseLayer.extend({
         this.effectLayer.addChild(moneyLb,1);
         // remove fish SP
         var spF = fishSp.getChildByTag(0);
-        spF.stopActionByTag(110);           //end action swim
+        spF.stopAllActions();
+        spF.setColor(cc.color(255,255,255));
         if(fishSp.getChildByTag(1))
             fishSp.getChildByTag(1).stopAllActions();
         spF.runAction(cc.sequence(cc.delayTime(.85),cc.fadeOut(.15)));
 
         fishSp.retain();
         fishSp.removeFromParent();
-        this.effectLayer.addChild(fishSp);         // cai nay de cho khi quay lai game, ta remove dc
+        this.fish2DLayerDie.addChild(fishSp);         // cai nay de cho khi quay lai game, ta remove dc
 
         fishSp.runAction(cc.sequence(cc.delayTime(1),cc.removeSelf()));
         //effect money
@@ -724,7 +729,7 @@ var GameLayerUI = BCBaseLayer.extend({
         var action = cc.animate(animation);
         sp.runAction(cc.repeatForever(action));
 
-        sp.setRotation(90);;
+        sp.setRotation(90);
         sp.setColor(cc.color(220,220,220))
         node.addChild(sp);
         sp.setScale(.75);
@@ -1004,7 +1009,7 @@ var GameLayerUI = BCBaseLayer.extend({
             BCDialog.showDialog("   Bạn cần nạp thêm vàng để tiếp tục chơi!",this,function (id) {
                 if(id == BCDialog.BTN_OK)
                 {
-
+                    this.addChild(new ShopLayer(),10,1000);
                 }
             })
             return false;

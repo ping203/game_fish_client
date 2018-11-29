@@ -125,9 +125,16 @@ var LobbyScene = BCBaseLayer.extend({
                 bcSceneMgr.addLoading("Đang vào phòng chơi, vui lòng chờ...",true);
                 break;
             }
+            case LobbyScene.BTN_PLUS_GOLD:
             case LobbyScene.BTN_SHOP:{
                 var shop = new ShopLayer();
-                this.addChild(shop,10);
+                this.addChild(shop,10,1000);
+                break;
+            }
+            case LobbyScene.BTN_PLUS_MAN:
+            {
+                var shop = new ShopLayer(true);
+                this.addChild(shop,10,1000);
                 break;
             }
             case LobbyScene.BTN_BACK:
@@ -149,8 +156,6 @@ var LobbyScene = BCBaseLayer.extend({
                         }
                     }
                 })
-
-
                 break;
             }
         }

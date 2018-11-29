@@ -147,3 +147,24 @@ BCCmdSendLockFish = CmdSendCommon.extend(
         }
     }
 )
+
+BCCmdSendExchange = CmdSendCommon.extend(
+    {
+        ctor:function()
+        {
+            this._super();
+            this.initData(1000);
+            this.setControllerId(1);
+            this.setCmdId(CMD.CMD_EXCHANGE);
+        },
+        putData:function(gold_or_vin,isToVin,captcha){
+            //pack
+            this.packHeader();
+            this.putLong(gold_or_vin);
+            this.putByte(isToVin);
+            this.putString(captcha);
+            //update
+            this.updateSize();
+        }
+    }
+)
