@@ -23,8 +23,9 @@ var LobbyThanBien = cc.Layer.extend({
             matranMap.loadData();
             gameData.loadStorage();
             ccs.load("res/GUI/GameLayer.json");
+            initSharedWorker();
 
-             var sys = cc.sys;
+            var sys = cc.sys;
              if(!sys.isNative)
                 document.body.style.cursor= "url('http://35.240.162.131/res/pointer.png'), auto";
 

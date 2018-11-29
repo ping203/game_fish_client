@@ -8,7 +8,6 @@ var FishLifeCycle = cc.Class.extend({
     },
     onJoinRoomSucess: function(pk)
     {
-
         this.gameScene = new GameLayerUI();
         bcSceneMgr.openWithScene(this.gameScene);
         this.players = this.gameScene.players;
@@ -36,6 +35,23 @@ var FishLifeCycle = cc.Class.extend({
         }
         this.gameScene.startMusic();
         this.gameScene.playerScreen();
+
+        setFuncForLoopWebWorker(this.onLoopWhenInActive.bind(this));
+        setFuncForEvent(this.onEvent.bind(this));
+
+    },
+    onLoopWhenInActive: function (dt) {
+        this.gameScene.doUpdate(dt);
+    },
+    onEvent: function (event) {
+        // cc.log("on Event HOANG : " + event);
+        if(event == cc.game.EVENT_SHOW)
+        {
+            this.gameScene.effectLayer.removeAllChildren(true);
+            this.gameScene.panel_diaplay.stopAllActions();
+            this.gameScene.effectLayerTop.removeAllChildren(true);
+        }
+
     },
     onUserJoin: function(pk)
     {

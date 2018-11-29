@@ -30,9 +30,7 @@ var SERVER_PORT = 8081;
 var FPS = 1;
 
 
-var box2D_init = function(){
 
-}
 
 
 var vec2 = function(x, y){

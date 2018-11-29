@@ -270,8 +270,6 @@ var GameLayerUI = BCBaseLayer.extend({
     onEnter: function()
     {
         this._super();
-
-
         this._listener = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             swallowTouches: true,

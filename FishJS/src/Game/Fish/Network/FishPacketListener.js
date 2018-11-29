@@ -111,6 +111,7 @@ fishBZ.sendStartShoot = function(bet,x,y)
         pk.putData(bet,x,y);
         BCGameClient.getInstance().sendPacket(pk);
         pk.clean();
+        cc.log("send start shoot")
 
 }
 

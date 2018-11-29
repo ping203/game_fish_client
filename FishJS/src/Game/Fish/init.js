@@ -27,3 +27,67 @@ else
 
 }
 
+var box2D_init = function(){
+
+}
+
+
+var webWorker = null;
+var isWebWorkerRunning = false;
+var __funcForLoop = null;
+var __funcForEvent = null;
+
+var setFuncForLoopWebWorker = function (func) {
+    __funcForLoop = func;
+}
+
+var setFuncForEvent = function (func) {
+    __funcForEvent = func;
+}
+
+
+var mainLoopForWebWorker=  function () {
+    if(__funcForLoop)
+    {
+        __funcForLoop.call(webWorker,1.0/60);
+    }
+}
+
+var initSharedWorker = function () {
+    if(cc.sys.isNative)
+        return;
+    if (!webWorker) {
+        webWorker = new SharedWorker("src/Engine/SharedWebworker.js");
+        webWorker.port.start();
+        webWorker.port.addEventListener("message", mainLoopForWebWorker);
+
+
+        cc.eventManager.addCustomListener(cc.game.EVENT_HIDE,function () {
+            cc.log("on game hide ----");
+            if(!isWebWorkerRunning)
+            {
+                webWorker.port.postMessage({type: "start"});
+                isWebWorkerRunning = true;
+                if(__funcForEvent)
+                {
+                    __funcForEvent.call(webWorker,cc.game.EVENT_HIDE);
+                }
+            }
+
+        })
+
+        cc.eventManager.addCustomListener(cc.game.EVENT_SHOW, function () {
+            cc.log("on game show ----")
+            if(isWebWorkerRunning)
+            {
+                webWorker.port.postMessage({type: "pause"});
+                isWebWorkerRunning = false;
+                if(__funcForEvent)
+                {
+                    __funcForEvent.call(webWorker,cc.game.EVENT_SHOW);
+                }
+            }
+        })
+    }
+}
+

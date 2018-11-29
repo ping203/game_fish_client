@@ -2664,11 +2664,11 @@ cc.game = /** @lends cc.game# */{
 
         director.setDisplayStats(config[CONFIG_KEY.showFPS]);
 
-        if (!this.webWorker) {
-            this.webWorker = new SharedWorker("src/Engine/SharedWebworker.js");
-            this.webWorker.port.start();
-            this.webWorker.port.addEventListener("message", this._handleMainLoop);
-        }
+        // if (!this.webWorker) {
+        //     this.webWorker = new SharedWorker("src/Engine/SharedWebworker.js");
+        //     this.webWorker.port.start();
+        //     this.webWorker.port.addEventListener("message", this._handleMainLoop);
+        // }
 
         callback = function () {
             if (!self._paused) {
@@ -2693,7 +2693,7 @@ cc.game = /** @lends cc.game# */{
 
         if (window.updateListener) {
             cc.log("on update");
-            window.updateListener(1000/60.0);
+            window.updateListener(1/60.0);
             // bcSceneMgr.getMainLayer().doUpdate(1000/60);
         }
     },

@@ -89,6 +89,7 @@
             matranMap.loadData();
             gameData.loadStorage();
             ccs.load("res/GUI/GameLayer.json");
+            initSharedWorker();
 
             bcSceneMgr.openWithScene(new LoginScene());
 
