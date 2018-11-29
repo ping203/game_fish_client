@@ -511,6 +511,11 @@ var GameLayerUI = BCBaseLayer.extend({
         if(fishSp.getChildByTag(1))
             fishSp.getChildByTag(1).stopAllActions();
         spF.runAction(cc.sequence(cc.delayTime(.85),cc.fadeOut(.15)));
+
+        fishSp.retain();
+        fishSp.removeFromParent();
+        this.effectLayer.addChild(fishSp);         // cai nay de cho khi quay lai game, ta remove dc
+
         fishSp.runAction(cc.sequence(cc.delayTime(1),cc.removeSelf()));
         //effect money
         moneyLb.setOpacity(50);

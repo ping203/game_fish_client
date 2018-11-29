@@ -50,6 +50,7 @@ var FishLifeCycle = cc.Class.extend({
             this.gameScene.effectLayer.removeAllChildren(true);
             this.gameScene.panel_diaplay.stopAllActions();
             this.gameScene.effectLayerTop.removeAllChildren(true);
+            this.gameScene.stopAllActions();
         }
 
     },
@@ -71,6 +72,9 @@ var FishLifeCycle = cc.Class.extend({
             bcSceneMgr.openWithScene(lobbyScene);
             fishSound.stopMusic();
             fishSound.playMusicLobby();
+
+            setFuncForLoopWebWorker(null);
+            setFuncForEvent(null);
         }
         else    // user khac quit
             this.players[pk.position].enable(false);
