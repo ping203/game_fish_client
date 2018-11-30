@@ -157,7 +157,7 @@ var GameManagerWeb = cc.Class.extend({
         var count = this._entities.length;
         while(count--)
         {
-            this._entities[count].update(dt);
+            this._entities[count].update(dtt);
             if(this._entities[count].need_remove && this._entities[count]._type == Entity.FISH)
             {
                 var fix = this._entities[count]._body.GetFixtureList();

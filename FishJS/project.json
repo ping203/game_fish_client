@@ -13,7 +13,6 @@
     "jsListOrder": [
     ],
     "jsList": [
-      "src/Engine/SharedWebworker.js",
       "src/Engine/GUI/BaseLayer.js",
       "src/Engine/GUI/BaseScene.js",
       "src/Engine/GUI/SceneMgr.js",
