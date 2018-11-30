@@ -57,7 +57,65 @@ var initSharedWorker = function () {
     if(cc.sys.isNative)
         return;
     if (!webWorker) {
-        webWorker = new SharedWorker("src/Engine/SharedWebworker.js");
+        var source = "var ports = [];\n" +
+            "var activePorts = [];\n" +
+            "\n" +
+            "isUndefined = function (obj) {\n" +
+            "    return typeof obj === 'undefined';\n" +
+            "};\n" +
+            "\n" +
+            "onconnect = function (e) {\n" +
+            "    var port = e.ports[0];\n" +
+            "    if (isUndefined(port)) return;\n" +
+            "    ports.push(port);\n" +
+            "    port.addEventListener(\"message\", function (e) {\n" +
+            "        console.log(e);\n" +
+            "        if (e.data.type == 'start') {\n" +
+            "            var idx = activePorts.indexOf(port);\n" +
+            "            if (idx < 0) {\n" +
+            "                activePorts.push(port);\n" +
+            "            }\n" +
+            "        } else if (e.data.type == 'pause') {\n" +
+            "            var idx = activePorts.indexOf(port);\n" +
+            "            if (idx >= 0) {\n" +
+            "                activePorts.splice(idx, 1);\n" +
+            "            }\n" +
+            "        } else if (e.data.type == 'stop') {\n" +
+            "            var activeIdx = activePorts.indexOf(port);\n" +
+            "            if (activeIdx >= 0) {\n" +
+            "                activePorts.splice(activeIdx, 1);\n" +
+            "            }\n" +
+            "            var portIdx = ports.indexOf(port);\n" +
+            "            if (portIdx >= 0) {\n" +
+            "                ports.splice(portIdx, 1);\n" +
+            "            }\n" +
+            "        }\n" +
+            "    }, false);\n" +
+            "    port.start();\n" +
+            "};\n" +
+            "\n" +
+            "addEventListener(\"connect\", onconnect);\n" +
+            "\n" +
+            "var interval = 1000 / 60;\n" +
+            "function loop() {\n" +
+            "    var len = activePorts.length;\n" +
+            "    for (var i = 0; i < len; i++) {\n" +
+            "        var port = activePorts[i];\n" +
+            "        port.postMessage(\"\");\n" +
+            "    }\n" +
+            "}\n" +
+            "\n" +
+            "setInterval(loop, interval);";
+        var blob;
+        try {
+            blob = new Blob([source], {type: 'application/javascript'});
+        } catch (e) { // Backwards-compatibility
+            window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+            blob = new BlobBuilder();
+            blob.append(source);
+            blob = blob.getBlob();
+        }
+        webWorker = new SharedWorker(URL.createObjectURL(blob));
         webWorker.port.start();
         webWorker.port.addEventListener("message", mainLoopForWebWorker);
 
