@@ -643,3 +643,113 @@ var RichLabelText = cc.Node.extend({
     }
 });
 
+//
+
+// UI avatar
+engine.AsyncImage = ccui.Widget.extend({
+    ctor: function () {
+        this._super();
+        this._img = null;
+        this._downloading = false;
+    },
+    initUI: function (id, url, defaultImg) {
+        if (!url) {
+            defaultImg = id;
+        }
+        else {
+            this._id = id;
+            this._url = url;
+            this._defaultImg = defaultImg;
+        }
+        this._img = new cc.Sprite(defaultImg);
+        this._img.oldSize = this._img.getContentSize();
+
+        this.addChild(this._img);
+    },
+    asyncExecuteWithUrl: function (id, url) {
+        if (url.length < 4 || (url.substring(0, 4) != "http"))
+            return;
+        this._id = id;
+        this._url = url;
+        var self = this;
+
+        if (!this._downloading) {
+            //cc.textureCache.addImageAsync(url,function(texture){
+            //    if(texture instanceof cc.Texture2D)
+            //    {
+            //        self._img.setTexture(texture);
+            //        var a = self._img.getContentSize();
+            //        self._img.setScale(self._img.oldSize.width/ a.width,self._img.oldSize.height/ a.height);
+            //        self._downloading = false;
+            //    }
+            //},this);
+
+
+            cc.loader.loadImg(url, {isCrossOrigin: false}, function (err, img) {
+                self.doneDownload(img);
+            }.bind(this));
+
+            this._downloading = true;
+
+        }
+
+    },
+    doneDownload: function (imgData) {
+        var texture2d = new cc.Texture2D();
+        texture2d.initWithElement(imgData);
+        texture2d.handleLoadedTexture();
+        var self = this;
+
+        self._img.setTexture(texture2d);
+        var a = self._img.getContentSize();
+        self._img.setScale(self._img.oldSize.width / a.width, self._img.oldSize.height / a.height);
+        self._downloading = false;
+
+    },
+    setDefaultImage: function () {
+
+    },
+    initUIMask: function (defaultImg, pathMask, extraImg) {
+        this._id = "";
+        this._defaultImg = defaultImg;
+        this._img = new cc.Sprite(defaultImg);
+        this._img.oldSize = this._img.getContentSize();
+
+        var mCliper = new cc.ClippingNode();
+        mCliper.retain();
+        mCliper.width = this._img.getContentSize().width;
+        mCliper.height = this._img.getContentSize().height;
+
+        mCliper.setStencil(new cc.Sprite(defaultImg));
+        mCliper.setAnchorPoint(cc.p(0.0, 0.0));
+
+        var holesClipper = new cc.ClippingNode();
+        holesClipper.inverted = false;
+        holesClipper.setAlphaThreshold(0.1);
+        holesClipper.addChild(this._img);
+        var holeStencil = new cc.Sprite(pathMask);
+        holeStencil.setPosition(cc.p(0, 0));
+        holesClipper.setStencil(holeStencil);
+
+        mCliper.addChild(holesClipper);
+        this.addChild(mCliper, -1, -1);
+
+        if (extraImg != "") {
+            this.addChild(new cc.Sprite(extraImg), 1);
+        }
+    }
+})
+
+engine.AsyncImage.create = function (id, url, defaultImg) {
+    var ret = new engine.AsyncImage();
+    ret.initUI(id, url, defaultImg);
+
+    return ret;
+}
+
+engine.AsyncImage.createWithMask = function (defaultImg, pathMask, extraImg) {
+    var ret = new engine.AsyncImage();
+    ret.initUIMask(defaultImg, pathMask, extraImg);
+
+    return ret;
+}

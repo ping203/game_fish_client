@@ -249,8 +249,8 @@ var GameLayerUI = BCBaseLayer.extend({
         this.bulletLayer.addChild(sprite);
 
         var destPosition = screenPosition;
-        if(fishLifeCycle.myPlayer.holdFishInfo.getIsHolding()){
-            var posBody = fishLifeCycle.myPlayer.holdFishInfo.getFish().getBodyPosition();
+        if(player.holdFishInfo.getIsHolding()){
+            var posBody = player.holdFishInfo.getFish().getBodyPosition();
             destPosition = vec2(posBody.x * PM_RATIO,posBody.y * PM_RATIO);
         }
 

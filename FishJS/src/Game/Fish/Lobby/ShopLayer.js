@@ -10,6 +10,7 @@ var ShopLayer = BCBaseLayer.extend({
             this.isToVin = true;
         this.initWithBinaryFile("res/GUI/ShopGUI.json");
     },
+
     initGUI: function () {
         this.panel_bg = this.getControl("bg");
         this.btnNapVang = this.customizeButton("btnNapVang", ShopLayer.BTN_NAPVANG,this.panel_bg);
@@ -39,6 +40,23 @@ var ShopLayer = BCBaseLayer.extend({
 
         this.money_need_change = shopss[0];
         this.effectDoiCuaso();
+
+        this.loadCaptcha("https://c1.staticflickr.com/9/8873/18598400202_3af67ef38f_q.jpg");
+
+    },
+    loadCaptcha: function (url) {
+        cc.loader.loadImg(url, {isCrossOrigin: false}, function (err, img) {
+            this.doneDownload(img);
+        }.bind(this));
+    },
+    doneDownload: function (imgData) {
+        var texture2d = new cc.Texture2D();
+        texture2d.initWithElement(imgData);
+        texture2d.handleLoadedTexture();
+
+        var sp = new cc.Sprite(texture2d);
+        this.nodeCapcha.removeAllChildren();
+        this.nodeCapcha.addChild(sp);
 
     },
     effectDoiCuaso: function () {
