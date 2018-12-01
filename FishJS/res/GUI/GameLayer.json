@@ -123,7 +123,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -439,7 +439,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -665,7 +665,7 @@
               "Y": 0.0029
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 184.1754,
@@ -1696,7 +1696,7 @@
               "Y": 0.0021
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2729,7 +2729,7 @@
               "Y": 0.7429
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -3766,7 +3766,7 @@
               "Y": 0.7375
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "VerticalEdge": "TopEdge",
@@ -4802,7 +4802,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -4849,7 +4849,7 @@
               "Y": 0.0214
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 605.4634,
@@ -5529,6 +5529,54 @@
                 "VisibleForFrame": false,
                 "Name": "panel_menu",
                 "ctype": "PanelObjectData"
+              },
+              {
+                "LabelText": "CHƠI THỬ",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/yellow-export.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 20.082,
+                  "Y": 678.8363
+                },
+                "Scale": {
+                  "ScaleX": 1.75,
+                  "ScaleY": 1.75
+                },
+                "CColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1004,
+                  "Y": 3.3942
+                },
+                "PreSize": {
+                  "X": 0.635,
+                  "Y": 0.235
+                },
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": -43.418,
+                "RightMargin": 116.418,
+                "TopMargin": -502.3363,
+                "BottomMargin": 655.3363,
+                "Tag": 216,
+                "ActionTag": -340868237,
+                "Size": {
+                  "X": 127.0,
+                  "Y": 47.0
+                },
+                "VisibleForFrame": false,
+                "Alpha": 162,
+                "Name": "txtDemo",
+                "ctype": "TextBMFontObjectData"
               },
               {
                 "FileData": {

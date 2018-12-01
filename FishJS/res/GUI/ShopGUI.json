@@ -49,6 +49,8 @@
               "X": 0.1562,
               "Y": 0.2778
             },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
             "LeftMargin": 640.0,
             "RightMargin": 440.0,
             "TopMargin": 160.0,
@@ -185,7 +187,7 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 2.6635,
+                  "X": 2.6636,
                   "Y": -0.0652
                 },
                 "PreSize": {
@@ -2828,7 +2830,7 @@
                     "FontSize": 30,
                     "IsCustomSize": true,
                     "LabelText": "",
-                    "PlaceHolderText": "Nhập CAPCHA",
+                    "PlaceHolderText": "Nhập CAPTCHA",
                     "MaxLengthText": 10,
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -2850,17 +2852,17 @@
                       "Y": 0.2302
                     },
                     "PreSize": {
-                      "X": 0.9,
+                      "X": 0.935,
                       "Y": 0.205
                     },
-                    "LeftMargin": 379.4567,
-                    "RightMargin": -359.4567,
+                    "LeftMargin": 375.9567,
+                    "RightMargin": -362.9567,
                     "TopMargin": 133.4678,
                     "BottomMargin": 25.5322,
                     "Tag": 214,
                     "ActionTag": -383318931,
                     "Size": {
-                      "X": 180.0,
+                      "X": 187.0,
                       "Y": 41.0
                     },
                     "Name": "tfCapcha",
@@ -3019,8 +3021,8 @@
                   {
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 744.9161,
-                      "Y": 48.6669
+                      "X": 780.3575,
+                      "Y": 49.1556
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3029,18 +3031,65 @@
                     "CColor": {},
                     "IconVisible": true,
                     "PrePosition": {
-                      "X": 3.7246,
-                      "Y": 0.2433
+                      "X": 3.9018,
+                      "Y": 0.2458
                     },
                     "PreSize": {
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 744.9161,
-                    "RightMargin": -544.9161,
-                    "TopMargin": 151.3331,
-                    "BottomMargin": 48.6669,
+                    "LeftMargin": 780.3575,
+                    "RightMargin": -580.3575,
+                    "TopMargin": 150.8444,
+                    "BottomMargin": 49.1556,
                     "Tag": 216,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Default",
+                          "Path": "Default/Sprite.png",
+                          "Plist": ""
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 0.0,
+                          "Y": 0.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.0,
+                          "Y": 0.0
+                        },
+                        "PreSize": {
+                          "X": 0.0,
+                          "Y": 0.0
+                        },
+                        "LeftMargin": -23.0,
+                        "RightMargin": -23.0,
+                        "TopMargin": -23.0,
+                        "BottomMargin": -23.0,
+                        "Tag": 100,
+                        "ActionTag": -196097494,
+                        "Size": {
+                          "X": 46.0,
+                          "Y": 46.0
+                        },
+                        "Name": "captchaSp",
+                        "ctype": "SpriteObjectData"
+                      }
+                    ],
                     "ActionTag": 1736106448,
                     "Size": {
                       "X": 0.0,
@@ -3077,6 +3126,7 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
+        "Default/Sprite.png",
         "Lobby/ico_MAN.png",
         "Lobby/ico_VANG.png",
         "Lobby/Popup/bg_cuahang.png",

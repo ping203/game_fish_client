@@ -25,7 +25,7 @@ BCCmdReceivedExchange = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-        this.isToVin = false;
+        this.isToVin = this.getBool();
         this.money_exchange = this.getLong();
         this.gold = this.getLong();
         this.vinMoney = this.getLong();
@@ -80,6 +80,29 @@ BCCmdReceivedUserJoinRoom = CmdReceivedCommon.extend({
         this.info["vipType"] = this.getByte();
 
         this.info["position"] = this.getByte();
+    }
+})
+
+
+BCCmdReceivedUpdateBG = CmdReceivedCommon.extend({
+    ctor :function(pkg)
+    {
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.bgIdx = this.getInt();
+    }
+})
+
+BCCmdReceivedCaptcha = CmdReceivedCommon.extend({
+    ctor :function(pkg)
+    {
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.captchaStr = this.getString();
     }
 })
 

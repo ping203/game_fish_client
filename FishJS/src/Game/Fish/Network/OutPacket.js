@@ -168,3 +168,23 @@ BCCmdSendExchange = CmdSendCommon.extend(
         }
     }
 )
+
+BCCmdSendRequestCaptcha= CmdSendCommon.extend(
+    {
+        ctor:function()
+        {
+            this._super();
+            this.initData(1000);
+            this.setControllerId(1);
+            this.setCmdId(CMD.CMD_CAPTCHA);
+            this.putData();
+        },
+        putData:function(){
+            //pack
+            this.packHeader();
+
+            //update
+            this.updateSize();
+        }
+    }
+)

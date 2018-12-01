@@ -33,8 +33,10 @@ var DemoScene = BCBaseLayer.extend({
     onEnter: function(){
         this._super();
         this.scheduleUpdate();
-        this.gameScene.startMusic();
+        this.gameScene.startMusic(0);
         // this.gameScene.playerScreen();
+        this.gameScene.txtDemo.setVisible(true);
+        this.gameScene.txtDemo.runAction(cc.sequence(cc.scaleTo(.25,1.5),cc.scaleTo(.25,1.7)).repeatForever());
     },
     update: function(dt){
         var fishAdd = this.gameLogic.update(dt);

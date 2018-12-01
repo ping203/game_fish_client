@@ -27,13 +27,18 @@ var FishLifeCycle = cc.Class.extend({
         {
             var position = pk.playerInfo[i]["position"];
             this.players[position].playerData.rawData = pk.playerInfo[i];
+            if(position == pk.position)
+            {
+                this.players[position].playerData.rawData["vinMoney"] = gameData.userData.vinMoney;
+
+            }
             this.players[position].setChair(position);
             this.players[position].enable(true);
             this.players[position].updateInfo();
 
             this.players[position].setIsMyPlayer(position == this.myChair);
         }
-        this.gameScene.startMusic();
+        // this.gameScene.startMusic();
         this.gameScene.playerScreen();
 
         setFuncForLoopWebWorker(this.onLoopWhenInActive.bind(this));
@@ -167,6 +172,10 @@ var FishLifeCycle = cc.Class.extend({
                 break;
             }
         }
+    },
+    onUpdateBG: function (pk) {
+        var idx = pk.bgIdx;
+        this.gameScene.startMusic(idx);
     },
     onMatrixData: function(pk)
     {

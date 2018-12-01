@@ -80,6 +80,8 @@ var GameLayerUI = BCBaseLayer.extend({
         this.panel_menu = this.getControl("panel_menu",panel_ui);
         this.panel_menu.originalPos = this.panel_menu.getPosition();
         this.txtLock = this.getControl("txtLockFish",panel_ui);
+        this.txtDemo = this.getControl("txtDemo",panel_ui);
+
 
         this.customizeButton("btnHome",GameLayerUI.BTN_QUIT,this.panel_menu);
         this.btnMusic = this.customizeButton("btnMusic",GameLayerUI.BTN_MUSIC,this.panel_menu);
@@ -237,6 +239,12 @@ var GameLayerUI = BCBaseLayer.extend({
         else{
             fishLifeCycle.myPlayer.setAngleForGun(screenPos);
         }
+    },
+
+    onUpdateData: function () {
+        fishLifeCycle.myPlayer.playerData.rawData["gold"] = gameData.userData.gold;
+        fishLifeCycle.myPlayer.playerData.rawData["vinMoney"] = gameData.userData.vinMoney;
+        fishLifeCycle.myPlayer.updateInfo();
     },
 
     shoot: function(player,screenPosition)
@@ -748,9 +756,10 @@ var GameLayerUI = BCBaseLayer.extend({
 
         if(playerIndex == fishLifeCycle.position || true)
         {
-            var txt = BCBaseLayer.createLabelText("+"+BCStringUtility.standartNumber(money)+"$",cc.color(255,255,255));
+            var txt = BCBaseLayer.createLabelText("+"+BCStringUtility.standartNumber(money)+"$",cc.color(255,216,66));
             txt.setFontSize(22);
             txt.setPosition(destPos);
+            txt.setColor(cc.color(255,216,66));
             this.effectLayerTop.addChild(txt);
             var timeDelay = .15 +.45 +.15+time -.15;
             txt.setVisible(false);
@@ -799,9 +808,10 @@ var GameLayerUI = BCBaseLayer.extend({
 
         return node;
     },
-    startMusic: function(){
+    startMusic: function(idx){
 
-        this.currentBG = Math.floor(Math.random() * 3);
+        var lastBG = this.currentBG;
+        this.currentBG = idx;
         if(this.currentBG > 2)
             this.currentBG = 2;
 
@@ -809,35 +819,24 @@ var GameLayerUI = BCBaseLayer.extend({
         this.backgrounds[1].setVisible(false);
         this.backgrounds[2].setVisible(false);
 
-        this.backgrounds[this.currentBG].setVisible(true);
 
-        fishSound.playMusicBackgroundGame(this.currentBG);
-
-        var action = cc.sequence(cc.delayTime(100),cc.callFunc(function(){
-            var lastBG = this.currentBG;
-            this.currentBG++;
-            if(this.currentBG > 2)
-                this.currentBG -= 3;
-
-            this.backgrounds[0].setVisible(false);
-            this.backgrounds[1].setVisible(false);
-            this.backgrounds[2].setVisible(false);
-
+        if(lastBG !== undefined)
+        {
             this.backgrounds[lastBG].setVisible(true);
-            this.backgrounds[lastBG].runAction(cc.fadeOut(.5));
-            this.backgrounds[this.currentBG].setVisible(true);
-            this.backgrounds[this.currentBG].setOpacity(0);
-            this.backgrounds[this.currentBG].runAction(cc.fadeIn(.5));
+            this.backgrounds[lastBG].runAction(cc.sequence(cc.fadeOut(.5),cc.hide()));
+        }
 
-            fishSound.playMusicBackgroundGame(this.currentBG);
-        }.bind(this))).repeatForever();
-        action.setTag(1111);
-        this.runAction(action);
+        this.backgrounds[this.currentBG].setVisible(true);
+        this.backgrounds[this.currentBG].setOpacity(0);
+        this.backgrounds[this.currentBG].runAction(cc.fadeIn(.5));
+
+        this.stopMusic();
+        fishSound.playMusicBackgroundGame(this.currentBG);
 
     },
     stopMusic: function(){
         fishSound.stopMusic();
-        this.stopActionByTag(1111);
+        // this.stopActionByTag(1111);
     },
     createEffectCoin: function(pos){
 

@@ -104,6 +104,9 @@ var Player = cc.Node.extend({
         // player info label
         this.lbName = bg_thongtin.getChildByName("username");
         this.lbMoney = bg_thongtin.getChildByName("lbMoney");
+        this.lbVin = bg_thongtin.getChildByName("lbMoney_0");
+        this.lbVin.setString("----------------");
+
 
         this.bgThongTin = bg_thongtin;
 
@@ -175,6 +178,11 @@ var Player = cc.Node.extend({
     {
         this.lbName.setString(this.playerData.rawData["displayName"]);
         this.lbMoney.setString(BCStringUtility.standartNumber(this.playerData.rawData["gold"]) +"$");
+        if(this.index == fishLifeCycle.myChair)
+        {
+            this.lbVin.setString(BCStringUtility.standartNumber(this.playerData.rawData["vinMoney"]) +"$");
+
+        }
     },
     setHold: function(fish){
         this.holdFishInfo.setIsHolding(true);

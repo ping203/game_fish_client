@@ -97,6 +97,14 @@ var FishPacketListener = cc.Class.extend({
                 fishLifeCycle.onLockFish(pk);
                 break;
             }
+            case CMD.CMD_UPDATE_BG:
+            {
+                var pk = new BCCmdReceivedUpdateBG(p);
+                pk.clean();
+                fishLifeCycle.onUpdateBG(pk);
+                break;
+            }
+
         }
     }
 });
@@ -144,6 +152,12 @@ fishBZ.sendQuit = function()
 fishBZ.sendExchange = function (money, isToVin, captcha) {
     var pk = new BCCmdSendExchange();
     pk.putData(money,isToVin,captcha);
+    BCGameClient.getInstance().sendPacket(pk);
+    pk.clean();
+}
+
+fishBZ.sendRequestCaptcha = function () {
+    var pk = new BCCmdSendRequestCaptcha();
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }

@@ -1306,6 +1306,16 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
+              <AbstractNodeData Name="txtDemo" ActionTag="-340868237" VisibleForFrame="False" Alpha="162" Tag="216" IconVisible="False" VerticalEdge="TopEdge" LeftMargin="-43.4180" RightMargin="116.4180" TopMargin="-502.3363" BottomMargin="655.3363" LabelText="CHƠI THỬ" ctype="TextBMFontObjectData">
+                <Size X="127.0000" Y="47.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="20.0820" Y="678.8363" />
+                <Scale ScaleX="1.7500" ScaleY="1.7500" />
+                <CColor A="255" R="255" G="0" B="0" />
+                <PrePosition X="0.1004" Y="3.3942" />
+                <PreSize X="0.6350" Y="0.2350" />
+                <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
+              </AbstractNodeData>
               <AbstractNodeData Name="txtLockFish" ActionTag="880935830" VisibleForFrame="False" Tag="111" IconVisible="False" LeftMargin="-188.1364" RightMargin="-89.8636" TopMargin="-326.4574" BottomMargin="463.4574" LeftEage="157" RightEage="157" TopEage="20" BottomEage="20" Scale9OriginX="157" Scale9OriginY="20" Scale9Width="164" Scale9Height="23" ctype="ImageViewObjectData">
                 <Size X="478.0000" Y="63.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

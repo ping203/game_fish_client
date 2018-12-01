@@ -6,7 +6,7 @@
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="bg" ActionTag="481835541" Tag="218" IconVisible="False" LeftMargin="640.0000" RightMargin="440.0000" TopMargin="160.0000" BottomMargin="360.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="bg" ActionTag="481835541" Tag="218" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="640.0000" RightMargin="440.0000" TopMargin="160.0000" BottomMargin="360.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="btnNapVang" ActionTag="-491717021" Tag="217" IconVisible="False" LeftMargin="458.7100" RightMargin="-406.7100" TopMargin="-10.5955" BottomMargin="59.5955" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="118" Scale9Height="129" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -30,7 +30,7 @@
                 <Position X="532.7100" Y="-13.0333" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="2.6635" Y="-0.0652" />
+                <PrePosition X="2.6636" Y="-0.0652" />
                 <PreSize X="0.7400" Y="0.7550" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
@@ -647,14 +647,14 @@
                     <PreSize X="1.0250" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/Popup/input.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tfCapcha" ActionTag="-383318931" Tag="214" IconVisible="False" LeftMargin="379.4567" RightMargin="-359.4567" TopMargin="133.4678" BottomMargin="25.5322" TouchEnable="True" FontSize="30" IsCustomSize="True" LabelText="" PlaceHolderText="Nhập CAPCHA" MaxLengthText="10" ctype="TextFieldObjectData">
-                    <Size X="180.0000" Y="41.0000" />
+                  <AbstractNodeData Name="tfCapcha" ActionTag="-383318931" Tag="214" IconVisible="False" LeftMargin="375.9567" RightMargin="-362.9567" TopMargin="133.4678" BottomMargin="25.5322" TouchEnable="True" FontSize="30" IsCustomSize="True" LabelText="" PlaceHolderText="Nhập CAPTCHA" MaxLengthText="10" ctype="TextFieldObjectData">
+                    <Size X="187.0000" Y="41.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="469.4567" Y="46.0322" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="2.3473" Y="0.2302" />
-                    <PreSize X="0.9000" Y="0.2050" />
+                    <PreSize X="0.9350" Y="0.2050" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="btnRefresh" ActionTag="171766307" Tag="211" IconVisible="False" LeftMargin="599.0887" RightMargin="-470.0887" TopMargin="121.1490" BottomMargin="11.8510" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="41" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -687,13 +687,26 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="nodeCapcha" ActionTag="1736106448" Tag="216" IconVisible="True" LeftMargin="744.9161" RightMargin="-544.9161" TopMargin="151.3331" BottomMargin="48.6669" ctype="SingleNodeObjectData">
+                  <AbstractNodeData Name="nodeCapcha" ActionTag="1736106448" Tag="216" IconVisible="True" LeftMargin="780.3575" RightMargin="-580.3575" TopMargin="150.8444" BottomMargin="49.1556" ctype="SingleNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
+                    <Children>
+                      <AbstractNodeData Name="captchaSp" ActionTag="-196097494" Tag="100" IconVisible="False" LeftMargin="-23.0000" RightMargin="-23.0000" TopMargin="-23.0000" BottomMargin="-23.0000" ctype="SpriteObjectData">
+                        <Size X="46.0000" Y="46.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition />
+                        <PreSize X="0.0000" Y="0.0000" />
+                        <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                    </Children>
                     <AnchorPoint />
-                    <Position X="744.9161" Y="48.6669" />
+                    <Position X="780.3575" Y="49.1556" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="3.7246" Y="0.2433" />
+                    <PrePosition X="3.9018" Y="0.2458" />
                     <PreSize X="0.0000" Y="0.0000" />
                   </AbstractNodeData>
                 </Children>

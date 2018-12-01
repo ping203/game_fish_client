@@ -505,6 +505,9 @@ var BCBaseLayer  = cc.Layer.extend({
     onBack : function () {
         
     },
+    onUpdateData: function () {
+
+    },
 
     playSoundButton: function(id){
         //if (gamedata.sound)
