@@ -77,10 +77,7 @@ var LobbyPacketListenner = cc.Class.extend({
                 {
 
                 }
-                gameData.userData.vinMoney = pk.vinMoney;
-                gameData.userData.gold = pk.gold;
 
-                main.onUpdateData();
 
                 var msg = "";
                 switch (error)
@@ -89,6 +86,10 @@ var LobbyPacketListenner = cc.Class.extend({
                     {
                         var money = BCStringUtility.standartNumber(pk.money_exchange);
                         msg = pk.isToVin?"Bạn đã đổi thành công "+money +" VÀNG thành " +money+" MAN":"Bạn đã đổi thành công "+money+" MAN thành "+money+" VÀNG";
+                        gameData.userData.vinMoney = pk.vinMoney;
+                        gameData.userData.gold = pk.gold;
+
+                        main.onUpdateData();
                         break;
                     }
                     case 1:

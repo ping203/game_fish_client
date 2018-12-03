@@ -298,6 +298,7 @@ var GameLayerUI = BCBaseLayer.extend({
         window.updateListener = this.doUpdate.bind(this);
     },
     onExit: function () {
+        this._super();
         window.updateListener = null;
     },
     addFish: function(id,typeFish,pathData,pathTime,elapsedTime)        // add fish khi ban thuong
