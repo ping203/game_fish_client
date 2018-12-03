@@ -168,6 +168,7 @@ var GameLayerUI = BCBaseLayer.extend({
             collide_check = true;
         if(collide_check){
             bullet.released = true;
+            var bet = bullet.bet;
             this.createEffectFishFired(vec2(pointCollide.x * PM_RATIO,pointCollide.y *PM_RATIO),bullet.playerID);
             this.gameMgr.destroyEntity(bullet);
 
@@ -184,11 +185,11 @@ var GameLayerUI = BCBaseLayer.extend({
             if(fish.id !== undefined && bullet.playerID == fishLifeCycle.myChair)
             {
                 if(this.actionListener && this.actionListener.onShootFish){
-                    this.actionListener.onShootFish.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
+                    this.actionListener.onShootFish.call(this.actionListener,bet,fish.id);
                 }
                 else
                 {
-                    fishBZ.sendShootFish(fishLifeCycle.bets[fishLifeCycle.myBetIdx],fish.id);
+                    fishBZ.sendShootFish(bet,fish.id);
                 }
             }
 
@@ -274,6 +275,7 @@ var GameLayerUI = BCBaseLayer.extend({
 
         var bullet = new Bullet(BULLET_LIVE);
         bullet.playerID = player.index;
+        bullet.bet = fishLifeCycle.bets[fishLifeCycle.myBetIdx];
         bullet.released = false;
         bullet.setNodeDisplay( sprite);
         this.gameMgr.createBodyForBullet(bullet,vec2(.5,.5));
