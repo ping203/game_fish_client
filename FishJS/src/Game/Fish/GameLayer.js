@@ -249,6 +249,8 @@ var GameLayerUI = BCBaseLayer.extend({
 
     shoot: function(player,screenPosition)
     {
+        var gun_start_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
+
         fishSound.playEffectShoot();
 
         this.enable_shoot = false;
@@ -267,17 +269,21 @@ var GameLayerUI = BCBaseLayer.extend({
 
 
         var location = vec2(destPosition.x,destPosition.y);
-        var gun_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
+
+        var gun_pos = player.fire_node.convertToWorldSpaceAR(cc.p(0,0));
+
         var bullet = new Bullet(BULLET_LIVE);
         bullet.playerID = player.index;
         bullet.released = false;
         bullet.setNodeDisplay( sprite);
         this.gameMgr.createBodyForBullet(bullet,vec2(.5,.5));
-        this.gameMgr.shootBullet(bullet,vec2(gun_pos.x / PM_RATIO,gun_pos.y / PM_RATIO),vec2((location.x - gun_pos.x) / PM_RATIO,(location.y - gun_pos.y) / PM_RATIO));
+        this.gameMgr.shootBullet(bullet,vec2(gun_start_pos.x / PM_RATIO,gun_start_pos.y / PM_RATIO),vec2((location.x - gun_pos.x) / PM_RATIO,(location.y - gun_pos.y) / PM_RATIO));
         if(player.holdFishInfo.getIsHolding()){
             bullet.setHoldInfo(player.holdFishInfo);
         }
         bullet.update(0);
+
+        return true;
     },
     onEnter: function()
     {
@@ -345,6 +351,8 @@ var GameLayerUI = BCBaseLayer.extend({
                 if(this.players[i].holdFishInfo.getFish().isNeedRemove() || this.players[i].holdFishInfo.getFish().released || this.players[i].holdFishInfo.getFish().isOutsite())
                 {
                     this.players[i].releaseHold();
+                    // if(i == fishLifeCycle.myChair)
+                    //     fishBZ.sendLockFish(false,-1);
                     continue;
                 }
                 var posBody = this.players[i].holdFishInfo.getFish().getBodyPosition();

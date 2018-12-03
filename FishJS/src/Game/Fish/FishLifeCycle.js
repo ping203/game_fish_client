@@ -97,6 +97,20 @@ var FishLifeCycle = cc.Class.extend({
               {
                   this.gameScene.addFish(pk.listFish[i].id,pk.listFish[i].type,pk.listFish[i].listPoint,pk.listFish[i].totalTime,pk.listFish[i].elapsedTime);
               }
+
+              for(var i=0;i<pk.lockInfos.length;i++)
+              {
+                  if( i != this.myChair && pk.lockInfos[i] != -1)
+                  {
+                      var fishNeedLock = this.gameScene.gameMgr.getFishByID(pk.lockInfos[i]);
+                      if(fishNeedLock)
+                      {
+                          fishNeedLock.enableCheckOutsite(true);
+                          this.players[i].setHold(fishNeedLock);
+                      }
+                  }
+              }
+
           }
           else if(pk.gameState == BCGameManager.STATE_MATRIX_MAP)
           {

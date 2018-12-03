@@ -148,6 +148,7 @@ BCCmdReceivedUpdateRound = CmdReceivedCommon.extend({
         this.listFish = [];
         this.startID = -1;
         this.timeElapsed = 0;
+        this.lockInfos = [];
         if(this.gameState == BCGameManager.STATE_NORMAL_MAP)
         {
             var length = this.getShort();
@@ -170,6 +171,11 @@ BCCmdReceivedUpdateRound = CmdReceivedCommon.extend({
                 }
 
                 this.listFish.push(f);
+            }
+            length = this.getShort();
+            for(var j=0;j<length;j++)
+            {
+                this.lockInfos.push(this.getInt());
             }
         }
         else if(this.gameState == BCGameManager.STATE_PREPARE)
