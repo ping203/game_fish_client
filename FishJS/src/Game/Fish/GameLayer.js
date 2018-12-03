@@ -443,7 +443,7 @@ var GameLayerUI = BCBaseLayer.extend({
         if(fishLifeCycle.myPlayer.holdFishInfo.prepare_hold){
             var fish_find = this.gameMgr.getFishByPos(location);
             if(fish_find){
-                if((fish_find.fishType >= 19 && fish_find.fishType <= 22) || fish_find.fishType == 25)
+                if((fish_find.fishType >= 19 && fish_find.fishType <= 22))
                 {
                     cc.log("Khong the khoa' loai. ca' nay`");
                 }
