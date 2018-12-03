@@ -108,7 +108,7 @@ var LobbyPacketListenner = cc.Class.extend({
                     }
                     case 4:
                     {
-                        msg = "Số tiền bạn cần đổi vượt quá hạn mức trong tài khoản!";
+                        msg = "Số tiền bạn cần đổi vượt quá hạn \nmức trong tài khoản!";
                         break;
                     }
                     case 5:
