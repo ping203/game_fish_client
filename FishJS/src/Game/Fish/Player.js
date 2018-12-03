@@ -90,13 +90,13 @@ var Player = cc.Node.extend({
 
         this.node = node;
 
-        this.de_sung = node.getChildByName("sung");
-        this.gun = this.de_sung.getChildByName("nong_sung");
+        this.root_sung = node.getChildByName("root_sung");
+        this.gun = this.root_sung.getChildByName("nong_sung");
         this.gun.origin_pos = this.gun.getPosition();
-        this.duoi_sung = this.de_sung.getChildByName("duoi_sung");
+        this.duoi_sung = this.root_sung.getChildByName("duoi_sung");
         this.duoi_sung.origin_pos = this.duoi_sung.getPosition();
-        this.fire_node = this.de_sung.getChildByName("fire");
-        this.fire_real = this.de_sung.getChildByName("fire_real");
+        this.fire_node = this.root_sung.getChildByName("fire");
+        this.fire_real = this.root_sung.getChildByName("fire_real");
 
         this.ui = node.getChildByName("ui");
 
@@ -141,7 +141,7 @@ var Player = cc.Node.extend({
     setAngleForGun: function(screenPos)
     {
         var node_pos = screenPos;
-        var gun_pos = this.fire_node.convertToWorldSpaceAR(cc.p(0,0));
+        var gun_pos = this.root_sung.convertToWorldSpaceAR(cc.p(0,0));
 
         var vel = vec2(node_pos.x - gun_pos.x,node_pos.y - gun_pos.y);
         var angle = Math.RotationFromVel(vel);
@@ -149,7 +149,7 @@ var Player = cc.Node.extend({
         if(this.index >= 2)
             angle += 180;
 
-        this.de_sung.setRotation(angle);
+        this.root_sung.setRotation(angle);
 
     },
     effectShoot: function()

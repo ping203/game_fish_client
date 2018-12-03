@@ -230,7 +230,7 @@ var GameLayerUI = BCBaseLayer.extend({
 
         if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
-            this.shoot(fishLifeCycle.myPlayer,screenPos);
+            this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,screenPos));
             if(this.actionListener && this.actionListener.onStartShoot){
                 this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],screenPos.x / PM_RATIO,screenPos.y / PM_RATIO);
             }
@@ -248,9 +248,23 @@ var GameLayerUI = BCBaseLayer.extend({
         fishLifeCycle.myPlayer.updateInfo();
     },
 
+    fixPositionShoot: function (player,screenPos) {                         // de cho player chi ban ngang
+        var gun_pos = player.root_sung.convertToWorldSpaceAR(cc.p(0,0));
+
+        var ret = vec2(screenPos.x,screenPos.y);
+
+        if(player.index ==0 || player.index == 1)
+        {
+            ret.y = Math.max(gun_pos.y,screenPos.y);
+        }
+        else
+            ret.y = Math.min(gun_pos.y,screenPos.y);
+
+        return ret;
+    },
+
     shoot: function(player,screenPosition)
     {
-        var gun_start_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
 
         fishSound.playEffectShoot();
 
@@ -271,7 +285,9 @@ var GameLayerUI = BCBaseLayer.extend({
 
         var location = vec2(destPosition.x,destPosition.y);
 
-        var gun_pos = player.fire_node.convertToWorldSpaceAR(cc.p(0,0));
+        var gun_pos = player.root_sung.convertToWorldSpaceAR(cc.p(0,0));
+        var gun_start_pos = player.fire_real.convertToWorldSpaceAR(cc.p(0,0));
+
 
         var bullet = new Bullet(BULLET_LIVE);
         bullet.playerID = player.index;
@@ -398,7 +414,7 @@ var GameLayerUI = BCBaseLayer.extend({
             {
                 if(this.checkMoney())
                 {
-                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
+                    this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,this.point_to_shoot));
                     if(this.actionListener && this.actionListener.onStartShoot){
                         this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     }
@@ -418,6 +434,7 @@ var GameLayerUI = BCBaseLayer.extend({
             }
         }
     },
+
     onCreateFish: function(id,fish_type,path,time_xuat_hien,elapsedTime)       // create fish in matran
     {
         //cc.log("id :" + id +" fish: "+fish_type);
@@ -472,7 +489,7 @@ var GameLayerUI = BCBaseLayer.extend({
 
         if(this.enable_shoot && this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
-            this.shoot(fishLifeCycle.myPlayer,location);
+            this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,location));
             if(this.actionListener && this.actionListener.onStartShoot){
                 this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
             }

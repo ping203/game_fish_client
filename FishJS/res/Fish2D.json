@@ -252,9 +252,9 @@
   "fish_type_26" :{
     "name" : "Tien Ca Tim Boss",
     "anim_swim" : "",
-    "scale" : 1.0,
+    "scale" : 1.2,
     "zorder": 10,
-    "box": [3,8],
+    "box": [3.5,10],
     "shadow": true,
     "shadow_offset" : [45,45],
     "sprite_offset" : [0,-35],
