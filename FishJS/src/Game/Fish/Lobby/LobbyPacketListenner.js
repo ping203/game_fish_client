@@ -89,6 +89,8 @@ var LobbyPacketListenner = cc.Class.extend({
                         gameData.userData.vinMoney = pk.vinMoney;
                         gameData.userData.gold = pk.gold;
 
+                        updateManPortal(gameData.userData.vinMoney);
+
                         main.onUpdateData();
                         break;
                     }

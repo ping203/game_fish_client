@@ -36,6 +36,7 @@ var webWorker = null;
 var isWebWorkerRunning = false;
 var __funcForLoop = null;
 var __funcForEvent = null;
+var __init = false;
 
 var setFuncForLoopWebWorker = function (func) {
     __funcForLoop = func;
@@ -53,7 +54,48 @@ var mainLoopForWebWorker=  function () {
     }
 }
 
+var initManPortalEvent = function(){      // for update Man
+    if(__init)
+        return;
+    this.customlistener = cc.EventListener.create({
+        event: cc.EventListener.CUSTOM,
+        eventName: "updateMoney",
+        callback: function(event){
+            gameData.userData.vinMoney = event.currentMoney;
+            var main = bcSceneMgr.getMainLayer();
+            main.onUpdateData();
+            //event.currentMoney Là tiền hiện tạ
+        }});
+
+    cc.eventManager.addListener(this.customlistener, 1);
+
+
+    // init for mobile , quit game layer khi an dung
+    if(cc.sys.isNative)
+    {
+        cc.eventManager.addCustomListener(cc.game.EVENT_HIDE,function () {
+            var main = bcSceneMgr.getMainLayer();
+            if(fishLifeCycle && !(main instanceof DemoScene))
+            {
+                fishBZ.sendQuit();
+            }
+        });
+    }
+
+    __init = true;
+
+}
+
+var updateManPortal = function(vinMoney)
+{
+    if(lobbyThanBien)
+    {
+        lobbyThanBien.getParent().updateVin(vinMoney);
+    }
+}
+
 var initSharedWorker = function () {
+    initManPortalEvent();
     if(cc.sys.isNative)
         return;
     if (!webWorker) {
@@ -89,4 +131,6 @@ var initSharedWorker = function () {
         })
     }
 }
+
+
 

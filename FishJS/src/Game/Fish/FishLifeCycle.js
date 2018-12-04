@@ -85,6 +85,8 @@ var FishLifeCycle = cc.Class.extend({
 
             setFuncForLoopWebWorker(null);
             setFuncForEvent(null);
+
+            fishLifeCycle = null;
         }
         else    // user khac quit
             this.players[pk.position].enable(false);
