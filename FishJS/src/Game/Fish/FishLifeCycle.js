@@ -58,6 +58,7 @@ var FishLifeCycle = cc.Class.extend({
             this.gameScene.fish2DLayerDie.removeAllChildren(true);
 
             this.gameScene.stopAllActions();
+            this.gameScene.resetBGWhenActiveTab();
 
             this.myPlayer.lbMoney.stopAllActions();
             this.myPlayer.lbMoney.setScale(1);

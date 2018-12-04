@@ -862,6 +862,21 @@ var GameLayerUI = BCBaseLayer.extend({
         fishSound.playMusicBackgroundGame(this.currentBG);
 
     },
+    resetBGWhenActiveTab: function () {
+        this.backgrounds[0].setVisible(false);
+        this.backgrounds[1].setVisible(false);
+        this.backgrounds[2].setVisible(false);
+
+        this.backgrounds[0].stopAllActions();
+        this.backgrounds[1].stopAllActions();
+        this.backgrounds[2].stopAllActions();
+
+        this.stopMusic();
+        fishSound.playMusicBackgroundGame(this.currentBG);
+        this.backgrounds[this.currentBG].setVisible(true);
+
+
+    },
     stopMusic: function(){
         fishSound.stopMusic();
         // this.stopActionByTag(1111);
