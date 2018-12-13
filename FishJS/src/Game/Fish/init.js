@@ -90,7 +90,7 @@ var updateManPortal = function(vinMoney)
 {
     if(lobbyThanBien)
     {
-        lobbyThanBien.getParent().updateVin(vinMoney);
+        lobbyThanBien.updateVin(vinMoney);
     }
 }
 

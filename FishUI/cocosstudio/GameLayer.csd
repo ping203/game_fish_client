@@ -188,14 +188,14 @@
                     <PreSize X="0.2928" Y="0.3826" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="98.2054" RightMargin="7.7946" TopMargin="69.6276" BottomMargin="131.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="199.0000" Y="31.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="98.2054" Y="145.8724" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6513" Y="0.1261" />
+                    <PreSize X="0.6546" Y="0.1348" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -432,14 +432,14 @@
                     <PreSize X="0.2928" Y="0.3826" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-1076639364" Tag="146" IconVisible="False" LeftMargin="98.2054" RightMargin="7.7946" TopMargin="69.6276" BottomMargin="131.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="username" ActionTag="-1076639364" Tag="146" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="199.0000" Y="31.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="98.2054" Y="145.8724" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6513" Y="0.1261" />
+                    <PreSize X="0.6546" Y="0.1348" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -676,14 +676,14 @@
                     <PreSize X="0.2928" Y="0.3826" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-707476370" Tag="153" IconVisible="False" LeftMargin="98.2054" RightMargin="7.7946" TopMargin="69.6276" BottomMargin="131.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="username" ActionTag="-707476370" Tag="153" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="199.0000" Y="31.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="98.2054" Y="145.8724" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6513" Y="0.1261" />
+                    <PreSize X="0.6546" Y="0.1348" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -882,13 +882,13 @@
                 <PrePosition X="0.6903" Y="0.0000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="waiting" ActionTag="-1307074425" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="81.7430" RightMargin="3.2570" TopMargin="3.8369" BottomMargin="149.1631" LabelText="WAITING" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="waiting" ActionTag="-1307074425" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="81.7430" RightMargin="3.2570" TopMargin="197.8400" BottomMargin="-44.8400" LabelText="WAITING" ctype="TextBMFontObjectData">
                 <Size X="115.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="139.2430" Y="172.6631" />
+                <Position X="139.2430" Y="-21.3400" />
                 <Scale ScaleX="1.0000" ScaleY="1.2000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6962" Y="0.8633" />
+                <PrePosition X="0.6962" Y="-0.1067" />
                 <PreSize X="0.5750" Y="0.2350" />
                 <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
               </AbstractNodeData>
@@ -920,14 +920,14 @@
                     <PreSize X="0.2928" Y="0.3826" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1847517040" Tag="160" IconVisible="False" LeftMargin="98.2054" RightMargin="7.7946" TopMargin="69.6276" BottomMargin="131.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="username" ActionTag="1847517040" Tag="160" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="199.0000" Y="31.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="98.2054" Y="145.8724" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6513" Y="0.1261" />
+                    <PreSize X="0.6546" Y="0.1348" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1126,13 +1126,13 @@
                 <PrePosition X="0.8287" Y="0.0000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="waiting" ActionTag="534812107" VisibleForFrame="False" Tag="167" IconVisible="False" LeftMargin="100.6252" RightMargin="-15.6252" TopMargin="0.5152" BottomMargin="152.4848" LabelText="WAITING" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="waiting" ActionTag="534812107" VisibleForFrame="False" Tag="167" IconVisible="False" LeftMargin="105.4468" RightMargin="-20.4468" TopMargin="193.4100" BottomMargin="-40.4100" LabelText="WAITING" ctype="TextBMFontObjectData">
                 <Size X="115.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="158.1252" Y="175.9848" />
+                <Position X="162.9468" Y="-16.9100" />
                 <Scale ScaleX="1.0000" ScaleY="1.2000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7906" Y="0.8799" />
+                <PrePosition X="0.8147" Y="-0.0846" />
                 <PreSize X="0.5750" Y="0.2350" />
                 <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
               </AbstractNodeData>

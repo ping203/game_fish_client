@@ -191,12 +191,14 @@
           </PlistImageFolder>
           <Image Name="btnAuto.png" />
         </Folder>
+        <Project Name="CellHistoryPlayGame.csd" Type="Layer" />
         <Project Name="CreatePathScene.csd" Type="Scene" />
         <Project Name="DialogGUI.csd" Type="Scene" />
         <Project Name="GameLayer.csd" Type="Layer" />
         <Project Name="LobbyScene.csd" Type="Scene" />
         <Project Name="LoginLayer.csd" Type="Scene" />
         <Project Name="ShopGUI.csd" Type="Scene" />
+        <Project Name="HistoryLayer.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

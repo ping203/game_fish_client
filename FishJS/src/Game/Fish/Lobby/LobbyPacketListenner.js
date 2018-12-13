@@ -154,6 +154,18 @@ var LobbyPacketListenner = cc.Class.extend({
                 }
                 break;
             }
+            case CMD.CMD_HISTOTY:
+            {
+                var pk = new BCCmdReceivedHistory(pkg);
+                var main = bcSceneMgr.getMainLayer();
+                var layerHistory = main.getChildByTag(1000);
+
+                if(layerHistory && (layerHistory instanceof HistoryLayer))
+                {
+                    layerHistory.updateHistory(pk.type,pk.lastPage,pk.dataHisoty);
+                }
+                break;
+            }
 
             default :
             {

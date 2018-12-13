@@ -667,7 +667,7 @@ var GameLogicDemo = cc.Class.extend({
     },
     shootTest: function(percent) {
         var test = Math.random();
-        return test <= percent * 2.0;
+        return test <= percent * 1.5;
     //        return true;
     },
 

@@ -161,3 +161,10 @@ fishBZ.sendRequestCaptcha = function () {
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }
+
+fishBZ.sendRequestHistory = function (type,offset,size) {
+    var pk = new BCCmdSendRequestHistoty();
+    pk.putData(type,offset,size);
+    BCGameClient.getInstance().sendPacket(pk);
+    pk.clean();
+}

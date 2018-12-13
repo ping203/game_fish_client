@@ -91,7 +91,7 @@
               "Y": 1.0099
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -220,7 +220,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 640.0,
@@ -1073,7 +1073,7 @@
               "Y": 1.0035
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -1156,7 +1156,7 @@
                   "X": 65.0,
                   "Y": 65.0
                 },
-                "Name": "Button_12",
+                "Name": "btnTop",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -1231,7 +1231,7 @@
                   "X": 65.0,
                   "Y": 65.0
                 },
-                "Name": "Button_12_0",
+                "Name": "btnTutorial",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -1306,7 +1306,7 @@
                   "X": 65.0,
                   "Y": 65.0
                 },
-                "Name": "Button_12_1",
+                "Name": "btnHistory",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -1381,7 +1381,7 @@
                   "X": 65.0,
                   "Y": 65.0
                 },
-                "Name": "Button_12_2",
+                "Name": "btnSetting",
                 "ctype": "ButtonObjectData"
               }
             ],
@@ -1426,7 +1426,7 @@
               "Y": 0.845
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1477,7 +1477,7 @@
               "Y": 0.4553
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1857,7 +1857,7 @@
               "Y": 0.1429
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -1955,7 +1955,7 @@
               "Y": 0.2192
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2053,7 +2053,7 @@
               "Y": 0.1855
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 231.1775,

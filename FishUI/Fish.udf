@@ -32,8 +32,11 @@
       <Value ctype="TabsInfo">
         <OpenedDocuments>
           <FilePathData Path="GameLayer.csd" />
+          <FilePathData Path="CellHistoryPlayGame.csd" />
+          <FilePathData Path="HistoryLayer.csd" />
+          <FilePathData Path="LobbyScene.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="GameLayer.csd" />
+        <ActiveDocument Path="CellHistoryPlayGame.csd" />
       </Value>
     </Item>
   </Properties>

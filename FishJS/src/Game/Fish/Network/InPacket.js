@@ -283,4 +283,39 @@ BCCmdReceivedLockFish = CmdReceivedCommon.extend({
 
 
 
+/// lobby
+
+
+BCCmdReceivedHistory = CmdReceivedCommon.extend({
+    ctor :function(pkg)
+    {
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.type= this.getShort();
+        this.lastPage = this.getBool();
+
+        this.dataHisoty = [];
+
+        var length = this.getShort();
+
+        for(var i=0;i<length;i++)
+        {
+            if(this.type == HISTORY_TYPE_CHOI_GAME)
+            {
+                var obj = {};
+                obj.changeMoney = this.getLong();
+                obj.gold = this.getLong();
+                obj.time = this.getString();
+
+                this.dataHisoty.push(obj);
+            }
+        }
+
+
+    }
+})
+
+
 

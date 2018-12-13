@@ -573,6 +573,8 @@ var GameLayerUI = BCBaseLayer.extend({
     },
     createEffectFishFired: function(pos,index)
     {
+        if(!fishLifeCycle)
+            return;
         var sp = new cc.Sprite("res/fishData/effect/net2.png");
         this.effectLayer.addChild(sp);
         if(fishLifeCycle.myChair == index)
@@ -873,6 +875,7 @@ var GameLayerUI = BCBaseLayer.extend({
 
         this.stopMusic();
         fishSound.playMusicBackgroundGame(this.currentBG);
+        this.backgrounds[this.currentBG].setOpacity(255);
         this.backgrounds[this.currentBG].setVisible(true);
 
 

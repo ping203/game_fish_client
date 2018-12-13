@@ -63,6 +63,8 @@
       "src/Game/Fish/Lobby/LobbyScene.js",
       "src/Game/Fish/Lobby/LobbyThanBien.js",
       "src/Game/Fish/Lobby/ShopLayer.js",
+      "src/Game/Fish/Lobby/HistoryLayer.js",
+
 
       "src/Game/Fish/Lobby/LobbyPacketListenner.js",
       "src/Game/Fish/Demos/DemoScene.js",

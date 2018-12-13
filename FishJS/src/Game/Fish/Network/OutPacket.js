@@ -188,3 +188,54 @@ BCCmdSendRequestCaptcha= CmdSendCommon.extend(
         }
     }
 )
+
+HISTORY_TYPE_CHOI_GAME = 2;
+HISTORY_TYPE_EXCHANGE_TO_GOLD = 0;
+HISTORY_TYPE_EXCHANGE_TO_VIN = 1;
+
+BCCmdSendRequestHistoty = CmdSendCommon.extend(
+    {
+        ctor:function()
+        {
+            this._super();
+            this.initData(1000);
+            this.setControllerId(1);
+            this.setCmdId(CMD.CMD_HISTOTY);
+
+        },
+        putData:function(type,offset,size){
+            //pack
+            this.packHeader();
+
+            this.putShort(type);
+            this.putShort(offset);
+            this.putShort(size);
+
+            //update
+            this.updateSize();
+        }
+    }
+)
+
+
+BCCmdSendRequestTop = CmdSendCommon.extend(
+    {
+        ctor:function()
+        {
+            this._super();
+            this.initData(1000);
+            this.setControllerId(1);
+            this.setCmdId(CMD.CMD_TOP);
+            this.putData();
+
+        },
+        putData:function(){
+            //pack
+            this.packHeader();
+
+
+            //update
+            this.updateSize();
+        }
+    }
+)

@@ -86,6 +86,16 @@ var LobbyScene = BCBaseLayer.extend({
         this.customizeButton("btnQuit",LobbyScene.BTN_BACK,this.panelBack);
 
 
+        //
+
+        this.panelTopRight = this.getControl("Panel_top_right");
+        this.customizeButton("btnSetting",LobbyScene.BTN_SETTING,this.panelTopRight);
+        this.customizeButton("btnTop",LobbyScene.BTN_TOP,this.panelTopRight);
+        this.customizeButton("btnHistory",LobbyScene.BTN_HISTORY,this.panelTopRight);
+        this.customizeButton("btnTutorial",LobbyScene.BTN_TUTORIAL,this.panelTopRight);
+
+
+
     },
     withLogin: function(){
         this.need_login = true;
@@ -158,6 +168,12 @@ var LobbyScene = BCBaseLayer.extend({
                 })
                 break;
             }
+            case LobbyScene.BTN_HISTORY:
+            {
+                var layer = new HistoryLayer();
+                this.addChild(layer,10,1000);
+                break;
+            }
         }
     }
 })
@@ -168,6 +184,11 @@ LobbyScene.BTN_BACK = 3;
 LobbyScene.BTN_PLAY_NOW = 4;
 LobbyScene.BTN_PLAY_DEMO = 5;
 LobbyScene.BTN_SHOP = 6;
+
+LobbyScene.BTN_TUTORIAL = 7;
+LobbyScene.BTN_HISTORY = 8;
+LobbyScene.BTN_TOP = 9;
+LobbyScene.BTN_SETTING = 10;
 
 
 
