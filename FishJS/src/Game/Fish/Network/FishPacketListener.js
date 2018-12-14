@@ -168,3 +168,10 @@ fishBZ.sendRequestHistory = function (type,offset,size) {
     BCGameClient.getInstance().sendPacket(pk);
     pk.clean();
 }
+fishBZ.sendRequestTop = function () {
+    var pk = new BCCmdSendRequestTop();
+    BCGameClient.getInstance().sendPacket(pk);
+    pk.clean();
+}
+
+

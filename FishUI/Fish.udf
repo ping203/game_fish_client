@@ -25,18 +25,7 @@
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
-        <LastRunType Value="Windows" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="GameLayer.csd" />
-          <FilePathData Path="CellHistoryPlayGame.csd" />
-          <FilePathData Path="HistoryLayer.csd" />
-          <FilePathData Path="LobbyScene.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="CellHistoryPlayGame.csd" />
+        <LastRunType Value="Mac" />
       </Value>
     </Item>
   </Properties>

@@ -167,7 +167,11 @@ var g_resources_fishes = ["res/bullet.png",
 "res/FX/TridentSkill_Noti_FX.json",
 "res/FX/TridentSkill_Noti_FX.png",
 "res/GUI/CellHistoryPlayGame.json",
-"res/GUI/CreatePathScene.json",
+    "res/GUI/CellHistoryGoldVin.json",
+    "res/GUI/TopLayer.json",
+
+
+    "res/GUI/CreatePathScene.json",
 "res/GUI/DialogGUI.json",
 "res/GUI/GameLayer.json",
 "res/GUI/HistoryLayer.json",

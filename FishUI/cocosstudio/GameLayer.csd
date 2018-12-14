@@ -175,93 +175,106 @@
           <AbstractNodeData Name="player_0" ActionTag="152389595" Tag="7" IconVisible="False" LeftMargin="184.1754" RightMargin="895.8246" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-575713470" Tag="34" IconVisible="False" LeftMargin="-263.6100" RightMargin="159.6100" TopMargin="29.9348" BottomMargin="-59.9348" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
-                <Size X="304.0000" Y="230.0000" />
+              <AbstractNodeData Name="bg_thongtin" ActionTag="-1843475137" Tag="186" IconVisible="False" LeftMargin="-164.1897" RightMargin="164.1897" TopMargin="4.6183" BottomMargin="-4.6183" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+                <Size X="200.0000" Y="200.0000" />
                 <Children>
-                  <AbstractNodeData Name="avatar" ActionTag="1413847253" Tag="35" IconVisible="False" LeftMargin="11.9012" RightMargin="203.0988" TopMargin="14.5051" BottomMargin="127.4949" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="bg_thongtin" ActionTag="-575713470" Tag="34" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
+                    <Size X="304.0000" Y="230.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="53.0343" Y="59.5885" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2652" Y="0.2979" />
+                    <PreSize X="1.5200" Y="1.1500" />
+                    <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="avatar" ActionTag="1413847253" Tag="35" IconVisible="False" LeftMargin="-36.1318" RightMargin="147.1318" TopMargin="70.5526" BottomMargin="41.4474" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
                     <Size X="89.0000" Y="88.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="56.4012" Y="171.4949" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="8.3682" Y="85.4474" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1855" Y="0.7456" />
-                    <PreSize X="0.2928" Y="0.3826" />
+                    <PrePosition X="0.0418" Y="0.4272" />
+                    <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="199.0000" Y="31.0000" />
+                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="25.7072" RightMargin="71.2928" TopMargin="117.6854" BottomMargin="66.3146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="103.0000" Y="16.0000" />
                     <AnchorPoint ScaleY="0.5000" />
-                    <Position X="98.2054" Y="145.8724" />
+                    <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6546" Y="0.1348" />
+                    <PrePosition X="0.1285" Y="0.3716" />
+                    <PreSize X="0.5150" Y="0.0800" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="1110743963" Tag="38" IconVisible="False" LeftMargin="13.5580" RightMargin="223.4420" TopMargin="97.5083" BottomMargin="64.4917" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="1110743963" Tag="38" IconVisible="False" LeftMargin="-32.9683" RightMargin="165.9683" TopMargin="115.4953" BottomMargin="16.5047" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="47.0580" Y="98.4917" />
-                    <Scale ScaleX="0.8493" ScaleY="0.8493" />
+                    <Position X="0.5317" Y="50.5047" />
+                    <Scale ScaleX="0.3605" ScaleY="0.3605" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1548" Y="0.4282" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0027" Y="0.2525" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_1" ActionTag="473010689" Tag="48" IconVisible="False" LeftMargin="12.0764" RightMargin="224.9236" TopMargin="154.2522" BottomMargin="7.7478" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_1" ActionTag="473010689" Tag="48" IconVisible="False" LeftMargin="-33.4503" RightMargin="166.4503" TopMargin="142.3138" BottomMargin="-10.3138" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="45.5764" Y="41.7478" />
-                    <Scale ScaleX="0.8305" ScaleY="0.8305" />
+                    <Position X="0.0497" Y="23.6862" />
+                    <Scale ScaleX="0.3754" ScaleY="0.3754" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1499" Y="0.1815" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0002" Y="0.1184" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="219.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="24.1197" RightMargin="86.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="89.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="185.3144" Y="99.7704" />
+                    <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
-                    <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.7204" Y="0.1435" />
+                    <PrePosition X="0.3431" Y="0.2614" />
+                    <PreSize X="0.4450" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_1" ActionTag="1599259051" Tag="146" IconVisible="False" LeftMargin="209.1410" RightMargin="35.8590" TopMargin="27.0388" BottomMargin="162.9612" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_1" ActionTag="1599259051" Tag="146" IconVisible="False" LeftMargin="68.3900" RightMargin="72.6100" TopMargin="86.2205" BottomMargin="73.7795" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="59.0000" Y="40.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="238.6410" Y="182.9612" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="97.8900" Y="93.7795" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.7850" Y="0.7955" />
-                    <PreSize X="0.1941" Y="0.1739" />
+                    <PrePosition X="0.4894" Y="0.4689" />
+                    <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="652313722" Tag="111" IconVisible="False" LeftMargin="95.3294" RightMargin="30.6706" TopMargin="170.7372" BottomMargin="26.2628" FontSize="26" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="178.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="652313722" Tag="111" IconVisible="False" LeftMargin="26.1335" RightMargin="90.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="83.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="184.3294" Y="42.7628" />
+                    <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6063" Y="0.1859" />
-                    <PreSize X="0.5855" Y="0.1435" />
+                    <PrePosition X="0.3382" Y="0.1211" />
+                    <PreSize X="0.4150" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="-111.6100" Y="55.0652" />
-                <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                <AnchorPoint />
+                <Position X="-164.1897" Y="-4.6183" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.5580" Y="0.2753" />
-                <PreSize X="1.5200" Y="1.1500" />
-                <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                <PrePosition X="-0.8209" Y="-0.0231" />
+                <PreSize X="1.0000" Y="1.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="node" ActionTag="455922431" Tag="41" IconVisible="True" LeftMargin="92.4951" RightMargin="107.5049" TopMargin="200.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -419,93 +432,106 @@
           <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="865.5502" RightMargin="214.4498" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-1635095029" Tag="144" IconVisible="False" LeftMargin="189.3900" RightMargin="-293.3900" TopMargin="29.4200" BottomMargin="-59.4200" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
-                <Size X="304.0000" Y="230.0000" />
+              <AbstractNodeData Name="bg_thongtin" ActionTag="-863753829" Tag="187" IconVisible="False" LeftMargin="288.7990" RightMargin="-288.7990" TopMargin="4.5642" BottomMargin="-4.5642" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="200.0000" Y="200.0000" />
                 <Children>
-                  <AbstractNodeData Name="avatar" ActionTag="-506546986" Tag="145" IconVisible="False" LeftMargin="11.9012" RightMargin="203.0988" TopMargin="14.5051" BottomMargin="127.4949" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="bg_thongtin" ActionTag="-521806844" Tag="188" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
+                    <Size X="304.0000" Y="230.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="53.0343" Y="59.5885" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2652" Y="0.2979" />
+                    <PreSize X="1.5200" Y="1.1500" />
+                    <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="avatar" ActionTag="-1713988097" Tag="189" IconVisible="False" LeftMargin="-36.1318" RightMargin="147.1318" TopMargin="70.5526" BottomMargin="41.4474" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
                     <Size X="89.0000" Y="88.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="56.4012" Y="171.4949" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="8.3682" Y="85.4474" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1855" Y="0.7456" />
-                    <PreSize X="0.2928" Y="0.3826" />
+                    <PrePosition X="0.0418" Y="0.4272" />
+                    <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-1076639364" Tag="146" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="199.0000" Y="31.0000" />
+                  <AbstractNodeData Name="username" ActionTag="-811548093" Tag="190" IconVisible="False" LeftMargin="25.7072" RightMargin="71.2928" TopMargin="117.6854" BottomMargin="66.3146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="103.0000" Y="16.0000" />
                     <AnchorPoint ScaleY="0.5000" />
-                    <Position X="98.2054" Y="145.8724" />
+                    <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6546" Y="0.1348" />
+                    <PrePosition X="0.1285" Y="0.3716" />
+                    <PreSize X="0.5150" Y="0.0800" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="490740162" Tag="147" IconVisible="False" LeftMargin="13.5580" RightMargin="223.4420" TopMargin="97.5083" BottomMargin="64.4917" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="1462400850" Tag="191" IconVisible="False" LeftMargin="-32.9683" RightMargin="165.9683" TopMargin="115.4953" BottomMargin="16.5047" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="47.0580" Y="98.4917" />
-                    <Scale ScaleX="0.8493" ScaleY="0.8493" />
+                    <Position X="0.5317" Y="50.5047" />
+                    <Scale ScaleX="0.3605" ScaleY="0.3605" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1548" Y="0.4282" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0027" Y="0.2525" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_1" ActionTag="252730163" Tag="148" IconVisible="False" LeftMargin="12.0764" RightMargin="224.9236" TopMargin="154.2522" BottomMargin="7.7478" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_1" ActionTag="-1909385134" Tag="192" IconVisible="False" LeftMargin="-33.4503" RightMargin="166.4503" TopMargin="142.3138" BottomMargin="-10.3138" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="45.5764" Y="41.7478" />
-                    <Scale ScaleX="0.8615" ScaleY="0.8615" />
+                    <Position X="0.0497" Y="23.6862" />
+                    <Scale ScaleX="0.3754" ScaleY="0.3754" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1499" Y="0.1815" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0002" Y="0.1184" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1128986007" Tag="149" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="219.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="184843080" Tag="193" IconVisible="False" LeftMargin="24.1197" RightMargin="86.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="89.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="185.3144" Y="99.7704" />
+                    <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
-                    <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.7204" Y="0.1435" />
+                    <PrePosition X="0.3431" Y="0.2614" />
+                    <PreSize X="0.4450" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_1" ActionTag="-1550663822" Tag="150" IconVisible="False" LeftMargin="214.5743" RightMargin="30.4257" TopMargin="26.7357" BottomMargin="163.2643" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_1" ActionTag="-2038967704" Tag="194" IconVisible="False" LeftMargin="68.3900" RightMargin="72.6100" TopMargin="86.2205" BottomMargin="73.7795" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="59.0000" Y="40.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="244.0743" Y="183.2643" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="97.8900" Y="93.7795" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8029" Y="0.7968" />
-                    <PreSize X="0.1941" Y="0.1739" />
+                    <PrePosition X="0.4894" Y="0.4689" />
+                    <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="-887825722" Tag="112" IconVisible="False" LeftMargin="96.3152" RightMargin="29.6848" TopMargin="170.1842" BottomMargin="26.8158" FontSize="26" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="178.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="1573472078" Tag="195" IconVisible="False" LeftMargin="26.1335" RightMargin="90.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="83.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="185.3152" Y="43.3158" />
+                    <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6096" Y="0.1883" />
-                    <PreSize X="0.5855" Y="0.1435" />
+                    <PrePosition X="0.3382" Y="0.1211" />
+                    <PreSize X="0.4150" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="341.3900" Y="55.5800" />
-                <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                <AnchorPoint />
+                <Position X="288.7990" Y="-4.5642" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="1.7070" Y="0.2779" />
-                <PreSize X="1.5200" Y="1.1500" />
-                <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                <PrePosition X="1.4440" Y="-0.0228" />
+                <PreSize X="1.0000" Y="1.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="node" ActionTag="-203092569" Tag="178" IconVisible="True" LeftMargin="138.5000" RightMargin="61.5000" TopMargin="200.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -663,93 +689,106 @@
           <AbstractNodeData Name="player_2" ActionTag="34468479" Tag="72" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="865.9838" RightMargin="214.0162" TopMargin="-200.0000" BottomMargin="720.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="1343566148" Tag="151" IconVisible="False" LeftMargin="188.7817" RightMargin="-292.7817" TopMargin="140.1446" BottomMargin="-170.1446" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
-                <Size X="304.0000" Y="230.0000" />
+              <AbstractNodeData Name="bg_thongtin" ActionTag="1684709740" Tag="196" IconVisible="False" LeftMargin="287.3592" RightMargin="-287.3592" TopMargin="115.3442" BottomMargin="-115.3442" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="200.0000" Y="200.0000" />
                 <Children>
-                  <AbstractNodeData Name="avatar" ActionTag="754674291" Tag="152" IconVisible="False" LeftMargin="11.9012" RightMargin="203.0988" TopMargin="14.5051" BottomMargin="127.4949" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="bg_thongtin" ActionTag="-869170799" Tag="197" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
+                    <Size X="304.0000" Y="230.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="53.0343" Y="59.5885" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2652" Y="0.2979" />
+                    <PreSize X="1.5200" Y="1.1500" />
+                    <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="avatar" ActionTag="-1129729356" Tag="198" IconVisible="False" LeftMargin="-36.1318" RightMargin="147.1318" TopMargin="70.5526" BottomMargin="41.4474" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
                     <Size X="89.0000" Y="88.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="56.4012" Y="171.4949" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="8.3682" Y="85.4474" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1855" Y="0.7456" />
-                    <PreSize X="0.2928" Y="0.3826" />
+                    <PrePosition X="0.0418" Y="0.4272" />
+                    <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-707476370" Tag="153" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="199.0000" Y="31.0000" />
+                  <AbstractNodeData Name="username" ActionTag="-863560204" Tag="199" IconVisible="False" LeftMargin="25.7072" RightMargin="71.2928" TopMargin="117.6854" BottomMargin="66.3146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="103.0000" Y="16.0000" />
                     <AnchorPoint ScaleY="0.5000" />
-                    <Position X="98.2054" Y="145.8724" />
+                    <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6546" Y="0.1348" />
+                    <PrePosition X="0.1285" Y="0.3716" />
+                    <PreSize X="0.5150" Y="0.0800" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="831682827" Tag="154" IconVisible="False" LeftMargin="13.5580" RightMargin="223.4420" TopMargin="97.5083" BottomMargin="64.4917" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="274434501" Tag="200" IconVisible="False" LeftMargin="-32.9683" RightMargin="165.9683" TopMargin="115.4953" BottomMargin="16.5047" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="47.0580" Y="98.4917" />
-                    <Scale ScaleX="0.8493" ScaleY="0.8493" />
+                    <Position X="0.5317" Y="50.5047" />
+                    <Scale ScaleX="0.3605" ScaleY="0.3605" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1548" Y="0.4282" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0027" Y="0.2525" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_1" ActionTag="-1493839467" Tag="155" IconVisible="False" LeftMargin="12.0764" RightMargin="224.9236" TopMargin="154.2523" BottomMargin="7.7477" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_1" ActionTag="155760940" Tag="201" IconVisible="False" LeftMargin="-33.4503" RightMargin="166.4503" TopMargin="142.3138" BottomMargin="-10.3138" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="45.5764" Y="41.7477" />
-                    <Scale ScaleX="0.8638" ScaleY="0.8638" />
+                    <Position X="0.0497" Y="23.6862" />
+                    <Scale ScaleX="0.3754" ScaleY="0.3754" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1499" Y="0.1815" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0002" Y="0.1184" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-808831615" Tag="156" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="219.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-752861110" Tag="202" IconVisible="False" LeftMargin="24.1197" RightMargin="86.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="89.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="185.3144" Y="99.7704" />
+                    <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
-                    <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.7204" Y="0.1435" />
+                    <PrePosition X="0.3431" Y="0.2614" />
+                    <PreSize X="0.4450" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_1" ActionTag="-1116950022" Tag="157" IconVisible="False" LeftMargin="208.6918" RightMargin="36.3082" TopMargin="28.7134" BottomMargin="161.2866" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_1" ActionTag="1970845700" Tag="203" IconVisible="False" LeftMargin="68.3900" RightMargin="72.6100" TopMargin="86.2205" BottomMargin="73.7795" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="59.0000" Y="40.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="238.1918" Y="181.2866" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="97.8900" Y="93.7795" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.7835" Y="0.7882" />
-                    <PreSize X="0.1941" Y="0.1739" />
+                    <PrePosition X="0.4894" Y="0.4689" />
+                    <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="-775767129" Tag="113" IconVisible="False" LeftMargin="88.8856" RightMargin="26.1144" TopMargin="172.4121" BottomMargin="24.5879" FontSize="26" LabelText="-----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="189.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="-2139524876" Tag="204" IconVisible="False" LeftMargin="26.1335" RightMargin="90.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="83.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="183.3856" Y="41.0879" />
+                    <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6032" Y="0.1786" />
-                    <PreSize X="0.6217" Y="0.1435" />
+                    <PrePosition X="0.3382" Y="0.1211" />
+                    <PreSize X="0.4150" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="340.7817" Y="-55.1446" />
-                <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                <AnchorPoint />
+                <Position X="287.3592" Y="-115.3442" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="1.7039" Y="-0.2757" />
-                <PreSize X="1.5200" Y="1.1500" />
-                <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                <PrePosition X="1.4368" Y="-0.5767" />
+                <PreSize X="1.0000" Y="1.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="node" ActionTag="1894541023" Tag="190" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="138.0664" RightMargin="61.9336" TopMargin="200.0001" BottomMargin="-0.0001" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -882,13 +921,13 @@
                 <PrePosition X="0.6903" Y="0.0000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="waiting" ActionTag="-1307074425" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="81.7430" RightMargin="3.2570" TopMargin="197.8400" BottomMargin="-44.8400" LabelText="WAITING" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="waiting" ActionTag="-1307074425" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="80.5261" RightMargin="4.4739" TopMargin="188.1047" BottomMargin="-35.1047" LabelText="WAITING" ctype="TextBMFontObjectData">
                 <Size X="115.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="139.2430" Y="-21.3400" />
+                <Position X="138.0261" Y="-11.6047" />
                 <Scale ScaleX="1.0000" ScaleY="1.2000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6962" Y="-0.1067" />
+                <PrePosition X="0.6901" Y="-0.0580" />
                 <PreSize X="0.5750" Y="0.2350" />
                 <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
               </AbstractNodeData>
@@ -907,93 +946,106 @@
           <AbstractNodeData Name="player_3" ActionTag="-1909796107" Tag="91" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="110.9214" RightMargin="969.0786" TopMargin="-200.0000" BottomMargin="720.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-2022178428" Tag="158" IconVisible="False" LeftMargin="-190.0398" RightMargin="86.0398" TopMargin="140.2700" BottomMargin="-170.2700" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
-                <Size X="304.0000" Y="230.0000" />
+              <AbstractNodeData Name="bg_thongtin" ActionTag="713520961" Tag="205" IconVisible="False" LeftMargin="-90.8326" RightMargin="90.8326" TopMargin="115.0006" BottomMargin="-115.0006" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="200.0000" Y="200.0000" />
                 <Children>
-                  <AbstractNodeData Name="avatar" ActionTag="1338739653" Tag="159" IconVisible="False" LeftMargin="11.9012" RightMargin="203.0988" TopMargin="14.5051" BottomMargin="127.4949" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="bg_thongtin" ActionTag="-455456828" Tag="206" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
+                    <Size X="304.0000" Y="230.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="53.0343" Y="59.5885" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.2652" Y="0.2979" />
+                    <PreSize X="1.5200" Y="1.1500" />
+                    <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="avatar" ActionTag="-408060609" Tag="207" IconVisible="False" LeftMargin="-36.1318" RightMargin="147.1318" TopMargin="70.5526" BottomMargin="41.4474" LeftEage="29" RightEage="29" TopEage="29" BottomEage="29" Scale9OriginX="29" Scale9OriginY="29" Scale9Width="31" Scale9Height="30" ctype="ImageViewObjectData">
                     <Size X="89.0000" Y="88.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="56.4012" Y="171.4949" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="8.3682" Y="85.4474" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1855" Y="0.7456" />
-                    <PreSize X="0.2928" Y="0.3826" />
+                    <PrePosition X="0.0418" Y="0.4272" />
+                    <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1847517040" Tag="160" IconVisible="False" LeftMargin="98.2054" RightMargin="6.7946" TopMargin="68.6276" BottomMargin="130.3724" FontSize="24" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="199.0000" Y="31.0000" />
+                  <AbstractNodeData Name="username" ActionTag="1457621511" Tag="208" IconVisible="False" LeftMargin="25.7072" RightMargin="71.2928" TopMargin="117.6854" BottomMargin="66.3146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="103.0000" Y="16.0000" />
                     <AnchorPoint ScaleY="0.5000" />
-                    <Position X="98.2054" Y="145.8724" />
+                    <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3230" Y="0.6342" />
-                    <PreSize X="0.6546" Y="0.1348" />
+                    <PrePosition X="0.1285" Y="0.3716" />
+                    <PreSize X="0.5150" Y="0.0800" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="-1319697090" Tag="161" IconVisible="False" LeftMargin="13.5580" RightMargin="223.4420" TopMargin="97.5083" BottomMargin="64.4917" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_0_0" ActionTag="1396789665" Tag="209" IconVisible="False" LeftMargin="-32.9683" RightMargin="165.9683" TopMargin="115.4953" BottomMargin="16.5047" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="47.0580" Y="98.4917" />
-                    <Scale ScaleX="0.8493" ScaleY="0.8493" />
+                    <Position X="0.5317" Y="50.5047" />
+                    <Scale ScaleX="0.3605" ScaleY="0.3605" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1548" Y="0.4282" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0027" Y="0.2525" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_4_0_1" ActionTag="-1505724745" Tag="162" IconVisible="False" LeftMargin="12.0764" RightMargin="224.9236" TopMargin="154.2522" BottomMargin="7.7478" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_4_0_1" ActionTag="138308289" Tag="210" IconVisible="False" LeftMargin="-33.4503" RightMargin="166.4503" TopMargin="142.3138" BottomMargin="-10.3138" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="39" Scale9Height="40" ctype="ImageViewObjectData">
                     <Size X="67.0000" Y="68.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="45.5764" Y="41.7478" />
-                    <Scale ScaleX="0.8727" ScaleY="0.8727" />
+                    <Position X="0.0497" Y="23.6862" />
+                    <Scale ScaleX="0.3754" ScaleY="0.3754" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1499" Y="0.1815" />
-                    <PreSize X="0.2204" Y="0.2957" />
+                    <PrePosition X="0.0002" Y="0.1184" />
+                    <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="215349011" Tag="163" IconVisible="False" LeftMargin="75.8144" RightMargin="9.1856" TopMargin="113.7296" BottomMargin="83.2704" FontSize="26" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="219.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="1765602264" Tag="211" IconVisible="False" LeftMargin="24.1197" RightMargin="86.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="89.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="185.3144" Y="99.7704" />
+                    <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
-                    <PrePosition X="0.6096" Y="0.4338" />
-                    <PreSize X="0.7204" Y="0.1435" />
+                    <PrePosition X="0.3431" Y="0.2614" />
+                    <PreSize X="0.4450" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Image_1" ActionTag="-1946509783" Tag="164" IconVisible="False" LeftMargin="209.8951" RightMargin="35.1049" TopMargin="30.9509" BottomMargin="159.0491" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="Image_1" ActionTag="-62443426" Tag="212" IconVisible="False" LeftMargin="68.3900" RightMargin="72.6100" TopMargin="86.2205" BottomMargin="73.7795" LeftEage="19" RightEage="19" TopEage="13" BottomEage="13" Scale9OriginX="19" Scale9OriginY="13" Scale9Width="21" Scale9Height="14" ctype="ImageViewObjectData">
                     <Size X="59.0000" Y="40.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="239.3951" Y="179.0491" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="97.8900" Y="93.7795" />
+                    <Scale ScaleX="0.4789" ScaleY="0.4789" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.7875" Y="0.7785" />
-                    <PreSize X="0.1941" Y="0.1739" />
+                    <PrePosition X="0.4894" Y="0.4689" />
+                    <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="-1994444559" Tag="114" IconVisible="False" LeftMargin="88.6670" RightMargin="26.3330" TopMargin="172.1381" BottomMargin="24.8619" FontSize="26" LabelText="-----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="189.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="1171871401" Tag="213" IconVisible="False" LeftMargin="26.1335" RightMargin="90.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="83.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="183.1670" Y="41.3619" />
+                    <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.6025" Y="0.1798" />
-                    <PreSize X="0.6217" Y="0.1435" />
+                    <PrePosition X="0.3382" Y="0.1211" />
+                    <PreSize X="0.4150" Y="0.0750" />
                     <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="-38.0398" Y="-55.2700" />
-                <Scale ScaleX="0.4789" ScaleY="0.4789" />
+                <AnchorPoint />
+                <Position X="-90.8326" Y="-115.0006" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.1902" Y="-0.2763" />
-                <PreSize X="1.5200" Y="1.1500" />
-                <FileData Type="PlistSubImage" Path="khung_ava.png" Plist="ScreenGame/Ingame.plist" />
+                <PrePosition X="-0.4542" Y="-0.5750" />
+                <PreSize X="1.0000" Y="1.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="node" ActionTag="1381576910" Tag="202" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="True" LeftMargin="165.7491" RightMargin="34.2509" TopMargin="199.9999" BottomMargin="0.0001" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -1126,13 +1178,13 @@
                 <PrePosition X="0.8287" Y="0.0000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="waiting" ActionTag="534812107" VisibleForFrame="False" Tag="167" IconVisible="False" LeftMargin="105.4468" RightMargin="-20.4468" TopMargin="193.4100" BottomMargin="-40.4100" LabelText="WAITING" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="waiting" ActionTag="534812107" VisibleForFrame="False" Tag="167" IconVisible="False" LeftMargin="104.8382" RightMargin="-19.8382" TopMargin="188.5424" BottomMargin="-35.5424" LabelText="WAITING" ctype="TextBMFontObjectData">
                 <Size X="115.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="162.9468" Y="-16.9100" />
+                <Position X="162.3382" Y="-12.0424" />
                 <Scale ScaleX="1.0000" ScaleY="1.2000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8147" Y="-0.0846" />
+                <PrePosition X="0.8117" Y="-0.0602" />
                 <PreSize X="0.5750" Y="0.2350" />
                 <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
               </AbstractNodeData>

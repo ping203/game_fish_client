@@ -195,10 +195,14 @@
         <Project Name="CreatePathScene.csd" Type="Scene" />
         <Project Name="DialogGUI.csd" Type="Scene" />
         <Project Name="GameLayer.csd" Type="Layer" />
+        <Project Name="HistoryLayer.csd" Type="Scene" />
         <Project Name="LobbyScene.csd" Type="Scene" />
         <Project Name="LoginLayer.csd" Type="Scene" />
         <Project Name="ShopGUI.csd" Type="Scene" />
-        <Project Name="HistoryLayer.csd" Type="Scene" />
+        <Project Name="CellHistoryGoldVin.csd" Type="Scene" />
+        <Project Name="TopLayer.csd" Type="Scene" />
+        <Project Name="CellTopUser.csd" Type="Scene" />
+        <Project Name="ListFish.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

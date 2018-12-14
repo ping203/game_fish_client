@@ -311,11 +311,41 @@ BCCmdReceivedHistory = CmdReceivedCommon.extend({
 
                 this.dataHisoty.push(obj);
             }
+            else
+            {
+                var obj = {};
+                obj.id = this.getLong();
+                obj.exchangeAmount = this.getLong();
+                obj.receivedAmount = this.getLong();
+                obj.status = this.getBool();
+                obj.time = this.getString();
+
+                this.dataHisoty.push(obj);
+            }
         }
 
 
     }
 })
 
-
+var BCCmdReceivedGetTop = CmdReceivedCommon.extend({
+    ctor :function(pkg)
+    {
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.data = [];
+        var length = this.getShort();
+        for(var i=0;i<length;i++)
+        {
+            var obj = {};
+            this.gold = this.getLong();
+            this.bet = this.getLong();
+            this.win = this.getLong();
+            this.username = this.getString();
+            this.avatar = this.getString();
+        }
+    }
+})
 

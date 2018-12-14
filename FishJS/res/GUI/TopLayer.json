@@ -1,0 +1,554 @@
+{
+  "ID": "7cb3b982-21f0-4a0f-8cfa-54a43c3fae5f",
+  "Version": "3.10.0.0",
+  "Name": "TopLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 155,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.2778
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 640.0,
+            "RightMargin": 440.0,
+            "TopMargin": 160.0,
+            "BottomMargin": 360.0,
+            "Tag": 156,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/napvang_tab.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/napvang_tab.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 118,
+                "Scale9Height": 129,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 569.9261,
+                  "Y": 97.2355
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 2.8496,
+                  "Y": 0.4862
+                },
+                "PreSize": {
+                  "X": 0.74,
+                  "Y": 0.755
+                },
+                "LeftMargin": 495.9261,
+                "RightMargin": -443.9261,
+                "TopMargin": 27.2645,
+                "BottomMargin": 21.7355,
+                "Tag": 157,
+                "ActionTag": 127379575,
+                "Size": {
+                  "X": 148.0,
+                  "Y": 151.0
+                },
+                "VisibleForFrame": false,
+                "Name": "btnNapVang",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_topwin.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 422,
+                "Scale9OriginY": 237,
+                "Scale9Width": 436,
+                "Scale9Height": 246,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 6.4,
+                  "Y": 3.6
+                },
+                "LeftMargin": -640.0,
+                "RightMargin": -440.0,
+                "TopMargin": -160.0,
+                "BottomMargin": -360.0,
+                "Tag": 158,
+                "Children": [
+                  {
+                    "ClipAble": false,
+                    "BackColorAlpha": 102,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 154.2752,
+                      "Y": 48.2114
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1205,
+                      "Y": 0.067
+                    },
+                    "PreSize": {
+                      "X": 0.7594,
+                      "Y": 0.6056
+                    },
+                    "LeftMargin": 154.2752,
+                    "RightMargin": 153.7249,
+                    "TopMargin": 235.7886,
+                    "BottomMargin": 48.2114,
+                    "Tag": 159,
+                    "ActionTag": 922721195,
+                    "Size": {
+                      "X": 972.0,
+                      "Y": 436.0
+                    },
+                    "Name": "panel_table",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/close.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/close.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 51,
+                    "Scale9Height": 59,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 1153.7086,
+                      "Y": 598.3996
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9013,
+                      "Y": 0.8311
+                    },
+                    "PreSize": {
+                      "X": 0.0633,
+                      "Y": 0.1125
+                    },
+                    "LeftMargin": 1113.2086,
+                    "RightMargin": 85.7914,
+                    "TopMargin": 81.1004,
+                    "BottomMargin": 557.8996,
+                    "Tag": 180,
+                    "ActionTag": 1563580870,
+                    "Size": {
+                      "X": 81.0,
+                      "Y": 81.0
+                    },
+                    "Name": "btnClose",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -812730035,
+                "Size": {
+                  "X": 1280.0,
+                  "Y": 720.0
+                },
+                "Name": "bg",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 996873051,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "Panel",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/thread_yellow.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 639.5939,
+              "Y": 510.7373
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4997,
+              "Y": 0.7094
+            },
+            "PreSize": {
+              "X": 0.7594,
+              "Y": 0.0694
+            },
+            "LeftMargin": 153.5939,
+            "RightMargin": 154.4061,
+            "TopMargin": 184.2627,
+            "BottomMargin": 485.7373,
+            "Tag": 181,
+            "Children": [
+              {
+                "FontSize": 28,
+                "LabelText": "Hạng",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 74.4995,
+                  "Y": 25.5861
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 23,
+                  "G": 90
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0766,
+                  "Y": 0.5117
+                },
+                "PreSize": {
+                  "X": 0.0628,
+                  "Y": 0.78
+                },
+                "LeftMargin": 43.9995,
+                "RightMargin": 867.0005,
+                "TopMargin": 4.9139,
+                "BottomMargin": 6.0861,
+                "Tag": 183,
+                "ActionTag": 1142198759,
+                "Size": {
+                  "X": 61.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 28,
+                "LabelText": "Người chơi",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 269.3998,
+                  "Y": 26.4917
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 23,
+                  "G": 90
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2772,
+                  "Y": 0.5298
+                },
+                "PreSize": {
+                  "X": 0.1245,
+                  "Y": 0.78
+                },
+                "LeftMargin": 208.8998,
+                "RightMargin": 642.1002,
+                "TopMargin": 4.0083,
+                "BottomMargin": 6.9917,
+                "Tag": 184,
+                "ActionTag": 241955988,
+                "Size": {
+                  "X": 121.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_1_0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 28,
+                "LabelText": "Tổng tiền thắng",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 582.6515,
+                  "Y": 27.0252
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 23,
+                  "G": 90
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5994,
+                  "Y": 0.5405
+                },
+                "PreSize": {
+                  "X": 0.1821,
+                  "Y": 0.78
+                },
+                "LeftMargin": 494.1515,
+                "RightMargin": 300.8485,
+                "TopMargin": 3.4748,
+                "BottomMargin": 7.5252,
+                "Tag": 185,
+                "ActionTag": 606312285,
+                "Size": {
+                  "X": 177.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_1_0_0",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 278568780,
+            "Size": {
+              "X": 972.0,
+              "Y": 50.0
+            },
+            "Name": "bg_user_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Lobby/Popup/bg_topwin.png",
+        "Lobby/Popup/close.png",
+        "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+        "Lobby/Popup/napvang_tab.png",
+        "Lobby/Popup/thread_yellow.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

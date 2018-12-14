@@ -166,6 +166,18 @@ var LobbyPacketListenner = cc.Class.extend({
                 }
                 break;
             }
+            case CMD.CMD_TOP:
+            {
+                var pk = new BCCmdReceivedGetTop(pkg);
+                var main = bcSceneMgr.getMainLayer();
+                var layer = main.getChildByTag(1000);
+
+                if(layer && (layer instanceof BCTopLayer))
+                {
+                    layer.updateData(pk.data);
+                }
+                break;
+            }
 
             default :
             {

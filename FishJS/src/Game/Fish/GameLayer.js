@@ -355,6 +355,8 @@ var GameLayerUI = BCBaseLayer.extend({
         this.doUpdate(dt);
     },
     doUpdate: function (dt) {
+        if(!fishLifeCycle)
+            return;
         // cc.log("do update");
         if(this.gameMgr.state === BCGameManager.STATE_MATRIX_MAP)
         {

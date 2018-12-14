@@ -6,7 +6,7 @@
       <ObjectData Name="Scene" Tag="118" ctype="GameNodeObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="Panel" ActionTag="1649019743" Tag="126" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="640.0000" RightMargin="440.0000" TopMargin="160.0000" BottomMargin="360.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel" ActionTag="1649019743" Tag="126" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="640.0000" RightMargin="440.0000" TopMargin="160.0000" BottomMargin="360.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="btnNapVang" ActionTag="1489820380" Tag="125" IconVisible="False" LeftMargin="495.9261" RightMargin="-443.9261" TopMargin="27.2645" BottomMargin="21.7355" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="118" Scale9Height="129" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -27,23 +27,23 @@
               <AbstractNodeData Name="bg" ActionTag="825051877" Tag="119" IconVisible="False" LeftMargin="-640.0000" RightMargin="-440.0000" TopMargin="-160.0000" BottomMargin="-360.0000" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <Children>
-                  <AbstractNodeData Name="panel_table" ActionTag="1124077614" Tag="123" IconVisible="False" LeftMargin="154.2752" RightMargin="149.7249" TopMargin="335.7886" BottomMargin="48.2114" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
-                    <Size X="976.0000" Y="336.0000" />
+                  <AbstractNodeData Name="panel_table" ActionTag="1124077614" Tag="123" IconVisible="False" LeftMargin="155.4212" RightMargin="152.5787" TopMargin="317.7886" BottomMargin="48.2114" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                    <Size X="972.0000" Y="354.0000" />
                     <AnchorPoint />
-                    <Position X="154.2752" Y="48.2114" />
+                    <Position X="155.4212" Y="48.2114" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1205" Y="0.0670" />
-                    <PreSize X="0.7625" Y="0.4667" />
+                    <PrePosition X="0.1214" Y="0.0670" />
+                    <PreSize X="0.7594" Y="0.4917" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_3" ActionTag="337344199" Tag="127" IconVisible="False" LeftMargin="154.4900" RightMargin="149.5100" TopMargin="264.5307" BottomMargin="385.4693" ClipAble="False" ComboBoxIndex="2" ColorAngle="90.0000" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_3" ActionTag="337344199" Tag="127" IconVisible="False" LeftMargin="153.4900" RightMargin="150.5100" TopMargin="256.1154" BottomMargin="393.8846" ClipAble="False" ColorAngle="90.0000" LeftEage="320" RightEage="320" TopEage="16" BottomEage="16" Scale9OriginX="320" Scale9OriginY="16" Scale9Width="332" Scale9Height="18" ctype="PanelObjectData">
                     <Size X="976.0000" Y="70.0000" />
                     <Children>
-                      <AbstractNodeData Name="Text_1" ActionTag="-48511652" Tag="128" IconVisible="False" LeftMargin="60.2801" RightMargin="796.7198" TopMargin="11.9778" BottomMargin="14.0222" FontSize="32" LabelText="Thời gian" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_1" ActionTag="-48511652" Tag="128" IconVisible="False" LeftMargin="60.2801" RightMargin="796.7199" TopMargin="11.9778" BottomMargin="14.0222" FontSize="32" LabelText="Thời gian" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="119.0000" Y="44.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="119.7801" Y="36.0222" />
@@ -93,17 +93,170 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
-                    <Position X="154.4900" Y="385.4693" />
+                    <Position X="153.4900" Y="393.8846" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1207" Y="0.5354" />
+                    <PrePosition X="0.1199" Y="0.5471" />
                     <PreSize X="0.7625" Y="0.0972" />
+                    <FileData Type="Normal" Path="Lobby/Popup/thread_yellow.png" Plist="" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="255" G="202" B="52" />
                     <EndColor A="255" R="244" G="221" B="182" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnChoiGame" ActionTag="1143978413" Tag="120" IconVisible="False" LeftMargin="315.7669" RightMargin="765.2331" TopMargin="175.0557" BottomMargin="472.9444" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="169" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="Panel_3_0" ActionTag="195090395" Tag="143" IconVisible="False" LeftMargin="154.4900" RightMargin="149.5100" TopMargin="256.1154" BottomMargin="393.8846" ClipAble="False" ColorAngle="90.0000" LeftEage="320" RightEage="320" TopEage="16" BottomEage="16" Scale9OriginX="320" Scale9OriginY="16" Scale9Width="332" Scale9Height="18" ctype="PanelObjectData">
+                    <Size X="976.0000" Y="70.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Text_1" ActionTag="-548277707" Tag="144" IconVisible="False" LeftMargin="58.7456" RightMargin="811.2544" TopMargin="15.9777" BottomMargin="15.0223" FontSize="28" LabelText="Thời gian" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="106.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="111.7456" Y="34.5223" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.1145" Y="0.4932" />
+                        <PreSize X="0.1086" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0" ActionTag="1334696304" Tag="145" IconVisible="False" LeftMargin="231.8115" RightMargin="555.1885" TopMargin="16.8705" BottomMargin="14.1295" FontSize="28" LabelText="Số VÀNG cần đổi" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="189.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="326.3115" Y="33.6295" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.3343" Y="0.4804" />
+                        <PreSize X="0.1936" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0" ActionTag="-737868123" Tag="146" IconVisible="False" LeftMargin="463.2900" RightMargin="288.7100" TopMargin="15.9777" BottomMargin="15.0223" FontSize="28" LabelText="Số VÀNG nhận được" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="224.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="575.2900" Y="34.5223" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.5894" Y="0.4932" />
+                        <PreSize X="0.2295" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0_0" ActionTag="1482146879" Tag="147" IconVisible="False" LeftMargin="885.0800" RightMargin="60.9200" TopMargin="11.0851" BottomMargin="14.9149" FontSize="32" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="30.0000" Y="44.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="900.0800" Y="36.9149" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.9222" Y="0.5274" />
+                        <PreSize X="0.0307" Y="0.6286" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0_0_0" ActionTag="-1269194995" Tag="148" IconVisible="False" LeftMargin="728.8909" RightMargin="130.1091" TopMargin="16.2632" BottomMargin="14.7368" FontSize="28" LabelText="Trạng thái" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="117.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="787.3909" Y="34.2368" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.8068" Y="0.4891" />
+                        <PreSize X="0.1199" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position X="154.4900" Y="393.8846" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.1207" Y="0.5471" />
+                    <PreSize X="0.7625" Y="0.0972" />
+                    <FileData Type="Normal" Path="Lobby/Popup/thread_yellow.png" Plist="" />
+                    <SingleColor A="255" R="150" G="200" B="255" />
+                    <FirstColor A="255" R="255" G="202" B="52" />
+                    <EndColor A="255" R="244" G="221" B="182" />
+                    <ColorVector ScaleY="1.0000" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Panel_3_0_0" Visible="False" ActionTag="1699798110" Tag="149" IconVisible="False" LeftMargin="153.3196" RightMargin="150.6804" TopMargin="256.1154" BottomMargin="393.8846" ClipAble="False" ColorAngle="90.0000" LeftEage="320" RightEage="320" TopEage="16" BottomEage="16" Scale9OriginX="320" Scale9OriginY="16" Scale9Width="332" Scale9Height="18" ctype="PanelObjectData">
+                    <Size X="976.0000" Y="70.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Text_1" ActionTag="1207039621" Tag="150" IconVisible="False" LeftMargin="58.7456" RightMargin="811.2544" TopMargin="15.9777" BottomMargin="15.0223" FontSize="28" LabelText="Thời gian" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="106.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="111.7456" Y="34.5223" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.1145" Y="0.4932" />
+                        <PreSize X="0.1086" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0" ActionTag="-1403168572" Tag="151" IconVisible="False" LeftMargin="236.8115" RightMargin="560.1885" TopMargin="16.8705" BottomMargin="14.1295" FontSize="28" LabelText="Số MAN cần đổi" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="179.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="326.3115" Y="33.6295" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.3343" Y="0.4804" />
+                        <PreSize X="0.1834" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0" ActionTag="-1285613415" Tag="152" IconVisible="False" LeftMargin="468.2900" RightMargin="293.7100" TopMargin="15.9777" BottomMargin="15.0223" FontSize="28" LabelText="Số MAN nhận được" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="214.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="575.2900" Y="34.5223" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.5894" Y="0.4932" />
+                        <PreSize X="0.2193" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0_0" ActionTag="1480120027" Tag="153" IconVisible="False" LeftMargin="885.0800" RightMargin="60.9200" TopMargin="11.0851" BottomMargin="14.9149" FontSize="32" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="30.0000" Y="44.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="900.0800" Y="36.9149" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.9222" Y="0.5274" />
+                        <PreSize X="0.0307" Y="0.6286" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text_1_0_0_0_0" ActionTag="642137938" Tag="154" IconVisible="False" LeftMargin="728.8909" RightMargin="130.1091" TopMargin="16.2632" BottomMargin="14.7368" FontSize="28" LabelText="Trạng thái" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="117.0000" Y="39.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="787.3909" Y="34.2368" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="23" G="90" B="255" />
+                        <PrePosition X="0.8068" Y="0.4891" />
+                        <PreSize X="0.1199" Y="0.5571" />
+                        <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint />
+                    <Position X="153.3196" Y="393.8846" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.1198" Y="0.5471" />
+                    <PreSize X="0.7625" Y="0.0972" />
+                    <FileData Type="Normal" Path="Lobby/Popup/thread_yellow.png" Plist="" />
+                    <SingleColor A="255" R="150" G="200" B="255" />
+                    <FirstColor A="255" R="255" G="202" B="52" />
+                    <EndColor A="255" R="244" G="221" B="182" />
+                    <ColorVector ScaleY="1.0000" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="btnChoiGame" ActionTag="1143978413" Tag="120" IconVisible="False" LeftMargin="315.7669" RightMargin="765.2331" TopMargin="175.0556" BottomMargin="472.9444" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="169" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="199.0000" Y="72.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="415.2669" Y="508.9444" />
@@ -118,13 +271,13 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnNhanVang" ActionTag="-1865062083" Tag="121" IconVisible="False" LeftMargin="564.3097" RightMargin="516.6903" TopMargin="168.4132" BottomMargin="479.5868" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="169" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btnNhanVang" ActionTag="-1865062083" Tag="121" IconVisible="False" LeftMargin="564.3097" RightMargin="516.6903" TopMargin="171.4132" BottomMargin="476.5868" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="169" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="199.0000" Y="72.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="663.8097" Y="515.5868" />
+                    <Position X="663.8097" Y="512.5868" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5186" Y="0.7161" />
+                    <PrePosition X="0.5186" Y="0.7119" />
                     <PreSize X="0.1555" Y="0.1000" />
                     <TextColor A="255" R="65" G="65" B="70" />
                     <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />

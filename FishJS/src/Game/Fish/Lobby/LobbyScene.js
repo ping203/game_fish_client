@@ -174,6 +174,12 @@ var LobbyScene = BCBaseLayer.extend({
                 this.addChild(layer,10,1000);
                 break;
             }
+            case LobbyScene.BTN_TOP:
+            {
+                var layer = new BCTopLayer();
+                this.addChild(layer,10,1000);
+                break;
+            }
         }
     }
 })
@@ -251,3 +257,137 @@ BCDialog.BTN_CANCEL = 1;
 
 BCDialog.ZORDER = 100;
 BCDialog.TAG = 1324;
+
+
+var BCTopLayer = BCBaseLayer.extend({
+    ctor: function () {
+        this._super();
+        this.initWithBinaryFile("res/GUI/TopLayer.json");
+    },
+    initGUI: function () {
+        this.panel_bg = this.getControl("Panel");
+        this.bg = this.getControl("bg",this.panel_bg);
+        this.panel_table = this.getControl("panel_table",this.bg);
+
+        var aa = this.panel_table.getContentSize();
+
+        var top = new BCTopLayerTable(this.panel_table);
+    },
+    onEnter: function () {
+        this._super();
+        fishBZ.sendRequestTop();
+    },
+    customizeGUI: function () {
+        this.setFog(true);
+    },
+    onEnterFinish: function () {
+        this.setShowHideAnimate(this.panel_bg);
+    },
+    updateData: function (data) {
+
+    }
+})
+
+/// to TOP
+
+var BCTopCell = cc.TableViewCell.extend({
+    ctor: function () {
+        this._super();
+        var jsonLayout = ccs.load("res/GUI/CellHistoryGoldVin.json");
+        this._layout = jsonLayout.node;
+        this._layout.setContentSize(cc.director.getWinSize());
+        if(cc.sys.isNative)
+            ccui.Helper.doLayout(this._layout);
+        this.addChild(this._layout);
+
+        this.lbTime = this._layout.getChildByName("lbTime");
+        this.lbExchangeAmount = this._layout.getChildByName("lbExchangeAmount");
+        this.lbReceivedAmount = this._layout.getChildByName("lbReceivedAmount");
+        this.lbStatus = this._layout.getChildByName("lbStatus");
+        this.lbID = this._layout.getChildByName("lbID");
+
+
+    },
+    updateCell: function(time,exchangeAmount,receivedAmount,status,id){
+        this.lbTime.setString(time);
+        this.lbExchangeAmount.setString(BCStringUtility.standartNumber(Math.abs(exchangeAmount))+"$");
+        this.lbReceivedAmount.setString(BCStringUtility.standartNumber(receivedAmount)+"$");
+        this.lbStatus.setString(status?"Thành công":"Thất bại");
+        this.lbStatus.setColor(status?cc.color(0,255,0):cc.color(255,0,0));
+        this.lbID.setString("#"+id);
+    }
+
+})
+
+
+var BCTopLayerTable = cc.Layer.extend({
+    ctor: function (parent) {
+        this._super();
+
+        this.data = [];
+        this.tableView = new cc.TableView(this,parent.getContentSize());
+        this.tableView.setDelegate(this);
+        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_BOTTOMUP);
+        this.tableView.setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL);
+
+        this.Size = parent.getContentSize();
+
+
+        this.addChild(this.tableView);
+        parent.addChild(this);
+
+        this.tableView.reloadData();
+
+        this.isLoading = false;
+        this.count = 0;
+    },
+    scrollViewDidScroll:function (view) {
+
+
+    },
+    scrollViewDidZoom:function (view) {
+    },
+
+    tableCellTouched:function (table, cell) {
+        cc.log("cell touched at index: " + cell.getIdx());
+    },
+
+    tableCellSizeForIndex:function (table) {
+        return cc.size(900, 55);
+    },
+
+    tableCellAtIndex:function (table, idx) {
+        var strValue = idx.toFixed(0);
+        var cell = table.dequeueCell();
+        if (!cell) {
+            cell = new HistoryGoldVinCell();
+        }
+        // cell.updateCell(this.data[idx].time,this.data[idx].exchangeAmount,this.data[idx].receivedAmount,this.data[idx].status,this.data[idx].id);
+        return cell;
+    },
+
+    updateData: function (isLastPage,data) {
+
+        this.isLoading = false;
+
+        this.isLastPage = isLastPage;
+        this.data = this.data.concat(data);
+        var old_count = this.count;
+        this.count = this.data.length;
+        this.tableView.reloadData();
+
+        if(old_count != 0)
+            this.tableView.getContainer().setPositionY(-(this.count - old_count) * 55);
+    },
+
+    numberOfCellsInTableView:function (table) {
+        return 10;
+        return this.data.length;
+    },
+    reset: function () {
+        this.data = [];
+        this.count = 0;
+        this.tableView.reloadData();
+    }
+
+})
