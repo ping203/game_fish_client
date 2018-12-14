@@ -173,7 +173,7 @@ var HistoryPlayGameLayer = cc.Layer.extend({
         this.data = [];
         this.tableView = new cc.TableView(this,parent.getContentSize());
         this.tableView.setDelegate(this);
-        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_BOTTOMUP);
+        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_TOPDOWN);
         this.tableView.setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL);
 
         this.Size = parent.getContentSize();
@@ -293,7 +293,7 @@ var HistoryGoldVinLayer = cc.Layer.extend({
         this.data = [];
         this.tableView = new cc.TableView(this,parent.getContentSize());
         this.tableView.setDelegate(this);
-        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_BOTTOMUP);
+        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_TOPDOWN);
         this.tableView.setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL);
 
         this.Size = parent.getContentSize();
