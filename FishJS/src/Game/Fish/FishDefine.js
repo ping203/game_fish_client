@@ -12,10 +12,10 @@ var FishData = cc.Class.extend({
         this.loadFishModel();
         //this.loadFishPath();
         this.loadMatrix();
-        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes0.plist");
-        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes1.plist");
-        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes2.plist");
-        cc.spriteFrameCache.addSpriteFrames("res/fishData/fishes3.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/GUI/ScreenGame/fishes0.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/GUI/ScreenGame/fishes1.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/GUI/ScreenGame/fishes2.plist");
+        cc.spriteFrameCache.addSpriteFrames("res/GUI/ScreenGame/fishes3.plist");
 
         cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/coin1.plist");
         cc.spriteFrameCache.addSpriteFrames("res/fishData/effect/spray.plist");

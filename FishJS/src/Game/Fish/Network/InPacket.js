@@ -18,6 +18,16 @@ BCCmdReceivedLogin = CmdReceivedCommon.extend({
     }
 })
 
+BCCmdReceivedConfig = CmdReceivedCommon.extend({
+    ctor: function(pkg){
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.jsonConfig = this.getString();
+    }
+})
+
 
 BCCmdReceivedExchange = CmdReceivedCommon.extend({
     ctor: function(pkg){
@@ -305,10 +315,10 @@ BCCmdReceivedHistory = CmdReceivedCommon.extend({
             if(this.type == HISTORY_TYPE_CHOI_GAME)
             {
                 var obj = {};
+                obj.roomID = this.getInt();
                 obj.changeMoney = this.getLong();
                 obj.gold = this.getLong();
                 obj.time = this.getString();
-
                 this.dataHisoty.push(obj);
             }
             else
@@ -340,11 +350,13 @@ var BCCmdReceivedGetTop = CmdReceivedCommon.extend({
         for(var i=0;i<length;i++)
         {
             var obj = {};
-            this.gold = this.getLong();
-            this.bet = this.getLong();
-            this.win = this.getLong();
-            this.username = this.getString();
-            this.avatar = this.getString();
+            obj.gold = this.getLong();
+            obj.bet = this.getLong();
+            obj.win = this.getLong();
+            obj.username = this.getString();
+            obj.avatar = this.getString();
+
+            this.data.push(obj);
         }
     }
 })

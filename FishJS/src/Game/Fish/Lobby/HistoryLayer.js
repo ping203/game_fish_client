@@ -73,8 +73,10 @@ var HistoryLayer = BCBaseLayer.extend({
     },
     onEnter: function () {
         this._super();
+    },
+    finishAnimate: function () {
         fishBZ.sendRequestHistory(HISTORY_TYPE_CHOI_GAME,0,10);
-        bcSceneMgr.addLoading("Xin cho",false);
+        bcSceneMgr.addLoading("",false);
     },
     customizeGUI: function () {
         this.setFog(true);
@@ -211,7 +213,7 @@ var HistoryPlayGameLayer = cc.Layer.extend({
     },
 
     tableCellSizeForIndex:function (table) {
-        return cc.size(this.Size.width, 55);
+        return cc.size(this.Size.width, 52);
     },
 
     tableCellAtIndex:function (table, idx) {
@@ -220,7 +222,7 @@ var HistoryPlayGameLayer = cc.Layer.extend({
         if (!cell) {
             cell = new HistoryPlayGameCell();
         }
-        cell.updateCell(this.data[idx].time,this.data[idx].changeMoney,this.data[idx].gold,10);
+        cell.updateCell(this.data[idx].time,this.data[idx].changeMoney,this.data[idx].gold,this.data[idx].roomID);
         return cell;
     },
 
@@ -278,7 +280,7 @@ var HistoryGoldVinCell = cc.TableViewCell.extend({
         this.lbTime.setString(time);
         this.lbExchangeAmount.setString(BCStringUtility.standartNumber(Math.abs(exchangeAmount))+"$");
         this.lbReceivedAmount.setString(BCStringUtility.standartNumber(receivedAmount)+"$");
-        this.lbStatus.setString(status?"Thành công":"Thất bại");
+        this.lbStatus.setString(status?"Thành công!":"Thất bại!");
         this.lbStatus.setColor(status?cc.color(0,255,0):cc.color(255,0,0));
         this.lbID.setString("#"+id);
     }
@@ -331,7 +333,7 @@ var HistoryGoldVinLayer = cc.Layer.extend({
     },
 
     tableCellSizeForIndex:function (table) {
-        return cc.size(this.Size.width, 55);
+        return cc.size(this.Size.width, 52);
     },
 
     tableCellAtIndex:function (table, idx) {

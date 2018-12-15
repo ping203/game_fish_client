@@ -62,10 +62,6 @@ var BCBaseLayer  = cc.Layer.extend({
             }
         });
         cc.eventManager.addListener(this._keyboardEvent, this);
-    },
-
-    onEnter: function(){
-        cc.Layer.prototype.onEnter.call(this);
 
         this._listener = cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -74,6 +70,10 @@ var BCBaseLayer  = cc.Layer.extend({
             onTouchMoved: function(touch,event){},
             onTouchEnded: function(touch,event){}
         });
+    },
+
+    onEnter: function(){
+        cc.Layer.prototype.onEnter.call(this);
 
         this.setContentSize(cc.winSize);
         this.setAnchorPoint(0.5,0.5);

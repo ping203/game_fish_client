@@ -95,8 +95,61 @@ var LobbyScene = BCBaseLayer.extend({
         this.customizeButton("btnTutorial",LobbyScene.BTN_TUTORIAL,this.panelTopRight);
 
 
+        this.bg_menu = this.getControl("bg_menu",this.panelTopRight);
+        this.btnSound = this.customizeButton("btnSound",LobbyScene.BTN_SOUND,this.bg_menu);
+        this.btnSound.lbOn = this.btnSound.getChildByName("lb_on");
+        this.btnSound.lbOff = this.btnSound.getChildByName("lb_off");
+        this.btnSound.icon = this.btnSound.getChildByName("icon");
+
+        this.btnMusic = this.customizeButton("btnMusic",LobbyScene.BTN_MUSIC,this.bg_menu);
+        this.btnMusic.lbOn = this.btnMusic.getChildByName("lb_on");
+        this.btnMusic.lbOff = this.btnMusic.getChildByName("lb_off");
+        this.btnMusic.icon = this.btnMusic.getChildByName("icon");
+
+        this.bg_menu.originalPos = this.bg_menu.getPosition();
+
+        this.bg_menu.setPositionY(this.bg_menu.originalPos.y + 400);
+        this.bg_menu.setVisible(false);
+
+
+        this.loadUIMusicSound(false);
+
 
     },
+    loadUIMusicSound: function (play) {
+        if(gameData.enableMusic)
+        {
+            if(play)
+                fishSound.playMusicLobby()
+            this.btnMusic.lbOn.setVisible(true);
+            this.btnMusic.lbOff.setVisible(false);
+            this.btnMusic.icon.setPositionX(98.9);
+        }
+        else
+        {
+            if(play)
+                fishSound.stopMusic();
+            this.btnMusic.lbOn.setVisible(false);
+            this.btnMusic.lbOff.setVisible(true);
+            this.btnMusic.icon.setPositionX(15.95);
+
+        }
+
+        if(gameData.enableSound) {
+            this.btnSound.lbOn.setVisible(true);
+            this.btnSound.lbOff.setVisible(false);
+            this.btnSound.icon.setPositionX(98.9);
+        }
+        else
+        {
+            this.btnSound.lbOn.setVisible(false);
+            this.btnSound.lbOff.setVisible(true);
+            this.btnSound.icon.setPositionX(15.95);
+        }
+
+
+    },
+
     withLogin: function(){
         this.need_login = true;
         this.avatar.setVisible(false);
@@ -180,6 +233,41 @@ var LobbyScene = BCBaseLayer.extend({
                 this.addChild(layer,10,1000);
                 break;
             }
+            case LobbyScene.BTN_TUTORIAL:
+            {
+                var layer = new BCHeSoCa();
+                layer.updateHeso(gameData.config["prize"]);
+                this.addChild(layer,10,1000);
+                break;
+            }
+            case LobbyScene.BTN_SETTING:
+            {
+                this.bg_menu.stopAllActions();
+                if(this.bg_menu.isVisible())
+                {
+                    this.bg_menu.runAction(cc.sequence(cc.moveTo(.275,cc.p(this.bg_menu.originalPos.x,this.bg_menu.originalPos.y + 400)).easing(cc.easeBackIn()),cc.hide()))
+                }
+                else
+                {
+                    this.bg_menu.runAction(cc.sequence(cc.show(),cc.moveTo(.35,cc.p(this.bg_menu.originalPos.x,this.bg_menu.originalPos.y )).easing(cc.easeBackOut())))
+
+                }
+                break;
+            }
+            case LobbyScene.BTN_SOUND:
+            {
+                gameData.enableSound = !gameData.enableSound;
+                gameData.saveStorage();
+                this.loadUIMusicSound(false);
+                break;
+            }
+            case LobbyScene.BTN_MUSIC:
+            {
+                gameData.enableMusic = !gameData.enableMusic;
+                gameData.saveStorage();
+                this.loadUIMusicSound(true);
+                break;
+            }
         }
     }
 })
@@ -195,6 +283,8 @@ LobbyScene.BTN_TUTORIAL = 7;
 LobbyScene.BTN_HISTORY = 8;
 LobbyScene.BTN_TOP = 9;
 LobbyScene.BTN_SETTING = 10;
+LobbyScene.BTN_SOUND = 11;
+LobbyScene.BTN_MUSIC = 12;
 
 
 
@@ -269,12 +359,17 @@ var BCTopLayer = BCBaseLayer.extend({
         this.bg = this.getControl("bg",this.panel_bg);
         this.panel_table = this.getControl("panel_table",this.bg);
 
-        var aa = this.panel_table.getContentSize();
+        this.customizeButton("btnClose",BCTopLayer.BTN_CLOSE,this.bg);
 
-        var top = new BCTopLayerTable(this.panel_table);
+        this.top = new BCTopLayerTable(this.panel_table);
+
+        this.bg_my = this.getControl("bg_my",this.bg);
+        this.bg_my.setVisible(false);
     },
     onEnter: function () {
         this._super();
+    },
+    finishAnimate: function () {
         fishBZ.sendRequestTop();
     },
     customizeGUI: function () {
@@ -285,36 +380,80 @@ var BCTopLayer = BCBaseLayer.extend({
     },
     updateData: function (data) {
 
+        this.top.updateData(data);
+
+        var exist = false;
+        for(var i=0;i<data.length;i++)
+        {
+            if(data[i].username === gameData.userData.userName)
+            {
+                exist = true;
+                break;
+            }
+        }
+        if(!exist)
+        {
+            this.bg_my.setVisible(true);
+            this.bg_my.getChildByName("username").setString(gameData.userData.userName);
+            this.bg_my.getChildByName("gold").setString(BCStringUtility.standartNumber(gameData.userData.gold)+"$");
+
+        }
+    },
+    onButtonReleased: function (btn, id) {
+        switch (id)
+        {
+            case BCTopLayer.BTN_CLOSE:
+            {
+                this.onClose();
+                break;
+            }
+        }
     }
 })
+
+BCTopLayer.BTN_CLOSE = 0;
 
 /// to TOP
 
 var BCTopCell = cc.TableViewCell.extend({
     ctor: function () {
         this._super();
-        var jsonLayout = ccs.load("res/GUI/CellHistoryGoldVin.json");
+        var jsonLayout = ccs.load("res/GUI/CellTopUser.json");
         this._layout = jsonLayout.node;
         this._layout.setContentSize(cc.director.getWinSize());
         if(cc.sys.isNative)
             ccui.Helper.doLayout(this._layout);
         this.addChild(this._layout);
 
-        this.lbTime = this._layout.getChildByName("lbTime");
-        this.lbExchangeAmount = this._layout.getChildByName("lbExchangeAmount");
-        this.lbReceivedAmount = this._layout.getChildByName("lbReceivedAmount");
-        this.lbStatus = this._layout.getChildByName("lbStatus");
-        this.lbID = this._layout.getChildByName("lbID");
+        this.lbRank = this._layout.getChildByName("rank");
+        this.lbName = this._layout.getChildByName("username");
+        this.lbGold = this._layout.getChildByName("gold");
+
+        this.tops = [];
+        this.tops.push(this._layout.getChildByName("top1"));
+        this.tops.push(this._layout.getChildByName("top2"));
+        this.tops.push(this._layout.getChildByName("top3"));
+
 
 
     },
-    updateCell: function(time,exchangeAmount,receivedAmount,status,id){
-        this.lbTime.setString(time);
-        this.lbExchangeAmount.setString(BCStringUtility.standartNumber(Math.abs(exchangeAmount))+"$");
-        this.lbReceivedAmount.setString(BCStringUtility.standartNumber(receivedAmount)+"$");
-        this.lbStatus.setString(status?"Thành công":"Thất bại");
-        this.lbStatus.setColor(status?cc.color(0,255,0):cc.color(255,0,0));
-        this.lbID.setString("#"+id);
+    updateCell: function(rank,name,gold){
+        this.lbRank.setString(""+rank);
+        this.lbGold.setString(BCStringUtility.standartNumber(gold)+"$");
+        this.lbName.setString(name);
+
+        this.lbRank.setVisible(false);
+        this.tops[0].setVisible(false);
+        this.tops[1].setVisible(false);
+        this.tops[2].setVisible(false);
+        if(rank <= 3)
+        {
+            this.tops[rank-1].setVisible(true);
+        }
+        else
+        {
+            this.lbRank.setVisible(true);
+        }
     }
 
 })
@@ -327,7 +466,7 @@ var BCTopLayerTable = cc.Layer.extend({
         this.data = [];
         this.tableView = new cc.TableView(this,parent.getContentSize());
         this.tableView.setDelegate(this);
-        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_BOTTOMUP);
+        this.tableView.setVerticalFillOrder(cc.TABLEVIEW_FILL_TOPDOWN);
         this.tableView.setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL);
 
         this.Size = parent.getContentSize();
@@ -340,6 +479,8 @@ var BCTopLayerTable = cc.Layer.extend({
 
         this.isLoading = false;
         this.count = 0;
+
+
     },
     scrollViewDidScroll:function (view) {
 
@@ -353,35 +494,33 @@ var BCTopLayerTable = cc.Layer.extend({
     },
 
     tableCellSizeForIndex:function (table) {
-        return cc.size(900, 55);
+        return cc.size(972, 75);
     },
 
     tableCellAtIndex:function (table, idx) {
         var strValue = idx.toFixed(0);
         var cell = table.dequeueCell();
         if (!cell) {
-            cell = new HistoryGoldVinCell();
+            cell = new BCTopCell();
         }
+        cell.updateCell(idx+1,this.data[idx].username,this.data[idx].win);
         // cell.updateCell(this.data[idx].time,this.data[idx].exchangeAmount,this.data[idx].receivedAmount,this.data[idx].status,this.data[idx].id);
         return cell;
     },
 
-    updateData: function (isLastPage,data) {
+    updateData: function (data) {
 
         this.isLoading = false;
-
-        this.isLastPage = isLastPage;
         this.data = this.data.concat(data);
         var old_count = this.count;
         this.count = this.data.length;
         this.tableView.reloadData();
 
-        if(old_count != 0)
-            this.tableView.getContainer().setPositionY(-(this.count - old_count) * 55);
+
+
     },
 
     numberOfCellsInTableView:function (table) {
-        return 10;
         return this.data.length;
     },
     reset: function () {
@@ -391,3 +530,59 @@ var BCTopLayerTable = cc.Layer.extend({
     }
 
 })
+
+
+var BCHeSoCa = BCBaseLayer.extend({
+    ctor: function () {
+        this._super();
+        this.initWithBinaryFile("res/GUI/HeSoCaLayer.json");
+    },
+    initGUI: function () {
+        this.bg = this.getControl("bg");
+        this.customizeButton("btnClose",0,this.bg);
+
+        this.fishes = [];
+        for(var i=1;i<=28;i++){
+            var node = this.getControl("Node_"+i,this.bg);
+            node.lb = node.getChildByName("lb");
+            this.fishes.push(node);
+        }
+
+    },
+    updateHeso: function (data) {
+        for(var i=0;i<this.fishes.length;i++)
+        {
+            var hic = data[i];
+            var str = (data[i].length == 1)?"x "+data[i][0]:"x "+data[i][0]+" - "+data[i][1]+"    ";
+            this.fishes[i].lb.setString(str);
+        }
+    },
+    finishAnimate: function () {
+
+    },
+    customizeGUI: function () {
+    },
+    onEnter: function () {
+        this._super();
+        this.setFog(true);
+    },
+    onExit: function () {
+        this._super();
+        cc.eventManager.removeListener(this._listener);
+    },
+    onEnterFinish: function () {
+        this.setShowHideAnimate(this.bg);
+    },
+    onButtonReleased: function (btn, id) {
+        if(id == 0)
+        {
+            this.onClose();
+        }
+    },
+    onCloseDone : function () {
+        this.retain();
+        this.removeFromParent();
+    },
+})
+
+var layerHesoCa = null;

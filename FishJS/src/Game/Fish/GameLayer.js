@@ -753,6 +753,13 @@ var GameLayerUI = BCBaseLayer.extend({
                     this.btnSound.loadTextures("button/btnSoundOff.png", "button/btnSoundOff.png", "button/btnSoundOff.png", 1);
                 break;
             }
+
+            case GameLayerUI.BTN_FISH:
+            {
+                var layer = new BCHeSoCa();
+                this.addChild(layer,10,1010);
+                break;
+            }
         }
     },
     createEffectMoney: function(pos,playerIndex,money)

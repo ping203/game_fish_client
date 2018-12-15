@@ -130,6 +130,7 @@
                   "X": 148.0,
                   "Y": 151.0
                 },
+                "VisibleForFrame": false,
                 "Name": "btnNapVang",
                 "ctype": "ButtonObjectData"
               },
@@ -191,7 +192,7 @@
                     "AnchorPoint": {},
                     "Position": {
                       "X": 155.4212,
-                      "Y": 48.2114
+                      "Y": 50.0605
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -201,16 +202,16 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.1214,
-                      "Y": 0.067
+                      "Y": 0.0695
                     },
                     "PreSize": {
                       "X": 0.7594,
                       "Y": 0.4917
                     },
                     "LeftMargin": 155.4212,
-                    "RightMargin": 152.5787,
-                    "TopMargin": 317.7886,
-                    "BottomMargin": 48.2114,
+                    "RightMargin": 152.5789,
+                    "TopMargin": 315.9395,
+                    "BottomMargin": 50.0605,
                     "Tag": 123,
                     "ActionTag": 1124077614,
                     "Size": {
@@ -387,8 +388,9 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 32,
-                        "LabelText": "Số dư",
+                        "LabelText": "Số dư ",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",

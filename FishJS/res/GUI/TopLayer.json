@@ -172,6 +172,224 @@
                 "Tag": 158,
                 "Children": [
                   {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/thread_yellow.png",
+                      "Plist": ""
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 639.5939,
+                      "Y": 510.7373
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4997,
+                      "Y": 0.7094
+                    },
+                    "PreSize": {
+                      "X": 0.7594,
+                      "Y": 0.0694
+                    },
+                    "LeftMargin": 153.5939,
+                    "RightMargin": 154.4061,
+                    "TopMargin": 184.2627,
+                    "BottomMargin": 485.7373,
+                    "Tag": 181,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "Hạng",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 67.4996,
+                          "Y": 25.5861
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.0694,
+                          "Y": 0.5117
+                        },
+                        "PreSize": {
+                          "X": 0.0628,
+                          "Y": 0.78
+                        },
+                        "LeftMargin": 36.9996,
+                        "RightMargin": 874.0004,
+                        "TopMargin": 4.9139,
+                        "BottomMargin": 6.0861,
+                        "Tag": 183,
+                        "ActionTag": 1142198759,
+                        "Size": {
+                          "X": 61.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_1",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FontSize": 28,
+                        "LabelText": "Người chơi",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 258.8548,
+                          "Y": 24.7343
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.2663,
+                          "Y": 0.4947
+                        },
+                        "PreSize": {
+                          "X": 0.1245,
+                          "Y": 0.78
+                        },
+                        "LeftMargin": 198.3548,
+                        "RightMargin": 652.6453,
+                        "TopMargin": 5.7657,
+                        "BottomMargin": 5.2343,
+                        "Tag": 184,
+                        "ActionTag": 241955988,
+                        "Size": {
+                          "X": 121.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_1_0",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FontSize": 28,
+                        "LabelText": "Tổng tiền thắng",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 565.0761,
+                          "Y": 27.0252
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5814,
+                          "Y": 0.5405
+                        },
+                        "PreSize": {
+                          "X": 0.1821,
+                          "Y": 0.78
+                        },
+                        "LeftMargin": 476.5761,
+                        "RightMargin": 318.4239,
+                        "TopMargin": 3.4748,
+                        "BottomMargin": 7.5252,
+                        "Tag": 185,
+                        "ActionTag": 606312285,
+                        "Size": {
+                          "X": 177.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_1_0_0",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 278568780,
+                    "Size": {
+                      "X": 972.0,
+                      "Y": 50.0
+                    },
+                    "Name": "bg_user_1",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
                     "ClipAble": false,
                     "BackColorAlpha": 102,
                     "SingleColor": {
@@ -294,6 +512,316 @@
                     },
                     "Name": "btnClose",
                     "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/bg_user.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 320,
+                    "Scale9OriginY": 16,
+                    "Scale9Width": 346,
+                    "Scale9Height": 62,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 642.2616,
+                      "Y": 86.9777
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5018,
+                      "Y": 0.1208
+                    },
+                    "PreSize": {
+                      "X": 0.7703,
+                      "Y": 0.1306
+                    },
+                    "LeftMargin": 149.2616,
+                    "RightMargin": 144.7384,
+                    "TopMargin": 586.0223,
+                    "BottomMargin": 39.9777,
+                    "Tag": 166,
+                    "Children": [
+                      {
+                        "FontSize": 24,
+                        "LabelText": "100+",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "HorizontalAlignmentType": "HT_Center",
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 68.2081,
+                          "Y": 45.9727
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.0692,
+                          "Y": 0.4891
+                        },
+                        "PreSize": {
+                          "X": 0.0578,
+                          "Y": 0.3511
+                        },
+                        "LeftMargin": 39.7081,
+                        "RightMargin": 889.2919,
+                        "TopMargin": 31.5273,
+                        "BottomMargin": 29.4727,
+                        "Tag": 167,
+                        "ActionTag": -811987361,
+                        "Size": {
+                          "X": 57.0,
+                          "Y": 33.0
+                        },
+                        "Name": "rank",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "Lobby/ico_VANG.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 22,
+                        "Scale9OriginY": 22,
+                        "Scale9Width": 23,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 632.7027,
+                          "Y": 46.6454
+                        },
+                        "Scale": {
+                          "ScaleX": 0.6022,
+                          "ScaleY": 0.6022
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6417,
+                          "Y": 0.4962
+                        },
+                        "PreSize": {
+                          "X": 0.068,
+                          "Y": 0.7234
+                        },
+                        "LeftMargin": 599.2027,
+                        "RightMargin": 319.7973,
+                        "TopMargin": 13.3546,
+                        "BottomMargin": 12.6454,
+                        "Tag": 168,
+                        "ActionTag": -1249217383,
+                        "Size": {
+                          "X": 67.0,
+                          "Y": 68.0
+                        },
+                        "Name": "icon",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 22,
+                        "LabelText": "Ten nguoi choi.........",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "HorizontalAlignmentType": "HT_Right",
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 602.1304,
+                          "Y": 46.0479
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6107,
+                          "Y": 0.4899
+                        },
+                        "PreSize": {
+                          "X": 0.1886,
+                          "Y": 0.3191
+                        },
+                        "LeftMargin": 416.1304,
+                        "RightMargin": 383.8696,
+                        "TopMargin": 32.9521,
+                        "BottomMargin": 31.0479,
+                        "Tag": 169,
+                        "ActionTag": -924803736,
+                        "Size": {
+                          "X": 186.0,
+                          "Y": 30.0
+                        },
+                        "Name": "gold",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Default",
+                          "Path": "Default/ImageFile.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 46,
+                        "Scale9Height": 46,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 193.4258,
+                          "Y": 46.036
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1962,
+                          "Y": 0.4897
+                        },
+                        "PreSize": {
+                          "X": 0.0467,
+                          "Y": 0.4894
+                        },
+                        "LeftMargin": 170.4258,
+                        "RightMargin": 769.5742,
+                        "TopMargin": 24.964,
+                        "BottomMargin": 23.036,
+                        "Tag": 170,
+                        "ActionTag": -146303229,
+                        "Size": {
+                          "X": 46.0,
+                          "Y": 46.0
+                        },
+                        "Name": "avatar",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FontSize": 22,
+                        "LabelText": "Ten nguoi choi.........",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 234.0016,
+                          "Y": 47.0135
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 23,
+                          "G": 90
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.2373,
+                          "Y": 0.5001
+                        },
+                        "PreSize": {
+                          "X": 0.1886,
+                          "Y": 0.3191
+                        },
+                        "LeftMargin": 234.0016,
+                        "RightMargin": 565.9984,
+                        "TopMargin": 31.9865,
+                        "BottomMargin": 32.0135,
+                        "Tag": 171,
+                        "ActionTag": 1112608816,
+                        "Size": {
+                          "X": 186.0,
+                          "Y": 30.0
+                        },
+                        "Name": "username",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 1952769848,
+                    "Size": {
+                      "X": 986.0,
+                      "Y": 94.0
+                    },
+                    "Name": "bg_my",
+                    "ctype": "ImageViewObjectData"
                   }
                 ],
                 "ActionTag": -812730035,
@@ -312,224 +840,6 @@
             },
             "Name": "Panel",
             "ctype": "PanelObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "Lobby/Popup/thread_yellow.png",
-              "Plist": ""
-            },
-            "BlendFunc": {
-              "Src": 1,
-              "Dst": 771
-            },
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 639.5939,
-              "Y": 510.7373
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.4997,
-              "Y": 0.7094
-            },
-            "PreSize": {
-              "X": 0.7594,
-              "Y": 0.0694
-            },
-            "LeftMargin": 153.5939,
-            "RightMargin": 154.4061,
-            "TopMargin": 184.2627,
-            "BottomMargin": 485.7373,
-            "Tag": 181,
-            "Children": [
-              {
-                "FontSize": 28,
-                "LabelText": "Hạng",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
-                  "Plist": ""
-                },
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 74.4995,
-                  "Y": 25.5861
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {
-                  "R": 23,
-                  "G": 90
-                },
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0766,
-                  "Y": 0.5117
-                },
-                "PreSize": {
-                  "X": 0.0628,
-                  "Y": 0.78
-                },
-                "LeftMargin": 43.9995,
-                "RightMargin": 867.0005,
-                "TopMargin": 4.9139,
-                "BottomMargin": 6.0861,
-                "Tag": 183,
-                "ActionTag": 1142198759,
-                "Size": {
-                  "X": 61.0,
-                  "Y": 39.0
-                },
-                "Name": "Text_1",
-                "ctype": "TextObjectData"
-              },
-              {
-                "FontSize": 28,
-                "LabelText": "Người chơi",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
-                  "Plist": ""
-                },
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 269.3998,
-                  "Y": 26.4917
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {
-                  "R": 23,
-                  "G": 90
-                },
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.2772,
-                  "Y": 0.5298
-                },
-                "PreSize": {
-                  "X": 0.1245,
-                  "Y": 0.78
-                },
-                "LeftMargin": 208.8998,
-                "RightMargin": 642.1002,
-                "TopMargin": 4.0083,
-                "BottomMargin": 6.9917,
-                "Tag": 184,
-                "ActionTag": 241955988,
-                "Size": {
-                  "X": 121.0,
-                  "Y": 39.0
-                },
-                "Name": "Text_1_0",
-                "ctype": "TextObjectData"
-              },
-              {
-                "FontSize": 28,
-                "LabelText": "Tổng tiền thắng",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
-                  "Plist": ""
-                },
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 582.6515,
-                  "Y": 27.0252
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {
-                  "R": 23,
-                  "G": 90
-                },
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.5994,
-                  "Y": 0.5405
-                },
-                "PreSize": {
-                  "X": 0.1821,
-                  "Y": 0.78
-                },
-                "LeftMargin": 494.1515,
-                "RightMargin": 300.8485,
-                "TopMargin": 3.4748,
-                "BottomMargin": 7.5252,
-                "Tag": 185,
-                "ActionTag": 606312285,
-                "Size": {
-                  "X": 177.0,
-                  "Y": 39.0
-                },
-                "Name": "Text_1_0_0",
-                "ctype": "TextObjectData"
-              }
-            ],
-            "ActionTag": 278568780,
-            "Size": {
-              "X": 972.0,
-              "Y": 50.0
-            },
-            "Name": "bg_user_1",
-            "ctype": "SpriteObjectData"
           }
         ],
         "Size": {
@@ -541,7 +851,10 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
+        "Default/ImageFile.png",
+        "Lobby/ico_VANG.png",
         "Lobby/Popup/bg_topwin.png",
+        "Lobby/Popup/bg_user.png",
         "Lobby/Popup/close.png",
         "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
         "Lobby/Popup/napvang_tab.png",

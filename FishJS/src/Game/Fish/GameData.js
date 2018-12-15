@@ -21,6 +21,7 @@ var GameData = cc.Class.extend({
         this.accessToken = "";
 
         this.userData = new UserData();
+        this.config = new Object();
 
         this.enableMusic = true;
         this.enableSound = true;

@@ -1,0 +1,577 @@
+{
+  "ID": "7db43be9-5ef2-45bb-9f8d-fbb4db0dad63",
+  "Version": "3.10.0.0",
+  "Name": "CellTopUser",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 214,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/row3.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 320,
+            "Scale9OriginY": 24,
+            "Scale9Width": 332,
+            "Scale9Height": 25,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 484.7831,
+              "Y": 37.0371
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3787,
+              "Y": 0.0514
+            },
+            "PreSize": {
+              "X": 0.7594,
+              "Y": 0.1014
+            },
+            "LeftMargin": -1.2169,
+            "RightMargin": 309.2169,
+            "TopMargin": 646.4629,
+            "BottomMargin": 0.5371,
+            "Tag": 215,
+            "ActionTag": -1753173398,
+            "Size": {
+              "X": 972.0,
+              "Y": 73.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/1.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 17,
+            "Scale9OriginY": 13,
+            "Scale9Width": 19,
+            "Scale9Height": 16,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 64.0736,
+              "Y": 35.8226
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0501,
+              "Y": 0.0498
+            },
+            "PreSize": {
+              "X": 0.0414,
+              "Y": 0.0583
+            },
+            "LeftMargin": 37.5736,
+            "RightMargin": 1189.4264,
+            "TopMargin": 663.1774,
+            "BottomMargin": 14.8226,
+            "Tag": 216,
+            "ActionTag": -671374644,
+            "Size": {
+              "X": 53.0,
+              "Y": 42.0
+            },
+            "Name": "top1",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/2.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 17,
+            "Scale9OriginY": 13,
+            "Scale9Width": 19,
+            "Scale9Height": 16,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 64.0736,
+              "Y": 35.8226
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0501,
+              "Y": 0.0498
+            },
+            "PreSize": {
+              "X": 0.0414,
+              "Y": 0.0583
+            },
+            "LeftMargin": 37.5736,
+            "RightMargin": 1189.4264,
+            "TopMargin": 663.1774,
+            "BottomMargin": 14.8226,
+            "Tag": 217,
+            "ActionTag": 923050348,
+            "Size": {
+              "X": 53.0,
+              "Y": 42.0
+            },
+            "Name": "top2",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/3.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 17,
+            "Scale9OriginY": 13,
+            "Scale9Width": 19,
+            "Scale9Height": 16,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 64.0736,
+              "Y": 35.8226
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0501,
+              "Y": 0.0498
+            },
+            "PreSize": {
+              "X": 0.0414,
+              "Y": 0.0583
+            },
+            "LeftMargin": 37.5736,
+            "RightMargin": 1189.4264,
+            "TopMargin": 663.1774,
+            "BottomMargin": 14.8226,
+            "Tag": 218,
+            "ActionTag": -1664858537,
+            "Size": {
+              "X": 53.0,
+              "Y": 42.0
+            },
+            "Name": "top3",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "Ten nguoi choi.........",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 231.5466,
+              "Y": 35.5622
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1809,
+              "Y": 0.0494
+            },
+            "PreSize": {
+              "X": 0.1297,
+              "Y": 0.0389
+            },
+            "LeftMargin": 231.5466,
+            "RightMargin": 882.4534,
+            "TopMargin": 670.4377,
+            "BottomMargin": 21.5622,
+            "Tag": 6,
+            "ActionTag": 1570614171,
+            "Size": {
+              "X": 166.0,
+              "Y": 28.0
+            },
+            "Name": "username",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
+            },
+            "Scale9Width": 46,
+            "Scale9Height": 46,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 189.1319,
+              "Y": 34.5851
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1478,
+              "Y": 0.048
+            },
+            "PreSize": {
+              "X": 0.0359,
+              "Y": 0.0639
+            },
+            "LeftMargin": 166.1319,
+            "RightMargin": 1067.8682,
+            "TopMargin": 662.4149,
+            "BottomMargin": 11.5851,
+            "Tag": 165,
+            "ActionTag": -740922944,
+            "Size": {
+              "X": 46.0,
+              "Y": 46.0
+            },
+            "Name": "avatar",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "Ten nguoi choi.........",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Right",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 1.0,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 597.8364,
+              "Y": 34.5969
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "G": 216,
+              "B": 66
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4671,
+              "Y": 0.0481
+            },
+            "PreSize": {
+              "X": 0.1297,
+              "Y": 0.0389
+            },
+            "LeftMargin": 431.8364,
+            "RightMargin": 682.1636,
+            "TopMargin": 671.4031,
+            "BottomMargin": 20.5969,
+            "Tag": 7,
+            "ActionTag": 1076681078,
+            "Size": {
+              "X": 166.0,
+              "Y": 28.0
+            },
+            "Name": "gold",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/ico_VANG.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 22,
+            "Scale9OriginY": 22,
+            "Scale9Width": 23,
+            "Scale9Height": 24,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 628.4086,
+              "Y": 35.1944
+            },
+            "Scale": {
+              "ScaleX": 0.6022,
+              "ScaleY": 0.6022
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4909,
+              "Y": 0.0489
+            },
+            "PreSize": {
+              "X": 0.0523,
+              "Y": 0.0944
+            },
+            "LeftMargin": 594.9086,
+            "RightMargin": 618.0914,
+            "TopMargin": 650.8057,
+            "BottomMargin": 1.1944,
+            "Tag": 164,
+            "ActionTag": 259577539,
+            "Size": {
+              "X": 67.0,
+              "Y": 68.0
+            },
+            "Name": "icon",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 24,
+            "LabelText": "123",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 63.9141,
+              "Y": 34.5218
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0499,
+              "Y": 0.0479
+            },
+            "PreSize": {
+              "X": 0.0305,
+              "Y": 0.0486
+            },
+            "LeftMargin": 44.4141,
+            "RightMargin": 1196.5859,
+            "TopMargin": 667.9783,
+            "BottomMargin": 17.0218,
+            "Tag": 9,
+            "ActionTag": 564968141,
+            "Size": {
+              "X": 39.0,
+              "Y": 35.0
+            },
+            "Name": "rank",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/btn_NapDoi.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 57,
+            "Scale9OriginY": 19,
+            "Scale9Width": 61,
+            "Scale9Height": 21,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 869.285,
+              "Y": 34.8349
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.6791,
+              "Y": 0.0484
+            },
+            "PreSize": {
+              "X": 0.1367,
+              "Y": 0.0819
+            },
+            "LeftMargin": 781.785,
+            "RightMargin": 323.215,
+            "TopMargin": 655.6651,
+            "BottomMargin": 5.3349,
+            "Tag": 153,
+            "Children": [
+              {
+                "FontSize": 20,
+                "LabelText": "Xem thông tin",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 87.7068,
+                  "Y": 31.9953
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5012,
+                  "Y": 0.5423
+                },
+                "PreSize": {
+                  "X": 0.6457,
+                  "Y": 0.4746
+                },
+                "LeftMargin": 31.2068,
+                "RightMargin": 30.7932,
+                "TopMargin": 13.0047,
+                "BottomMargin": 17.9953,
+                "Tag": 155,
+                "ActionTag": 5701535,
+                "Size": {
+                  "X": 113.0,
+                  "Y": 28.0
+                },
+                "Name": "gold_0",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 846910489,
+            "Size": {
+              "X": 175.0,
+              "Y": 59.0
+            },
+            "Name": "Image_11",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/ImageFile.png",
+        "Lobby/ico_VANG.png",
+        "Lobby/Popup/1.png",
+        "Lobby/Popup/2.png",
+        "Lobby/Popup/3.png",
+        "Lobby/Popup/btn_NapDoi.png",
+        "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+        "Lobby/Popup/row3.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

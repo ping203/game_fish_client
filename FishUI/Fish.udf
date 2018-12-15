@@ -25,7 +25,20 @@
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
-        <LastRunType Value="Mac" />
+        <LastRunType Value="Windows" />
+      </Value>
+    </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="CellTopUser.csd" />
+          <FilePathData Path="TopLayer.csd" />
+          <FilePathData Path="HistoryLayer.csd" />
+          <FilePathData Path="HeSoCaLayer.csd" />
+          <FilePathData Path="LobbyScene.csd" />
+          <FilePathData Path="ThangLonLayer.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="ThangLonLayer.csd" />
       </Value>
     </Item>
   </Properties>

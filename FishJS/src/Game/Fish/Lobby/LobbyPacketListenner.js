@@ -65,6 +65,20 @@ var LobbyPacketListenner = cc.Class.extend({
                 break;
             }
 
+            case CMD.CMD_CONFIG:
+            {
+                var pk = new BCCmdReceivedConfig(pkg);
+                gameData.config = JSON.parse(pk.jsonConfig);
+
+                if(layerHesoCa)
+                {
+                    layerHesoCa.updateHeso(gameData.config["prize"]);
+                }
+
+
+                break;
+            }
+
             case CMD.CMD_EXCHANGE:
             {
                 var pk = new BCCmdReceivedExchange(pkg);
@@ -126,7 +140,7 @@ var LobbyPacketListenner = cc.Class.extend({
                     }
                     case 7:
                     {
-                        msg = "Số tiền giao dịch phải lớn hơn 10.000 và nhỏ hơn 10.000.000";
+                        msg = "Số tiền giao dịch phải lớn hơn "+StringUtility.standartNumber(gameData.config["exchange"][0])+" và nhỏ hơn "+StringUtility.standartNumber(gameData.config["exchange"][1]);
                         break;
                     }
                     case 8:

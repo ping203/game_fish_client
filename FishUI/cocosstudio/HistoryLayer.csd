@@ -9,7 +9,7 @@
           <AbstractNodeData Name="Panel" ActionTag="1649019743" Tag="126" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="640.0000" RightMargin="440.0000" TopMargin="160.0000" BottomMargin="360.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="btnNapVang" ActionTag="1489820380" Tag="125" IconVisible="False" LeftMargin="495.9261" RightMargin="-443.9261" TopMargin="27.2645" BottomMargin="21.7355" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="118" Scale9Height="129" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnNapVang" ActionTag="1489820380" VisibleForFrame="False" Tag="125" IconVisible="False" LeftMargin="495.9261" RightMargin="-443.9261" TopMargin="27.2645" BottomMargin="21.7355" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="118" Scale9Height="129" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="148.0000" Y="151.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="569.9261" Y="97.2355" />
@@ -27,13 +27,13 @@
               <AbstractNodeData Name="bg" ActionTag="825051877" Tag="119" IconVisible="False" LeftMargin="-640.0000" RightMargin="-440.0000" TopMargin="-160.0000" BottomMargin="-360.0000" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <Children>
-                  <AbstractNodeData Name="panel_table" ActionTag="1124077614" Tag="123" IconVisible="False" LeftMargin="155.4212" RightMargin="152.5787" TopMargin="317.7886" BottomMargin="48.2114" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="panel_table" ActionTag="1124077614" Tag="123" IconVisible="False" LeftMargin="155.4212" RightMargin="152.5789" TopMargin="315.9395" BottomMargin="50.0605" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="972.0000" Y="354.0000" />
                     <AnchorPoint />
-                    <Position X="155.4212" Y="48.2114" />
+                    <Position X="155.4212" Y="50.0605" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1214" Y="0.0670" />
+                    <PrePosition X="0.1214" Y="0.0695" />
                     <PreSize X="0.7594" Y="0.4917" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
@@ -67,7 +67,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_1_0_0" ActionTag="-14452080" Tag="176" IconVisible="False" LeftMargin="591.1102" RightMargin="308.8898" TopMargin="11.9778" BottomMargin="14.0222" FontSize="32" LabelText="Số dư" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_1_0_0" ActionTag="-14452080" Tag="176" IconVisible="False" LeftMargin="591.1102" RightMargin="308.8898" TopMargin="11.9778" BottomMargin="14.0222" IsCustomSize="True" FontSize="32" LabelText="Số dư " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="76.0000" Y="44.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="629.1102" Y="36.0222" />
@@ -104,7 +104,7 @@
                     <EndColor A="255" R="244" G="221" B="182" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_3_0" ActionTag="195090395" Tag="143" IconVisible="False" LeftMargin="154.4900" RightMargin="149.5100" TopMargin="256.1154" BottomMargin="393.8846" ClipAble="False" ColorAngle="90.0000" LeftEage="320" RightEage="320" TopEage="16" BottomEage="16" Scale9OriginX="320" Scale9OriginY="16" Scale9Width="332" Scale9Height="18" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_3_0" Visible="False" ActionTag="195090395" Tag="143" IconVisible="False" LeftMargin="154.4900" RightMargin="149.5100" TopMargin="256.1154" BottomMargin="393.8846" ClipAble="False" ColorAngle="90.0000" LeftEage="320" RightEage="320" TopEage="16" BottomEage="16" Scale9OriginX="320" Scale9OriginY="16" Scale9Width="332" Scale9Height="18" ctype="PanelObjectData">
                     <Size X="976.0000" Y="70.0000" />
                     <Children>
                       <AbstractNodeData Name="Text_1" ActionTag="-548277707" Tag="144" IconVisible="False" LeftMargin="58.7456" RightMargin="811.2544" TopMargin="15.9777" BottomMargin="15.0223" FontSize="28" LabelText="Thời gian" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

@@ -192,6 +192,10 @@ var FishLifeCycle = cc.Class.extend({
     },
     onUpdateBG: function (pk) {
         var idx = pk.bgIdx;
+        if(idx == 0)
+        {
+            cc.log(idx);
+        }
         this.gameScene.startMusic(idx);
     },
     onMatrixData: function(pk)
