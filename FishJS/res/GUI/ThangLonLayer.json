@@ -5,12 +5,78 @@
   "Content": {
     "Content": {
       "Animation": {
-        "Duration": 0,
+        "Duration": 24,
         "Speed": 1.0,
-        "Timelines": [],
+        "ActivedAnimationName": "animation0",
+        "Timelines": [
+          {
+            "ActionTag": -1278418436,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 360.0,
+                "Y": 360.0,
+                "FrameIndex": 24,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -1278418436,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": -5.2686,
+                "Y": -10.5428,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -1278418436,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 1.0318,
+                "Y": 1.0318,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
         "ctype": "TimelineActionData"
       },
-      "AnimationList": [],
+      "AnimationList": [
+        {
+          "StartIndex": 0,
+          "EndIndex": 24,
+          "Name": "animation0",
+          "ctype": "AnimationInfoData"
+        }
+      ],
       "ObjectData": {
         "Tag": 158,
         "Children": [
@@ -29,6 +95,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
               "X": 610.9335,
@@ -69,27 +137,29 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": -5.2725,
-                  "Y": -10.5453
+                  "X": -5.2686,
+                  "Y": -10.5428
                 },
                 "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
+                  "ScaleX": 1.0318,
+                  "ScaleY": 1.0318
                 },
+                "RotationSkewX": 360.0,
+                "RotationSkewY": 360.0,
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": -0.0264,
+                  "X": -0.0263,
                   "Y": -0.0527
                 },
                 "PreSize": {
                   "X": 4.275,
                   "Y": 4.34
                 },
-                "LeftMargin": -432.7725,
-                "RightMargin": -222.2275,
-                "TopMargin": -223.4547,
-                "BottomMargin": -444.5453,
+                "LeftMargin": -432.7686,
+                "RightMargin": -222.2314,
+                "TopMargin": -223.4572,
+                "BottomMargin": -444.5428,
                 "Tag": 160,
                 "ActionTag": -1278418436,
                 "Size": {
@@ -230,6 +300,48 @@
                 },
                 "Name": "BitmapFontLabel_1",
                 "ctype": "TextBMFontObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "ScreenGame/thanglon/BurstPipe.plist",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 10.2234,
+                  "Y": 310.7785
+                },
+                "Scale": {
+                  "ScaleX": 1.5,
+                  "ScaleY": 1.5
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.0511,
+                  "Y": 1.5539
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 10.2234,
+                "RightMargin": 189.7766,
+                "TopMargin": -110.7785,
+                "BottomMargin": 310.7785,
+                "Tag": 198,
+                "ActionTag": -584240171,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "Particle_1",
+                "ctype": "ParticleObjectData"
               }
             ],
             "ActionTag": -692507629,
@@ -237,7 +349,7 @@
               "X": 200.0,
               "Y": 200.0
             },
-            "Name": "Panel_1",
+            "Name": "panel",
             "ctype": "PanelObjectData"
           }
         ],
@@ -252,6 +364,8 @@
         "Lobby/Popup/Fonts/yellow-export.fnt",
         "Lobby/Popup/Fonts/yellow-export.png",
         "ScreenGame/thanglon/bg_txt.png",
+        "ScreenGame/thanglon/BurstPipe.plist",
+        "ScreenGame/thanglon/chip_4.png",
         "ScreenGame/thanglon/fx_xoay.png",
         "ScreenGame/thanglon/txt.png"
       ],

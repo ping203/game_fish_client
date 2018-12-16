@@ -740,6 +740,7 @@ var GameLayerUI = BCBaseLayer.extend({
                 gameData.enableMusic = !gameData.enableMusic;
                 gameData.saveStorage();
                 this.loadUIMusicSound();
+                // this.addChild(new ThangLonLayer(),10,1999);
                 break;
             }
             case GameLayerUI.BTN_SOUND:
@@ -1106,3 +1107,13 @@ GameLayerUI.BTN_QUIT = 5;
 GameLayerUI.BTN_MUSIC = 6;
 GameLayerUI.BTN_SOUND = 7;
 GameLayerUI.BTN_FISH = 8;
+
+
+var ThangLonLayer = BCBaseLayer.extend({
+    ctor: function () {
+        this._super();
+        this.initWithBinaryFile("res/GUI/ThangLonLayer.json");
+
+        this.runAction(cc.sequence(cc.delayTime(6),cc.removeSelf()));
+    }
+})

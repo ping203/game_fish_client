@@ -91,7 +91,7 @@
               "Y": 1.0099
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -220,7 +220,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "LeftMargin": 640.0,
@@ -1073,7 +1073,7 @@
               "Y": 0.845
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1124,7 +1124,7 @@
               "Y": 0.4553
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1504,7 +1504,7 @@
               "Y": 0.1429
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -1602,7 +1602,7 @@
               "Y": 0.2192
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -1700,7 +1700,7 @@
               "Y": 0.1855
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "LeftMargin": 231.1775,
@@ -1749,7 +1749,7 @@
               "Y": 1.0035
             },
             "PreSize": {
-              "X": 0.1562,
+              "X": 0.1563,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2321,7 +2321,7 @@
                       },
                       {
                         "FontSize": 22,
-                        "LabelText": "OFF",
+                        "LabelText": "OFF ",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
@@ -2605,7 +2605,7 @@
                       },
                       {
                         "FontSize": 22,
-                        "LabelText": "OFF",
+                        "LabelText": "OFF ",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",

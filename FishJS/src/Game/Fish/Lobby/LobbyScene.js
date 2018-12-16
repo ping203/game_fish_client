@@ -491,6 +491,12 @@ var BCTopLayerTable = cc.Layer.extend({
 
     tableCellTouched:function (table, cell) {
         cc.log("cell touched at index: " + cell.getIdx());
+
+        var idx = cell.getIdx();
+        var info = new BCUserInfo();
+        info.set(this.data[idx].username,this.data[idx].gold,this.data[idx].win,this.data[idx].avatar);
+
+        bcSceneMgr.getMainLayer().addChild(info,11);
     },
 
     tableCellSizeForIndex:function (table) {
@@ -515,8 +521,6 @@ var BCTopLayerTable = cc.Layer.extend({
         var old_count = this.count;
         this.count = this.data.length;
         this.tableView.reloadData();
-
-
 
     },
 
@@ -586,3 +590,41 @@ var BCHeSoCa = BCBaseLayer.extend({
 })
 
 var layerHesoCa = null;
+
+
+var BCUserInfo = BCBaseLayer.extend({
+    ctor: function () {
+        this._super();
+        this.initWithBinaryFile("res/GUI/UserInfo.json");
+        this.target = this.callback = null;
+    },
+    initGUI: function () {
+        this._bg = this.getControl("bg");
+        this._btnCancel = this.customizeButton("btnCancel", BCDialog.BTN_CANCEL,this._bg);
+
+        this.lbUserName = this._bg.getChildByName("bg_username").getChildByName("lb");
+        this.lbGold = this._bg.getChildByName("bg_gold").getChildByName("lb");
+        this.lbWin = this._bg.getChildByName("bg_win").getChildByName("lb");
+
+
+    },
+    customizeGUI: function () {
+        this.setFog(true);
+    },
+    onEnterFinish: function () {
+        this.setShowHideAnimate(this._bg);
+    },
+
+    set: function (username,gold,win,avatar) {
+        this.lbUserName.setString(username);
+        this.lbGold.setString(BCStringUtility.standartNumber(gold));
+        this.lbWin.setString(BCStringUtility.standartNumber(win));
+    },
+    onButtonReleased: function (btn,id) {
+        this.btnID = id;
+        this.onClose();
+    },
+    onClose: function () {
+        this._super();
+    }
+})

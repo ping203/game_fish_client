@@ -2,20 +2,38 @@
   <PropertyGroup Name="ThangLonLayer" Type="Scene" ID="4a8911e2-17c1-4522-a09d-44d4e3d2fbc9" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000">
+      <Animation Duration="24" Speed="1.0000" ActivedAnimationName="animation0">
         <Timeline ActionTag="-1278418436" Property="RotationSkew">
           <ScaleFrame FrameIndex="0" X="0.0000" Y="0.0000">
             <EasingData Type="0" />
           </ScaleFrame>
+          <ScaleFrame FrameIndex="24" X="360.0000" Y="360.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="-1278418436" Property="Position">
+          <PointFrame FrameIndex="0" X="-5.2686" Y="-10.5428">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="-1278418436" Property="Scale">
+          <ScaleFrame FrameIndex="0" X="1.0318" Y="1.0318">
+            <EasingData Type="0" />
+          </ScaleFrame>
         </Timeline>
       </Animation>
+      <AnimationList>
+        <AnimationInfo Name="animation0" StartIndex="0" EndIndex="24">
+          <RenderColor A="150" R="106" G="90" B="205" />
+        </AnimationInfo>
+      </AnimationList>
       <ObjectData Name="Scene" Tag="158" ctype="GameNodeObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="-692507629" Tag="159" IconVisible="False" LeftMargin="610.9335" RightMargin="469.0665" TopMargin="143.7773" BottomMargin="376.2227" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="panel" ActionTag="-692507629" Tag="159" IconVisible="False" LeftMargin="610.9335" RightMargin="469.0665" TopMargin="143.7773" BottomMargin="376.2227" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="Image_1" ActionTag="-1278418436" Tag="160" IconVisible="False" LeftMargin="-432.7686" RightMargin="-222.2314" TopMargin="-223.4572" BottomMargin="-444.5428" LeftEage="282" RightEage="282" TopEage="286" BottomEage="286" Scale9OriginX="282" Scale9OriginY="286" Scale9Width="291" Scale9Height="296" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_1" ActionTag="-1278418436" Tag="160" RotationSkewX="360.0000" RotationSkewY="360.0000" IconVisible="False" LeftMargin="-432.7686" RightMargin="-222.2314" TopMargin="-223.4572" BottomMargin="-444.5428" LeftEage="282" RightEage="282" TopEage="286" BottomEage="286" Scale9OriginX="282" Scale9OriginY="286" Scale9Width="291" Scale9Height="296" ctype="ImageViewObjectData">
                 <Size X="855.0000" Y="868.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="-5.2686" Y="-10.5428" />

@@ -1,0 +1,954 @@
+{
+  "ID": "7e0eefa7-881f-4f42-8f07-3beb43fa1c92",
+  "Version": "3.10.0.0",
+  "Name": "UserInfo",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Lobby/Popup/bg_thongbao.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 224,
+            "Scale9OriginY": 181,
+            "Scale9Width": 232,
+            "Scale9Height": 188,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 417.6
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.58
+            },
+            "PreSize": {
+              "X": 0.5312,
+              "Y": 0.7639
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 300.0,
+            "RightMargin": 300.0,
+            "TopMargin": 27.4,
+            "BottomMargin": 142.6,
+            "Tag": 7,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 16,
+                "Scale9Height": 14,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.7427,
+                  "Y": 293.1211
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8482,
+                  "Y": 0.5329
+                },
+                "PreSize": {
+                  "X": 0.0882,
+                  "Y": 0.1091
+                },
+                "LeftMargin": 546.7427,
+                "RightMargin": 73.2573,
+                "TopMargin": 226.8789,
+                "BottomMargin": 263.1211,
+                "Tag": 10,
+                "ActionTag": -2144782132,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 60.0
+                },
+                "Alpha": 0,
+                "Name": "btnCancel",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 46,
+                "Scale9Height": 46,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 186.1302,
+                  "Y": 287.2413
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2737,
+                  "Y": 0.5223
+                },
+                "PreSize": {
+                  "X": 0.0676,
+                  "Y": 0.0836
+                },
+                "LeftMargin": 163.1302,
+                "RightMargin": 470.8698,
+                "TopMargin": 239.7587,
+                "BottomMargin": 264.2413,
+                "Tag": 11,
+                "ActionTag": -207741651,
+                "Size": {
+                  "X": 46.0,
+                  "Y": 46.0
+                },
+                "Name": "avatar",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "LabelText": "THÔNG TIN CÁ NHÂN",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/Fonts/yellow-export.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 364.6824,
+                  "Y": 289.2234
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5363,
+                  "Y": 0.5259
+                },
+                "PreSize": {
+                  "X": 0.4059,
+                  "Y": 0.0855
+                },
+                "LeftMargin": 226.6824,
+                "RightMargin": 177.3176,
+                "TopMargin": 237.2766,
+                "BottomMargin": 265.7234,
+                "Tag": 12,
+                "ActionTag": 400531308,
+                "Size": {
+                  "X": 276.0,
+                  "Y": 47.0
+                },
+                "Name": "title",
+                "ctype": "TextBMFontObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 443.7636,
+                  "Y": 224.2317
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6526,
+                  "Y": 0.4077
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 353.7636,
+                "RightMargin": 146.2365,
+                "TopMargin": 299.7683,
+                "BottomMargin": 198.2317,
+                "Tag": 21,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "Text Label.................",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 90.2943,
+                      "Y": 23.901
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5016,
+                      "Y": 0.4596
+                    },
+                    "PreSize": {
+                      "X": 0.9556,
+                      "Y": 0.5769
+                    },
+                    "LeftMargin": 4.2943,
+                    "RightMargin": 3.7057,
+                    "TopMargin": 13.099,
+                    "BottomMargin": 8.901,
+                    "Tag": 22,
+                    "ActionTag": -1030454377,
+                    "Size": {
+                      "X": 172.0,
+                      "Y": 30.0
+                    },
+                    "Name": "lb",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1287494063,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Alpha": 189,
+                "Name": "bg_username",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 252.7841,
+                  "Y": 223.243
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3717,
+                  "Y": 0.4059
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 162.7841,
+                "RightMargin": 337.2159,
+                "TopMargin": 300.757,
+                "BottomMargin": 197.243,
+                "Tag": 13,
+                "Children": [
+                  {
+                    "FontSize": 22,
+                    "LabelText": "Tên nhân vật",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 89.4074,
+                      "Y": 26.5566
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4967,
+                      "Y": 0.5107
+                    },
+                    "PreSize": {
+                      "X": 0.6167,
+                      "Y": 0.5769
+                    },
+                    "LeftMargin": 33.9074,
+                    "RightMargin": 35.0926,
+                    "TopMargin": 10.4434,
+                    "BottomMargin": 11.5566,
+                    "Tag": 14,
+                    "ActionTag": 37578727,
+                    "Size": {
+                      "X": 111.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Text_3",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1476455124,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Name": "Image_3_0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 253.0467,
+                  "Y": 167.3264
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3721,
+                  "Y": 0.3042
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 163.0467,
+                "RightMargin": 336.9533,
+                "TopMargin": 356.6736,
+                "BottomMargin": 141.3264,
+                "Tag": 15,
+                "Children": [
+                  {
+                    "FontSize": 22,
+                    "LabelText": "Tài sản",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 89.4074,
+                      "Y": 26.5566
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4967,
+                      "Y": 0.5107
+                    },
+                    "PreSize": {
+                      "X": 0.3556,
+                      "Y": 0.5769
+                    },
+                    "LeftMargin": 57.4074,
+                    "RightMargin": 58.5926,
+                    "TopMargin": 10.4434,
+                    "BottomMargin": 11.5566,
+                    "Tag": 16,
+                    "ActionTag": 1436009658,
+                    "Size": {
+                      "X": 64.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Text_3",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/ico_VANG.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 22,
+                    "Scale9OriginY": 22,
+                    "Scale9Width": 23,
+                    "Scale9Height": 24,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 30.0181,
+                      "Y": 24.8243
+                    },
+                    "Scale": {
+                      "ScaleX": 0.5316,
+                      "ScaleY": 0.5316
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1668,
+                      "Y": 0.4774
+                    },
+                    "PreSize": {
+                      "X": 0.3722,
+                      "Y": 1.3077
+                    },
+                    "LeftMargin": -3.4819,
+                    "RightMargin": 116.4819,
+                    "TopMargin": -6.8243,
+                    "BottomMargin": -9.1757,
+                    "Tag": 19,
+                    "ActionTag": -449118423,
+                    "Size": {
+                      "X": 67.0,
+                      "Y": 68.0
+                    },
+                    "Name": "Image_7",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 175368247,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Name": "Image_3_0_0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 252.1615,
+                  "Y": 110.5575
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3708,
+                  "Y": 0.201
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 162.1615,
+                "RightMargin": 337.8384,
+                "TopMargin": 413.4425,
+                "BottomMargin": 84.5575,
+                "Tag": 17,
+                "Children": [
+                  {
+                    "FontSize": 22,
+                    "LabelText": "Tổng thắng",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 98.6366,
+                      "Y": 24.7107
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.548,
+                      "Y": 0.4752
+                    },
+                    "PreSize": {
+                      "X": 0.5333,
+                      "Y": 0.5769
+                    },
+                    "LeftMargin": 50.6366,
+                    "RightMargin": 33.3634,
+                    "TopMargin": 12.2893,
+                    "BottomMargin": 9.7107,
+                    "Tag": 18,
+                    "ActionTag": 158018464,
+                    "Size": {
+                      "X": 96.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Text_3",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/ico_VANG.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 22,
+                    "Scale9OriginY": 22,
+                    "Scale9Width": 23,
+                    "Scale9Height": 24,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 28.9424,
+                      "Y": 22.2078
+                    },
+                    "Scale": {
+                      "ScaleX": 0.5316,
+                      "ScaleY": 0.5316
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1608,
+                      "Y": 0.4271
+                    },
+                    "PreSize": {
+                      "X": 0.3722,
+                      "Y": 1.3077
+                    },
+                    "LeftMargin": -4.5576,
+                    "RightMargin": 117.5576,
+                    "TopMargin": -4.2078,
+                    "BottomMargin": -11.7922,
+                    "Tag": 20,
+                    "ActionTag": 358702705,
+                    "Size": {
+                      "X": 67.0,
+                      "Y": 68.0
+                    },
+                    "Name": "Image_7_0",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -881583205,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Name": "Image_3_0_1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 443.1408,
+                  "Y": 167.3153
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6517,
+                  "Y": 0.3042
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 353.1408,
+                "RightMargin": 146.8592,
+                "TopMargin": 356.6847,
+                "BottomMargin": 141.3153,
+                "Tag": 23,
+                "Children": [
+                  {
+                    "FontSize": 22,
+                    "LabelText": "Text Label.................",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 4.917,
+                      "Y": 23.9012
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0273,
+                      "Y": 0.4596
+                    },
+                    "PreSize": {
+                      "X": 1.0833,
+                      "Y": 0.6154
+                    },
+                    "LeftMargin": 4.917,
+                    "RightMargin": -19.917,
+                    "TopMargin": 12.0988,
+                    "BottomMargin": 7.9012,
+                    "Tag": 24,
+                    "ActionTag": 578983184,
+                    "Size": {
+                      "X": 195.0,
+                      "Y": 32.0
+                    },
+                    "Name": "lb",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -376170962,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Alpha": 189,
+                "Name": "bg_gold",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/Popup/bg_row_user_info.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 59,
+                "Scale9OriginY": 17,
+                "Scale9Width": 62,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 444.0257,
+                  "Y": 109.7759
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.653,
+                  "Y": 0.1996
+                },
+                "PreSize": {
+                  "X": 0.2647,
+                  "Y": 0.0945
+                },
+                "LeftMargin": 354.0257,
+                "RightMargin": 145.9743,
+                "TopMargin": 414.2241,
+                "BottomMargin": 83.7759,
+                "Tag": 25,
+                "Children": [
+                  {
+                    "FontSize": 22,
+                    "LabelText": "Text Label.................",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 4.0322,
+                      "Y": 23.901
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0224,
+                      "Y": 0.4596
+                    },
+                    "PreSize": {
+                      "X": 1.0833,
+                      "Y": 0.6154
+                    },
+                    "LeftMargin": 4.0322,
+                    "RightMargin": -19.0322,
+                    "TopMargin": 12.099,
+                    "BottomMargin": 7.901,
+                    "Tag": 26,
+                    "ActionTag": -189811176,
+                    "Size": {
+                      "X": 195.0,
+                      "Y": 32.0
+                    },
+                    "Name": "lb",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1806697818,
+                "Size": {
+                  "X": 180.0,
+                  "Y": 52.0
+                },
+                "Alpha": 189,
+                "Name": "bg_win",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": -1966926858,
+            "Size": {
+              "X": 680.0,
+              "Y": 550.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/Button_Normal.png",
+        "Default/Button_Press.png",
+        "Default/ImageFile.png",
+        "Lobby/ico_VANG.png",
+        "Lobby/Popup/bg_row_user_info.png",
+        "Lobby/Popup/bg_thongbao.png",
+        "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+        "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+        "Lobby/Popup/Fonts/yellow-export.fnt",
+        "Lobby/Popup/Fonts/yellow-export.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}
