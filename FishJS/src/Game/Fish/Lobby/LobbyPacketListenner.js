@@ -87,10 +87,7 @@ var LobbyPacketListenner = cc.Class.extend({
 
                 var main = bcSceneMgr.getMainLayer();
                 var shop = main.getChildByTag(1000);
-                if(shop && (shop instanceof ShopLayer))
-                {
 
-                }
 
 
                 var msg = "";
@@ -104,6 +101,11 @@ var LobbyPacketListenner = cc.Class.extend({
                         gameData.userData.gold = pk.gold;
 
                         updateManPortal(gameData.userData.vinMoney);
+
+                        if(shop && (shop instanceof ShopLayer))
+                        {
+                            shop.tfCapcha.setString("");
+                        }
 
                         main.onUpdateData();
                         break;
@@ -125,7 +127,7 @@ var LobbyPacketListenner = cc.Class.extend({
                     }
                     case 4:
                     {
-                        msg = "Số tiền bạn cần đổi vượt quá hạn \nmức trong tài khoản!";
+                        msg = "Không đủ số dư để giao dịch!";
                         break;
                     }
                     case 5:
@@ -145,7 +147,7 @@ var LobbyPacketListenner = cc.Class.extend({
                     }
                     case 8:
                     {
-                        msg = "Mã captcha không hợp lệ!";
+                        msg = "Sai mã Captcha, vui lòng thử lại!";
                         break;
                     }
 
