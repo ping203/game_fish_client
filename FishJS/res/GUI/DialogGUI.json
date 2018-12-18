@@ -42,7 +42,7 @@
               "Y": 0.58
             },
             "PreSize": {
-              "X": 0.5313,
+              "X": 0.5312,
               "Y": 0.7639
             },
             "HorizontalEdge": "BothEdge",
@@ -58,7 +58,7 @@
                 "LabelText": "Ban muon thoat khoi game?  jjjjjjjjjjjj\njjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "Fonts/tahomabd.ttf",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -93,18 +93,18 @@
                   "Y": 0.4187
                 },
                 "PreSize": {
-                  "X": 0.6912,
-                  "Y": 0.1582
+                  "X": 0.5191,
+                  "Y": 0.18
                 },
-                "LeftMargin": 107.9254,
-                "RightMargin": 102.0746,
-                "TopMargin": 276.21,
-                "BottomMargin": 186.79,
+                "LeftMargin": 166.4254,
+                "RightMargin": 160.5746,
+                "TopMargin": 270.21,
+                "BottomMargin": 180.79,
                 "Tag": 5,
                 "ActionTag": -1326926591,
                 "Size": {
-                  "X": 470.0,
-                  "Y": 87.0
+                  "X": 353.0,
+                  "Y": 99.0
                 },
                 "Name": "lbText",
                 "ctype": "TextObjectData"
@@ -281,8 +281,8 @@
         "Default/Button_Disable.png",
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
-        "Fonts/tahomabd.ttf",
         "Lobby/Popup/bg_thongbao.png",
+        "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
         "Lobby/Popup/xacnhan.png"
       ],
       "ctype": "GameFileData"

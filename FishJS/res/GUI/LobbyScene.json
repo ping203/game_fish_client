@@ -91,7 +91,7 @@
               "Y": 1.0099
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -220,7 +220,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 640.0,
@@ -502,7 +502,7 @@
                     "LabelText": "-----------------",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Fonts/tahomabd.ttf",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -539,18 +539,18 @@
                       "Y": 0.5204
                     },
                     "PreSize": {
-                      "X": 0.865,
-                      "Y": 0.8857
+                      "X": 0.69,
+                      "Y": 0.9429
                     },
-                    "LeftMargin": -3.9324,
-                    "RightMargin": 30.9324,
-                    "TopMargin": 1.2869,
-                    "BottomMargin": 2.7131,
+                    "LeftMargin": 13.5676,
+                    "RightMargin": 48.4324,
+                    "TopMargin": 0.2869,
+                    "BottomMargin": 1.7131,
                     "Tag": 116,
                     "ActionTag": 1833338586,
                     "Size": {
-                      "X": 173.0,
-                      "Y": 31.0
+                      "X": 138.0,
+                      "Y": 33.0
                     },
                     "Name": "lbMan",
                     "ctype": "TextObjectData"
@@ -644,7 +644,7 @@
                 "LabelText": "-------------",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "Fonts/tahoma.ttf",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -678,18 +678,18 @@
                   "Y": 0.3199
                 },
                 "PreSize": {
-                  "X": 0.47,
-                  "Y": 0.12
+                  "X": 0.405,
+                  "Y": 0.125
                 },
                 "LeftMargin": -345.7608,
-                "RightMargin": 451.7608,
-                "TopMargin": 124.0168,
-                "BottomMargin": 51.9832,
+                "RightMargin": 464.7608,
+                "TopMargin": 123.5168,
+                "BottomMargin": 51.4832,
                 "Tag": 134,
                 "ActionTag": -860299745,
                 "Size": {
-                  "X": 94.0,
-                  "Y": 24.0
+                  "X": 81.0,
+                  "Y": 25.0
                 },
                 "Name": "lbUserName",
                 "ctype": "TextObjectData"
@@ -699,7 +699,7 @@
                 "LabelText": "----------------",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "Fonts/tahoma.ttf",
+                  "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -736,18 +736,18 @@
                   "Y": 0.1881
                 },
                 "PreSize": {
-                  "X": 0.575,
-                  "Y": 0.12
+                  "X": 0.495,
+                  "Y": 0.125
                 },
                 "LeftMargin": -345.9559,
-                "RightMargin": 430.9559,
-                "TopMargin": 150.3879,
-                "BottomMargin": 25.6121,
+                "RightMargin": 446.9559,
+                "TopMargin": 149.8879,
+                "BottomMargin": 25.1121,
                 "Tag": 135,
                 "ActionTag": 1487563279,
                 "Size": {
-                  "X": 115.0,
-                  "Y": 24.0
+                  "X": 99.0,
+                  "Y": 25.0
                 },
                 "Name": "lbUserID",
                 "ctype": "TextObjectData"
@@ -891,7 +891,7 @@
                     "LabelText": "--------------------",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Fonts/tahomabd.ttf",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -931,18 +931,18 @@
                       "Y": 0.4924
                     },
                     "PreSize": {
-                      "X": 1.015,
-                      "Y": 0.8857
+                      "X": 0.81,
+                      "Y": 0.9429
                     },
-                    "LeftMargin": -9.1285,
-                    "RightMargin": 6.1285,
-                    "TopMargin": 2.2669,
-                    "BottomMargin": 1.7331,
+                    "LeftMargin": 11.3715,
+                    "RightMargin": 26.6285,
+                    "TopMargin": 1.2669,
+                    "BottomMargin": 0.7331,
                     "Tag": 141,
                     "ActionTag": 322122576,
                     "Size": {
-                      "X": 203.0,
-                      "Y": 31.0
+                      "X": 162.0,
+                      "Y": 33.0
                     },
                     "Name": "lbGold",
                     "ctype": "TextObjectData"
@@ -1073,7 +1073,7 @@
               "Y": 0.845
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1110,6 +1110,268 @@
             "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
+              "X": 93.4214,
+              "Y": 102.9213
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.073,
+              "Y": 0.1429
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.2778
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "BottomEdge",
+            "LeftMargin": 93.4214,
+            "RightMargin": 986.5786,
+            "TopMargin": 417.0787,
+            "BottomMargin": 102.9213,
+            "Tag": 147,
+            "Children": [
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 36.9077,
+                  "Y": 100.1793
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.1845,
+                  "Y": 0.5009
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 36.9077,
+                "RightMargin": 163.0923,
+                "TopMargin": 99.8207,
+                "BottomMargin": 100.1793,
+                "Tag": 390,
+                "ActionTag": -790566576,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "Node",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/fish_bottom_left.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 47,
+                "Scale9OriginY": 57,
+                "Scale9Width": 50,
+                "Scale9Height": 60,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 15.8346,
+                  "Y": 41.1684
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0792,
+                  "Y": 0.2058
+                },
+                "PreSize": {
+                  "X": 0.72,
+                  "Y": 0.87
+                },
+                "LeftMargin": -56.1654,
+                "RightMargin": 112.1654,
+                "TopMargin": 71.8316,
+                "BottomMargin": -45.8316,
+                "Tag": 149,
+                "ActionTag": 339264135,
+                "Size": {
+                  "X": 144.0,
+                  "Y": 174.0
+                },
+                "Name": "Image_55",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 62873056,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "Panel_anim_left",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 1172.2192,
+              "Y": 157.8407
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9158,
+              "Y": 0.2192
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.2778
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "BottomEdge",
+            "LeftMargin": 1172.2192,
+            "RightMargin": -92.2192,
+            "TopMargin": 362.1593,
+            "BottomMargin": 157.8407,
+            "Tag": 148,
+            "Children": [
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": -36.3988,
+                  "Y": 39.5621
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": -0.182,
+                  "Y": 0.1978
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -36.3988,
+                "RightMargin": 236.3988,
+                "TopMargin": 160.4379,
+                "BottomMargin": 39.5621,
+                "Tag": 391,
+                "ActionTag": 1242668339,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "Node",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Lobby/fish_bottom_right.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 47,
+                "Scale9OriginY": 47,
+                "Scale9Width": 51,
+                "Scale9Height": 49,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 30.0841,
+                  "Y": -57.0025
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1504,
+                  "Y": -0.285
+                },
+                "PreSize": {
+                  "X": 0.725,
+                  "Y": 0.715
+                },
+                "LeftMargin": -42.4159,
+                "RightMargin": 97.4159,
+                "TopMargin": 185.5025,
+                "BottomMargin": -128.5025,
+                "Tag": 150,
+                "ActionTag": 1909635470,
+                "Size": {
+                  "X": 145.0,
+                  "Y": 143.0
+                },
+                "Name": "Image_56",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 1014690859,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "Panel_anim_right",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {},
+            "Position": {
               "X": 647.296,
               "Y": 327.816
             },
@@ -1124,7 +1386,7 @@
               "Y": 0.4553
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -1490,202 +1752,6 @@
             "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
-              "X": 93.4214,
-              "Y": 102.9213
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.073,
-              "Y": 0.1429
-            },
-            "PreSize": {
-              "X": 0.1563,
-              "Y": 0.2778
-            },
-            "HorizontalEdge": "LeftEdge",
-            "VerticalEdge": "BottomEdge",
-            "LeftMargin": 93.4214,
-            "RightMargin": 986.5786,
-            "TopMargin": 417.0787,
-            "BottomMargin": 102.9213,
-            "Tag": 147,
-            "Children": [
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Lobby/fish_bottom_left.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 47,
-                "Scale9OriginY": 57,
-                "Scale9Width": 50,
-                "Scale9Height": 60,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 15.8346,
-                  "Y": 41.1684
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0792,
-                  "Y": 0.2058
-                },
-                "PreSize": {
-                  "X": 0.72,
-                  "Y": 0.87
-                },
-                "LeftMargin": -56.1654,
-                "RightMargin": 112.1654,
-                "TopMargin": 71.8316,
-                "BottomMargin": -45.8316,
-                "Tag": 149,
-                "ActionTag": 339264135,
-                "Size": {
-                  "X": 144.0,
-                  "Y": 174.0
-                },
-                "Name": "Image_55",
-                "ctype": "ImageViewObjectData"
-              }
-            ],
-            "ActionTag": 62873056,
-            "Size": {
-              "X": 200.0,
-              "Y": 200.0
-            },
-            "Name": "Panel_anim_left",
-            "ctype": "PanelObjectData"
-          },
-          {
-            "ClipAble": false,
-            "BackColorAlpha": 102,
-            "SingleColor": {
-              "R": 150,
-              "G": 200
-            },
-            "FirstColor": {
-              "R": 150,
-              "G": 200
-            },
-            "EndColor": {},
-            "ColorVector": {
-              "ScaleY": 1.0
-            },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
-            "AnchorPoint": {},
-            "Position": {
-              "X": 1172.2192,
-              "Y": 157.8407
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.9158,
-              "Y": 0.2192
-            },
-            "PreSize": {
-              "X": 0.1563,
-              "Y": 0.2778
-            },
-            "HorizontalEdge": "RightEdge",
-            "VerticalEdge": "BottomEdge",
-            "LeftMargin": 1172.2192,
-            "RightMargin": -92.2192,
-            "TopMargin": 362.1593,
-            "BottomMargin": 157.8407,
-            "Tag": 148,
-            "Children": [
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Lobby/fish_bottom_right.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 47,
-                "Scale9OriginY": 47,
-                "Scale9Width": 51,
-                "Scale9Height": 49,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 30.0841,
-                  "Y": -57.0025
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.1504,
-                  "Y": -0.285
-                },
-                "PreSize": {
-                  "X": 0.725,
-                  "Y": 0.715
-                },
-                "LeftMargin": -42.4159,
-                "RightMargin": 97.4159,
-                "TopMargin": 185.5025,
-                "BottomMargin": -128.5025,
-                "Tag": 150,
-                "ActionTag": 1909635470,
-                "Size": {
-                  "X": 145.0,
-                  "Y": 143.0
-                },
-                "Name": "Image_56",
-                "ctype": "ImageViewObjectData"
-              }
-            ],
-            "ActionTag": 1014690859,
-            "Size": {
-              "X": 200.0,
-              "Y": 200.0
-            },
-            "Name": "Panel_anim_right",
-            "ctype": "PanelObjectData"
-          },
-          {
-            "ClipAble": false,
-            "BackColorAlpha": 102,
-            "SingleColor": {
-              "R": 150,
-              "G": 200
-            },
-            "FirstColor": {
-              "R": 150,
-              "G": 200
-            },
-            "EndColor": {},
-            "ColorVector": {
-              "ScaleY": 1.0
-            },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
-            "AnchorPoint": {},
-            "Position": {
               "X": 231.1775,
               "Y": 133.59
             },
@@ -1700,7 +1766,7 @@
               "Y": 0.1855
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 231.1775,
@@ -1749,7 +1815,7 @@
               "Y": 1.0035
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2694,8 +2760,6 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
-        "Fonts/tahoma.ttf",
-        "Fonts/tahomabd.ttf",
         "Lobby/avatar_bg_top.png",
         "Lobby/avatar_photo.png",
         "Lobby/bg_drag.png",

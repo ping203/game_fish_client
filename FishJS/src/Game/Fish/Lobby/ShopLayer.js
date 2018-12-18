@@ -86,13 +86,13 @@ var ShopLayer = BCBaseLayer.extend({
             this.btnNapVang.runAction(cc.moveTo(.05,this.btnNapVang.originalPos.x - 20,this.btnNapVang.originalPos.y));
             this.btnDoiMan.runAction(cc.moveTo(.05,this.btnDoiMan.originalPos.x,this.btnDoiMan.originalPos.y));
 
-            this.tfNapVang.setPlaceHolder("Nạp MAN");
+            this.tfNapVang.setPlaceHolder("MAN đổi");
         }
         else
         {
             this.btnNapVang.runAction(cc.moveTo(.05,this.btnNapVang.originalPos.x,this.btnNapVang.originalPos.y));
             this.btnDoiMan.runAction(cc.moveTo(.05,this.btnDoiMan.originalPos.x - 20,this.btnDoiMan.originalPos.y));
-            this.tfNapVang.setPlaceHolder("Nạp VÀNG");
+            this.tfNapVang.setPlaceHolder("VÀNG đổi");
         }
         this.tfNapVang.setString("");
         this.panel_btn.setOpacity(0)
@@ -118,6 +118,10 @@ var ShopLayer = BCBaseLayer.extend({
                 {
                     this.isToVin = true;
                     this.effectDoiCuaso();
+
+                    this.panel_bg.getChildByName("panel_quydoi").setVisible(false);
+                    this.panel_bg.getChildByName("panel_quydoi_0").setVisible(true);
+
                 }
                 break;
             }
@@ -127,6 +131,8 @@ var ShopLayer = BCBaseLayer.extend({
                 {
                     this.isToVin = false;
                     this.effectDoiCuaso();
+                    this.panel_bg.getChildByName("panel_quydoi").setVisible(true);
+                    this.panel_bg.getChildByName("panel_quydoi_0").setVisible(false);
                 }
                 break;
             }

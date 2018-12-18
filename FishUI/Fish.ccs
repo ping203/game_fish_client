@@ -12,8 +12,6 @@
         <Folder Name="Fonts">
           <Fnt Name="FontCoin.fnt" />
           <Fnt Name="SoDan.fnt" />
-          <TTF Name="tahoma.ttf" />
-          <TTF Name="tahomabd.ttf" />
           <Fnt Name="Tien bac-export.fnt" />
           <Fnt Name="Tien vang-export.fnt" />
         </Folder>

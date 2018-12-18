@@ -64,7 +64,7 @@
             "LabelText": "Text Label................................",
             "FontResource": {
               "Type": "Normal",
-              "Path": "Fonts/tahoma.ttf",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
               "Plist": ""
             },
             "OutlineColor": {
@@ -96,18 +96,18 @@
               "Y": 0.0308
             },
             "PreSize": {
-              "X": 0.2539,
-              "Y": 0.0375
+              "X": 0.2227,
+              "Y": 0.0417
             },
             "LeftMargin": 15.9395,
-            "RightMargin": 939.0605,
-            "TopMargin": 684.3252,
-            "BottomMargin": 8.6748,
+            "RightMargin": 979.0605,
+            "TopMargin": 682.8252,
+            "BottomMargin": 7.1748,
             "Tag": 117,
             "ActionTag": -149761368,
             "Size": {
-              "X": 325.0,
-              "Y": 27.0
+              "X": 285.0,
+              "Y": 30.0
             },
             "Name": "lbTime",
             "ctype": "TextObjectData"
@@ -117,7 +117,7 @@
             "LabelText": "Text Label................................",
             "FontResource": {
               "Type": "Normal",
-              "Path": "Fonts/tahoma.ttf",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -151,18 +151,18 @@
               "Y": 0.028
             },
             "PreSize": {
-              "X": 0.2539,
-              "Y": 0.0375
+              "X": 0.2227,
+              "Y": 0.0417
             },
-            "LeftMargin": 230.1785,
-            "RightMargin": 724.8215,
-            "TopMargin": 686.3257,
-            "BottomMargin": 6.6743,
+            "LeftMargin": 250.1785,
+            "RightMargin": 744.8215,
+            "TopMargin": 684.8257,
+            "BottomMargin": 5.1743,
             "Tag": 172,
             "ActionTag": 1592254577,
             "Size": {
-              "X": 325.0,
-              "Y": 27.0
+              "X": 285.0,
+              "Y": 30.0
             },
             "Name": "lbMoneyChange",
             "ctype": "TextObjectData"
@@ -172,7 +172,7 @@
             "LabelText": "Text Label................................",
             "FontResource": {
               "Type": "Normal",
-              "Path": "Fonts/tahoma.ttf",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -206,18 +206,18 @@
               "Y": 0.0312
             },
             "PreSize": {
-              "X": 0.2539,
-              "Y": 0.0375
+              "X": 0.2227,
+              "Y": 0.0417
             },
-            "LeftMargin": 476.0794,
-            "RightMargin": 478.9206,
-            "TopMargin": 684.0395,
-            "BottomMargin": 8.9605,
+            "LeftMargin": 496.0794,
+            "RightMargin": 498.9206,
+            "TopMargin": 682.5395,
+            "BottomMargin": 7.4605,
             "Tag": 173,
             "ActionTag": 1220056941,
             "Size": {
-              "X": 325.0,
-              "Y": 27.0
+              "X": 285.0,
+              "Y": 30.0
             },
             "Name": "lbGold",
             "ctype": "TextObjectData"
@@ -227,7 +227,7 @@
             "LabelText": "Text Label................................",
             "FontResource": {
               "Type": "Normal",
-              "Path": "Fonts/tahoma.ttf",
+              "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
               "Plist": ""
             },
             "OutlineColor": {
@@ -259,18 +259,18 @@
               "Y": 0.0306
             },
             "PreSize": {
-              "X": 0.2539,
-              "Y": 0.0375
+              "X": 0.2227,
+              "Y": 0.0417
             },
             "LeftMargin": 841.7654,
-            "RightMargin": 113.2346,
-            "TopMargin": 684.4365,
-            "BottomMargin": 8.5635,
+            "RightMargin": 153.2346,
+            "TopMargin": 682.9365,
+            "BottomMargin": 7.0635,
             "Tag": 174,
             "ActionTag": -1482697498,
             "Size": {
-              "X": 325.0,
-              "Y": 27.0
+              "X": 285.0,
+              "Y": 30.0
             },
             "Name": "lbRoom",
             "ctype": "TextObjectData"
@@ -284,7 +284,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "Fonts/tahoma.ttf",
+        "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
         "Lobby/Popup/row2.png"
       ],
       "ctype": "GameFileData"

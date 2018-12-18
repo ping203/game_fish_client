@@ -44,16 +44,25 @@ var LobbyScene = BCBaseLayer.extend({
 
         node_shop.addChild(animShop);
 
-        var animLeft =  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/Shop/skeleton.json","res/GUI/Lobby/Anim/Shop/skeleton.atlas");
-        animLeft.setAnimation(0,"animation",true);
-        animLeft.setScale(.65);
 
         var animCua =  sp.SkeletonAnimation.createWithJsonFile("res/GUI/Lobby/Anim/cua/skeleton.json","res/GUI/Lobby/Anim/cua/skeleton.atlas");
         animCua.setAnimation(0,"animation",true);
         animCua.setScale(.3);
 
+
         var panel_cua = this.getControl("panel_cua");
         panel_cua.addChild(animCua);
+
+        // bong bong
+
+        var panel_left = this.getControl("Panel_anim_left").getChildByName("Node");
+        var bongbong =  sp.SkeletonAnimation.createWithJsonFile("res/FX/Bubbles_FX.json","res/FX/Bubbles_FX.atlas");
+        bongbong.setAnimation(0,"Normal",true);
+        panel_left.addChild(bongbong);
+        var panel_right = this.getControl("Panel_anim_right").getChildByName("Node");
+        bongbong =  sp.SkeletonAnimation.createWithJsonFile("res/FX/Bubbles_FX.json","res/FX/Bubbles_FX.atlas");
+        bongbong.setAnimation(0,"Normal",true);
+        panel_right.addChild(bongbong);
 
         animCua.flipped = true;
 
@@ -173,6 +182,7 @@ var LobbyScene = BCBaseLayer.extend({
         this.bg.runAction(cc.fadeIn(.35));
 
         this.avatar.setVisible(true);
+        updateAvatar(gameData.userData.avatar,this.avatar);
 
     },
     onButtonReleased: function(btn,id){
@@ -428,6 +438,8 @@ var BCTopCell = cc.TableViewCell.extend({
         this.lbRank = this._layout.getChildByName("rank");
         this.lbName = this._layout.getChildByName("username");
         this.lbGold = this._layout.getChildByName("gold");
+        this.avatar = this._layout.getChildByName("avatar");
+
 
         this.tops = [];
         this.tops.push(this._layout.getChildByName("top1"));
@@ -437,7 +449,7 @@ var BCTopCell = cc.TableViewCell.extend({
 
 
     },
-    updateCell: function(rank,name,gold){
+    updateCell: function(rank,name,gold,avatar){
         this.lbRank.setString(""+rank);
         this.lbGold.setString(BCStringUtility.standartNumber(gold)+"$");
         this.lbName.setString(name);
@@ -454,6 +466,8 @@ var BCTopCell = cc.TableViewCell.extend({
         {
             this.lbRank.setVisible(true);
         }
+        cc.log(avatar);
+        updateAvatar(avatar,this.avatar);
     }
 
 })
@@ -509,7 +523,7 @@ var BCTopLayerTable = cc.Layer.extend({
         if (!cell) {
             cell = new BCTopCell();
         }
-        cell.updateCell(idx+1,this.data[idx].username,this.data[idx].win);
+        cell.updateCell(idx+1,this.data[idx].username,this.data[idx].win,this.data[idx].avatar);
         // cell.updateCell(this.data[idx].time,this.data[idx].exchangeAmount,this.data[idx].receivedAmount,this.data[idx].status,this.data[idx].id);
         return cell;
     },
@@ -606,6 +620,8 @@ var BCUserInfo = BCBaseLayer.extend({
         this.lbGold = this._bg.getChildByName("bg_gold").getChildByName("lb");
         this.lbWin = this._bg.getChildByName("bg_win").getChildByName("lb");
 
+        this.avatar = this._bg.getChildByName("avatar");
+
 
     },
     customizeGUI: function () {
@@ -619,6 +635,8 @@ var BCUserInfo = BCBaseLayer.extend({
         this.lbUserName.setString(username);
         this.lbGold.setString(BCStringUtility.standartNumber(gold));
         this.lbWin.setString(BCStringUtility.standartNumber(win));
+
+        updateAvatar(avatar,this.avatar);
     },
     onButtonReleased: function (btn,id) {
         this.btnID = id;
@@ -628,3 +646,17 @@ var BCUserInfo = BCBaseLayer.extend({
         this._super();
     }
 })
+
+
+var updateAvatar = function (avatarStr, avatarSp) {
+    var avaStr = "res/fishData/avatar/1.png";
+    if(typeof (avatarStr) == 'string')
+    {
+        var tmp = parseInt(avatarStr,10);
+        if(!isNaN(tmp) && tmp > 0 && tmp < 13)
+        {
+            avaStr = "res/fishData/avatar/"+avatarStr+".png"
+        }
+    }
+    avatarSp.loadTexture(avaStr);
+}

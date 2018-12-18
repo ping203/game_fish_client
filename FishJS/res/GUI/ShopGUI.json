@@ -46,7 +46,7 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -2407,13 +2407,13 @@
                       "Y": 0.0783
                     },
                     "PreSize": {
-                      "X": 0.635,
-                      "Y": 0.16
+                      "X": 0.81,
+                      "Y": 0.15
                     },
-                    "LeftMargin": 180.4778,
-                    "RightMargin": -107.4778,
-                    "TopMargin": 168.338,
-                    "BottomMargin": -0.338,
+                    "LeftMargin": 162.9778,
+                    "RightMargin": -124.9778,
+                    "TopMargin": 169.338,
+                    "BottomMargin": 0.662,
                     "Tag": 203,
                     "ActionTag": -1714441751,
                     "Size": {
@@ -3105,6 +3105,322 @@
                   "Y": 200.0
                 },
                 "Name": "panel_action",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": -399.3666,
+                  "Y": -221.5503
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": -1.9968,
+                  "Y": -1.1078
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "LeftMargin": -399.3666,
+                "RightMargin": 399.3666,
+                "TopMargin": 221.5503,
+                "BottomMargin": -221.5503,
+                "Tag": 89,
+                "Children": [
+                  {
+                    "FontSize": 24,
+                    "LabelText": "Ty lệ quy đổi:",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 243.9778,
+                      "Y": 15.662
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 4,
+                      "G": 68,
+                      "B": 130
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 1.2199,
+                      "Y": 0.0783
+                    },
+                    "PreSize": {
+                      "X": 0.635,
+                      "Y": 0.16
+                    },
+                    "LeftMargin": 180.4778,
+                    "RightMargin": -107.4778,
+                    "TopMargin": 168.338,
+                    "BottomMargin": -0.338,
+                    "Tag": 90,
+                    "ActionTag": -888744335,
+                    "Size": {
+                      "X": 127.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_1",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 24,
+                    "LabelText": "1 VÀNG ",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 347.7542,
+                      "Y": 14.4645
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 1.7388,
+                      "Y": 0.0723
+                    },
+                    "PreSize": {
+                      "X": 0.37,
+                      "Y": 0.165
+                    },
+                    "LeftMargin": 310.7542,
+                    "RightMargin": -184.7542,
+                    "TopMargin": 169.0355,
+                    "BottomMargin": -2.0355,
+                    "Tag": 91,
+                    "ActionTag": -67967202,
+                    "Size": {
+                      "X": 74.0,
+                      "Y": 33.0
+                    },
+                    "Name": "Text_1_0",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 24,
+                    "LabelText": "= 1 MAN",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 485.1126,
+                      "Y": 16.5002
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 2.4256,
+                      "Y": 0.0825
+                    },
+                    "PreSize": {
+                      "X": 0.455,
+                      "Y": 0.165
+                    },
+                    "LeftMargin": 439.6126,
+                    "RightMargin": -330.6126,
+                    "TopMargin": 166.9998,
+                    "BottomMargin": 0.0002,
+                    "Tag": 92,
+                    "ActionTag": 1273439440,
+                    "Size": {
+                      "X": 91.0,
+                      "Y": 33.0
+                    },
+                    "Name": "Text_1_0_0",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/ico_MAN.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 22,
+                    "Scale9OriginY": 22,
+                    "Scale9Width": 23,
+                    "Scale9Height": 24,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 562.6469,
+                      "Y": 13.8741
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6694,
+                      "ScaleY": 0.6694
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 2.8132,
+                      "Y": 0.0694
+                    },
+                    "PreSize": {
+                      "X": 0.335,
+                      "Y": 0.34
+                    },
+                    "LeftMargin": 529.1469,
+                    "RightMargin": -396.1469,
+                    "TopMargin": 152.1259,
+                    "BottomMargin": -20.1259,
+                    "Tag": 93,
+                    "ActionTag": -2068189437,
+                    "Size": {
+                      "X": 67.0,
+                      "Y": 68.0
+                    },
+                    "Name": "Image_20",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Lobby/ico_VANG.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 22,
+                    "Scale9OriginY": 22,
+                    "Scale9Width": 23,
+                    "Scale9Height": 24,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 410.9892,
+                      "Y": 12.4468
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6279,
+                      "ScaleY": 0.6279
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 2.0549,
+                      "Y": 0.0622
+                    },
+                    "PreSize": {
+                      "X": 0.335,
+                      "Y": 0.34
+                    },
+                    "LeftMargin": 377.4892,
+                    "RightMargin": -244.4892,
+                    "TopMargin": 153.5532,
+                    "BottomMargin": -21.5532,
+                    "Tag": 94,
+                    "ActionTag": 1859545860,
+                    "Size": {
+                      "X": 67.0,
+                      "Y": 68.0
+                    },
+                    "Name": "Image_20_0",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1997132195,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 200.0
+                },
+                "VisibleForFrame": false,
+                "Name": "panel_quydoi_0",
                 "ctype": "PanelObjectData"
               }
             ],

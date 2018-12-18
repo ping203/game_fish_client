@@ -463,7 +463,7 @@ var BCLoading = cc.Layer.extend({
 
         this._label = new ccui.Text();
         this._label.setAnchorPoint(cc.p(0.5, 0.5));
-        this._label.setFontName("fonts/tahoma.ttf");
+        this._label.setFontName("res/Lobby/Popup/Fonts/UTM Swiss Condensed.ttf");
         this._label.setFontSize(BCSceneMgr.FONT_SIZE_DEFAULT);
         this._label.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
         this._label.setColor(bcSceneMgr.ccWhite);
@@ -572,8 +572,8 @@ var Waiting = cc.Layer.extend({
 BCSceneMgr.sharedInstance = null;
 BCSceneMgr.firstInit = true;
 
-BCSceneMgr.FONT_NORMAL = "fonts/tahoma.ttf";
-BCSceneMgr.FONT_BOLD = "fonts/tahomabd.ttf";
+BCSceneMgr.FONT_NORMAL = "res/Lobby/Popup/Fonts/UTM Swiss Condensed.ttf";
+BCSceneMgr.FONT_BOLD = "res/Lobby/Popup/Fonts/UTM Swiss Condensed.ttf";
 BCSceneMgr.FONT_SIZE_DEFAULT = 26;
 
 BCSceneMgr.convertPosToParent = function (parent, target) {
@@ -620,7 +620,7 @@ var BCToast = cc.Layer.extend({
         //this._label.setLineBreakOnSpace(true);
         //this._label.setTextAreaSize(cc.size(cc.winSize.width * 0.5, 40));
 
-        this._label.setFontName("fonts/tahoma.ttf");
+        this._label.setFontName("res/Lobby/Popup/Fonts/UTM Swiss Condensed.ttf");
         this._label.setFontSize(BCSceneMgr.FONT_SIZE_DEFAULT);
         this._label.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
         this._label.setColor(bcSceneMgr.ccWhite);

@@ -102,15 +102,15 @@
                     <PreSize X="0.3350" Y="1.9429" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMan" ActionTag="1833338586" Tag="116" IconVisible="False" LeftMargin="-3.9324" RightMargin="30.9324" TopMargin="1.2869" BottomMargin="2.7131" FontSize="24" LabelText="-----------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="173.0000" Y="31.0000" />
+                  <AbstractNodeData Name="lbMan" ActionTag="1833338586" Tag="116" IconVisible="False" LeftMargin="13.5676" RightMargin="48.4324" TopMargin="0.2869" BottomMargin="1.7131" FontSize="24" LabelText="-----------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="138.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="82.5676" Y="18.2131" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4128" Y="0.5204" />
-                    <PreSize X="0.8650" Y="0.8857" />
-                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
+                    <PreSize X="0.6900" Y="0.9429" />
+                    <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -141,27 +141,27 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbUserName" ActionTag="-860299745" Tag="134" IconVisible="False" LeftMargin="-345.7608" RightMargin="451.7608" TopMargin="124.0168" BottomMargin="51.9832" FontSize="18" LabelText="-------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="94.0000" Y="24.0000" />
+              <AbstractNodeData Name="lbUserName" ActionTag="-860299745" Tag="134" IconVisible="False" LeftMargin="-345.7608" RightMargin="464.7608" TopMargin="123.5168" BottomMargin="51.4832" FontSize="18" LabelText="-------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="81.0000" Y="25.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="-345.7608" Y="63.9832" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="-1.7288" Y="0.3199" />
-                <PreSize X="0.4700" Y="0.1200" />
-                <FontResource Type="Normal" Path="Fonts/tahoma.ttf" Plist="" />
+                <PreSize X="0.4050" Y="0.1250" />
+                <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbUserID" ActionTag="1487563279" Tag="135" IconVisible="False" LeftMargin="-345.9559" RightMargin="430.9559" TopMargin="150.3879" BottomMargin="25.6121" FontSize="18" LabelText="----------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="115.0000" Y="24.0000" />
+              <AbstractNodeData Name="lbUserID" ActionTag="1487563279" Tag="135" IconVisible="False" LeftMargin="-345.9559" RightMargin="446.9559" TopMargin="149.8879" BottomMargin="25.1121" FontSize="18" LabelText="----------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="99.0000" Y="25.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="-345.9559" Y="37.6121" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="197" B="46" />
                 <PrePosition X="-1.7298" Y="0.1881" />
-                <PreSize X="0.5750" Y="0.1200" />
-                <FontResource Type="Normal" Path="Fonts/tahoma.ttf" Plist="" />
+                <PreSize X="0.4950" Y="0.1250" />
+                <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -188,15 +188,15 @@
                     <PreSize X="0.3350" Y="1.9429" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbGold" ActionTag="322122576" Tag="141" IconVisible="False" LeftMargin="-9.1285" RightMargin="6.1285" TopMargin="2.2669" BottomMargin="1.7331" FontSize="24" LabelText="--------------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="203.0000" Y="31.0000" />
+                  <AbstractNodeData Name="lbGold" ActionTag="322122576" Tag="141" IconVisible="False" LeftMargin="11.3715" RightMargin="26.6285" TopMargin="1.2669" BottomMargin="0.7331" FontSize="24" LabelText="--------------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="162.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="92.3715" Y="17.2331" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.4619" Y="0.4924" />
-                    <PreSize X="1.0150" Y="0.8857" />
-                    <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
+                    <PreSize X="0.8100" Y="0.9429" />
+                    <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -246,6 +246,74 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.8450" />
+            <PreSize X="0.1563" Y="0.2778" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Panel_anim_left" ActionTag="62873056" Tag="147" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="93.4214" RightMargin="986.5786" TopMargin="417.0787" BottomMargin="102.9213" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="Node" ActionTag="-790566576" Tag="390" IconVisible="True" LeftMargin="36.9077" RightMargin="163.0923" TopMargin="99.8207" BottomMargin="100.1793" ctype="SingleNodeObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <AnchorPoint />
+                <Position X="36.9077" Y="100.1793" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.1845" Y="0.5009" />
+                <PreSize X="0.0000" Y="0.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Image_55" ActionTag="339264135" Tag="149" IconVisible="False" LeftMargin="-56.1654" RightMargin="112.1654" TopMargin="71.8316" BottomMargin="-45.8316" LeftEage="47" RightEage="47" TopEage="57" BottomEage="57" Scale9OriginX="47" Scale9OriginY="57" Scale9Width="50" Scale9Height="60" ctype="ImageViewObjectData">
+                <Size X="144.0000" Y="174.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="15.8346" Y="41.1684" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.0792" Y="0.2058" />
+                <PreSize X="0.7200" Y="0.8700" />
+                <FileData Type="Normal" Path="Lobby/fish_bottom_left.png" Plist="" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="93.4214" Y="102.9213" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0730" Y="0.1429" />
+            <PreSize X="0.1563" Y="0.2778" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Panel_anim_right" ActionTag="1014690859" Tag="148" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="1172.2192" RightMargin="-92.2192" TopMargin="362.1593" BottomMargin="157.8407" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="Node" ActionTag="1242668339" Tag="391" IconVisible="True" LeftMargin="-36.3988" RightMargin="236.3988" TopMargin="160.4379" BottomMargin="39.5621" ctype="SingleNodeObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <AnchorPoint />
+                <Position X="-36.3988" Y="39.5621" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="-0.1820" Y="0.1978" />
+                <PreSize X="0.0000" Y="0.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Image_56" ActionTag="1909635470" Tag="150" IconVisible="False" LeftMargin="-42.4159" RightMargin="97.4159" TopMargin="185.5025" BottomMargin="-128.5025" LeftEage="47" RightEage="47" TopEage="47" BottomEage="47" Scale9OriginX="47" Scale9OriginY="47" Scale9Width="51" Scale9Height="49" ctype="ImageViewObjectData">
+                <Size X="145.0000" Y="143.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="30.0841" Y="-57.0025" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.1504" Y="-0.2850" />
+                <PreSize X="0.7250" Y="0.7150" />
+                <FileData Type="Normal" Path="Lobby/fish_bottom_right.png" Plist="" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="1172.2192" Y="157.8407" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.9158" Y="0.2192" />
             <PreSize X="0.1563" Y="0.2778" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
@@ -339,56 +407,6 @@
             <Scale ScaleX="1.4046" ScaleY="1.4046" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5057" Y="0.4553" />
-            <PreSize X="0.1563" Y="0.2778" />
-            <SingleColor A="255" R="150" G="200" B="255" />
-            <FirstColor A="255" R="150" G="200" B="255" />
-            <EndColor A="255" R="255" G="255" B="255" />
-            <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Panel_anim_left" ActionTag="62873056" Tag="147" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="93.4214" RightMargin="986.5786" TopMargin="417.0787" BottomMargin="102.9213" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="200.0000" Y="200.0000" />
-            <Children>
-              <AbstractNodeData Name="Image_55" ActionTag="339264135" Tag="149" IconVisible="False" LeftMargin="-56.1654" RightMargin="112.1654" TopMargin="71.8316" BottomMargin="-45.8316" LeftEage="47" RightEage="47" TopEage="57" BottomEage="57" Scale9OriginX="47" Scale9OriginY="57" Scale9Width="50" Scale9Height="60" ctype="ImageViewObjectData">
-                <Size X="144.0000" Y="174.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="15.8346" Y="41.1684" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0792" Y="0.2058" />
-                <PreSize X="0.7200" Y="0.8700" />
-                <FileData Type="Normal" Path="Lobby/fish_bottom_left.png" Plist="" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint />
-            <Position X="93.4214" Y="102.9213" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0730" Y="0.1429" />
-            <PreSize X="0.1563" Y="0.2778" />
-            <SingleColor A="255" R="150" G="200" B="255" />
-            <FirstColor A="255" R="150" G="200" B="255" />
-            <EndColor A="255" R="255" G="255" B="255" />
-            <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Panel_anim_right" ActionTag="1014690859" Tag="148" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="1172.2192" RightMargin="-92.2192" TopMargin="362.1593" BottomMargin="157.8407" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="200.0000" Y="200.0000" />
-            <Children>
-              <AbstractNodeData Name="Image_56" ActionTag="1909635470" Tag="150" IconVisible="False" LeftMargin="-42.4159" RightMargin="97.4159" TopMargin="185.5025" BottomMargin="-128.5025" LeftEage="47" RightEage="47" TopEage="47" BottomEage="47" Scale9OriginX="47" Scale9OriginY="47" Scale9Width="51" Scale9Height="49" ctype="ImageViewObjectData">
-                <Size X="145.0000" Y="143.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="30.0841" Y="-57.0025" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1504" Y="-0.2850" />
-                <PreSize X="0.7250" Y="0.7150" />
-                <FileData Type="Normal" Path="Lobby/fish_bottom_right.png" Plist="" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint />
-            <Position X="1172.2192" Y="157.8407" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9158" Y="0.2192" />
             <PreSize X="0.1563" Y="0.2778" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />

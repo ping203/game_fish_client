@@ -35,8 +35,14 @@
           <FilePathData Path="DialogGUI.csd" />
           <FilePathData Path="TopLayer.csd" />
           <FilePathData Path="ThangLonLayer.csd" />
+          <FilePathData Path="ShopGUI.csd" />
+          <FilePathData Path="GameLayer.csd" />
+          <FilePathData Path="LobbyScene.csd" />
+          <FilePathData Path="CellHistoryGoldVin.csd" />
+          <FilePathData Path="CellHistoryPlayGame.csd" />
+          <FilePathData Path="CellTopUser.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="ThangLonLayer.csd" />
+        <ActiveDocument Path="LobbyScene.csd" />
       </Value>
     </Item>
   </Properties>

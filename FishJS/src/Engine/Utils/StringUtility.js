@@ -113,8 +113,8 @@ BCStringUtility.parseJSON = function (json) {
 
 BCStringUtility.getFontDefault = function (fnt) {
 
-    var defaultPath = "fonts/";
-    var defaultFont = "tahoma.ttf";
+    var defaultPath = "res/Lobby/Popup/Fonts/";
+    var defaultFont = "UTM Swiss Condensed.ttf";
 
     if(fnt === undefined || fnt == null || fnt == "")
         return defaultPath + defaultFont;

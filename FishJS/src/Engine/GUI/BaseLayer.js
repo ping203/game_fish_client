@@ -524,7 +524,7 @@ var BCBaseLayer  = cc.Layer.extend({
 BCBaseLayer.createLabelText = function (txt,color) {
     var ret = new ccui.Text();
     ret.setAnchorPoint(cc.p(0.5, 0.5));
-    ret.setFontName("res/fonts/tahoma.ttf");
+    ret.setFontName("res/Lobby/Popup/Fonts/UTM Swiss Condensed.ttf");
     ret.setFontSize(25);
     ret.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
     if(txt !== undefined) ret.setString(txt);

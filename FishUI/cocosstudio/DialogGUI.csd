@@ -9,15 +9,15 @@
           <AbstractNodeData Name="bg" ActionTag="-412138560" Tag="2" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="300.0000" RightMargin="300.0000" TopMargin="27.4000" BottomMargin="142.6000" LeftEage="224" RightEage="224" TopEage="181" BottomEage="181" Scale9OriginX="224" Scale9OriginY="181" Scale9Width="232" Scale9Height="188" ctype="ImageViewObjectData">
             <Size X="680.0000" Y="550.0000" />
             <Children>
-              <AbstractNodeData Name="lbText" ActionTag="-1326926591" Tag="5" IconVisible="False" LeftMargin="107.9254" RightMargin="102.0746" TopMargin="276.2100" BottomMargin="186.7900" FontSize="24" LabelText="Ban muon thoat khoi game?  jjjjjjjjjjjj&#xA;jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj&#xA;" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="470.0000" Y="87.0000" />
+              <AbstractNodeData Name="lbText" ActionTag="-1326926591" Tag="5" IconVisible="False" LeftMargin="166.4254" RightMargin="160.5746" TopMargin="270.2100" BottomMargin="180.7900" FontSize="24" LabelText="Ban muon thoat khoi game?  jjjjjjjjjjjj&#xA;jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj&#xA;" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="353.0000" Y="99.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="342.9254" Y="230.2900" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="0" G="0" B="0" />
                 <PrePosition X="0.5043" Y="0.4187" />
-                <PreSize X="0.6912" Y="0.1582" />
-                <FontResource Type="Normal" Path="Fonts/tahomabd.ttf" Plist="" />
+                <PreSize X="0.5191" Y="0.1800" />
+                <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="255" B="255" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
