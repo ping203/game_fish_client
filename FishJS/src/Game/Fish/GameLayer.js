@@ -58,7 +58,8 @@ var GameLayerUI = BCBaseLayer.extend({
         panel_display.addChild(this.fish3DScene,1);
         panel_display.addChild(this.fish2DLayer,2);
         panel_display.addChild(this.fish2DLayerDie,2);
-
+        panel_display.addChild(this.bulletLayer,3);                 // layer chua' bullet
+        
         panel_display.addChild(this.effectLayer,4);             // layer effect chinh'
 
         ////////
@@ -66,7 +67,6 @@ var GameLayerUI = BCBaseLayer.extend({
 
         var top_panel = this.getControl("Panel_Top");           // top panel (tren ca UI)
         top_panel.addChild(this.topLayer,40);                   // top layer chua bong' nuoc' khi touch move
-        top_panel.addChild(this.bulletLayer,3);                 // layer chua' bullet
         top_panel.addChild(this.effectLayerTop,5);              // add coin khi fish die va` money lb
 
 

@@ -46,7 +46,7 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "BothEdge",
@@ -2370,7 +2370,7 @@
                     "LabelText": "Ty lệ quy đổi:",
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2407,18 +2407,18 @@
                       "Y": 0.0783
                     },
                     "PreSize": {
-                      "X": 0.81,
-                      "Y": 0.15
+                      "X": 0.65,
+                      "Y": 0.165
                     },
-                    "LeftMargin": 162.9778,
-                    "RightMargin": -124.9778,
-                    "TopMargin": 169.338,
-                    "BottomMargin": 0.662,
+                    "LeftMargin": 178.9778,
+                    "RightMargin": -108.9778,
+                    "TopMargin": 167.838,
+                    "BottomMargin": -0.838,
                     "Tag": 203,
                     "ActionTag": -1714441751,
                     "Size": {
-                      "X": 127.0,
-                      "Y": 32.0
+                      "X": 130.0,
+                      "Y": 33.0
                     },
                     "Name": "Text_1",
                     "ctype": "TextObjectData"
@@ -2728,7 +2728,7 @@
                   {
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
                       "Plist": ""
                     },
                     "FontSize": 32,
@@ -2824,7 +2824,7 @@
                   {
                     "FontResource": {
                       "Type": "Normal",
-                      "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
+                      "Path": "Lobby/Popup/Fonts/UTM Swiss Condensed.ttf",
                       "Plist": ""
                     },
                     "FontSize": 30,
@@ -2838,7 +2838,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 469.4567,
+                      "X": 470.5828,
                       "Y": 46.0322
                     },
                     "Scale": {
@@ -2848,15 +2848,15 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 2.3473,
+                      "X": 2.3529,
                       "Y": 0.2302
                     },
                     "PreSize": {
                       "X": 0.935,
                       "Y": 0.205
                     },
-                    "LeftMargin": 375.9567,
-                    "RightMargin": -362.9567,
+                    "LeftMargin": 377.0828,
+                    "RightMargin": -364.0828,
                     "TopMargin": 133.4678,
                     "BottomMargin": 25.5322,
                     "Tag": 214,

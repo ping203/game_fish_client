@@ -327,10 +327,12 @@ BCCmdReceivedHistory = CmdReceivedCommon.extend({
                 obj.id = this.getLong();
                 obj.exchangeAmount = this.getLong();
                 obj.receivedAmount = this.getLong();
+                obj.gold = this.getLong();
+                obj.vinMoney = this.getLong();
                 obj.status = this.getBool();
                 obj.time = this.getString();
-
-                this.dataHisoty.push(obj);
+                if(obj.status)
+                    this.dataHisoty.push(obj);
             }
         }
 

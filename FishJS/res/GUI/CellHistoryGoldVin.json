@@ -84,8 +84,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 899.5075,
-              "Y": 20.9171
+              "X": 899.5076,
+              "Y": 22.1748
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -95,16 +95,16 @@
             "IconVisible": false,
             "PrePosition": {
               "X": 0.7027,
-              "Y": 0.0291
+              "Y": 0.0308
             },
             "PreSize": {
               "X": 0.1609,
               "Y": 0.0389
             },
-            "LeftMargin": 796.5075,
-            "RightMargin": 277.4925,
-            "TopMargin": 685.0829,
-            "BottomMargin": 6.9171,
+            "LeftMargin": 796.5076,
+            "RightMargin": 277.4924,
+            "TopMargin": 683.8252,
+            "BottomMargin": 8.1748,
             "Tag": 137,
             "ActionTag": -1497857976,
             "Size": {
@@ -116,7 +116,7 @@
           },
           {
             "FontSize": 20,
-            "LabelText": "Text Label................................",
+            "LabelText": "Text Label.......................",
             "FontResource": {
               "Type": "Normal",
               "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
@@ -139,8 +139,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 555.94,
-              "Y": 19.986
+              "X": 532.712,
+              "Y": 22.1748
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -149,21 +149,21 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.4343,
-              "Y": 0.0278
+              "X": 0.4162,
+              "Y": 0.0308
             },
             "PreSize": {
-              "X": 0.1922,
+              "X": 0.157,
               "Y": 0.0389
             },
-            "LeftMargin": 432.94,
-            "RightMargin": 601.06,
-            "TopMargin": 686.014,
-            "BottomMargin": 5.986,
+            "LeftMargin": 432.212,
+            "RightMargin": 646.788,
+            "TopMargin": 683.8252,
+            "BottomMargin": 8.1748,
             "Tag": 138,
             "ActionTag": -857114786,
             "Size": {
-              "X": 246.0,
+              "X": 201.0,
               "Y": 28.0
             },
             "Name": "lbReceivedAmount",
@@ -194,8 +194,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 339.68,
-              "Y": 20.1743
+              "X": 325.3003,
+              "Y": 22.1748
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -204,17 +204,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.2654,
-              "Y": 0.028
+              "X": 0.2541,
+              "Y": 0.0308
             },
             "PreSize": {
               "X": 0.1922,
               "Y": 0.0389
             },
-            "LeftMargin": 216.68,
-            "RightMargin": 817.32,
-            "TopMargin": 685.8257,
-            "BottomMargin": 6.1743,
+            "LeftMargin": 202.3003,
+            "RightMargin": 831.6997,
+            "TopMargin": 683.8252,
+            "BottomMargin": 8.1748,
             "Tag": 139,
             "ActionTag": -1871153873,
             "Size": {
@@ -278,8 +278,8 @@
             "ctype": "TextObjectData"
           },
           {
-            "FontSize": 18,
-            "LabelText": "Text Label.................",
+            "FontSize": 20,
+            "LabelText": "Text Label............................",
             "FontResource": {
               "Type": "Normal",
               "Path": "Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf",
@@ -302,8 +302,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 785.754,
-              "Y": 19.4871
+              "X": 726.0246,
+              "Y": 22.1748
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -312,24 +312,24 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.6139,
-              "Y": 0.0271
+              "X": 0.5672,
+              "Y": 0.0308
             },
             "PreSize": {
-              "X": 0.1273,
-              "Y": 0.0347
+              "X": 0.1766,
+              "Y": 0.0389
             },
-            "LeftMargin": 704.254,
-            "RightMargin": 412.746,
-            "TopMargin": 688.0129,
-            "BottomMargin": 6.9871,
+            "LeftMargin": 613.0246,
+            "RightMargin": 440.9754,
+            "TopMargin": 683.8252,
+            "BottomMargin": 8.1748,
             "Tag": 142,
             "ActionTag": -908694880,
             "Size": {
-              "X": 163.0,
-              "Y": 25.0
+              "X": 226.0,
+              "Y": 28.0
             },
-            "Name": "lbStatus",
+            "Name": "lbSodu",
             "ctype": "TextObjectData"
           }
         ],

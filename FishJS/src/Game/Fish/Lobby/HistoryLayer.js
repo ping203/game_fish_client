@@ -271,17 +271,17 @@ var HistoryGoldVinCell = cc.TableViewCell.extend({
         this.lbTime = this._layout.getChildByName("lbTime");
         this.lbExchangeAmount = this._layout.getChildByName("lbExchangeAmount");
         this.lbReceivedAmount = this._layout.getChildByName("lbReceivedAmount");
-        this.lbStatus = this._layout.getChildByName("lbStatus");
+        this.lbSodu = this._layout.getChildByName("lbSodu");
         this.lbID = this._layout.getChildByName("lbID");
 
 
     },
-    updateCell: function(time,exchangeAmount,receivedAmount,status,id){
+    updateCell: function(time,exchangeAmount,receivedAmount,sodu,id){
         this.lbTime.setString(time);
         this.lbExchangeAmount.setString(BCStringUtility.standartNumber(Math.abs(exchangeAmount))+"$");
         this.lbReceivedAmount.setString(BCStringUtility.standartNumber(receivedAmount)+"$");
-        this.lbStatus.setString(status?"Thành công!":"Thất bại!");
-        this.lbStatus.setColor(status?cc.color(0,255,0):cc.color(255,0,0));
+        this.lbSodu.setString(BCStringUtility.standartNumber(sodu)+"$");
+        // this.lbStatus.setColor(status?cc.color(0,255,0):cc.color(255,0,0));
         this.lbID.setString("#"+id);
     }
 
@@ -342,14 +342,15 @@ var HistoryGoldVinLayer = cc.Layer.extend({
         if (!cell) {
             cell = new HistoryGoldVinCell();
         }
-        cell.updateCell(this.data[idx].time,this.data[idx].exchangeAmount,this.data[idx].receivedAmount,this.data[idx].status,this.data[idx].id);
+        var sodu = (this.type == HISTORY_TYPE_EXCHANGE_TO_GOLD)?this.data[idx].vinMoney:this.data[idx].gold;
+        cell.updateCell(this.data[idx].time,this.data[idx].exchangeAmount,this.data[idx].receivedAmount,sodu,this.data[idx].id);
         return cell;
     },
 
-    updateData: function (isLastPage,data) {
+    updateData: function (isLastPage,data,type) {
 
         this.isLoading = false;
-
+        this.type = type;
         this.isLastPage = isLastPage;
         this.data = this.data.concat(data);
         var old_count = this.count;
