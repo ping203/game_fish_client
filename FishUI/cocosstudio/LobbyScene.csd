@@ -59,13 +59,13 @@
                 <PreSize X="5.0100" Y="0.6350" />
                 <FileData Type="Normal" Path="Lobby/bg_info_bottom.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="avatar" ActionTag="-248366024" Tag="133" IconVisible="False" LeftMargin="-440.3256" RightMargin="553.3256" TopMargin="107.8857" BottomMargin="5.1143" LeftEage="28" RightEage="28" TopEage="28" BottomEage="28" Scale9OriginX="28" Scale9OriginY="28" Scale9Width="31" Scale9Height="31" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="avatar" ActionTag="-248366024" Tag="133" IconVisible="False" LeftMargin="-440.7583" RightMargin="553.7583" TopMargin="105.2894" BottomMargin="7.7106" LeftEage="28" RightEage="28" TopEage="28" BottomEage="28" Scale9OriginX="28" Scale9OriginY="28" Scale9Width="31" Scale9Height="31" ctype="ImageViewObjectData">
                 <Size X="87.0000" Y="87.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="-396.8256" Y="48.6143" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="-397.2583" Y="51.2106" />
+                <Scale ScaleX="0.8707" ScaleY="0.8707" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-1.9841" Y="0.2431" />
+                <PrePosition X="-1.9863" Y="0.2561" />
                 <PreSize X="0.4350" Y="0.4350" />
                 <FileData Type="Normal" Path="Lobby/avatar_photo.png" Plist="" />
               </AbstractNodeData>
@@ -102,14 +102,14 @@
                     <PreSize X="0.3350" Y="1.9429" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMan" ActionTag="1833338586" Tag="116" IconVisible="False" LeftMargin="13.5676" RightMargin="48.4324" TopMargin="0.2869" BottomMargin="1.7131" FontSize="24" LabelText="-----------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="138.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbMan" ActionTag="1833338586" Tag="116" IconVisible="False" LeftMargin="13.0676" RightMargin="47.9324" TopMargin="-0.7131" BottomMargin="0.7131" FontSize="24" LabelText="-----------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="139.0000" Y="35.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="82.5676" Y="18.2131" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4128" Y="0.5204" />
-                    <PreSize X="0.6900" Y="0.9429" />
+                    <PreSize X="0.6950" Y="1.0000" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -141,26 +141,26 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbUserName" ActionTag="-860299745" Tag="134" IconVisible="False" LeftMargin="-345.7608" RightMargin="464.7608" TopMargin="123.5168" BottomMargin="51.4832" FontSize="18" LabelText="-------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="81.0000" Y="25.0000" />
+              <AbstractNodeData Name="lbUserName" ActionTag="-860299745" Tag="134" IconVisible="False" LeftMargin="-345.7608" RightMargin="464.7608" TopMargin="122.5168" BottomMargin="50.4832" FontSize="18" LabelText="-------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="81.0000" Y="27.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="-345.7608" Y="63.9832" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="-1.7288" Y="0.3199" />
-                <PreSize X="0.4050" Y="0.1250" />
+                <PreSize X="0.4050" Y="0.1350" />
                 <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbUserID" ActionTag="1487563279" Tag="135" IconVisible="False" LeftMargin="-345.9559" RightMargin="446.9559" TopMargin="149.8879" BottomMargin="25.1121" FontSize="18" LabelText="----------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="99.0000" Y="25.0000" />
+              <AbstractNodeData Name="lbUserID" ActionTag="1487563279" Tag="135" IconVisible="False" LeftMargin="-345.9559" RightMargin="446.9559" TopMargin="148.8879" BottomMargin="24.1121" FontSize="18" LabelText="----------------" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="99.0000" Y="27.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="-345.9559" Y="37.6121" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="197" B="46" />
                 <PrePosition X="-1.7298" Y="0.1881" />
-                <PreSize X="0.4950" Y="0.1250" />
+                <PreSize X="0.4950" Y="0.1350" />
                 <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                 <OutlineColor A="255" R="0" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
@@ -188,14 +188,14 @@
                     <PreSize X="0.3350" Y="1.9429" />
                     <FileData Type="Normal" Path="Lobby/ico_VANG.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbGold" ActionTag="322122576" Tag="141" IconVisible="False" LeftMargin="11.3715" RightMargin="26.6285" TopMargin="1.2669" BottomMargin="0.7331" FontSize="24" LabelText="--------------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="162.0000" Y="33.0000" />
+                  <AbstractNodeData Name="lbGold" ActionTag="322122576" Tag="141" IconVisible="False" LeftMargin="10.8715" RightMargin="26.1285" TopMargin="0.2669" BottomMargin="-0.2669" FontSize="24" LabelText="--------------------" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="163.0000" Y="35.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="92.3715" Y="17.2331" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.4619" Y="0.4924" />
-                    <PreSize X="0.8100" Y="0.9429" />
+                    <PreSize X="0.8150" Y="1.0000" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -264,7 +264,7 @@
                 <PrePosition X="0.1845" Y="0.5009" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Image_55" ActionTag="339264135" Tag="149" IconVisible="False" LeftMargin="-56.1654" RightMargin="112.1654" TopMargin="71.8316" BottomMargin="-45.8316" LeftEage="47" RightEage="47" TopEage="57" BottomEage="57" Scale9OriginX="47" Scale9OriginY="57" Scale9Width="50" Scale9Height="60" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_55" Visible="False" ActionTag="339264135" Tag="149" IconVisible="False" LeftMargin="-56.1654" RightMargin="112.1654" TopMargin="71.8316" BottomMargin="-45.8316" LeftEage="47" RightEage="47" TopEage="57" BottomEage="57" Scale9OriginX="47" Scale9OriginY="57" Scale9Width="50" Scale9Height="60" ctype="ImageViewObjectData">
                 <Size X="144.0000" Y="174.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="15.8346" Y="41.1684" />
