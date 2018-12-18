@@ -31,7 +31,7 @@
       <ObjectData Name="Layer" Tag="4" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_bg" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_bg" Visible="False" ActionTag="-2088100913" Tag="97" IconVisible="False" RightMargin="1080.0000" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="bg0" ActionTag="-911620121" Tag="11" IconVisible="False" RightMargin="-1080.0000" TopMargin="-520.0000" LeftEage="633" RightEage="633" TopEage="356" BottomEage="356" Scale9OriginX="633" Scale9OriginY="356" Scale9Width="654" Scale9Height="368" ctype="ImageViewObjectData">
@@ -175,7 +175,7 @@
           <AbstractNodeData Name="player_0" ActionTag="152389595" Tag="7" IconVisible="False" LeftMargin="184.1754" RightMargin="895.8246" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-1843475137" Tag="186" IconVisible="False" LeftMargin="-164.1897" RightMargin="164.1897" TopMargin="4.6183" BottomMargin="-4.6183" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="bg_thongtin" ActionTag="-1843475137" Tag="186" IconVisible="False" LeftMargin="-164.1897" RightMargin="164.1897" TopMargin="4.6183" BottomMargin="-4.6183" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="200.0000" Y="200.0000" />
                 <Children>
                   <AbstractNodeData Name="bg_thongtin" ActionTag="-575713470" Tag="34" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -198,14 +198,14 @@
                     <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="25.7072" RightMargin="95.2928" TopMargin="117.1854" BottomMargin="65.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="79.0000" Y="17.0000" />
+                  <AbstractNodeData Name="username" ActionTag="1683421429" Tag="39" IconVisible="False" LeftMargin="25.7072" RightMargin="94.2928" TopMargin="116.1854" BottomMargin="64.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="80.0000" Y="19.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1285" Y="0.3716" />
-                    <PreSize X="0.3950" Y="0.0850" />
+                    <PreSize X="0.4000" Y="0.0950" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -230,14 +230,14 @@
                     <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="28.1197" RightMargin="90.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="81.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-1980223621" Tag="49" IconVisible="False" LeftMargin="27.6197" RightMargin="90.3803" TopMargin="139.2224" BottomMargin="43.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="82.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.3431" Y="0.2614" />
-                    <PreSize X="0.4050" Y="0.0750" />
+                    <PreSize X="0.4100" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -252,14 +252,14 @@
                     <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="652313722" Tag="111" IconVisible="False" LeftMargin="34.1335" RightMargin="98.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="67.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="652313722" Tag="111" IconVisible="False" LeftMargin="33.6335" RightMargin="98.3665" TopMargin="167.2819" BottomMargin="15.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="68.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3382" Y="0.1211" />
-                    <PreSize X="0.3350" Y="0.0750" />
+                    <PreSize X="0.3400" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -432,7 +432,7 @@
           <AbstractNodeData Name="player_1" ActionTag="501428907" Tag="53" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="865.5502" RightMargin="214.4498" TopMargin="520.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="-863753829" Tag="187" IconVisible="False" LeftMargin="288.7990" RightMargin="-288.7990" TopMargin="4.5642" BottomMargin="-4.5642" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="bg_thongtin" ActionTag="-863753829" Tag="187" IconVisible="False" LeftMargin="288.7990" RightMargin="-288.7990" TopMargin="4.5642" BottomMargin="-4.5642" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="200.0000" Y="200.0000" />
                 <Children>
                   <AbstractNodeData Name="bg_thongtin" ActionTag="-521806844" Tag="188" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -455,14 +455,14 @@
                     <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-811548093" Tag="190" IconVisible="False" LeftMargin="25.7072" RightMargin="95.2928" TopMargin="117.1854" BottomMargin="65.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="79.0000" Y="17.0000" />
+                  <AbstractNodeData Name="username" ActionTag="-811548093" Tag="190" IconVisible="False" LeftMargin="25.7072" RightMargin="94.2928" TopMargin="116.1854" BottomMargin="64.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="80.0000" Y="19.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1285" Y="0.3716" />
-                    <PreSize X="0.3950" Y="0.0850" />
+                    <PreSize X="0.4000" Y="0.0950" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -487,14 +487,14 @@
                     <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="184843080" Tag="193" IconVisible="False" LeftMargin="28.1197" RightMargin="90.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="81.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="184843080" Tag="193" IconVisible="False" LeftMargin="27.6197" RightMargin="90.3803" TopMargin="139.2224" BottomMargin="43.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="82.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.3431" Y="0.2614" />
-                    <PreSize X="0.4050" Y="0.0750" />
+                    <PreSize X="0.4100" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -509,14 +509,14 @@
                     <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="1573472078" Tag="195" IconVisible="False" LeftMargin="34.1335" RightMargin="98.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="67.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="1573472078" Tag="195" IconVisible="False" LeftMargin="33.6335" RightMargin="98.3665" TopMargin="167.2819" BottomMargin="15.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="68.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3382" Y="0.1211" />
-                    <PreSize X="0.3350" Y="0.0750" />
+                    <PreSize X="0.3400" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -689,7 +689,7 @@
           <AbstractNodeData Name="player_2" ActionTag="34468479" Tag="72" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="865.9838" RightMargin="214.0162" TopMargin="-200.0000" BottomMargin="720.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="1684709740" Tag="196" IconVisible="False" LeftMargin="287.3592" RightMargin="-287.3592" TopMargin="115.3442" BottomMargin="-115.3442" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="bg_thongtin" ActionTag="1684709740" Tag="196" IconVisible="False" LeftMargin="287.3592" RightMargin="-287.3592" TopMargin="115.3442" BottomMargin="-115.3442" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="200.0000" Y="200.0000" />
                 <Children>
                   <AbstractNodeData Name="bg_thongtin" ActionTag="-869170799" Tag="197" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -712,14 +712,14 @@
                     <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="-863560204" Tag="199" IconVisible="False" LeftMargin="25.7072" RightMargin="95.2928" TopMargin="117.1854" BottomMargin="65.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="79.0000" Y="17.0000" />
+                  <AbstractNodeData Name="username" ActionTag="-863560204" Tag="199" IconVisible="False" LeftMargin="25.7072" RightMargin="94.2928" TopMargin="116.1854" BottomMargin="64.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="80.0000" Y="19.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1285" Y="0.3716" />
-                    <PreSize X="0.3950" Y="0.0850" />
+                    <PreSize X="0.4000" Y="0.0950" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -744,14 +744,14 @@
                     <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="-752861110" Tag="202" IconVisible="False" LeftMargin="28.1197" RightMargin="90.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="81.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="-752861110" Tag="202" IconVisible="False" LeftMargin="27.6197" RightMargin="90.3803" TopMargin="139.2224" BottomMargin="43.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="82.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.3431" Y="0.2614" />
-                    <PreSize X="0.4050" Y="0.0750" />
+                    <PreSize X="0.4100" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -766,14 +766,14 @@
                     <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="-2139524876" Tag="204" IconVisible="False" LeftMargin="34.1335" RightMargin="98.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="67.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="-2139524876" Tag="204" IconVisible="False" LeftMargin="33.6335" RightMargin="98.3665" TopMargin="167.2819" BottomMargin="15.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="68.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3382" Y="0.1211" />
-                    <PreSize X="0.3350" Y="0.0750" />
+                    <PreSize X="0.3400" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -946,7 +946,7 @@
           <AbstractNodeData Name="player_3" ActionTag="-1909796107" Tag="91" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="110.9214" RightMargin="969.0786" TopMargin="-200.0000" BottomMargin="720.0000" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="bg_thongtin" ActionTag="713520961" Tag="205" IconVisible="False" LeftMargin="-90.8326" RightMargin="90.8326" TopMargin="115.0006" BottomMargin="-115.0006" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="bg_thongtin" ActionTag="713520961" Tag="205" IconVisible="False" LeftMargin="-90.8326" RightMargin="90.8326" TopMargin="115.0006" BottomMargin="-115.0006" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="200.0000" Y="200.0000" />
                 <Children>
                   <AbstractNodeData Name="bg_thongtin" ActionTag="-455456828" Tag="206" IconVisible="False" LeftMargin="-98.9657" RightMargin="-5.0343" TopMargin="25.4115" BottomMargin="-55.4115" LeftEage="100" RightEage="100" TopEage="75" BottomEage="75" Scale9OriginX="100" Scale9OriginY="75" Scale9Width="104" Scale9Height="80" ctype="ImageViewObjectData">
@@ -969,14 +969,14 @@
                     <PreSize X="0.4450" Y="0.4400" />
                     <FileData Type="PlistSubImage" Path="ava_nho.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="username" ActionTag="1457621511" Tag="208" IconVisible="False" LeftMargin="25.7072" RightMargin="95.2928" TopMargin="117.1854" BottomMargin="65.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="79.0000" Y="17.0000" />
+                  <AbstractNodeData Name="username" ActionTag="1457621511" Tag="208" IconVisible="False" LeftMargin="25.7072" RightMargin="94.2928" TopMargin="116.1854" BottomMargin="64.8146" FontSize="12" LabelText="Hoang..............." OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="80.0000" Y="19.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="25.7072" Y="74.3146" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1285" Y="0.3716" />
-                    <PreSize X="0.3950" Y="0.0850" />
+                    <PreSize X="0.4000" Y="0.0950" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1001,14 +1001,14 @@
                     <PreSize X="0.3350" Y="0.3400" />
                     <FileData Type="Normal" Path="Lobby/ico_MAN.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney" ActionTag="1765602264" Tag="211" IconVisible="False" LeftMargin="28.1197" RightMargin="90.8803" TopMargin="140.2224" BottomMargin="44.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="81.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney" ActionTag="1765602264" Tag="211" IconVisible="False" LeftMargin="27.6197" RightMargin="90.3803" TopMargin="139.2224" BottomMargin="43.7776" FontSize="11" LabelText="1.000.000$........" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="82.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="68.6197" Y="52.2776" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="216" B="66" />
                     <PrePosition X="0.3431" Y="0.2614" />
-                    <PreSize X="0.4050" Y="0.0750" />
+                    <PreSize X="0.4100" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1023,14 +1023,14 @@
                     <PreSize X="0.2950" Y="0.2000" />
                     <FileData Type="PlistSubImage" Path="co.png" Plist="ScreenGame/Ingame.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="lbMoney_0" ActionTag="1171871401" Tag="213" IconVisible="False" LeftMargin="34.1335" RightMargin="98.8665" TopMargin="168.2819" BottomMargin="16.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="67.0000" Y="15.0000" />
+                  <AbstractNodeData Name="lbMoney_0" ActionTag="1171871401" Tag="213" IconVisible="False" LeftMargin="33.6335" RightMargin="98.3665" TopMargin="167.2819" BottomMargin="15.7181" FontSize="11" LabelText="----------------" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="68.0000" Y="17.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="67.6335" Y="24.2181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3382" Y="0.1211" />
-                    <PreSize X="0.3350" Y="0.0750" />
+                    <PreSize X="0.3400" Y="0.0850" />
                     <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />

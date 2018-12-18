@@ -123,7 +123,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -439,7 +439,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -665,7 +665,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 184.1754,
@@ -690,7 +690,6 @@
                 },
                 "Scale9Width": 1,
                 "Scale9Height": 1,
-                "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
                   "X": -164.1897,
@@ -845,18 +844,18 @@
                       "Y": 0.3716
                     },
                     "PreSize": {
-                      "X": 0.395,
-                      "Y": 0.085
+                      "X": 0.4,
+                      "Y": 0.095
                     },
                     "LeftMargin": 25.7072,
-                    "RightMargin": 95.2928,
-                    "TopMargin": 117.1854,
-                    "BottomMargin": 65.8146,
+                    "RightMargin": 94.2928,
+                    "TopMargin": 116.1854,
+                    "BottomMargin": 64.8146,
                     "Tag": 39,
                     "ActionTag": 1683421429,
                     "Size": {
-                      "X": 79.0,
-                      "Y": 17.0
+                      "X": 80.0,
+                      "Y": 19.0
                     },
                     "Name": "username",
                     "ctype": "TextObjectData"
@@ -995,18 +994,18 @@
                       "Y": 0.2614
                     },
                     "PreSize": {
-                      "X": 0.405,
-                      "Y": 0.075
+                      "X": 0.41,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 28.1197,
-                    "RightMargin": 90.8803,
-                    "TopMargin": 140.2224,
-                    "BottomMargin": 44.7776,
+                    "LeftMargin": 27.6197,
+                    "RightMargin": 90.3803,
+                    "TopMargin": 139.2224,
+                    "BottomMargin": 43.7776,
                     "Tag": 49,
                     "ActionTag": -1980223621,
                     "Size": {
-                      "X": 81.0,
-                      "Y": 15.0
+                      "X": 82.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -1097,18 +1096,18 @@
                       "Y": 0.1211
                     },
                     "PreSize": {
-                      "X": 0.335,
-                      "Y": 0.075
+                      "X": 0.34,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 34.1335,
-                    "RightMargin": 98.8665,
-                    "TopMargin": 168.2819,
-                    "BottomMargin": 16.7181,
+                    "LeftMargin": 33.6335,
+                    "RightMargin": 98.3665,
+                    "TopMargin": 167.2819,
+                    "BottomMargin": 15.7181,
                     "Tag": 111,
                     "ActionTag": 652313722,
                     "Size": {
-                      "X": 67.0,
-                      "Y": 15.0
+                      "X": 68.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney_0",
                     "ctype": "TextObjectData"
@@ -1739,7 +1738,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -1766,7 +1765,6 @@
                 },
                 "Scale9Width": 1,
                 "Scale9Height": 1,
-                "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
                   "X": 288.799,
@@ -1921,18 +1919,18 @@
                       "Y": 0.3716
                     },
                     "PreSize": {
-                      "X": 0.395,
-                      "Y": 0.085
+                      "X": 0.4,
+                      "Y": 0.095
                     },
                     "LeftMargin": 25.7072,
-                    "RightMargin": 95.2928,
-                    "TopMargin": 117.1854,
-                    "BottomMargin": 65.8146,
+                    "RightMargin": 94.2928,
+                    "TopMargin": 116.1854,
+                    "BottomMargin": 64.8146,
                     "Tag": 190,
                     "ActionTag": -811548093,
                     "Size": {
-                      "X": 79.0,
-                      "Y": 17.0
+                      "X": 80.0,
+                      "Y": 19.0
                     },
                     "Name": "username",
                     "ctype": "TextObjectData"
@@ -2071,18 +2069,18 @@
                       "Y": 0.2614
                     },
                     "PreSize": {
-                      "X": 0.405,
-                      "Y": 0.075
+                      "X": 0.41,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 28.1197,
-                    "RightMargin": 90.8803,
-                    "TopMargin": 140.2224,
-                    "BottomMargin": 44.7776,
+                    "LeftMargin": 27.6197,
+                    "RightMargin": 90.3803,
+                    "TopMargin": 139.2224,
+                    "BottomMargin": 43.7776,
                     "Tag": 193,
                     "ActionTag": 184843080,
                     "Size": {
-                      "X": 81.0,
-                      "Y": 15.0
+                      "X": 82.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -2173,18 +2171,18 @@
                       "Y": 0.1211
                     },
                     "PreSize": {
-                      "X": 0.335,
-                      "Y": 0.075
+                      "X": 0.34,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 34.1335,
-                    "RightMargin": 98.8665,
-                    "TopMargin": 168.2819,
-                    "BottomMargin": 16.7181,
+                    "LeftMargin": 33.6335,
+                    "RightMargin": 98.3665,
+                    "TopMargin": 167.2819,
+                    "BottomMargin": 15.7181,
                     "Tag": 195,
                     "ActionTag": 1573472078,
                     "Size": {
-                      "X": 67.0,
-                      "Y": 15.0
+                      "X": 68.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney_0",
                     "ctype": "TextObjectData"
@@ -2815,7 +2813,7 @@
               "Y": 1.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "RightEdge",
@@ -2843,7 +2841,6 @@
                 },
                 "Scale9Width": 1,
                 "Scale9Height": 1,
-                "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
                   "X": 287.3592,
@@ -2998,18 +2995,18 @@
                       "Y": 0.3716
                     },
                     "PreSize": {
-                      "X": 0.395,
-                      "Y": 0.085
+                      "X": 0.4,
+                      "Y": 0.095
                     },
                     "LeftMargin": 25.7072,
-                    "RightMargin": 95.2928,
-                    "TopMargin": 117.1854,
-                    "BottomMargin": 65.8146,
+                    "RightMargin": 94.2928,
+                    "TopMargin": 116.1854,
+                    "BottomMargin": 64.8146,
                     "Tag": 199,
                     "ActionTag": -863560204,
                     "Size": {
-                      "X": 79.0,
-                      "Y": 17.0
+                      "X": 80.0,
+                      "Y": 19.0
                     },
                     "Name": "username",
                     "ctype": "TextObjectData"
@@ -3148,18 +3145,18 @@
                       "Y": 0.2614
                     },
                     "PreSize": {
-                      "X": 0.405,
-                      "Y": 0.075
+                      "X": 0.41,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 28.1197,
-                    "RightMargin": 90.8803,
-                    "TopMargin": 140.2224,
-                    "BottomMargin": 44.7776,
+                    "LeftMargin": 27.6197,
+                    "RightMargin": 90.3803,
+                    "TopMargin": 139.2224,
+                    "BottomMargin": 43.7776,
                     "Tag": 202,
                     "ActionTag": -752861110,
                     "Size": {
-                      "X": 81.0,
-                      "Y": 15.0
+                      "X": 82.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -3250,18 +3247,18 @@
                       "Y": 0.1211
                     },
                     "PreSize": {
-                      "X": 0.335,
-                      "Y": 0.075
+                      "X": 0.34,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 34.1335,
-                    "RightMargin": 98.8665,
-                    "TopMargin": 168.2819,
-                    "BottomMargin": 16.7181,
+                    "LeftMargin": 33.6335,
+                    "RightMargin": 98.3665,
+                    "TopMargin": 167.2819,
+                    "BottomMargin": 15.7181,
                     "Tag": 204,
                     "ActionTag": -2139524876,
                     "Size": {
-                      "X": 67.0,
-                      "Y": 15.0
+                      "X": 68.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney_0",
                     "ctype": "TextObjectData"
@@ -3895,7 +3892,7 @@
               "Y": 1.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "HorizontalEdge": "LeftEdge",
@@ -3923,7 +3920,6 @@
                 },
                 "Scale9Width": 1,
                 "Scale9Height": 1,
-                "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
                   "X": -90.8326,
@@ -4078,18 +4074,18 @@
                       "Y": 0.3716
                     },
                     "PreSize": {
-                      "X": 0.395,
-                      "Y": 0.085
+                      "X": 0.4,
+                      "Y": 0.095
                     },
                     "LeftMargin": 25.7072,
-                    "RightMargin": 95.2928,
-                    "TopMargin": 117.1854,
-                    "BottomMargin": 65.8146,
+                    "RightMargin": 94.2928,
+                    "TopMargin": 116.1854,
+                    "BottomMargin": 64.8146,
                     "Tag": 208,
                     "ActionTag": 1457621511,
                     "Size": {
-                      "X": 79.0,
-                      "Y": 17.0
+                      "X": 80.0,
+                      "Y": 19.0
                     },
                     "Name": "username",
                     "ctype": "TextObjectData"
@@ -4228,18 +4224,18 @@
                       "Y": 0.2614
                     },
                     "PreSize": {
-                      "X": 0.405,
-                      "Y": 0.075
+                      "X": 0.41,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 28.1197,
-                    "RightMargin": 90.8803,
-                    "TopMargin": 140.2224,
-                    "BottomMargin": 44.7776,
+                    "LeftMargin": 27.6197,
+                    "RightMargin": 90.3803,
+                    "TopMargin": 139.2224,
+                    "BottomMargin": 43.7776,
                     "Tag": 211,
                     "ActionTag": 1765602264,
                     "Size": {
-                      "X": 81.0,
-                      "Y": 15.0
+                      "X": 82.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney",
                     "ctype": "TextObjectData"
@@ -4330,18 +4326,18 @@
                       "Y": 0.1211
                     },
                     "PreSize": {
-                      "X": 0.335,
-                      "Y": 0.075
+                      "X": 0.34,
+                      "Y": 0.085
                     },
-                    "LeftMargin": 34.1335,
-                    "RightMargin": 98.8665,
-                    "TopMargin": 168.2819,
-                    "BottomMargin": 16.7181,
+                    "LeftMargin": 33.6335,
+                    "RightMargin": 98.3665,
+                    "TopMargin": 167.2819,
+                    "BottomMargin": 15.7181,
                     "Tag": 213,
                     "ActionTag": 1171871401,
                     "Size": {
-                      "X": 67.0,
-                      "Y": 15.0
+                      "X": 68.0,
+                      "Y": 17.0
                     },
                     "Name": "lbMoney_0",
                     "ctype": "TextObjectData"
@@ -4975,7 +4971,7 @@
               "Y": 0.0
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "RightMargin": 1080.0,
@@ -5022,7 +5018,7 @@
               "Y": 0.0214
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
             "LeftMargin": 605.4634,

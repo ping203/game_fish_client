@@ -407,6 +407,8 @@ var BCTopLayer = BCBaseLayer.extend({
             this.bg_my.getChildByName("username").setString(gameData.userData.userName);
             this.bg_my.getChildByName("gold").setString(BCStringUtility.standartNumber(gameData.userData.gold)+"$");
 
+            updateAvatar(gameData.userData.avatar,this.bg_my.getChildByName("avatar"));
+
         }
     },
     onButtonReleased: function (btn, id) {
@@ -447,7 +449,6 @@ var BCTopCell = cc.TableViewCell.extend({
         this.tops.push(this._layout.getChildByName("top3"));
 
 
-
     },
     updateCell: function(rank,name,gold,avatar){
         this.lbRank.setString(""+rank);
@@ -466,7 +467,7 @@ var BCTopCell = cc.TableViewCell.extend({
         {
             this.lbRank.setVisible(true);
         }
-        cc.log(avatar);
+
         updateAvatar(avatar,this.avatar);
     }
 
