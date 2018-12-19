@@ -24,16 +24,16 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="animation0" StartIndex="0" EndIndex="24">
-          <RenderColor A="150" R="106" G="90" B="205" />
+          <RenderColor A="255" R="106" G="90" B="205" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Scene" Tag="158" ctype="GameNodeObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="panel" ActionTag="-692507629" Tag="159" IconVisible="False" LeftMargin="610.9335" RightMargin="469.0665" TopMargin="143.7773" BottomMargin="376.2227" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="panel" ActionTag="-692507629" Tag="159" IconVisible="False" LeftMargin="610.9300" RightMargin="469.0700" TopMargin="143.7773" BottomMargin="376.2227" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="Image_1" ActionTag="-1278418436" Tag="160" RotationSkewX="360.0000" RotationSkewY="360.0000" IconVisible="False" LeftMargin="-432.7686" RightMargin="-222.2314" TopMargin="-223.4572" BottomMargin="-444.5428" LeftEage="282" RightEage="282" TopEage="286" BottomEage="286" Scale9OriginX="282" Scale9OriginY="286" Scale9Width="291" Scale9Height="296" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="xoay" ActionTag="-1278418436" Tag="160" IconVisible="False" LeftMargin="-432.7686" RightMargin="-222.2314" TopMargin="-223.4572" BottomMargin="-444.5428" LeftEage="282" RightEage="282" TopEage="286" BottomEage="286" Scale9OriginX="282" Scale9OriginY="286" Scale9Width="291" Scale9Height="296" ctype="ImageViewObjectData">
                 <Size X="855.0000" Y="868.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="-5.2686" Y="-10.5428" />
@@ -53,7 +53,33 @@
                 <PreSize X="4.2750" Y="4.3400" />
                 <FileData Type="Normal" Path="ScreenGame/thanglon/bg_txt.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Image_2_0" ActionTag="899243039" Tag="162" IconVisible="False" LeftMargin="-484.7572" RightMargin="-301.2428" TopMargin="103.0301" BottomMargin="-131.0301" LeftEage="282" RightEage="282" TopEage="75" BottomEage="75" Scale9OriginX="282" Scale9OriginY="75" Scale9Width="422" Scale9Height="78" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Particle_1" ActionTag="-584240171" Tag="198" IconVisible="True" LeftMargin="16.2235" RightMargin="183.7765" TopMargin="-143.7786" BottomMargin="343.7786" ctype="ParticleObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <AnchorPoint />
+                <Position X="16.2235" Y="343.7786" />
+                <Scale ScaleX="1.5000" ScaleY="1.5000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.0811" Y="1.7189" />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="ScreenGame/thanglon/BurstPipe.plist" Plist="" />
+                <BlendFunc Src="770" Dst="771" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="610.9300" Y="376.2227" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4773" Y="0.5225" />
+            <PreSize X="0.1563" Y="0.2778" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="panel_0" ActionTag="1284581937" Tag="59" IconVisible="False" LeftMargin="610.9300" RightMargin="469.0700" TopMargin="143.7800" BottomMargin="376.2200" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="txtThangLon" ActionTag="1837739313" Tag="62" IconVisible="False" LeftMargin="-484.7572" RightMargin="-301.2428" TopMargin="103.0301" BottomMargin="-131.0301" LeftEage="282" RightEage="282" TopEage="75" BottomEage="75" Scale9OriginX="282" Scale9OriginY="75" Scale9Width="422" Scale9Height="78" ctype="ImageViewObjectData">
                 <Size X="986.0000" Y="228.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="8.2428" Y="-17.0301" />
@@ -63,7 +89,7 @@
                 <PreSize X="4.9300" Y="1.1400" />
                 <FileData Type="Normal" Path="ScreenGame/thanglon/txt.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="BitmapFontLabel_1" ActionTag="-1139723947" Tag="163" IconVisible="False" LeftMargin="-78.1870" RightMargin="93.1870" TopMargin="-28.1808" BottomMargin="181.1808" LabelText="+8.000.000$" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="gold" ActionTag="-611700718" Tag="63" IconVisible="False" LeftMargin="-78.1870" RightMargin="93.1870" TopMargin="-28.1808" BottomMargin="181.1808" LabelText="+8.000.000$" ctype="TextBMFontObjectData">
                 <Size X="185.0000" Y="47.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="14.3130" Y="204.6808" />
@@ -73,20 +99,9 @@
                 <PreSize X="0.9250" Y="0.2350" />
                 <LabelBMFontFile_CNB Type="Normal" Path="Lobby/Popup/Fonts/yellow-export.fnt" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Particle_1" ActionTag="-584240171" Tag="198" IconVisible="True" LeftMargin="10.2234" RightMargin="189.7766" TopMargin="-110.7785" BottomMargin="310.7785" ctype="ParticleObjectData">
-                <Size X="0.0000" Y="0.0000" />
-                <AnchorPoint />
-                <Position X="10.2234" Y="310.7785" />
-                <Scale ScaleX="1.5000" ScaleY="1.5000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0511" Y="1.5539" />
-                <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="ScreenGame/thanglon/BurstPipe.plist" Plist="" />
-                <BlendFunc Src="770" Dst="771" />
-              </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="610.9335" Y="376.2227" />
+            <Position X="610.9300" Y="376.2200" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4773" Y="0.5225" />

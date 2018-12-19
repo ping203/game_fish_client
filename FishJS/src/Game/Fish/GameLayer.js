@@ -570,8 +570,12 @@ var GameLayerUI = BCBaseLayer.extend({
         //effect gold
         var goldSp = this.createEffectMoney(pos,playerIndex,money);
 
+
         if(withCoin)
+        {
+
             this.createEffectCoin(pos);
+        }
     },
     createEffectFishFired: function(pos,index)
     {
@@ -740,7 +744,7 @@ var GameLayerUI = BCBaseLayer.extend({
                 gameData.enableMusic = !gameData.enableMusic;
                 gameData.saveStorage();
                 this.loadUIMusicSound();
-                // this.addChild(new ThangLonLayer(),10,1999);
+
                 break;
             }
             case GameLayerUI.BTN_SOUND:
@@ -1027,6 +1031,7 @@ var GameLayerUI = BCBaseLayer.extend({
         currentFishLayer.addChild(wave,101);
         wave.setPosition(cc.winSize.width + 30,cc.winSize.height/2);
         wave.runAction(cc.sequence(cc.moveBy(TIME_CLEAN,cc.p(-cc.winSize.width - 30,0))));
+        fishSound.playWave();
     },
     animCatranDen: function(){
         var catranAnim =  sp.SkeletonAnimation.createWithJsonFile("res/FX/FXCaTran.json","res/FX/FXCaTran.atlas");
@@ -1110,10 +1115,19 @@ GameLayerUI.BTN_FISH = 8;
 
 
 var ThangLonLayer = BCBaseLayer.extend({
-    ctor: function () {
+    ctor: function (gold) {
         this._super();
         this.initWithBinaryFile("res/GUI/ThangLonLayer.json");
 
-        this.runAction(cc.sequence(cc.delayTime(6),cc.removeSelf()));
+        var panel = this._layout.getChildByName("panel");
+        panel.getChildByName("xoay").runAction(cc.sequence(cc.rotateBy(5,360)).repeatForever());
+
+        var panel1 = this._layout.getChildByName("panel_0");
+        panel1.getChildByName("txtThangLon").runAction(cc.sequence(cc.scaleTo(.45,.95),cc.scaleTo(.45,1)).repeatForever());
+        panel1.getChildByName("gold").runAction(cc.sequence(cc.tintTo(.35,255,0,0),cc.tintTo(.35,255,255,255)).repeatForever());
+        panel1.getChildByName("gold").setString("+"+BCStringUtility.standartNumber(gold)+"$")
+        this.runAction(cc.sequence(cc.delayTime(7.5),cc.scaleTo(.25,0),cc.removeSelf()));
+
+        fishSound.playThangLon();
     }
 })

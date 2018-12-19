@@ -99,7 +99,7 @@
             "Scale9Height": 1,
             "AnchorPoint": {},
             "Position": {
-              "X": 610.9335,
+              "X": 610.93,
               "Y": 376.2227
             },
             "Scale": {
@@ -113,11 +113,11 @@
               "Y": 0.5225
             },
             "PreSize": {
-              "X": 0.1563,
+              "X": 0.1562,
               "Y": 0.2778
             },
-            "LeftMargin": 610.9335,
-            "RightMargin": 469.0665,
+            "LeftMargin": 610.93,
+            "RightMargin": 469.07,
             "TopMargin": 143.7773,
             "BottomMargin": 376.2227,
             "Tag": 159,
@@ -144,8 +144,6 @@
                   "ScaleX": 1.0318,
                   "ScaleY": 1.0318
                 },
-                "RotationSkewX": 360.0,
-                "RotationSkewY": 360.0,
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
@@ -166,7 +164,7 @@
                   "X": 855.0,
                   "Y": 868.0
                 },
-                "Name": "Image_1",
+                "Name": "xoay",
                 "ctype": "ImageViewObjectData"
               },
               {
@@ -217,6 +215,99 @@
               {
                 "FileData": {
                   "Type": "Normal",
+                  "Path": "ScreenGame/thanglon/BurstPipe.plist",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 16.2235,
+                  "Y": 343.7786
+                },
+                "Scale": {
+                  "ScaleX": 1.5,
+                  "ScaleY": 1.5
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.0811,
+                  "Y": 1.7189
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 16.2235,
+                "RightMargin": 183.7765,
+                "TopMargin": -143.7786,
+                "BottomMargin": 343.7786,
+                "Tag": 198,
+                "ActionTag": -584240171,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "Particle_1",
+                "ctype": "ParticleObjectData"
+              }
+            ],
+            "ActionTag": -692507629,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "panel",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 610.93,
+              "Y": 376.22
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4773,
+              "Y": 0.5225
+            },
+            "PreSize": {
+              "X": 0.1562,
+              "Y": 0.2778
+            },
+            "LeftMargin": 610.93,
+            "RightMargin": 469.07,
+            "TopMargin": 143.78,
+            "BottomMargin": 376.22,
+            "Tag": 59,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
                   "Path": "ScreenGame/thanglon/txt.png",
                   "Plist": ""
                 },
@@ -250,13 +341,13 @@
                 "RightMargin": -301.2428,
                 "TopMargin": 103.0301,
                 "BottomMargin": -131.0301,
-                "Tag": 162,
-                "ActionTag": 899243039,
+                "Tag": 62,
+                "ActionTag": 1837739313,
                 "Size": {
                   "X": 986.0,
                   "Y": 228.0
                 },
-                "Name": "Image_2_0",
+                "Name": "txtThangLon",
                 "ctype": "ImageViewObjectData"
               },
               {
@@ -292,64 +383,22 @@
                 "RightMargin": 93.187,
                 "TopMargin": -28.1808,
                 "BottomMargin": 181.1808,
-                "Tag": 163,
-                "ActionTag": -1139723947,
+                "Tag": 63,
+                "ActionTag": -611700718,
                 "Size": {
                   "X": 185.0,
                   "Y": 47.0
                 },
-                "Name": "BitmapFontLabel_1",
+                "Name": "gold",
                 "ctype": "TextBMFontObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "ScreenGame/thanglon/BurstPipe.plist",
-                  "Plist": ""
-                },
-                "BlendFunc": {
-                  "Src": 770,
-                  "Dst": 771
-                },
-                "AnchorPoint": {},
-                "Position": {
-                  "X": 10.2234,
-                  "Y": 310.7785
-                },
-                "Scale": {
-                  "ScaleX": 1.5,
-                  "ScaleY": 1.5
-                },
-                "CColor": {},
-                "IconVisible": true,
-                "PrePosition": {
-                  "X": 0.0511,
-                  "Y": 1.5539
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 10.2234,
-                "RightMargin": 189.7766,
-                "TopMargin": -110.7785,
-                "BottomMargin": 310.7785,
-                "Tag": 198,
-                "ActionTag": -584240171,
-                "Size": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Name": "Particle_1",
-                "ctype": "ParticleObjectData"
               }
             ],
-            "ActionTag": -692507629,
+            "ActionTag": 1284581937,
             "Size": {
               "X": 200.0,
               "Y": 200.0
             },
-            "Name": "panel",
+            "Name": "panel_0",
             "ctype": "PanelObjectData"
           }
         ],

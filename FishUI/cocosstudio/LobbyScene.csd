@@ -507,13 +507,13 @@
                   <AbstractNodeData Name="btnSound" ActionTag="-971724443" Tag="145" IconVisible="False" LeftMargin="75.2049" RightMargin="71.7951" TopMargin="104.2139" BottomMargin="168.7861" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="85" Scale9Height="17" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="115.0000" Y="39.0000" />
                     <Children>
-                      <AbstractNodeData Name="lb_on" ActionTag="592255419" Tag="148" IconVisible="False" LeftMargin="10.4543" RightMargin="76.5457" TopMargin="4.0906" BottomMargin="4.9094" FontSize="22" LabelText="ON" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="lb_on" ActionTag="592255419" Tag="148" IconVisible="False" LeftMargin="9.7338" RightMargin="77.2662" TopMargin="4.8102" BottomMargin="4.1898" FontSize="22" LabelText="ON" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="28.0000" Y="30.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="24.4543" Y="19.9094" />
+                        <Position X="23.7338" Y="19.1898" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.2126" Y="0.5105" />
+                        <PrePosition X="0.2064" Y="0.4920" />
                         <PreSize X="0.2435" Y="0.7692" />
                         <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -529,13 +529,13 @@
                         <PreSize X="0.4522" Y="1.3590" />
                         <FileData Type="Normal" Path="Lobby/ico_drag.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="lb_off" ActionTag="1642644025" Tag="156" IconVisible="False" LeftMargin="65.3384" RightMargin="11.6616" TopMargin="3.2674" BottomMargin="5.7326" FontSize="22" LabelText="OFF " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="lb_off" ActionTag="1642644025" Tag="156" IconVisible="False" LeftMargin="64.6184" RightMargin="12.3816" TopMargin="4.8102" BottomMargin="4.1898" FontSize="22" LabelText="OFF " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="38.0000" Y="30.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="84.3384" Y="20.7326" />
+                        <Position X="83.6184" Y="19.1898" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.7334" Y="0.5316" />
+                        <PrePosition X="0.7271" Y="0.4920" />
                         <PreSize X="0.3304" Y="0.7692" />
                         <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -570,13 +570,13 @@
                   <AbstractNodeData Name="btnMusic" ActionTag="731744109" Tag="150" IconVisible="False" LeftMargin="72.3344" RightMargin="74.6656" TopMargin="211.0575" BottomMargin="61.9425" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="85" Scale9Height="17" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="115.0000" Y="39.0000" />
                     <Children>
-                      <AbstractNodeData Name="lb_on" ActionTag="-220482580" Tag="151" IconVisible="False" LeftMargin="10.4543" RightMargin="76.5457" TopMargin="4.0906" BottomMargin="4.9094" FontSize="22" LabelText="ON" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="lb_on" ActionTag="-220482580" Tag="151" IconVisible="False" LeftMargin="10.4557" RightMargin="76.5443" TopMargin="1.9308" BottomMargin="7.0692" FontSize="22" LabelText="ON" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="28.0000" Y="30.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="24.4543" Y="19.9094" />
+                        <Position X="24.4557" Y="22.0692" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.2126" Y="0.5105" />
+                        <PrePosition X="0.2127" Y="0.5659" />
                         <PreSize X="0.2435" Y="0.7692" />
                         <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -592,13 +592,13 @@
                         <PreSize X="0.4522" Y="1.3590" />
                         <FileData Type="Normal" Path="Lobby/ico_drag.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="lb_off" ActionTag="168183183" Tag="157" IconVisible="False" LeftMargin="66.7503" RightMargin="10.2497" TopMargin="2.7959" BottomMargin="6.2041" FontSize="22" LabelText="OFF " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="lb_off" ActionTag="168183183" Tag="157" IconVisible="False" LeftMargin="66.7510" RightMargin="10.2490" TopMargin="1.9308" BottomMargin="7.0692" FontSize="22" LabelText="OFF " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="38.0000" Y="30.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="85.7503" Y="21.2041" />
+                        <Position X="85.7510" Y="22.0692" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.7457" Y="0.5437" />
+                        <PrePosition X="0.7457" Y="0.5659" />
                         <PreSize X="0.3304" Y="0.7692" />
                         <FontResource Type="Normal" Path="Lobby/Popup/Fonts/UTM Swiss CondensedBold.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />

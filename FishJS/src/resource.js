@@ -241,6 +241,7 @@ var g_resources_fishes = ["res/bullet.png",
 "res/sounds/game/coin2.mp3",
 "res/sounds/game/fire1.mp3",
 "res/sounds/game/fire2.mp3",
+"res/sounds/game/tiengvotay.mp3",
 "res/sounds/game/wave.mp3",
 "res/sounds/lobby/bg_lobby_0.mp3",
 "res/sounds/lobby/bg_lobby_1.mp3"];

@@ -52,5 +52,18 @@ fishSound.playEffectFishDie = function(type)
 
 }
 
+fishSound.playWave = function () {
+    if(!gameData.enableSound)
+        return;
+    audioEngine.playEffect("res/sounds/game/wave.mp3",false);
+}
+
+fishSound.playThangLon = function () {
+    if(!gameData.enableSound)
+        return;
+    audioEngine.playEffect("res/sounds/game/tiengvotay.mp3",false);
+}
+
+
 
 // effect
