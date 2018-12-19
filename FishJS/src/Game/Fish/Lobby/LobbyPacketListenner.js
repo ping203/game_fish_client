@@ -110,44 +110,49 @@ var LobbyPacketListenner = cc.Class.extend({
                         main.onUpdateData();
                         break;
                     }
-                    case 1:
+                    // case 1:
+                    // {
+                    //     msg = "Lỗi không xác định!";
+                    //     break;
+                    // }
+                    // case 2:
+                    // {
+                    //     msg = "Hệ thống xảy ra lỗi khi xử lí, vui lòng thử lại sau!";
+                    //     break;
+                    // }
+                    // case 3:
+                    // {
+                    //     msg = "Lỗi xác thực tài khoản, vui lòng đăng nhập và thử lại!";
+                    //     break;
+                    // }
+                    // case 4:
+                    // {
+                    //     msg = "Không đủ số dư để giao dịch!";
+                    //     break;
+                    // }
+                    // case 5:
+                    // {
+                    //     msg = "Bạn đã sử dụng hết hạn mức trong ngày!";
+                    //     break;
+                    // }
+                    // case 6:
+                    // {
+                    //     msg = "Giao dịch bị từ chối!";
+                    //     break;
+                    // }
+                    // case 7:
+                    // {
+                    //     msg = "Số tiền giao dịch phải lớn hơn "+StringUtility.standartNumber(gameData.config["exchange"][0])+" và nhỏ hơn "+StringUtility.standartNumber(gameData.config["exchange"][1]);
+                    //     break;
+                    // }
+                    // case 8:
+                    // {
+                    //     msg = "Sai mã Captcha, vui lòng thử lại!";
+                    //     break;
+                    // }
+                    default:
                     {
-                        msg = "Lỗi không xác định!";
-                        break;
-                    }
-                    case 2:
-                    {
-                        msg = "Hệ thống xảy ra lỗi khi xử lí, vui lòng thử lại sau!";
-                        break;
-                    }
-                    case 3:
-                    {
-                        msg = "Lỗi xác thực tài khoản, vui lòng đăng nhập và thử lại!";
-                        break;
-                    }
-                    case 4:
-                    {
-                        msg = "Không đủ số dư để giao dịch!";
-                        break;
-                    }
-                    case 5:
-                    {
-                        msg = "Bạn đã sử dụng hết hạn mức trong ngày!";
-                        break;
-                    }
-                    case 6:
-                    {
-                        msg = "Giao dịch bị từ chối!";
-                        break;
-                    }
-                    case 7:
-                    {
-                        msg = "Số tiền giao dịch phải lớn hơn "+StringUtility.standartNumber(gameData.config["exchange"][0])+" và nhỏ hơn "+StringUtility.standartNumber(gameData.config["exchange"][1]);
-                        break;
-                    }
-                    case 8:
-                    {
-                        msg = "Sai mã Captcha, vui lòng thử lại!";
+                        msg = pk.message;
                         break;
                     }
 
