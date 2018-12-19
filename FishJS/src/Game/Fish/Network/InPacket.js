@@ -35,12 +35,12 @@ BCCmdReceivedExchange = CmdReceivedCommon.extend({
         this.readData();
     },
     readData: function(){
-        this.message = decodeURIComponent(this.getString());
         this.errorCode = this.getError();
         this.isToVin = this.getBool();
         this.money_exchange = this.getLong();
         this.gold = this.getLong();
         this.vinMoney = this.getLong();
+        this.message = decodeURIComponent(this.getString());
 
     }
 })
