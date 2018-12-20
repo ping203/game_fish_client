@@ -24,6 +24,8 @@ var SettingWeb = cc.Class.extend({
 })
 
 var GameManagerWeb = cc.Class.extend({
+    deltaTime: 1/60.0,
+    accumulator: 0,
     ctor: function(setting)
     {
         this.gameLayer = null;
@@ -151,14 +153,26 @@ var GameManagerWeb = cc.Class.extend({
     },
     update: function(dtt)
     {
-        cc.log(dtt);
-        var dt = dtt;
-        if(this.setting.using_constant_fps)
-            dt = this.setting.FPS;
+        // cc.log(dtt);
+        // var dt = dtt;
+        // if(this.setting.using_constant_fps)
+        //     dt = this.setting.FPS;
+        if (dtt >= 0.1) {
+            dtt = 0.1;
+        }
+
+        this.accumulator += dtt;
+
+        while (this.accumulator >= this.deltaTime) {
+            this._doUpdate(this.deltaTime);
+            this.accumulator -= this.deltaTime;
+        }
+    },
+    _doUpdate: function (dt) {
         var count = this._entities.length;
         while(count--)
         {
-            this._entities[count].update(dtt);
+            this._entities[count].update(dt);
             if(this._entities[count].need_remove && this._entities[count]._type == Entity.FISH)
             {
                 var fix = this._entities[count]._body.GetFixtureList();
