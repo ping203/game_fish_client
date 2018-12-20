@@ -500,7 +500,8 @@ var MapDemo = cc.Class.extend({
                var points = PathReader.getInstance().getListPointAtPathID(listPath[i]);
                cc.log(JSON.stringify(points));
                for(var j=0;j<points.length;j++){
-                   ret.listPoints.push(points[j]);
+                   if(!(i!=0 && j==0))
+                    ret.listPoints.push(points[j]);
                }
            }
            ret.totalTime = fishDataReal.time_xuat_hien;
