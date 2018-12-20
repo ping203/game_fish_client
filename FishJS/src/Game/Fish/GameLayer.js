@@ -227,10 +227,10 @@ var GameLayerUI = BCBaseLayer.extend({
 
     shootAuto: function () {
         var screenPos = this.last_touch_point?this.last_touch_point:vec2(cc.winSize.width/2,cc.winSize.height/2);
-
+        screenPos = this.fixPositionShoot(fishLifeCycle.myPlayer,screenPos);
         if(this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
-            this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,screenPos));
+            this.shoot(fishLifeCycle.myPlayer,screenPos);
             if(this.actionListener && this.actionListener.onStartShoot){
                 this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],screenPos.x / PM_RATIO,screenPos.y / PM_RATIO);
             }
@@ -416,7 +416,8 @@ var GameLayerUI = BCBaseLayer.extend({
             {
                 if(this.checkMoney())
                 {
-                    this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,this.point_to_shoot));
+                    this.point_to_shoot = this.fixPositionShoot(fishLifeCycle.myPlayer,this.point_to_shoot);
+                    this.shoot(fishLifeCycle.myPlayer,this.point_to_shoot);
                     if(this.actionListener && this.actionListener.onStartShoot){
                         this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],this.point_to_shoot.x / PM_RATIO,this.point_to_shoot.y / PM_RATIO);
                     }
@@ -491,13 +492,14 @@ var GameLayerUI = BCBaseLayer.extend({
 
         if(this.enable_shoot && this.gameMgr.state != BCGameManager.STATE_PREPARE)
         {
-            this.shoot(fishLifeCycle.myPlayer,this.fixPositionShoot(fishLifeCycle.myPlayer,location));
+            var finalPos = this.fixPositionShoot(fishLifeCycle.myPlayer,location);
+            this.shoot(fishLifeCycle.myPlayer,finalPos);
             if(this.actionListener && this.actionListener.onStartShoot){
-                this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],location.x / PM_RATIO,location.y / PM_RATIO);
+                this.actionListener.onStartShoot.call(this.actionListener,fishLifeCycle.bets[fishLifeCycle.myBetIdx],finalPos.x / PM_RATIO,finalPos.y / PM_RATIO);
             }
             else {
                 // for (var i = 0; i < 10; i ++) {
-                    fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx], location.x / PM_RATIO, location.y / PM_RATIO);
+                    fishBZ.sendStartShoot(fishLifeCycle.bets[fishLifeCycle.myBetIdx], finalPos.x / PM_RATIO, finalPos.y / PM_RATIO);
                 // }
             }
 
