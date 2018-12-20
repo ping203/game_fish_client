@@ -2,6 +2,8 @@
  * Created by HOANG on 9/22/2018.
  */
 
+
+
 BCCmdSendLogin = CmdSendCommon.extend({
     ctor: function()
     {
@@ -17,6 +19,13 @@ BCCmdSendLogin = CmdSendCommon.extend({
 
         this.putString(username);
         this.putString(password);
+
+        var platform = LOGIN_WEB;
+        if(cc.sys.isNative)
+        {
+            platform = (cc.sys.os == cc.sys.OS_IOS)?LOGIN_IOS:LOGIN_ANDROID;
+        }
+        this.putInt(platform);
 
         //update
         this.updateSize();

@@ -30,7 +30,9 @@ var SERVER_PORT = 8080;
 var FPS = 1;
 
 
-
+var LOGIN_WEB = 0;
+var LOGIN_ANDROID = 1;
+var LOGIN_IOS = 2;
 
 
 var vec2 = function(x, y){
