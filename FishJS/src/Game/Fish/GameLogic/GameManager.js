@@ -12,7 +12,7 @@ var SettingWeb = cc.Class.extend({
         this.bullet_vel = 40;
         this.bullet_live = 10;
 
-        this.using_constant_fps = true;
+        this.using_constant_fps = false;
         this.FPS = 1.0 / 60;
         this.PM_RATIO = 32;
 
@@ -151,6 +151,7 @@ var GameManagerWeb = cc.Class.extend({
     },
     update: function(dtt)
     {
+        cc.log(dtt);
         var dt = dtt;
         if(this.setting.using_constant_fps)
             dt = this.setting.FPS;
