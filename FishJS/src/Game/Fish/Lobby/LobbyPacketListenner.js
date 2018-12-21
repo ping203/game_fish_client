@@ -214,8 +214,6 @@ var LobbyPacketListenner = cc.Class.extend({
         //this.gameListenner.onDisconnect();
         cc.log("on Disconnected");
 
-        // bcSceneMgr.openWithScene(new LoginScene());
-
         BCDialog.showDialog("Bạn đã bị ngắt kết nối từ máy chủ!",this,function () {
             var lobbyScene = new LobbyScene();
             lobbyScene.withLogin();

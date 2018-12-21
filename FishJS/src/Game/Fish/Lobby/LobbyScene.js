@@ -163,11 +163,29 @@ var LobbyScene = BCBaseLayer.extend({
         this.need_login = true;
         this.avatar.setVisible(false);
     },
+    onEnterTransitionDidFinish: function () {
+        this._super();
+        // cc.log("hiu hiu 2 " + BCGameClient.getInstance().connected);
+
+        if(!BCGameClient.getInstance().connected && !this.need_login)
+        {
+            BCDialog.showDialog("Bạn đã bị ngắt kết nối từ máy chủ!",this,function () {
+                var lobbyScene = new LobbyScene();
+                lobbyScene.withLogin();
+                bcSceneMgr.openWithScene(lobbyScene);
+                //
+                BCGameClient.getInstance().setListener(lobbyListenner);
+                BCGameClient.getInstance().connect(SERVER_IP,SERVER_PORT);
+            },this)
+        }
+    },
     onEnter: function(){
         this._super();
         if(this.need_login)
             bcSceneMgr.addLoading("Loading...",true);
 
+
+        // cc.log("hiu hiu 1");
 
     },
     onUpdateData: function(){
@@ -340,8 +358,10 @@ var BCDialog = BCBaseLayer.extend({
 
 
 
-BCDialog.showDialog = function (msg, target, selector) {
+BCDialog.showDialog = function (msg, target, selector , parent) {
     var mainLayer = bcSceneMgr.getMainLayer();
+    if(parent)
+        mainLayer = parent;
     if(mainLayer.getChildByTag(BCDialog.TAG))
     {
         mainLayer.removeChildByTag(BCDialog.TAG);
