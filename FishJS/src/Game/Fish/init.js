@@ -46,7 +46,6 @@ var setFuncForEvent = function (func) {
     __funcForEvent = func;
 }
 
-
 var mainLoopForWebWorker=  function () {
     if(__funcForLoop)
     {
@@ -94,13 +93,17 @@ var updateManPortal = function(vinMoney)
     }
 }
 
+// Detect browser type (customized)
+(function () {
+    if (cc.sys.isNative) {
+        return;
+    }
 
-var win = window, nav = win.navigator;
-var ua = nav.userAgent.toLowerCase();
+    var win = window, nav = win.navigator;
+    var ua = nav.userAgent.toLowerCase();
 
-cc.sys.browserType = cc.sys.BROWSER_TYPE_UNKNOWN;
-/* Determine the browser type */
-(function(){
+    cc.sys.browserType = cc.sys.BROWSER_TYPE_UNKNOWN;
+
     var typeReg1 = /micromessenger|mqqbrowser|sogou|qzone|liebao|ucbrowser|360 aphone|360browser|baiduboxapp|baidubrowser|maxthon|mxbrowser|trident|msie|edge|miuibrowser/i;
     var typeReg2 = /qqbrowser|qq|chrome|safari|firefox|opr|oupeng|opera/i;
     var browserTypes = typeReg1.exec(ua);
