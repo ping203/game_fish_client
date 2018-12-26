@@ -764,6 +764,7 @@ var GameLayerUI = BCBaseLayer.extend({
             case GameLayerUI.BTN_FISH:
             {
                 var layer = new BCHeSoCa();
+                layer.updateHeso(gameData.config["prize"]);
                 this.addChild(layer,10,1010);
                 break;
             }

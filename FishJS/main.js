@@ -90,8 +90,6 @@
             gameData.loadStorage();
             ccs.load("res/GUI/GameLayer.json");
             initSharedWorker();
-            layerHesoCa = new BCHeSoCa();
-            layerHesoCa.retain();
 
             bcSceneMgr.openWithScene(new LoginScene());
 

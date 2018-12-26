@@ -624,8 +624,6 @@ var BCHeSoCa = BCBaseLayer.extend({
     },
 })
 
-var layerHesoCa = null;
-
 
 var BCUserInfo = BCBaseLayer.extend({
     ctor: function () {

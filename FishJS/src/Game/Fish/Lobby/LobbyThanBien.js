@@ -24,8 +24,6 @@ var LobbyThanBien = cc.Layer.extend({
             gameData.loadStorage();
             ccs.load("res/GUI/GameLayer.json");
             initSharedWorker();
-            layerHesoCa = new BCHeSoCa();
-            layerHesoCa.retain();
 
             var sys = cc.sys;
              if(!sys.isNative)

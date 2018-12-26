@@ -94,7 +94,7 @@ var updateManPortal = function(vinMoney)
 }
 
 // Detect browser type (customized)
-(function () {
+var detectBrowser = function () {
     if (cc.sys.isNative) {
         return;
     }
@@ -123,7 +123,8 @@ var updateManPortal = function(vinMoney)
         browserType = cc.sys.BROWSER_TYPE_OPERA;
 
     cc.sys.browserType = browserType;
-})();
+};
+detectBrowser();
 
 var initWebWorker = function() {
     if (!webWorker) {

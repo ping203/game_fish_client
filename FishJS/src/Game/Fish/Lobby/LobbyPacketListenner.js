@@ -70,11 +70,6 @@ var LobbyPacketListenner = cc.Class.extend({
                 var pk = new BCCmdReceivedConfig(pkg);
                 gameData.config = JSON.parse(pk.jsonConfig);
 
-                if(layerHesoCa)
-                {
-                    layerHesoCa.updateHeso(gameData.config["prize"]);
-                }
-
 
                 break;
             }
