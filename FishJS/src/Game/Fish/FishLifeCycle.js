@@ -161,7 +161,7 @@ var FishLifeCycle = cc.Class.extend({
                 fish.setNodeDisplay(null);
 
                 this.gameScene.createEffectFishDie(fishSp,pk.won_money,pk.position,fish.fishType > 10);
-                this.gameScene.gameMgr.destroyEntity(fish);
+                this.gameScene.gameMgr.destroyFish(fish);
 
                 fishSound.playEffectFishDie(fish.id);
             }

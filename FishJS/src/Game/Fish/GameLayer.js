@@ -150,6 +150,10 @@ var GameLayerUI = BCBaseLayer.extend({
         this.gameMgr = new BCGameManager(new Setting());
         this.gameMgr.setEntityCollisionListener(this.onEntityCollision.bind(this));
         this.gameMgr.setOnContactPreSolve(this.onContactPreSolve.bind(this));
+        this.gameMgr.setFishDestroyDelegate(this.onFishDestroy.bind(this));
+    },
+    onFishDestroy: function (fish) {        // khi 1 fish bi remove thi` clean no tai dong obj
+        this.gameMgr.removeFish(fish);
     },
     onEntityCollision: function(fish,bullet,pointCollide)
     {
@@ -340,8 +344,8 @@ var GameLayerUI = BCBaseLayer.extend({
         fish.id = id;
         fish.fishType = typeFish;
         fish.setNodeDisplay(sp);
-        fish.startWithPath(path,elapsedTime);
         fish.enableFlip(typeFish>= 26);
+        fish.startWithPath(path,elapsedTime);
         fish.setContentSize(cc.size(fishData.data["fish_type_"+typeFish]["box"][0] * PM_RATIO * 2,fishData.data["fish_type_"+typeFish]["box"][1] * PM_RATIO * 2));
 
         this.gameMgr.createBodyForFish(fish,vec2(fishData.data["fish_type_"+typeFish]["box"][0]/2,fishData.data["fish_type_"+typeFish]["box"][1]/2));
@@ -980,6 +984,8 @@ var GameLayerUI = BCBaseLayer.extend({
             this.cleanScreenForCatran();
         }.bind(this))))
 
+        this.gameMgr.clean();
+
         this.check_matrix = false;
     },
     cleanScreenForCatran: function(){
@@ -1056,6 +1062,7 @@ var GameLayerUI = BCBaseLayer.extend({
     stateToMatrixMap: function(){
 
         this.gameMgr.destroyAllEntity(false);
+        this.gameMgr.clean();
         this.check_matrix = true;
 
     },

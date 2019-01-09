@@ -1,0 +1,9 @@
+{
+	"packageUrl" : "http://35.240.162.131/mobile",
+	"remoteManifestUrl" : "http://35.240.162.131/mobile/project.manifest",
+	"remoteVersionUrl" : "http://35.240.162.131/mobile/version.manifest",
+	"version" : "@version@",
+	"engineVersion" : "3.16",
+	"assets" : {@list_assets@},
+    "searchPaths" : []
+}

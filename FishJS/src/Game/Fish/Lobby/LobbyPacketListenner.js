@@ -206,7 +206,7 @@ var LobbyPacketListenner = cc.Class.extend({
 
     },
     onDisconnect: function(){
-        //this.gameListenner.onDisconnect();
+        this.gameListenner.onDisconnect();
         cc.log("on Disconnected");
 
         BCDialog.showDialog("Bạn đã bị ngắt kết nối từ máy chủ!",this,function () {

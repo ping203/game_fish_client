@@ -1,6 +1,4 @@
-/**
- * Created by Hunter on 5/25/2016.
- */
+
 var Config = Config || {}
 
 

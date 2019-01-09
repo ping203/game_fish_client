@@ -39,6 +39,7 @@ var GameManagerWeb = cc.Class.extend({
 
         this._entityCollisionListener = null;
         this._contactPreSolveLitener = null;
+        this._fishDestroyDelegate = null;
 
     },
     setEntityCollisionListener: function(_lis)
@@ -47,6 +48,9 @@ var GameManagerWeb = cc.Class.extend({
     },
     setOnContactPreSolve: function(lis){
         this._contactPreSolveLitener = lis;
+    },
+    setFishDestroyDelegate: function (lis) {
+        this._fishDestroyDelegate = lis;
     },
     createWall: function()
     {
@@ -187,6 +191,10 @@ var GameManagerWeb = cc.Class.extend({
         {
             if(this._entities[count].need_remove)
             {
+                if(this._entities[count].getType() == Entity.FISH)
+                {
+                    this.onRealDestroyFish(this._entities[count]);
+                }
                 if(this._entities[count]._nodeDisplay)
                 {
                     this._entities[count]._nodeDisplay.removeFromParent();
@@ -196,6 +204,7 @@ var GameManagerWeb = cc.Class.extend({
             }
         }
     },
+
     shootBullet: function(bullet,start_pos,vel_dir)
     {
         var vel = new b2Vec2(vel_dir.x,vel_dir.y)
@@ -214,6 +223,12 @@ var GameManagerWeb = cc.Class.extend({
     {
         entity.need_remove = true;
         entity.released = true;
+    },
+    onRealDestroyFish: function (fish) {
+        if(this._fishDestroyDelegate != null)
+        {
+            this._fishDestroyDelegate(fish);
+        }
     },
     destroyAllEntity: function(destroyNode){
         var count = this._entities.length;
@@ -349,6 +364,18 @@ var GameManagerWeb = cc.Class.extend({
 
 })
 
+if (!Object.keys) {
+    Object.keys = function (obj) {
+        var arr = [],
+            key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                arr.push(key);
+            }
+        }
+        return arr;
+    };
+}
 
 
 var Setting = cc.sys.isNative?engine.Setting:SettingWeb;
@@ -371,7 +398,19 @@ var BCGameManager = (cc.sys.isNative?engine.GameManager:GameManagerWeb).extend({
     {
         this._super(entity);
         entity.released = true;
+    },
+    destroyFish: function (fish) {
+        this.destroyEntity(fish);
+
+    },
+    removeFish: function (fish) {
+        // cc.log("ahii--------------------------------------------------: " +Object.keys(this.fishEntities).length);
+        delete this.fishEntities[""+fish.id];
+    },
+    clean:function () {
+        this.fishEntities = {};
     }
+
 
 });
 

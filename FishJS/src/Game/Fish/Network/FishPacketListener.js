@@ -6,6 +6,12 @@ var FishPacketListener = cc.Class.extend({
     ctor: function () {
 
     },
+    onDisconnect: function () {
+        if(fishLifeCycle)
+        {
+            fishLifeCycle.gameScene.auto_shoot = false;
+        }
+    },
     onReceived: function (cmd, p) {
         //cc.log("Fish ->>>Listener::onReceived :" + cmd);
 
