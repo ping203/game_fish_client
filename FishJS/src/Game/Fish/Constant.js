@@ -26,6 +26,7 @@ var MONEY_DEMO = 1000000;
 
 var SERVER_IP = "35.240.162.131";
 var SERVER_PORT = 8080;
+var RES_PATH = "http://35.240.162.131/mobile";
 
 var FPS = 1;
 

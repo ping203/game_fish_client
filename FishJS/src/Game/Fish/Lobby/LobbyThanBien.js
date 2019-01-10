@@ -16,7 +16,7 @@ var LobbyThanBien = cc.Layer.extend({
 
         if(!cc.sys.isNative)
         {
-            cc.loader.resPath = "http://35.240.162.131/mobile";
+            cc.loader.resPath = RES_PATH;
             //load resources
             cc.loader.load(g_resources_fishes,function(result, count, loadedCount){
                 if(lobbyThanBien && lobbyThanBien.updatePercent)
