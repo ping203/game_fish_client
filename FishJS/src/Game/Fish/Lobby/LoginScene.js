@@ -4,7 +4,7 @@
 
 var wsClient = null;
 
-var BASE_URL = "http://130.211.249.69:8081/api?";
+
 
 var LoginScene = BCBaseLayer.extend({
     ctor: function()

@@ -19,7 +19,12 @@ var BCWebsocketClient = cc.Class.extend({
     },
     connect: function (host, port, isSsl, listenner) {
         console.log("create websocket client begin");
-        this.ws = new BCWebSocket("ws" + (isSsl ? "s" : "") + "://" + host + ":" + port + "/websocket");
+        if(cc.sys.isNative)
+        {
+            this.ws = new BCWebSocket("ws" + (isSsl ? "s" : "") + "://" + host + ":" + port + "/websocket",null,"res/cacert.pem");
+        }
+        else
+            this.ws = new BCWebSocket("ws" + (isSsl ? "s" : "") + "://" + host + ":" + port + "/websocket");
         this.listener = listenner;
         this.ws.binaryType = "arraybuffer";
         this.ws.onopen = this.onSocketConnect.bind(this);

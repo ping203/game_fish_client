@@ -2,4 +2,5 @@ frameworks/cocos2d-x
 frameworks/runtime-src
 publish
 simulator
-Deploy/mobile
+Deploy_Live/mobile
+Deploy_Private/mobile

@@ -1,0 +1,2 @@
+python deploy_normal.py
+pause

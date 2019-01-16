@@ -24,9 +24,28 @@ var TIME_MATRAN_MAP = 120;
 
 var MONEY_DEMO = 1000000;
 
-var SERVER_IP = "35.240.162.131";
-var SERVER_PORT = 8080;
-var RES_PATH = "http://35.240.162.131/mobile";
+
+// for api login standalone
+var BASE_URL = "https://manvip.club/portal/api?";
+BASE_URL = "https://cors-anywhere.herokuapp.com/http://manvip.club/portal/api?";
+// BASE_URL = "http://130.211.249.69:8081/api?";
+
+//cloudflare
+var SERVER_IP = "ws-thanbien.api-core.net";      // server live CF
+var SERVER_PORT = 2053;
+
+// var SERVER_IP = "35.247.131.44";             // server live that
+// var SERVER_PORT = 2053;
+
+// var SERVER_IP = "35.240.162.131";               // server test
+// var SERVER_PORT = 8080;
+
+
+var IS_SSL = true;
+
+// for web download resources
+var RES_PATH = "https://thanbien.manvip.club/mobile";       // live for web
+// var RES_PATH = "http://35.240.162.131/web";                    // host test for web
 
 var FPS = 1;
 

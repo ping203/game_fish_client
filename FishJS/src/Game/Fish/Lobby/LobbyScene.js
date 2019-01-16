@@ -531,7 +531,7 @@ var BCTopLayerTable = cc.Layer.extend({
         var info = new BCUserInfo();
         info.set(this.data[idx].username,this.data[idx].gold,this.data[idx].win,this.data[idx].avatar);
 
-        bcSceneMgr.getMainLayer().addChild(info,11);
+        // bcSceneMgr.getMainLayer().addChild(info,11);
     },
 
     tableCellSizeForIndex:function (table) {

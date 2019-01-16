@@ -24,7 +24,7 @@ var LobbyThanBien = cc.Layer.extend({
                     lobbyThanBien.updatePercent(Math.floor(loadedCount * 100 / count));
                 }
             },function () {
-                document.body.style.cursor= "url('http://35.240.162.131/res/pointer.png'), auto";
+                document.body.style.cursor= "url('https://thanbien.manvip.club/mobile/res/pointer.png'), auto";
                 startGame();
                 cc.loader.resPath = "";
             });
