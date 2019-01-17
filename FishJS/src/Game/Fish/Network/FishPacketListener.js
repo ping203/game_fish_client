@@ -44,7 +44,7 @@ var FishPacketListener = cc.Class.extend({
                 pk.clean();
                 if(fishLifeCycle)
                     fishLifeCycle.onStartShoot(pk);
-                cc.log("start shoot: " + JSON.stringify(pk));
+                // cc.log("start shoot: " + JSON.stringify(pk));
                 break;
             }
             case CMD.CMD_SHOOT_RESULT:
@@ -53,7 +53,7 @@ var FishPacketListener = cc.Class.extend({
                 pk.clean();
                 if(fishLifeCycle)
                     fishLifeCycle.onShootResult(pk);
-                cc.log("shoot result: " +JSON.stringify(pk));
+                // cc.log("shoot result: " +JSON.stringify(pk));
                 break;
             }
             case CMD.CMD_USER_JOIN_ROOM:

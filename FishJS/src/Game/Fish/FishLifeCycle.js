@@ -136,19 +136,19 @@ var FishLifeCycle = cc.Class.extend({
     onStartShoot: function(data)
     {
         var position = data.position;
-        if(position != this.position)
+        if(position != this.position && data.getError() == 0)
         {
             this.gameScene.shoot(this.players[position],vec2(data.x * PM_RATIO,data.y * PM_RATIO));
             this.players[position].setGunBet(data.bet,false);
 
         }
-        else
+        if(position == this.position)
         {
             gameData.userData.gold = data.user_money;
         }
 
         this.players[position].playerData.rawData["gold"] = data.user_money;
-        this.players[position].updateInfo()
+        this.players[position].updateInfo();
     },
     onShootResult: function(pk)
     {
@@ -168,9 +168,9 @@ var FishLifeCycle = cc.Class.extend({
             if(pk.position == this.position)        // effect money for player
             {
                 this.gameScene.effectMoney(pk.position,pk.won_money);
-                gameData.userData.gold = pk.user_money;
-                this.players[this.position].playerData.rawData["gold"] = pk.user_money;
-                this.players[this.position].updateInfo();
+                // gameData.userData.gold = pk.user_money;
+                // this.players[this.position].playerData.rawData["gold"] = pk.user_money;
+                // this.players[this.position].updateInfo();
 
                 if(fish.fishType > 25 || (pk.won_money >= 300000))
                 {
@@ -178,9 +178,13 @@ var FishLifeCycle = cc.Class.extend({
                 }
             }
         }
+        if(pk.position == this.position)
+        {
+            gameData.userData.gold = pk.user_money;
+        }
 
-        // this.players[pk.position].playerData.rawData["gold"] = pk.user_money;
-        // this.players[pk.position].updateInfo();
+        this.players[pk.position].playerData.rawData["gold"] = pk.user_money;
+        this.players[pk.position].updateInfo();
 
     },
     onStateChange: function(pk)
