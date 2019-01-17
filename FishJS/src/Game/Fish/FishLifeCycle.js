@@ -169,8 +169,8 @@ var FishLifeCycle = cc.Class.extend({
             {
                 this.gameScene.effectMoney(pk.position,pk.won_money);
                 gameData.userData.gold = pk.user_money;
-                // this.players[this.position].playerData.rawData["gold"] = pk.user_money;
-                // this.players[this.position].updateInfo();
+                this.players[this.position].playerData.rawData["gold"] = pk.user_money;
+                this.players[this.position].updateInfo();
 
                 if(fish.fishType > 25 || (pk.won_money >= 300000))
                 {
@@ -179,8 +179,8 @@ var FishLifeCycle = cc.Class.extend({
             }
         }
 
-        this.players[pk.position].playerData.rawData["gold"] = pk.user_money;
-        this.players[pk.position].updateInfo()
+        // this.players[pk.position].playerData.rawData["gold"] = pk.user_money;
+        // this.players[pk.position].updateInfo();
 
     },
     onStateChange: function(pk)
