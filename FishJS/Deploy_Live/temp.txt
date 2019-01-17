@@ -1,7 +1,7 @@
 {
-	"packageUrl" : "http://resource.thanbien.club/mobile",
-	"remoteManifestUrl" : "http://resource.thanbien.club/mobile/project.manifest",
-	"remoteVersionUrl" : "http://resource.thanbien.club/mobile/version.manifest",
+	"packageUrl" : "http://rs-thanbien.api-core.net/mobile",
+	"remoteManifestUrl" : "http://rs-thanbien.api-core.net/mobile/project.manifest",
+	"remoteVersionUrl" : "http://rs-thanbien.api-core.net/mobile/version.manifest",
 	"version" : "@version@",
 	"engineVersion" : "3.16",
 	"assets" : {@list_assets@},
