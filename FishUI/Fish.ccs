@@ -650,6 +650,7 @@
         <Project Name="ThangLonLayer.csd" Type="Scene" />
         <Project Name="TopLayer.csd" Type="Scene" />
         <Project Name="UserInfo.csd" Type="Layer" />
+        <Project Name="NotifyLayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

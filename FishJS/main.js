@@ -91,6 +91,11 @@
             ccs.load("res/GUI/GameLayer.json");
             initSharedWorker();
 
+            // var layer = new GameLayerUI();
+            //
+            // var notify = new NotifyLayer();
+            // layer.addChild(notify,100);
+
             bcSceneMgr.openWithScene(new LoginScene());
 
         }, this);

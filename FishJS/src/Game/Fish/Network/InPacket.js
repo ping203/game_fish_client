@@ -45,6 +45,19 @@ BCCmdReceivedExchange = CmdReceivedCommon.extend({
     }
 })
 
+BCCmdReceivedLixi = CmdReceivedCommon.extend({
+    ctor: function(pkg){
+        this._super(pkg);
+        this.readData();
+    },
+    readData: function(){
+        this.errorCode = this.getError();
+        this.goldLixi = this.getLong();
+        this.gold = this.getLong();
+
+    }
+})
+
 BCCmdReceivedJoinRoomSuccess = CmdReceivedCommon.extend({
     ctor :function(pkg)
     {

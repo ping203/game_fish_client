@@ -331,6 +331,7 @@ var GameLayerUI = BCBaseLayer.extend({
     },
     addFish: function(id,typeFish,pathData,pathTime,elapsedTime)        // add fish khi ban thuong
     {
+        //NotifyLayer.needNotify("Sự kiện x2 Boss thần biển đang diễn ra : x2 Vàng nhận được khi săn Rồng Đỏ , Cá Tiên và Thần Rồng"+typeFish);
         var sp = this.createFishAnim(typeFish);
         this.fish2DLayer.addChild(sp);
 

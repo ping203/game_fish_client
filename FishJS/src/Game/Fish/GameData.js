@@ -25,6 +25,8 @@ var GameData = cc.Class.extend({
 
         this.enableMusic = true;
         this.enableSound = true;
+
+        this.notifyData = [];
     },
     loadStorage: function () {
         var check = cc.sys.localStorage.getItem("music");
@@ -43,6 +45,13 @@ var GameData = cc.Class.extend({
         cc.sys.localStorage.setItem("music",this.enableMusic?"1":"0");
         cc.sys.localStorage.setItem("sound",this.enableSound?"1":"0");
 
+    },
+    pushNotify: function (msg) {
+        if(this.notifyData.length >= 10)
+        {
+            this.notifyData.splice(0,1);
+        }
+        this.notifyData.push(msg);
     }
 })
 
