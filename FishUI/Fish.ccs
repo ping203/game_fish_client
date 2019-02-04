@@ -646,11 +646,11 @@
         <Project Name="ListFish.csd" Type="Layer" />
         <Project Name="LobbyScene.csd" Type="Scene" />
         <Project Name="LoginLayer.csd" Type="Scene" />
+        <Project Name="NotifyLayer.csd" Type="Layer" />
         <Project Name="ShopGUI.csd" Type="Scene" />
         <Project Name="ThangLonLayer.csd" Type="Scene" />
         <Project Name="TopLayer.csd" Type="Scene" />
         <Project Name="UserInfo.csd" Type="Layer" />
-        <Project Name="NotifyLayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
