@@ -185,6 +185,8 @@ var LobbyScene = BCBaseLayer.extend({
             bcSceneMgr.addLoading("Loading...",true);
 
 
+
+
         // cc.log("hiu hiu 1");
 
     },
@@ -371,6 +373,17 @@ BCDialog.showDialog = function (msg, target, selector , parent) {
     mainLayer.addChild(dialog,BCDialog.ZORDER,BCDialog.TAG);
     return dialog;
 }
+
+BCDialog.showDialogWithoutRemoveOther = function (msg, target, selector , parent) {
+    var mainLayer = bcSceneMgr.getMainLayer();
+    if(parent)
+        mainLayer = parent;
+    var dialog = new BCDialog();
+    dialog.set(msg,target,selector);
+    mainLayer.addChild(dialog,BCDialog.ZORDER,BCDialog.TAG);
+    return dialog;
+}
+
 
 BCDialog.BTN_OK = 0;
 BCDialog.BTN_CANCEL = 1;

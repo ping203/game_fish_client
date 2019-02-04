@@ -109,6 +109,14 @@ var FishPacketListener = cc.Class.extend({
                 fishLifeCycle.onUpdateBG(pk);
                 break;
             }
+            case CMD.CMD_NOTIFY:
+            {
+                var pk = new BCCmdReceivedNotify(p);
+                pk.clean();
+                var msg = decodeURIComponent(pk.message);
+                NotifyLayer.needNotify(msg,fishLifeCycle.gameScene);
+                break;
+            }
 
         }
     }

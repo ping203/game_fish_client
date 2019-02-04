@@ -1,6 +1,6 @@
 {
   "ID": "3486eccf-28d8-4766-9224-38390ad56e12",
-  "Version": "3.10.0.0",
+  "Version": "2.3.4",
   "Name": "NotifyLayer",
   "Content": {
     "Content": {
@@ -25,9 +25,11 @@
             },
             "VerticalAlignmentType": "VT_Center",
             "OutlineColor": {
+              "R": 0,
               "G": 0,
               "B": 0
             },
+            "OutlineEnabled": true,
             "ShadowColor": {
               "R": 110,
               "G": 110,
@@ -85,6 +87,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5

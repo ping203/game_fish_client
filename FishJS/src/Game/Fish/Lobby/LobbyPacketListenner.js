@@ -118,6 +118,31 @@ var LobbyPacketListenner = cc.Class.extend({
             }
             case CMD.CMD_LIXI:
             {
+                cc.log("lixi");
+                var pk = new BCCmdReceivedLixi(pkg);
+
+                gameData.userData.gold = pk.gold;
+
+                var main = bcSceneMgr.getMainLayer();
+                var shop = main.getChildByTag(1000);
+                main.onUpdateData();
+
+                var dialog = BCDialog.showDialogWithoutRemoveOther("Chúc mừng bạn nhận được \n"+BCStringUtility.standartNumber(pk.goldLixi)+" VÀNG lì xì từ THẦN BIỂN \n CHÚC MỪNG NĂM MỚI",this,function (id) {
+                    // fishBZ.sendRequestCaptcha();
+                })
+
+
+                var animLixi =  sp.SkeletonAnimation.createWithJsonFile("res/FX/lixi/skeleton.json","res/FX/lixi/skeleton.atlas");
+                animLixi.setAnimation(0,"animation",true);
+                animLixi.setPosition(420,275);
+
+                dialog._bg.addChild(animLixi,0);
+                dialog._btnOK.setLocalZOrder(10);
+                dialog._btnCancel.setLocalZOrder(10);
+                dialog._lbMessage.setLocalZOrder(10);
+                dialog._btnOK.setPositionY(dialog._btnOK.getPositionY()-20);
+                dialog._lbMessage.setPositionY(340);
+
 
                 break;
             }

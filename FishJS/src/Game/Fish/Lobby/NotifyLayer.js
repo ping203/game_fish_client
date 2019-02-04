@@ -54,9 +54,10 @@ var NotifyLayer = BCBaseLayer.extend({
             return;
 
         var msg = gameData.notifyData[0] +"";
+        gameData.notifyData.splice(0,1);
         this.lbMessage.setString(msg);
         var length = msg.length * 5 + this.clipper.width  ;
-        var vel = 40;
+        var vel = 30;
 
         this.lbMessage.setPositionX( this.clipper.width );
         this.lbMessage.runAction(cc.sequence(cc.moveTo(length/vel,cc.p(-length,this.clipper.height/2)),cc.callFunc(function () {
@@ -72,10 +73,13 @@ var NotifyLayer = BCBaseLayer.extend({
 
 NotifyLayer.TAG = 1123;
 NotifyLayer.ZORDER = 1000;
-NotifyLayer.needNotify = function (msg) {           // chi can su dung ham nay khi nhan goi tin la dc
+NotifyLayer.needNotify = function (msg,parent) {           // chi can su dung ham nay khi nhan goi tin la dc
+    gameData.pushNotify(msg);
     gameData.pushNotify(msg);
 
     var main = bcSceneMgr.getMainLayer();
+    if(parent)
+        main = parent;
     var notify = main.getChildByTag(NotifyLayer.TAG);
     if(!notify)
     {
